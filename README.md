@@ -146,10 +146,15 @@ Generating Test Cases and Procedures from Use Cases in Dynamic Software Product 
 
 ####Backward snowballing (46 initials results)
 
-- \#Initial results:
-- Explain why articles where not chosen according to relevance criteria
-- Choose at least one article
-- Execute further restrictions on the search criteria
+Direct references from the base article have been evaluated in case they were extensively mentioned in the _Related Work_ 
+chapter. Other references relate to preceding work that was taken as a basis to build the transition system approach and
+shouldn't be further taken into consideration. Another restriction is as in the forward snowballing that only whitepapers 
+from IEEE Xplore or ACM got evaluated.
+
+Title                                                                                                                             | Relevance | Explanation       
+--------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------
+Boundary coverage criteria for test generation from formal models                                                                 | No        | Not in the context of automatic system test generation
+Requirement-Based Automated Black-Box Test Generation                                                                             | Possibly  | The approach accepts a sofhvare specijication as a set of individual requirements expressed in textual and SDL formats (a common practice in the industry). The system model is used to automatically generate test cases related to individual requirements.
 
 ### Search term based search
 
