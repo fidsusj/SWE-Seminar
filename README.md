@@ -197,9 +197,34 @@ UMTG: A Toolset to Automatically Generate System Test Cases from Use Case Specif
 
 ### Choosing one article
 
-- Justify new criteria and the decision which article is chosen
-- Document why articles were not chosen
+Six relevant articles remain after the initial search:
 
+- System Testing using UML Models
+- An Automatic Tool for Generating Test Cases from the System's Requirements
+- Automated Test Case Generation from Use Case: A Model Based Approach
+- Requirements Document Based Test Scenario Generation for Web Application Scenario Testing
+- An Approach to Modeling and Testing Web Applications Based on Use Cases
+- An Automated Approach to System Testing Based on Scenarios and Operations Contracts
+
+The decision criteria are based on the different search terms above mentioned and the already defined criteria. Additionally,
+focus of the selected paper should lie on creating system tests for any generic application area, not just UI parts of an application. 
+
+The paper _An Automatic Tool for Generating Test Cases from the System's Requirements_ was not chosen as it does not focus
+on testing the consistency of use case combinations with contracts to build test objectives as in the original paper. Furthermore,
+it is not as in-depth as the original paper. Contract enriched use cases could neither be found in _System Testing using UML Models_.
+
+_Automated Test Case Generation from Use Case: A Model Based Approach_ really embodies the principle of state base modeling 
+based on use cases with its _interaction finite automaton_ (IFA), but doesn't introduce a formal language to define use cases
+and its contracts. 
+
+_Requirements Document Based Test Scenario Generation for Web Application Scenario Testing_ as well as 
+_An Approach to Modeling and Testing Web Applications Based on Use Cases_ are specifically optimized for web application 
+test scenarios and therefore not as general and universally applicable as the original paper.
+
+The chosen article to further evaluate is _An Automated Approach to System Testing based on Scenarios and Operations Contracts_, 
+as it introduces a second way to create system tests from use cases as UML 2.0 models by enriching it with contracts and 
+by transforming the formalized use cases to a transition system to validate test objectives. Further information on the paper will be
+introduced in the mid-term presentation. 
 
 <br />
 <br />
