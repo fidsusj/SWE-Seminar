@@ -4,8 +4,8 @@
 
 ### Central research question
 
-Which approaches for automatic system test generation using contract enriched use cases within a transition system 
-simulation model as well as using sequence diagrams exist?
+Which approaches for automatic generation of system tests exist that are using contract enriched use cases or other 
+use case related means of the specification area within a transition system simulation model?
 
 ### Snowballing
 
@@ -25,35 +25,34 @@ Following search terms were chosen for doing research on the central research qu
 - simulation model
 - use cases
 - contracts
-- sequence diagrams
 
 __Generic search term:__ "system testing" AND "automatic generation" AND "transition system" AND "simulation model" AND
-"use cases" AND contracts AND "sequence diagrams"
+"use cases" AND contracts
 
 __Research Sources:__ IEEE Xplore<sup>[1](#myfootnote1)</sup>, ACM<sup>[2](#myfootnote2)</sup>
 
-__Explanation:__ Pre-search results were promising both on IEEE Xplore and ACM. Only some papers on ACM could not be accessed publicly. 
+__Explanation:__ Pre-search results were promising both on IEEE Xplore and ACM. Only some papers on ACM could not be 
+accessed publicly. The amount of results should be sufficient to cover all relevant scientific papers.
 
 ### Relevance criteria
 
-- Does the method described in the article generate system tests automatically from use cases and other means of the specification area like sequence diagrams?
+- Does the method described in the article generate system tests automatically from use cases or other use case related 
+means of the specification area?
 - Are test objectives generated using some kind of simulation model based on use case contracts (pre- and postconditions) 
 or similar transition system approaches?
 
 __Explanation:__ 
 - As system tests can not exclusively be derived from means of the specification area, an article should 
-restrict to generating system tests from use cases explicitly. Supporting artifacts to generate test scenarios are not prohibited in case they originate
-from the specification area.
-- To derive test objectives the correctness and consistency of use case combinations should be tested based on their contracts
-(pre- and postconditions)
+restrict to generating system tests from use cases. Supporting artifacts to generate test scenarios are not 
+prohibited in case they originate from the specification area.
+- To derive test objectives the correctness and consistency of use case combinations should be tested based on their 
+contracts (pre- and postconditions)
  
 ## Research execution
 
-### Snowballing based search (forwards and backwards oriented)
+### Forward snowballing (140 initial results)
 
-####Forward snowballing (140 initial results)
-
-As agreed on in the research planning, only whitepapers from IEEE Xplore or ACM got evaluated.
+As agreed on in the research planning, only white papers from IEEE Xplore or ACM got evaluated.
 
 __IEEE Xplore:__
 
@@ -144,17 +143,22 @@ UML Behavioral Model Based Test Case Generation: A Survey                       
 Generating Test Cases and Procedures from Use Cases in Dynamic Software Product Lines                                             | No        | No use case driven approach
 
 
-####Backward snowballing (46 initials results)
+### Backward snowballing (46 initials results)
 
 Direct references from the base article have been evaluated in case they were extensively mentioned in the _Related Work_ 
-chapter. Other references relate to preceding work that was taken as a basis to build the transition system approach and
-shouldn't be further taken into consideration. Another restriction is as in the forward snowballing that only whitepapers 
+chapter. Other references relate to preceding work that was taken as a basis to realise the transition system approach and
+shouldn't be further taken into consideration. Another restriction is as in the forward snowballing that only white papers 
 from IEEE Xplore or ACM got evaluated.
 
 __IEEE Xplore:__
 
+Most of the references where quite old since the original paper was published in 2006. Therefore not all papers could be found on IEEE Xplore or ACM. 
+
 Title                                                                                                                             | Relevance | Explanation       
 --------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------
+Test cases generation from UML state diagrams                                                                                     | Yes       | Uses UML state diagrams and transforms them into extended finite state machines (EFSMs)
+Requirements by Contracts allow Automated System Testing                                                                          | Yes       | First we propose a contract language for functional requirements expressed as parameterized use cases. Then we provide a method, a formal model and a prototype tool to automatically derive both functional and robustness test cases from the requirements enhanced with contracts.
+Use of Sequencing Constraints for Specification-Based Testing of Concurrent Programs                                              | No        | No use case driven approach
 Boundary coverage criteria for test generation from formal models                                                                 | No        | Not in the context of automatic system test generation
 Requirement-Based Automated Black-Box Test Generation                                                                             | Possibly  | The approach accepts a software specification as a set of individual requirements expressed in textual and SDL formats (a common practice in the industry). The system model is used to automatically generate test cases related to individual requirements.
 
@@ -164,11 +168,11 @@ Only articles published between 2006 and 2020 having the search term "test" and 
 
 __IEEE Xplore:__
 
-Source      | Date       | Search restrictions                                                                                                                                                                                                                                                                  | Search query                                                                                                                                         | \#Results | \#Relevant results | \#New relevant results | Selected results | Notes
------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ | ---------------------- | ---------------- | --------------------------
-IEEE Xplore | 2020-22-21 | "system tests" in document title; "automatic generation" in document title; "transition system" in full text & metadata; "simulation model" in full text & metadata; "use cases" in document title; "contracts" in full text & metadata; "sequence diagrams" in full text & metadata | "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts AND "sequence diagrams"       | 0         | 0                  | /                      | /                | Most detailed search query
-IEEE Xplore | 2020-22-21 | "system tests" in document title; "automatic generation" in abstract; "transition system" in full text & metadata; "use cases" in document title; "contracts" in full text & metadata; "sequence diagrams" in full text & metadata                                                   | "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts AND "sequence diagrams"                              | 0         | 0                  | /                      | /                | 
-IEEE Xplore | 2020-22-21 | "test" in document title; "transition system" in full text & metadata; "use cases" in document title                                                                                                                                                                                 | "system tests" AND "transition system" AND "use cases"                                                                                               | 82        | 0                  | /                      | /                | 
+Source      | Date       | Search restrictions                                                                                                                                                                                                                      | Search query                                                                                                             | \#Results | \#Relevant results | \#New relevant results | Selected results | Notes
+----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------ | ---------------------- | ---------------- | --------------------------
+IEEE Xplore | 2020-22-21 | "system tests" in document title; "automatic generation" in document title; "transition system" in full text & metadata; "simulation model" in full text & metadata; "use cases" in document title; "contracts" in full text & metadata; | "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts   | 0         | 0                  | /                      | /                | Most detailed search query
+IEEE Xplore | 2020-22-21 | "system tests" in document title; "automatic generation" in abstract; "transition system" in full text & metadata; "use cases" in document title; "contracts" in full text & metadata;                                                   | "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts                          | 0         | 0                  | /                      | /                | 
+IEEE Xplore | 2020-22-21 | "test" in document title; "transition system" in full text & metadata; "use cases" in document title                                                                                                                                     | "system tests" AND "transition system" AND "use cases"                                                                   | 82        | 0                  | /                      | /                | 
 
 Title                                                                                                                             | Relevance | Explanation       
 --------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------
@@ -177,33 +181,35 @@ A Case Study for Generating Test Cases from Use Cases                           
 A Method for Semi-automated Generation of Test Scenarios based on Use Cases                                                       | No        | No transition system driven approach
 Automation of Test Case Generation From Textual Use Case                                                                          | No        | No transition system driven approach
 Starting Model-Based Testing based on Existing Test Cases used for Model Creation                                                 | No        | No use case driven approach
-Automated Test Case Generation from Use Case: A Model Based Approach                                                              | No        | Not in the context of automatic system test generation
 System Testing of Timing Requirements based on Use Cases and Timed Automata                                                       | No        | No transition system driven approach
 
 __ACM:__
 
-Source | Date       | Search restrictions                                                                                                                                                                                                                                                                  | Search query                                                                                                                                     | \#Results | \#Relevant results | \#New relevant results | Selected results | Notes
------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------ | ---------------------- | ---------------- | ------------------------------
-ACM    | 2020-22-21 | "system tests" in title; "automatic generation" in title; "transition system" in full text; "simulation model" in full text; "use cases" in title; "contracts" in full text; "sequence diagrams" in full text                                                                        | "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts AND "sequence diagrams"   | 8.868     | 0                  | /                      | /                | Most detailed search query
-ACM    | 2020-22-21 | "system tests" in title; "automatic generation" in abstract; "transition system" in full text; "use cases" in title; "contracts" in full text; "sequence diagrams" in full text                                                                                                      | "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts AND "sequence diagrams"                          | 1.869     | 0                  | /                      | /                | Most detailed search query
-ACM    | 2020-22-21 | "system tests" in title; "transition system" in full text; "use cases" in title                                                                                                                                                                                                      | "system tests" AND "transition system" AND "use cases"                                                                                           | 0         | 0                  | /                      | /                | Most detailed search query
-ACM    | 2020-22-21 | "test" in title; "use case" in title                                                                                                                                                                                                                                                 | "system tests" AND "use cases"                                                                                                                   | 6         | 0                  | /                      | /                | Most detailed search query
+Source | Date       | Search restrictions                                                                                                                                                              | Search query                                                                                                            | \#Results | \#Relevant results | \#New relevant results | Selected results | Notes
+------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ | ---------------------- | ---------------- | ------------------------------
+ACM    | 2020-22-21 | "system tests" in title; "automatic generation" in title; "transition system" in full text; "simulation model" in full text; "use cases" in title; "contracts" in full text;     | "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts  | 0         | 0                  | /                      | /                | Most detailed search query
+ACM    | 2020-22-21 | "system tests" in title; "automatic generation" in abstract; "transition system" in full text; "use cases" in title; "contracts" in full text;                                   | "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts                         | 0         | 0                  | /                      | /                | 
+ACM    | 2020-22-21 | "system tests" in title; "transition system" in full text; "use cases" in title                                                                                                  | "system tests" AND "transition system" AND "use cases"                                                                  | 0         | 0                  | /                      | /                | 
+ACM    | 2020-22-21 | "test" in title; "use case" in title                                                                                                                                             | "system tests" AND "use cases"                                                                                          | 8         | 0                  | /                      | /                | 
 
 Title                                                                                                                             | Relevance | Explanation       
 --------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------
 Automatic Generation of System Test Cases from Use Case Specifications                                                            | No        | No transition system driven approach
 Generating Interaction Test Cases for Mobile Phone Systems from Use Case Specifications                                           | No        | No transition system driven approach
 UMTG: A Toolset to Automatically Generate System Test Cases from Use Case Specifications                                          | No        | No transition system driven approach
+A novel approach to system testing and reliability assessment using use case model                                                | No        | No transition system driven approach
 
 ### Choosing one article
 
-Six relevant articles remain after the initial search:
+Eight relevant articles remain after the initial search:
 
 - System Testing using UML Models
 - An Automatic Tool for Generating Test Cases from the System's Requirements
 - Automated Test Case Generation from Use Case: A Model Based Approach
 - Requirements Document Based Test Scenario Generation for Web Application Scenario Testing
 - An Approach to Modeling and Testing Web Applications Based on Use Cases
+- Test cases generation from UML state diagrams
+- Requirements by Contracts allow Automated System Testing 
 - An Automated Approach to System Testing Based on Scenarios and Operations Contracts
 
 The decision criteria are based on the different search terms above mentioned and the already defined criteria. Additionally,
@@ -221,9 +227,12 @@ _Requirements Document Based Test Scenario Generation for Web Application Scenar
 _An Approach to Modeling and Testing Web Applications Based on Use Cases_ are specifically optimized for web application 
 test scenarios and therefore not as general and universally applicable as the original paper.
 
+_Test cases generation from UML state diagrams_ and _Requirements by Contracts allow Automated System Testing_ could 
+unfortunately not be accessed in full length in IEEE Xplore. 
+
 The chosen article to further evaluate is _An Automated Approach to System Testing based on Scenarios and Operations Contracts_, 
-as it introduces a second way to create system tests from use cases as UML 2.0 models by enriching it with contracts and 
-by transforming the formalized use cases to a transition system to validate test objectives. Further information on the paper will be
+as it introduces a second way to create system tests from use case scenarios as UML 2.0 models by enriching it with contracts and 
+by transforming the formalized scenarios to a transition system to validate test objectives. Further information on the paper will be
 introduced in the mid-term presentation. 
 
 <br />
