@@ -52,7 +52,7 @@ contracts (pre- and postconditions)
 
 ### Forward snowballing (140 initial results)
 
-As agreed on in the research planning, only white papers from IEEE Xplore or ACM got evaluated.
+As agreed on in the research planning, only papers from IEEE Xplore or ACM got evaluated.
 
 __IEEE Xplore:__
 
@@ -147,7 +147,7 @@ Generating Test Cases and Procedures from Use Cases in Dynamic Software Product 
 
 Direct references from the base article have been evaluated in case they were extensively mentioned in the _Related Work_ 
 chapter. Other references relate to preceding work that was taken as a basis to realise the transition system approach and
-shouldn't be further taken into consideration. Another restriction is as in the forward snowballing that only white papers 
+shouldn't be further taken into consideration. Another restriction is as in the forward snowballing that only papers 
 from IEEE Xplore or ACM got evaluated.
 
 __IEEE Xplore:__
