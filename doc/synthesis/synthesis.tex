@@ -1,0 +1,121 @@
+% This template was initially provided by Dulip Withanage.
+% Modifications for the database systems research group
+% were made by Conny Junghans, Jannik Stroetgen and Michael Gertz
+
+\documentclass[
+     12pt,         % font size
+     a4paper,      % paper format
+     BCOR10mm,     % binding correction
+     DIV14,        % stripe size for margin calculation
+     ]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PACKAGES:
+
+% Use English :
+\usepackage[english]{babel}
+% Input and font encoding
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% Index-generation
+\usepackage{makeidx}
+% Einbinden von URLs:
+\usepackage{url}
+% Special \LaTex symbols (e.g. \BibTeX):
+%\usepackage{doc}
+% Include Graphic-files:
+\usepackage{graphicx}
+% Include doc++ generated tex-files:
+%\usepackage{docxx}
+\usepackage[english]{babel}
+\usepackage[
+backend=biber
+,style=ieee
+,backref
+,defernumbers=true
+]{biblatex}
+
+\addbibresource[datatype=bibtex]{references.bib}
+
+% Fuer anderthalbzeiligen Textsatz
+\usepackage{setspace}
+
+% hyperrefs in the documents
+\PassOptionsToPackage{hyphens}{url}\usepackage[bookmarks=true,colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black,urlcolor=black]{hyperref}
+%\usepackage{hyperref}
+
+% Choose language
+\newcommand{\setlang}[1]{\selectlanguage{#1}\nonfrenchspacing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% OTHER SETTINGS:
+
+\usepackage{csquotes}
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DOCUMENT HEADER:
+
+\begin{document}
+
+\pagenumbering{roman} 
+\begin{titlepage}
+
+\vspace*{1cm}
+\begin{center}
+\textbf{ 
+\Large Heidelberg University\\
+\smallskip
+\Large Institute of Computer Science\\
+\smallskip
+\Large Software Engineering Group\\
+\smallskip
+}
+
+\vspace{3cm}
+
+\textbf{\large Better Software Through Systematic Testing}
+
+\vspace{0.5\baselineskip}
+{\huge
+\textbf{Literature Synthesis}
+}
+\vspace{0.5cm}
+
+\url{https://github.com/fidsusj/SWE-Seminar}
+
+\vspace{0.5cm}
+
+{\small
+	\begin{tabular}[l]{ll}
+		Felix Hausberger, 3661293,\\
+		Applied Computer Science\\
+		eb260@stud.uni-heidelberg.de\\
+	\end{tabular}
+}
+\end{center}
+
+
+
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DOCUMENT CONTENT:
+
+\pagenumbering{arabic} 
+
+\input{content/synthesis}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% REFERENCES:
+\newpage
+\printbibliography
+
+\end{document}

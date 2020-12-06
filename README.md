@@ -1,4 +1,4 @@
-# Research planning, research und mid-term presentation
+# Research planning, research and mid-term presentation
 
 ## Research planning
 
