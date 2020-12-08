@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  6 DEC 2020 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  8 DEC 2020 17:42
 entering extended mode
 **./synthesis.tex
 (synthesis.tex
@@ -760,34 +760,51 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {C:/Users/D070497/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(content/synthesis.tex) [1]
+(content/synthesis.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
-LaTeX Warning: Empty bibliography on input line 119.
+ []
 
-(synthesis.aux)
+[1] [2]
+Overfull \hbox (2.41496pt too wide) in paragraph at lines 43--43
+[]\T1/lmr/m/n/12 Nr.| 
+ []
+
+)
+Overfull \hbox (67.85118pt too wide) in paragraph at lines 42--113
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--113
+
+ []
+
+[3] [4] (synthesis.aux)
 Package rerunfilecheck Info: File `synthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 657DBE15E909916C7B6FC0AE9CFCBCCB;45.
+(rerunfilecheck)             Checksum: 0E6630AA0EE992A1E1E858FBC085E494;168.
 Package logreq Info: Writing requests to 'synthesis.run.xml'.
 \openout1 = `synthesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13916 strings out of 479765
- 249920 string characters out of 2865212
- 981109 words of memory out of 3000000
- 30696 multiletter control sequences out of 15000+200000
- 575109 words of font info for 53 fonts, out of 3000000 for 9000
+ 14155 strings out of 479765
+ 254565 string characters out of 2865212
+ 988260 words of memory out of 3000000
+ 30912 multiletter control sequences out of 15000+200000
+ 582370 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,6n,73p,1032b,1693s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,8n,73p,1280b,1693s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
 enc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
 mbx12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmr10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/lm/lmr12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmtt12.pfb>
-Output written on synthesis.pdf (2 pages, 94987 bytes).
+ype1/public/lm/lmri12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/lm/lmtt12.pfb>
+Output written on synthesis.pdf (5 pages, 145271 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

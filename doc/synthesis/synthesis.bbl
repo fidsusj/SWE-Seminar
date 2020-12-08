@@ -16,5 +16,72 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ansatz.2006}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8e85a0d94f268b979a9124e24d0fc88a}{%
+           family={{Clémentine Nebut, Franck Fleurey, Yves Le Traon, Jean-Marc Jézéquel}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e85a0d94f268b979a9124e24d0fc88a}
+      \strng{fullhash}{8e85a0d94f268b979a9124e24d0fc88a}
+      \strng{bibnamehash}{8e85a0d94f268b979a9124e24d0fc88a}
+      \strng{authorbibnamehash}{8e85a0d94f268b979a9124e24d0fc88a}
+      \strng{authornamehash}{8e85a0d94f268b979a9124e24d0fc88a}
+      \strng{authorfullhash}{8e85a0d94f268b979a9124e24d0fc88a}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automatic Test Generation: A Use Case Driven Approach}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{volume}{32}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1610607
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1610607
+      \endverb
+    \endentry
+    \entry{ansatz.2007}{proceedings}{}
+      \name{editor}{1}{}{%
+        {{hash=a621e429c65ee9d3c55f40fc0b9e2e8e}{%
+           family={{Najla Raza, Aamer Nadeem, Muhammad Zohaib Z. Iqbal}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a621e429c65ee9d3c55f40fc0b9e2e8e}
+      \strng{fullhash}{a621e429c65ee9d3c55f40fc0b9e2e8e}
+      \strng{bibnamehash}{a621e429c65ee9d3c55f40fc0b9e2e8e}
+      \strng{editorbibnamehash}{a621e429c65ee9d3c55f40fc0b9e2e8e}
+      \strng{editornamehash}{a621e429c65ee9d3c55f40fc0b9e2e8e}
+      \strng{editorfullhash}{a621e429c65ee9d3c55f40fc0b9e2e8e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{An Automated Approach to System Testing based on Scenarios and Operations Contracts}
+      \field{urlday}{6}
+      \field{urlmonth}{12}
+      \field{urlyear}{2020}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4385504
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4385504
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
