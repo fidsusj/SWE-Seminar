@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  8 DEC 2020 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  9 DEC 2020 17:50
 entering extended mode
 **./synthesis.tex
 (synthesis.tex
@@ -636,48 +636,92 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \c@LT@chunks=\count403
 \LT@p@ftn=\toks21
 )
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
+s.sty"
+\lst@mode=\count404
+\lst@gtempboxa=\box54
+\lst@token=\toks22
+\lst@length=\count405
+\lst@currlwidth=\dimen147
+\lst@column=\count406
+\lst@pos=\count407
+\lst@lostspace=\dimen148
+\lst@width=\dimen149
+\lst@newlines=\count408
+\lst@lineno=\count409
+\lst@maxwidth=\dimen150
+
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc
+.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count410
+\lst@skipnumbers=\count411
+\lst@framebox=\box55
+)
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listing
+s.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.s
+ty"
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\col
+or.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang
+1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 64
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 89
 .
- ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+
+("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (synthesis.aux)
+)
+(synthesis.aux)
 \openout1 = `synthesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
 -pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count404
-\scratchdimen=\dimen147
-\scratchbox=\box54
-\nofMPsegments=\count405
-\nofMParguments=\count406
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count407
-\MPscratchDim=\dimen148
-\MPnumerator=\count408
-\makeMPintoPDFobject=\count409
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count412
+\scratchdimen=\dimen151
+\scratchbox=\box56
+\nofMPsegments=\count413
+\nofMParguments=\count414
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count415
+\MPscratchDim=\dimen152
+\MPnumerator=\count416
+\makeMPintoPDFobject=\count417
+\everyMPtoPDFconversion=\toks24
 )
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\eps
 topdf-base.sty"
@@ -700,20 +744,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'synthesis.bbl' found.
  (synthesis.bbl)
-Package biblatex Info: Reference section=0 on input line 64.
-Package biblatex Info: Reference segment=0 on input line 64.
-
-("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.s
-ty"
-Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
-
-("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\col
-or.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-Package hyperref Info: Link coloring ON on input line 64.
+Package biblatex Info: Reference section=0 on input line 89.
+Package biblatex Info: Reference segment=0 on input line 89.
+Package hyperref Info: Link coloring ON on input line 89.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref
 .sty"
@@ -727,53 +760,54 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 \gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count410
+\c@section@level=\count418
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
+LaTeX Info: Redefining \nameref on input line 89.
  (synthesis.out) (synthesis.out)
 \@outlinefile=\write4
 \openout4 = `synthesis.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-0.
+\c@lstlisting=\count419
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+15.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-0.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+15.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-0.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+15.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-90.
+115.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-90.
+115.
 
 ("C:\Users\D070497\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 90.
+(Font)              <12> on input line 115.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 90.
+(Font)              <8> on input line 115.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 90.
+(Font)              <6> on input line 115.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 95.
+(Font)              <10.95> on input line 120.
 
 [1
 
@@ -818,31 +852,47 @@ Overfull \hbox (50.22636pt too wide) in alignment at lines 42--74
  [] [] [] 
  []
 
-[3] [4] [5]) [6] [7] (synthesis.aux)
+[3] [4] [5]) (content/example.tex [6]
+
+Package hyperref Warning: No autoref name for `lstnumber' on input line 51.
+
+<img/ucts.png, id=97, 789.95125pt x 262.9825pt>
+File: img/ucts.png Graphic file (type png)
+<use img/ucts.png>
+Package pdftex.def Info: img/ucts.png  used on input line 55.
+(pdftex.def)             Requested size: 390.0pt x 129.83363pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7]) [8 <./img/ucts.png>] [9] (synthesis.aux)
 Package rerunfilecheck Info: File `synthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0E6630AA0EE992A1E1E858FBC085E494;168.
+(rerunfilecheck)             Checksum: CC611DE528B5EB61727A11A4F735266C;452.
 Package logreq Info: Writing requests to 'synthesis.run.xml'.
 \openout1 = `synthesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14247 strings out of 479765
- 255722 string characters out of 2865212
- 1007057 words of memory out of 3000000
- 30996 multiletter control sequences out of 15000+200000
- 582370 words of font info for 55 fonts, out of 3000000 for 9000
+ 16013 strings out of 479765
+ 279173 string characters out of 2865212
+ 1078167 words of memory out of 3000000
+ 32694 multiletter control sequences out of 15000+200000
+ 582689 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,6n,73p,1657b,1693s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.
-enc}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
-mbx12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmr10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/lm/lmr12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmri12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/lm/lmtt12.pfb>
-Output written on synthesis.pdf (8 pages, 154536 bytes).
+ 66i,6n,73p,1657b,1964s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{lstnumber.60} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
+c}<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmb
+x12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmr10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmr12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmri12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmtt10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on synthesis.pdf (10 pages, 205452 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

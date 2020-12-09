@@ -1,17 +1,17 @@
 [0] Config.pm:312> INFO - This is Biber 2.15 (beta)
 [1] Config.pm:315> INFO - Logfile is 'synthesis.blg'
-[1477] biber-MSWIN64:330> INFO - === 
-[2127] Biber.pm:415> INFO - Reading 'synthesis.bcf'
-[3132] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
-[3429] Biber.pm:4334> INFO - Processing section 0
-[3546] Biber.pm:4523> INFO - Looking for bibtex format file 'references.bib' for section 0
-[3711] bibtex.pm:1682> INFO - LaTeX decoding ...
-[3730] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[4415] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\D070497\AppData\Local\Temp\biber_tmp_FRKJ\33e59b5ca9ec342068223d604c3f8d55_17700.utf8, line 3, warning: 43 characters of junk seen at toplevel
-[4531] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[4532] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[4532] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[4532] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
-[5030] bbl.pm:651> INFO - Writing 'synthesis.bbl' with encoding 'latin1'
-[5034] bbl.pm:754> INFO - Output to synthesis.bbl
-[5035] Biber.pm:128> INFO - WARNINGS: 1
+[192] biber-MSWIN64:330> INFO - === 
+[229] Biber.pm:415> INFO - Reading 'synthesis.bcf'
+[393] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[416] Biber.pm:4334> INFO - Processing section 0
+[437] Biber.pm:4523> INFO - Looking for bibtex format file 'references.bib' for section 0
+[464] bibtex.pm:1682> INFO - LaTeX decoding ...
+[477] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[508] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\D070497\AppData\Local\Temp\biber_tmp_nWRg\33e59b5ca9ec342068223d604c3f8d55_3592.utf8, line 3, warning: 43 characters of junk seen at toplevel
+[522] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[522] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[522] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[523] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[538] bbl.pm:651> INFO - Writing 'synthesis.bbl' with encoding 'latin1'
+[541] bbl.pm:754> INFO - Output to synthesis.bbl
+[543] Biber.pm:128> INFO - WARNINGS: 1

@@ -1,0 +1,64 @@
+\section{Example}
+
+In this chapter both approaches should be demonstrated within the example of a movie management software.  
+
+\subsection{Automatic Test Generation: A Use Case Driven Approach}
+
+In the first step the test objectives have to be derived. Therefore we define the use cases and their contracts as requirement-level logical expressions. Only the use cases that really impact the state of the transition system were specified for this example. The notation used is equal to the one proposed in the paper. 
+
+\begin{lstlisting}
+UC createMovie(m: movie)
+post createdMovie(m)
+
+UC createLinkedPerformer(p: performer, m: movie)
+pre createdMovie(m)
+post createdPerformer(p) and createdLink(p,m)
+
+UC rateMovie(m: movie)
+pre createdMovie(m)
+post calculatedOverallRating(m)
+
+UC ratePerformer(p: performer)
+pre createdPerformer(p)
+post forall(m: movie){ createdLink(p,m)@pre implies calculatedOverallRating(m) }
+
+UC linkExistingMovie(m: movie, p: performer)
+pre createdMovie(m) and createdPerformer(p)
+post not createdLink(p,m)@pre implies (createdLink(p,m) and calculatedOverallRating(m))
+
+UC linkExistingPerformer(m: movie, p: performer)
+pre createdMovie(m) and createdPerformer(p)
+post not createdLink(p,m)@pre implies (createdLink(p,m) and calculatedOverallRating(m))
+
+UC unlinkMovie(m: movie, p: performer)
+pre createdMovie(m) and createdPerformer(p) and createdLink(p,m)
+post calculatedOverallRating(m) and not createdLink(p,m) and not exists(m2: movie){ createdLink(p,m2) }@pre implies not createdPerformer(p)
+
+UC unlinkPerformer(m: movie, p: performer)
+pre createdMovie(m) and createdPerformer(p) and createdLink(p,m)
+post calculatedOverallRating(m) and not createdLink(p,m) and not exists(m2: movie){ createdLink(p,m2) }@pre implies not createdPerformer(p)
+
+UC removeMovie(m: movie)
+pre createdMovie(m)
+post not createdMovie(m) and forall(p: performer){ not createdLink(p,m) } and not exist(m2: movie){ createdLink(p,m2) }@pre implies not createdPerformer(p)
+
+UC removePerformer(p: performer)
+pre createdPerformer(p)
+post not createdPerformer(p) and forall(m: movie){ not createdLink(p,m) }
+
+\end{lstlisting}
+
+After that the UCSystem tool should build the UCTS (\autoref{ucts}) through exhaustive simulation. The pool of parameters was restricted to one movie and performer to avoid a combinatorical explosion for this example. Furthermore the predicate calculatedOverallRating is no longer considered. Note that only predicates that evaluate to true are listed in the states as in the original paper. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\textwidth]{img/ucts.png}
+	\label{ucts}
+\end{figure}
+
+Depending on the selected coverage criterion, we receive different test objectives. How many test objectives are derived depends on the internal implementation of UCSystem and cannot be predicted for this example. Let's assume that one test objective is the test path createMovie(m) -> createLinkedPerformer(p,m) -> unlinkMovie(m). 
+
+
+
+
+\subsection{An Automated Approach to System Testing based on Scenarios and Operations Contracts}
