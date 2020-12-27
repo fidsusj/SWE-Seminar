@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  27 DEC 2020 14:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  27 DEC 2020 16:54
 entering extended mode
 **./report.tex
 (report.tex
@@ -948,7 +948,7 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 
 ]
 chapter 1.
-<./images/T1Figure01.pdf, id=36, 340.12811pt x 249.55574pt>
+<./images/T1Figure01.pdf, id=58, 340.12811pt x 249.55574pt>
 File: ./images/T1Figure01.pdf Graphic file (type pdf)
 <use ./images/T1Figure01.pdf>
 Package pdftex.def Info: ./images/T1Figure01.pdf  used on input line 12.
@@ -969,56 +969,56 @@ chapter 3.
 chapter 4.
 ) (content/10-Conclusion.tex [8
 
-]
+] [9]
 chapter 5.
-) [9
+) [10
 
 ]
 chapter 6.
-[10
+[11
 
 ] (report.lof)
 \tf@lof=\write5
 \openout5 = `report.lof'.
 
- [11
+ [12
 
 ] (report.lot)
 \tf@lot=\write6
 \openout6 = `report.lot'.
 
- [12
+ [13
 
 ]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     118.
+(LaTeX3)     124.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     118.
+(LaTeX3)     124.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     118.
+(LaTeX3)     124.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     118.
+(LaTeX3)     124.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     118.
+(LaTeX3)     124.
 
  (report.aux (content/0-Abstract.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18287 strings out of 479765
- 330468 string characters out of 2865212
- 851350 words of memory out of 3000000
- 34890 multiletter control sequences out of 15000+200000
+ 18304 strings out of 479765
+ 330792 string characters out of 2865212
+ 853350 words of memory out of 3000000
+ 34904 multiletter control sequences out of 15000+200000
  541974 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,10n,111p,10603b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1034,9 +1034,9 @@ msfonts/cm/cmr9.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/D070497/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/D070497/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (12 pages, 196598 bytes).
+Output written on report.pdf (13 pages, 205359 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

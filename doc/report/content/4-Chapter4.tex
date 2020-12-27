@@ -1,29 +1,38 @@
-\chapter{Topic}
+\chapter{Testing with Transition Systems}
+
+% 15 Seiten maxmimal
 
 \section{Introduction}
 
-% Problemmotivation
-% Grundlegende Begriffe (im Wesentlichen durch Verweis auf den Glossar
-% Struktur des Kapitels.
+Acceptance tests are used to make sure that clients receive exactly the kind of software that they previously specified within the order contract submitted to the software vendor. Oftentimes what was specified and what was implemented in the end does not match entirely. The software vendor therefore faces traceability problems to track which requirements could be covered in which tests. How does one make sure that each atomic functional and robustness requirement specified is covered in the requirements' implementation?
 
-\section{Literature Search}
+To solve this, the process of formal definition of requirements and matching acceptance tests must be brought closer together, testing should already bé possible in early stages of development, to be precise during the specification phase already. To automatically derive test scenarios from means of the specification area transition systems are used. They help to generate test paths through possible combinations of fine-grained functional requirements. An equivalent approach can be used to derive robustness tests as well. In this process requirements can furthermore be tested on their consistency and integration and eventually can be refined further. 
 
-\section{Approach 1}
+For this purpose the two approaches \cite{ClementineNebut2006} and \cite{NajlaRaza2007} were analyzed. While \cite{ClementineNebut2006} was given in advance by the advisors, \cite{NajlaRaza2007} was discovered through an extensive literature search shown in \autoref{literaturesearch}. Both apporaches will be explained in the following sections \ref{approachone} and \ref{approachtwo} and applied to the movie management software example. A comparison between the two approaches will be drawn using a synthesis matrix shown in \autoref{comparison}. The main results of testing with transitions systems will be summarized in \autoref{conclusion}. 
+
+Please refer to the glossar in order to receive a common understanding of the following terms used in the sections below: contract, operation, test criterion, test objective, test scenario, use case, use case scenario.
+
+\section{Literature Search} \label{literaturesearch}
+
+
+
+\section{Approach 1} \label{approachone}
 
 \subsection{Description of Approach 1}
 
 \subsection{Application of Approach 1}
 
-\section{Approach 2}
+\section{Approach 2} \label{approachtwo}
 
 \subsection{Description of Approach 2}
 
 \subsection{Application of Approach 2}
 
-\section{Comparison}
+\section{Comparison} \label{comparison}
 
 % Synthesematrix
+% Feedback einarbeiten
 
-\section{Conclusion}
+\section{Conclusion} \label{conclusion}
 
 % Enthält Aussagen zum Vergleich der Ansätze
