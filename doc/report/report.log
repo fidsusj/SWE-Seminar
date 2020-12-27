@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  27 DEC 2020 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  27 DEC 2020 17:46
 entering extended mode
 **./report.tex
 (report.tex
@@ -967,27 +967,27 @@ chapter 3.
 
 ]
 chapter 4.
-) (content/10-Conclusion.tex [8
+[8
 
-] [9]
+]) (content/10-Conclusion.tex [9] [10]
 chapter 5.
-) [10
+) [11
 
 ]
 chapter 6.
-[11
+[12
 
 ] (report.lof)
 \tf@lof=\write5
 \openout5 = `report.lof'.
 
- [12
+ [13
 
 ] (report.lot)
 \tf@lot=\write6
 \openout6 = `report.lot'.
 
- [13
+ [14
 
 ]
 
@@ -1015,10 +1015,10 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18304 strings out of 479765
- 330792 string characters out of 2865212
- 853350 words of memory out of 3000000
- 34904 multiletter control sequences out of 15000+200000
+ 18306 strings out of 479765
+ 330807 string characters out of 2865212
+ 855350 words of memory out of 3000000
+ 34905 multiletter control sequences out of 15000+200000
  541974 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,10n,111p,10603b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1034,9 +1034,9 @@ msfonts/cm/cmr9.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/D070497/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/D070497/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (13 pages, 205359 bytes).
+Output written on report.pdf (14 pages, 209312 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
+ 248 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

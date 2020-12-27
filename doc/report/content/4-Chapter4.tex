@@ -4,15 +4,41 @@
 
 \section{Introduction}
 
-Acceptance tests are used to make sure that clients receive exactly the kind of software that they previously specified within the order contract submitted to the software vendor. Oftentimes what was specified and what was implemented in the end does not match entirely. The software vendor therefore faces traceability problems to track which requirements could be covered in which tests. How does one make sure that each atomic functional and robustness requirement specified is covered in the requirements' implementation?
+System tests are used to make sure that clients receive exactly the kind of software that they previously specified within the order contract submitted to the software vendor. Oftentimes what was specified and what was implemented in the end does not match entirely. The software vendor therefore faces traceability problems to track which requirements could be covered in which tests. How does one make sure that each atomic functional and robustness requirement specified is covered in the requirements' implementation?
 
-To solve this, the process of formal definition of requirements and matching acceptance tests must be brought closer together, testing should already bé possible in early stages of development, to be precise during the specification phase already. To automatically derive test scenarios from means of the specification area transition systems are used. They help to generate test paths through possible combinations of fine-grained functional requirements. An equivalent approach can be used to derive robustness tests as well. In this process requirements can furthermore be tested on their consistency and integration and eventually can be refined further. 
+To solve this, the process of formal definition of requirements and matching system tests must be brought closer together, testing should already bé possible in early stages of development, to be precise during the specification phase already. To automatically derive test scenarios from means of the specification area transition systems are used. They help to generate test paths through possible combinations of fine-grained functional requirements. An equivalent approach can be used to derive robustness tests as well. In this process requirements can furthermore be tested on their consistency, correctness and integration and eventually can be refined further.
 
 For this purpose the two approaches \cite{ClementineNebut2006} and \cite{NajlaRaza2007} were analyzed. While \cite{ClementineNebut2006} was given in advance by the advisors, \cite{NajlaRaza2007} was discovered through an extensive literature search shown in \autoref{literaturesearch}. Both apporaches will be explained in the following sections \ref{approachone} and \ref{approachtwo} and applied to the movie management software example. A comparison between the two approaches will be drawn using a synthesis matrix shown in \autoref{comparison}. The main results of testing with transitions systems will be summarized in \autoref{conclusion}. 
 
 Please refer to the glossar in order to receive a common understanding of the following terms used in the sections below: contract, operation, test criterion, test objective, test scenario, use case, use case scenario.
 
 \section{Literature Search} \label{literaturesearch}
+
+The literature research was driven by the central research question: \glqq Which approaches for automatic generation of system tests exist that are using contract enriched use cases or other use case related means of the specification area within a transition system simulation model?\grqq 
+
+The focus during this literature search was on finding a second approach to automatically generate system tests from means of the specification phase by exhaustively simulating a transition system to generate test paths similar to \cite{ClementineNebut2006}. But as \cite{ClementineNebut2006} is restricted on using contract enriched use cases and use case scenarios, the way how test objectives are derived was this time freely selectable to receive another new, but similar approach. The pre-search results were promising both on IEEE Xplore and ACM. Only some papers on ACM could not be accessed publicly. The amount of results was considered to be sufficient to cover all relevant scientific papers, which is why research was restricted on these two platforms. Furthermore two relevance criteria inspired by the central research question were defined:
+
+\begin{itemize}
+	\item Does the method described in the article generate system tests automatically from use cases or other use case related means of the specification area?
+	\item Are test objectives generated using some kind of simulation model based on use case contracts (pre- and postconditions) or similar transition system approaches?
+\end{itemize} 
+
+As system tests can not exclusively be derived from means of the specification area, an article should restrict to generating system tests from use case related means of the specification area. To derive test objectives a transition system should be simulated exhaustively based on contract definitions (pre- and postconditions). 
+
+Search was done using both snowballing and search term techniques. 140 papers were found referencing \cite{ClementineNebut2006} and 46 articles were referenced by \cite{ClementineNebut2006}. 
+
+% Snowballing table
+
+Seach-term based search was done using the following key terms:
+
+\begin{itemize}
+	\item system tests
+	\item automatic generation
+	\item transition system
+	\item simulation model
+	\item use cases
+	\item contracts
+\end{itemize} 
 
 
 
