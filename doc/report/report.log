@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  28 DEC 2020 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  28 DEC 2020 19:17
 entering extended mode
 **./report.tex
 (report.tex
@@ -1235,25 +1235,25 @@ Overfull \hbox (50.22635pt too wide) in alignment at lines 343--375
  [] [] [] 
  []
 
-[19 <./images/cts.png>] [20]) (content/10-Conclusion.tex [21]
+[19 <./images/cts.png>] [20] [21]) (content/10-Conclusion.tex [22]
 chapter 5.
-) [22
+) [23
 
 ]
 chapter 6.
-[23
+[24
 
 ] (report.lof)
 \tf@lof=\write5
 \openout5 = `report.lof'.
 
- [24
+ [25
 
 ] (report.lot)
 \tf@lot=\write6
 \openout6 = `report.lot'.
 
- [25
+ [26
 
 ]
 
@@ -1281,8 +1281,8 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20158 strings out of 479765
- 355495 string characters out of 2865212
+ 20159 strings out of 479765
+ 355502 string characters out of 2865212
  936211 words of memory out of 3000000
  36645 multiletter control sequences out of 15000+200000
  542141 words of font info for 54 fonts, out of 3000000 for 9000
@@ -1307,9 +1307,9 @@ ublic/amsfonts/cm/cmsy10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/D070497/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/D070497/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report.pdf (25 pages, 552301 bytes).
+Output written on report.pdf (26 pages, 555899 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 137 named destinations out of 1000 (max. 500000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
