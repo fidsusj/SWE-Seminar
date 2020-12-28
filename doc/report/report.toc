@@ -4,17 +4,17 @@
 \contentsline {subsubsection}{\nonumberline Subsubsection}{5}{subsubsection*.4}%
 \contentsline {chapter}{\numberline {2}Richtiges Zitieren}{6}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Chapter}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Testing with Transition Systems}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Testing with a Transition System}{8}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{8}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Literature Search}{8}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Approach 1}{11}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Description of Approach 1}{11}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Application of Approach 1}{12}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Approach 2}{14}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Description of Approach 2}{14}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Application of Approach 2}{15}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Comparison}{16}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Conclusion}{19}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Conclusion}{20}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Bibliography}{21}{chapter.6}%
+\contentsline {subsection}{\numberline {4.3.2}Application of Approach 1}{14}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Approach 2}{17}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Description of Approach 2}{17}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Application of Approach 2}{17}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Comparison}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Conclusion}{21}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Conclusion}{22}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Bibliography}{23}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
