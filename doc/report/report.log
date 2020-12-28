@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  28 DEC 2020 17:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  28 DEC 2020 18:29
 entering extended mode
 **./report.tex
 (report.tex
@@ -1209,39 +1209,33 @@ Package pdftex.def Info: ./images/ucts.png  used on input line 243.
 File: ./images/ucs.png Graphic file (type png)
 <use ./images/ucs.png>
 Package pdftex.def Info: ./images/ucs.png  used on input line 254.
-(pdftex.def)             Requested size: 330.05322pt x 368.82732pt.
- [16 <./images/ucs.png>]
-<./images/iod.png, id=226, 854.19125pt x 595.22375pt>
+(pdftex.def)             Requested size: 412.56496pt x 461.04144pt.
+ [16 <./images/ucs.png>] [17]
+<./images/iod.png, id=230, 854.19125pt x 595.22375pt>
 File: ./images/iod.png Graphic file (type png)
 <use ./images/iod.png>
-Package pdftex.def Info: ./images/iod.png  used on input line 275.
+Package pdftex.def Info: ./images/iod.png  used on input line 279.
 (pdftex.def)             Requested size: 412.56496pt x 287.4843pt.
- [17 <./images/iod.png>]
-<./images/cts.png, id=235, 850.17625pt x 151.56625pt>
+<./images/cts.png, id=232, 850.17625pt x 151.56625pt>
 File: ./images/cts.png Graphic file (type png)
 <use ./images/cts.png>
-Package pdftex.def Info: ./images/cts.png  used on input line 305.
+Package pdftex.def Info: ./images/cts.png  used on input line 309.
 (pdftex.def)             Requested size: 412.56496pt x 73.55116pt.
- [18 <./images/cts.png>]
-
-Package natbib Warning: Citation `ansatz.2006' on page 19 undefined on input li
-ne 340.
 
 
-Package natbib Warning: Citation `ansatz.2007' on page 19 undefined on input li
-ne 340.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 1043) in paragraph at lines 357--357
+[18 <./images/iod.png>]
+Underfull \hbox (badness 1043) in paragraph at lines 361--361
 \OT1/cmr/m/n/10 tech-niques, ob-jec-tives of test-ing, eval-u-a-tion
  []
 
 
-Overfull \hbox (50.22635pt too wide) in alignment at lines 339--371
+Overfull \hbox (50.22635pt too wide) in alignment at lines 343--375
  [] [] [] 
  []
 
-[19] [20]) (content/10-Conclusion.tex [21]
+[19 <./images/cts.png>] [20]) (content/10-Conclusion.tex [21]
 chapter 5.
 ) [22
 
@@ -1259,11 +1253,7 @@ chapter 6.
 \tf@lot=\write6
 \openout6 = `report.lot'.
 
-
-
-Package natbib Warning: There were undefined citations.
-
-[25
+ [25
 
 ]
 
@@ -1317,9 +1307,9 @@ ublic/amsfonts/cm/cmsy10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/D070497/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/D070497/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report.pdf (25 pages, 550755 bytes).
+Output written on report.pdf (25 pages, 552301 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
+ 452 PDF objects out of 1000 (max. 8388607)
  137 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

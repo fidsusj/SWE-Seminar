@@ -236,7 +236,7 @@ In the first step the test objectives have to be derived. Therefore we define th
 	post not createdPerformer(p) and forall(m: movie){ not createdLink(p,m) }
 \end{lstlisting}
 
-After that the UCSystem prototype/interpreter tool should build the UCTS (\autoref{ucts}) through exhaustive simulation. The pool of parameters was restricted to one movie and performer to avoid a combinatorical explosion for this example. To build instantiated use cases the set of formal parameters are replaces with all the possible combinations of their actual vales. In our case we use the most simple approach by just having one possible combination. Furthermore the predicate calculatedOverallRating is no longer considered. Note that only predicates that evaluate to true are listed in the states as in the original paper. 
+After that the UCSystem prototype/interpreter tool should build the UCTS (\autoref{ucts}) through exhaustive simulation. The pool of parameters was restricted to one movie and performer to avoid a combinatorical explosion for this example. To build instantiated use cases the set of formal parameters are replaced with all the possible combinations of their actual values. In our case we use the most simple approach by just having one possible combination. Furthermore the predicate calculatedOverallRating is no longer considered. Note that only predicates that evaluate to true are listed in the states as in the original paper. 
 
 \begin{figure}[h]
 	\centering
@@ -251,7 +251,7 @@ Depending on the selected coverage criterion, we receive different test objectiv
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{./images/ucs.png}
+	\includegraphics[width=1.0\textwidth]{./images/ucs.png}
 	\caption{The Use Case Scenarios}
 	\label{ucs}
 \end{figure}
@@ -264,7 +264,11 @@ The UC-SCSystem uses the shown implementation in the use case scenarios to deriv
 
 \subsection{Description of Approach 2}
 
-Based on the suggested improvements in the first paper, the second paper uses interaction overview diagrams (IOD), a special form of activity diagram used to show control flow, to derive test paths. It helps to start testing in early stages of development. Each node in the IOD The IODs get enhanced with contracts written in the object constraint language (OCL) and the get transformed into a contracts transition system (CTS) which models all scenarios of the IOD. Through traversing the CTS test paths get derived. Key difference to the first paper is that test scenarios do not get generated on system level but rather on use case level due to the fact that contracts are not attached to use cases but to IODs. It therefore serves as a platform to generate more in-depth test scenarios (as well for negative test cases).
+Based on the suggested improvements in the first paper, the second paper uses interaction overview diagrams (IOD), a special form of activity diagram used to show control flow, to derive test paths. It helps to start testing in early stages of development. Each node in the IOD represent either an interaction diagram (sequence diagrams) or interaction occurences that show an operation invocation. Every IOD corresponds to one use case. The IODs get enhanced with contracts written in the object constraint language (OCL) and they get transformed into a contracts transition system (CTS) which models all scenarios of the IOD. Here the states are represented by the contracts and the transitions by the operations (interaction diagrams or interaction occurences) in the IOD. The CTS is built by a tool using the XMI file for the IOD and the operation contracts in OCL as inputs. A state is created against each precondition and each postcondition of the operations. Logical if-then-else conditions are resolved by combining their testing condition with the result, therefore two different sub-states are created. The surrounding postcondition is then a composition of the two sub-states. If contract statements are the same for different operations, the identical statements are also split into two sub-states. Additional transitions are added for all conditional flows leading to alternative scenarios and their guard conditions are attached with them. Additional CTS flows help to further refine the requirements, potential unwanted behavior or underspecification can be found. The CTS is often visualized in a matrix. 
+
+Through traversing the CTS test paths get derived. Therefore different coverage criteria are defined. The simplest coverage criterion is the \textit{state coverage} criterion, which generates test paths until all states of the CTS are covered. The criterion is already covered by the wider \textit{transition coverage} criterion, which makes sure that all transitions are traversed before stopping the test path generation. The most expensive criterion is the \textit{transition pair coverage} criterion, each possible transition pair needs to be covered in the test path generation process. It was detected, that the \textit{transition coverage} criterion delivers a reasonable amount of test paths, but is not suitable for fault detection every time (compared to the \textit{transition pair coverage} criterion which scores best in this task). 
+
+Key difference to the first paper is that test scenarios do not get generated on system level but rather on use case level due to the fact that contracts are not attached to use cases but to IODs. It therefore serves as a platform to generate more in-depth test scenarios (as well for negative test cases). The paper does not provide additional steps on how the generate executable test scenarios from the retrieved test paths. 
 
 \subsection{Application of Approach 2}
 
@@ -337,35 +341,35 @@ Based on a coverage criterion the test paths get derived. Differing from the fir
 \end{enumerate}
 
 \begin{longtable}[h]{p{0.5cm}p{0.5\textwidth}p{0.5\textwidth}}
-	Nr. & Approach \cite{ansatz.2006} & Approach \cite{ansatz.2007} \\
-	3a & 
+	Nr. & Approach \cite{ClementineNebut2006} & Approach \cite{NajlaRaza2007} \\
+	1a & 
 	Use cases describing the basic operations in the transition system. Contracts that are attached to the use cases describing the states in the transition system. The transition system (UCTS) itself as a simulation model to derive test objectives from. Test objectives describing the test paths. UCSystem as a third party tool to build the UCTS and to derive test objectives using coverage criteria. Use case scenarios to build test scenarios from test objectives. UC-SCSystem to generate executable test scenarios.  & 
 	IODs holding all scenarios and operations of a use case. Operations can either be interaction uses or sequence diagrams inside the IOD. Contracts written in OCL that are attached to the operations describing the states in the transition system. The CTS describing the transition system. Test paths derived from the CTS using coverage criteria.  \\
-	3b & 
+	1b & 
 	Use cases, contracts written as logical expressions, use case scenarios (sequence diagrams), initial system state, selected coverage criterion and additional use case scenario parameters & 
 	IODs, contracts written in OCL, selected coverage criterion, possibly manual resolving of conflicts in the CTS matrix \\
-	3c &
-	To express the ordering constraints between use cases, each use case is attached by a contract. A contract consists of pre- and postconditions that specify the system properties to make a use case applicable and which properties are aquired by the system after its application. Parameters to contracts are actors and main concepts of the use case. To simulate the use cases, the set of formal parameters of the contracts are replaced with all possible combinations of their actual values. The use cases are then called \textit{instantiated}. To apply an instantiated use case the precondition of its contract must match with the current simulation state. Afterwards the simulation state is updated according to the postcondition of the use case. Exhaustively simulating the system results in the use case transition system (UTCS). To derive test objectives the transition system is traversed according to one of the predefined coverage criteria {All Edges} (AE), \textit{All Vertices} (AV), \textit{All Instantiated Use Cases} (AIUC), \textit{All Vertices and All Instantiated Use Cases} (AV-AIUC) or \textit{All Precondition Terms criterion} (APT). Use case scenarios contain the main messages exchanged between the tester and the SUT, they define how the system has to be simulated to perform a use case and how to react to the simulation. To build test scenarios a use case scenario can replace a use case at a certain stage of execution iff the state reached at this stage locally implies the precondition of the use case scenario. Executable test scenarios are genereted by the UC-SCSystem. &
+	1c &
+	To express the ordering constraints between use cases, each use case is attached by a contract. A contract consists of pre- and postconditions that specify the system properties to make a use case applicable and which properties are aquired by the system after its application. Parameters to contracts are actors and main concepts of the use case. To simulate the use cases, the set of formal parameters of the contracts are replaced with all possible combinations of their actual values. The use cases are then called \textit{instantiated}. To apply an instantiated use case the precondition of its contract must match with the current simulation state. Afterwards the simulation state is updated according to the postcondition of the use case. Exhaustively simulating the system results in the use case transition system (UCTS). To derive test objectives the transition system is traversed according to one of the predefined coverage criteria {All Edges} (AE), \textit{All Vertices} (AV), \textit{All Instantiated Use Cases} (AIUC), \textit{All Vertices and All Instantiated Use Cases} (AV-AIUC) or \textit{All Precondition Terms criterion} (APT). Use case scenarios contain the main messages exchanged between the tester and the SUT, they define how the system has to be simulated to perform a use case and how to react to the simulation. To build test scenarios a use case scenario can replace a use case at a certain stage of execution if the state reached at this stage locally implies the precondition of the use case scenario. Executable test scenarios are genereted by the UC-SCSystem. &
 	Each operation in the IOD was enriched with its own contract written in OCL. To build the CTS, first all operations have to be identified from the IOD. The operations are taken from the sequence diagrams or from other operations expressed as interaction occurences in the IOD. Using the contracts of operations, the states for the CTS are identified. Eventually conflicts in the CTS have to be resolved such as logical if-then-else conditions, equal contract statements or join nodes. After the CTS was built, test paths are derived from the CTS by applying a coverage criterion, which is either state-, transition- or transition pair coverage. \\
-	4a & 
+	2a & 
 	Automatic test generation from use cases and use case scenarios. Requirement validation by identifying inconsistencies, underspecifications and invariants. & 
 	Deriving test paths from IODs. Further requirement validation on use case level\\
-	4b & 
+	2b & 
 	Test writers / Developers, Requirement Engineers &
 	Test writers / Developers, Requirement Engineers \\
-	4c &
+	2c &
 	Software Requirements (definition of a software requirement, functional requirements, acceptance tests), Software Testing (model-based techniques, objectives of testing, evaluation of the tests performed), Software Engineering Models and Methods (preconditions, postconditions and invariants, behavioral modeling, analysis for consistency and correctness, traceability) &
 	Software Requirements (definition of a software requirement, functional requirements, acceptance tests), Software Testing (model-based techniques), Software Engineering Models and Methods (preconditions, postconditions and invariants, behavioral modeling, analysis for consistency and correctness) \\
-	5a & 
+	3a & 
 	Dedicated editor to design use cases with contracts, UCSystem to build the UCTS simulation model and to derive test objectives from it. UC-SCSystem to exchange the use cases by use case scenarios in order to build the executable test case scenarios & 
 	UML 2.0 as a standard for IODs, OCL as formal language to write the contracts, prototype tool to derive test paths \\
-	5b & 
+	3b & 
 	Writing the use cases and contracts is supported by a dedicated editor, but has to be done manually. Deriving test objectives from use cases and contracts through the transition system is done automatically by UCSystem. Use case scenarios have to be specified manually, the generation of test scenarios works semi-automatically with UC-SCSystem as it may need additional parameters from the tester. & 
 	Only the IOD and contract specification has to be done manually, the complete approach was then automized by a prototype tool \\
-	6a & 
+	4a & 
 	The approach was evaluated by looking at the statement coverage of three sample programs and the efficiency of test case scenario generation & 
 	The approach was evaluated by looking at the number of test paths generated to cover all success scenarios and fault detections \\
-	6b &
+	4b &
 	Code coverage with the most coverage criteria was around 80\%. The Coverage criteria differ in efficiency. AE, AV and AV-AIUC perform with low efficiency, the sets of test cases are larger than in AIUC and APT. APT reaches 100\% functional test coverage with only 15 test case scenarios. Testing robustness leads to a high number of generated test case scenarios that only cover about 50\% of the corresponding code. The approach is good for functional testing, but bad for robustness testing. &
 	Using the transition criterion to derive test paths leads to a reasonable amount of test paths and covers all alternative flows in the IOD, but is not suitable for fault detection at any time. The transition pair coverage criterion guarantees the maximum fault detection, but leads to a high amount of test paths. State coverage captures all success scenarios. \\
 \end{longtable}

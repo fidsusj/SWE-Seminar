@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {4.4}Approach 2}{17}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Description of Approach 2}{17}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Application of Approach 2}{17}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Comparison}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Comparison}{19}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Conclusion}{21}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Conclusion}{22}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Bibliography}{23}{chapter.6}%
