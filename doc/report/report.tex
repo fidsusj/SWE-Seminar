@@ -12,12 +12,43 @@
 
 % Custom packages
 \usepackage[numbers]{natbib}
-\usepackage{longtable}
 \usepackage{ragged2e}
+\usepackage{longtable}
 %\usepackage{tikz}
 %\usetikzlibrary{positioning}
 %\usepackage{pdflscape}
 %\usepackage{rotating}
+
+%----------Begin Hausberger Packages-----------
+%\usepackage{csquotes}
+%\usepackage{float}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	morekeywords={UC, context, pre, @pre, post, and, or, not, implies, forall, exists},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+%----------End Hausberger Packages-----------
 
 \usepackage{glossaries} 
 
@@ -114,6 +145,9 @@ In: IEEE Transactions on Software Engineering (Volume: 32, Issue: 3, March 2006)
 
 \bibitem{NajlaRaza2007} Raza, N., Nadeem, A., Iqbal, M. Z. Z.: An Automated Approach to System Testing based on Scenarios and Operations Contracts.
 In: Seventh International Conference on Quality Software (QSIC 2007)
+
+\bibitem{FelixHausberger2020} Hausberger, F.: Research planning, research and mid-term presentation.
+\url{https://github.com/fidsusj/SWE-Seminar}
 
 \end{thebibliography}
 
