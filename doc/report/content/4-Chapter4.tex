@@ -97,9 +97,9 @@ The paper \textit{An Automatic Tool for Generating Test Cases from the System's 
 
 The chosen article to further evaluate is \textit{An Automated Approach to System Testing based on Scenarios and Operations Contracts}, as it introduces a second way to create system tests from use case scenarios as UML 2.0 models by enriching it with contracts and by transforming the formalized scenarios to a transition system to derive test objectives. It uses a more graphical approach to define use cases instead of using a formalized language to do so and goes deeper down into use-case level instead of system-level test generation. A more in-depth comparison between the two papers can be found in \autoref{comparison}.
 
-\section{Approach 1} \label{approachone}
+\section{Automatic Test Generation: A Use Case Driven Approach} \label{approachone}
 
-\subsection{Description of Approach 1}
+\subsection{Description}
 
 \begin{figure}[h]
 	\centering
@@ -124,7 +124,7 @@ where
 
 $n_{ip}$ describes the amount of instantiated predicates, $p$ the amount of predicates, $max_{instances}$ the maximum amount of instances and $max_{param}$ the maximum amount of parameters per predicate p. In practice many of the potential states are not reachable and only a small number of instances are necessary for achieving a proper statement coverage. 
 
-Now relevant \textit{test objectives} get extracted from the UCTS by applying predefined coverage criteria. 
+Now relevant test objectives get extracted from the UCTS by applying predefined coverage criteria. 
 
 The \textit{All Edges} (AE) criterion makes sure that all state transitions are covered, whereas the \textit{All Vertices} (AV) criterion guarantees that all states (predicates) are reached within the set of test objectives.  The \textit{All Instantiated Use Cases} (AIUC) criterion is helpful in case a state transition can be done by multiple use cases or a use case leads to no state change. A combination od AV and AIUC is the \textit{All vertices and All Instantiated Use Cases} (AV-AIUC) criterion. The most strict criterion is probably the \textit{All Precondition Terms} (APT) criterion, which makes sure that all possible ways to apply each use case are exercised. Now these criterion are mainly introduced to generate functional tests. The \textit{robustness} criterion on the other hand explicitly exercises a use case in as many different ways to make its precondition false. Therefore valid test paths are generated, that lead to an invalid application of a use case to generate robustness tests from. All algorithms are based on breadth-first search in the UCTS to obtain small test-objectives that are human-understandable and meaningful. 
 
@@ -188,7 +188,7 @@ All coverage criteria are almost equal in their achieved code coverage, with the
 
 One possible extensions of the approach was also considered. Activity diagrams could be chosen to model the use case dependencies in a more graphical approach, which is then shown in the upcoming approach two. 
 
-\subsection{Application of Approach 1}
+\subsection{Application}
 
 In the first step the test objectives have to be derived. Therefore we define the use cases and their contracts (\autoref{contracts1}) as requirement-level first order logical expressions. The contracts are used to infer the correct partial ordering of functionalities that the system should offer. Only the use cases that really impact the state of the transition system were specified for this example. The notation used is equal to the one proposed in the paper. \textit{UC} introduces the identifier and parameters of a use case, \textit{pre} marks the beginning of the precondition logical expression and \textit{post} the beginning of the postcondition logical expression. 
 
@@ -258,9 +258,9 @@ Note that the use case scenarios may still be incomplete for the execution. They
 
 The prototype-tool UC-SCSystem uses the shown implementation in the use case scenarios to derive executable test scenarios as JUnit tests.
 
-\section{Approach 2} \label{approachtwo}
+\section{An Automated Approach to System Testing based on Scenarios and Operations Contracts} \label{approachtwo}
 
-\subsection{Description of Approach 2}
+\subsection{Description}
 
 Based on the suggested improvements in the first paper, the second paper uses a more graphical approach using interaction overview diagrams (IOD), a special form of activity diagram used to show control flow, to derive test paths. It helps to start testing in early stages of development. Each node in the IOD represent either an interaction diagram (sequence diagrams) or interaction occurences that show an operation invocation. Every IOD corresponds to one use case. The IODs get enhanced with contracts written in the object constraint language (OCL) and they get transformed into a contracts transition system (CTS) which models all scenarios of the IOD. Here the states are represented by the contracts and the transitions by the operations (interaction diagrams or interaction occurences) in the IOD. The CTS is built by a tool using the XMI file for the IOD and the operation contracts in OCL as inputs. A state is created against each precondition and each postcondition of the operations. Logical if-then-else conditions are resolved by combining their testing condition with the result, therefore two different sub-states are created. The surrounding postcondition is then a composition of the two sub-states. Additional transitions are added for all conditional flows leading to alternative scenarios and their guard conditions are attached to them. Additional CTS flows help to further refine the requirements by spotting potential unwanted behavior or underspecification. The CTS is often visualized in a matrix. 
 
@@ -268,7 +268,7 @@ Through traversing the CTS test paths get derived. Therefore different coverage 
 
 Besides using a graphical approach with IODs instead of using a formal requirement level language, the key difference to the first paper is that test scenarios do not get generated on system level but rather on use case level due to the fact that contracts are not attached to use cases (which can be compared to a complete IOD) but rather to all operations within the IODs. It therefore serves as a platform to generate more in-depth test scenarios (as well for negative test cases). The paper does not provide additional steps on how the generate executable test scenarios from the retrieved test paths. 
 
-\subsection{Application of Approach 2}
+\subsection{Application}
 
 The second approach differs from the first one as this time a transition system is built on a concrete use case, in our case the use case to unlink a movie from a performer. Input to the approach in this paper is the IOD (\autoref{iod}) with separate contracts defined in an OCL file (\autoref{contracts2}). IODs are a special form of activity diagrams used to show the control flow. The nodes in our case are UML sequence diagrams and define the operations of the CTS. The states are represented by the contracts themselves. 
 
@@ -394,6 +394,6 @@ In literature search a second paper was found that follows the process of automa
 
 Approach \cite{ClementineNebut2006} almost shows a fully automated way to derive executable test scenarios as JUnit tests. Contract enriched use cases using a formal language based on requirement-level first order logical expressions are used as an input to the simulation model. Through exhaustive simulation a transition system is build from which test objectives are derived using coverage criteria. It was empirically proven that the AIUC and APT criterion perform most efficient and most extensive measured by statement coverage. Giving contract enriched use case scenarios as a second input helps to generate concrete executable test scenarios. 
 
-\cite{ClementineNebut2006} switches from system level to use case level test generation. It uses contract enriched IODs as graphical input and builds a transition system on it. Test paths are generated using the \textit{transition coverage} criterion. No further methodology was introduced to generate executable test cases, but as the approach is already specified on use case level, the generation of test code is self-explanatory (a similar tool like \textit{UC-SCSystem} from \cite{ClementineNebut2006} can be used).
+\cite{ClementineNebut2006} switches from system level to use case level test generation. It uses contract enriched IODs as graphical input and builds a transition system on it. Test paths are generated using the \textit{transition coverage} criterion. No further methodology was introduced to generate executable test cases, but as the approach is already specified on use case level, the generation of test code is self-explanatory (a similar tool like UC-SCSystem from \cite{ClementineNebut2006} can be used).
 
 One weakness of both approaches remains the capability to generate a sufficient amount robustness tests for fault detection. Both approaches only rely on contract violations and do not sufficiently cover data variations as test path generation is only based on one initial state chosen by the test creator. Still for the automatic generation of functional test scenarios both approaches show industry-standard and highly applicable solutions.
