@@ -2,13 +2,13 @@
 
 \section{Introduction}
 
-System tests are used to make sure that clients receive exactly the kind of software that they previously specified within the order contract submitted to the software vendor. Oftentimes what was specified and what was implemented in the end does not match entirely. The software vendor therefore faces traceability problems to track which requirements could be covered in which tests. How does one make sure that each atomic functional and robustness requirement specified is covered in the requirements' implementation?
+System tests are used to make sure that clients receive exactly the kind of software they previously specified within the order contract submitted to the software vendor. Oftentimes what was specified and what was implemented does not match entirely in the end. The software vendor faces traceability problems to track which requirements could be covered in which tests and therefore which requirements got implemented. How does one make sure that each atomic functional and robustness requirement specified is covered in the requirements' implementation?
 
-To solve this, the process of formal definition of requirements and matching system tests must be brought closer together, testing should already bé possible in early stages of development, to be precise during the specification phase already. To automatically derive test scenarios from means of the specification area transition systems are used. They help to generate test paths through possible combinations of fine-grained functional requirements. An equivalent approach can be used to derive robustness tests as well. In this process requirements can furthermore be tested on their consistency, correctness and integration and eventually can be refined further.
+To solve this, the process of formal definition of requirements and matching system tests must be brought closer together. Testing should already be possible in early stages of development, to be precise during the specification phase already. To automatically derive test scenarios from means of the specification area transition systems are used. They help to generate test paths through possible combinations of fine-grained functional requirements. An equivalent approach can be used to derive robustness tests as well. In this process requirements can furthermore be tested on their consistency, correctness and integration and eventually can be refined further.
 
 For this purpose the two approaches \cite{ClementineNebut2006} and \cite{NajlaRaza2007} were analyzed. While \cite{ClementineNebut2006} was given in advance by the advisors, \cite{NajlaRaza2007} was discovered through an extensive literature search shown in \autoref{literaturesearch}. Both apporaches will be explained in the following sections \ref{approachone} and \ref{approachtwo} and applied to the movie management software example. A comparison between the two approaches will be drawn using a synthesis matrix shown in \autoref{comparison}. The main results of testing with transitions systems will be summarized in \autoref{conclusion}. 
 
-Please refer to the glossar in order to receive a common understanding of the following terms used in the sections below: contract, coverage criterion, IOD, OCL, operation, test case, test criterion, test objective, test scenario, transition system, UC-System, UC-SCSystem, use case, use case scenario, XMI.
+Please refer to the glossar in order to receive a common understanding of the following terms used in the sections below: contract, coverage criterion, IOD, OCL, operation, test case, test objective, test scenario, transition system, UC-System, UC-SCSystem, use case, use case scenario, XMI.
 
 \section{Literature Search} \label{literaturesearch}
 
@@ -23,7 +23,7 @@ The focus during this literature search was on finding a second approach to auto
 
 As system tests can not exclusively be derived from means of the specification area, an article should restrict to generating system tests from use case related means of the specification area. To derive test objectives a transition system should be simulated exhaustively based on contract definitions (pre- and postconditions). 
 
-Search was done using both snowballing and search term techniques. 140 papers were found referencing \cite{ClementineNebut2006} and 46 articles were referenced by \cite{ClementineNebut2006}. The results of the snowballing search can be found in \autoref{snowballing}. The backward snowballing approach was restricted on references stated in the \textit{Related Work} chapter as all other references relate to preceding work that serve as basis knowledge to realize the transition system approach. Additionally, most of the references where quite old since the original paper was published in 2006. Therefore not all papers could be found on IEEE Xplore or ACM. Why specific papers were considered not suitable or only partly suitable is documented in \cite{FelixHausberger2020}.
+Search was done using both snowballing and search term techniques. 140 papers were found referencing \cite{ClementineNebut2006} and 46 articles were referenced by \cite{ClementineNebut2006}. The results of the snowballing search can be found in \autoref{snowballing}. The backward snowballing approach was restricted on references stated in the \textit{Related Work} chapter as all other references relate to preceding work that serve as basis knowledge to realize the transition system approach in \cite{ClementineNebut2006}. Additionally, most of the references where quite old since the original paper was published in 2006. Therefore not all papers could be found on IEEE Xplore or ACM. Why specific papers were considered not suitable or only partly suitable is documented in \cite{FelixHausberger2020}.
 
 \begin{table}[h] 
 	\centering
@@ -44,7 +44,7 @@ Search was done using both snowballing and search term techniques. 140 papers we
 	\end{small}
 \end{table}
 
-Seach-term based search was done using the following key terms: system tests, automatic generation, transition system, simulation model, use cases, contracts. Only papers published between 2006 and 2020 havint the search term "test" and "use case" in its publication title were evaluated. 
+Seach-term based search was done using the following key terms: system tests, automatic generation, transition system, simulation model, use cases, contracts. Only papers published between 2006 and 2020 having the search term "test" and "use case" in its publication title were evaluated. 
 
 \begin{small}
 	\centering
@@ -75,17 +75,17 @@ Seach-term based search was done using the following key terms: system tests, au
 From the resulting papers, only one was considered suitable as a potential second paper. After the search for potential articles to be evaluated was finished, a choice between eight remaining papers from the initial search had to be made:
 
 \begin{itemize}
-	\item System Testing using UML Models,
-	\item An Automatic Tool for Generating Test Cases from the System's Requirements,
-	\item Automated Test Case Generation from Use Case: A Model Based Approach,
-	\item Requirements Document Based Test Scenario Generation for Web Application Scenario Testing,
-	\item An Approach to Modeling and Testing Web Applications Based on Use Cases,
-	\item Test cases generation from UML state diagrams,
-	\item Requirements by Contracts allow Automated System Testing,
-	\item An Automated Approach to System Testing Based on Scenarios and Operations Contracts.
+	\item System Testing using UML Models \cite{MonalisaSarma2007},
+	\item An Automatic Tool for Generating Test Cases from the System's Requirements \cite{RosziatiIbrahim2007},
+	\item Automated Test Case Generation from Use Case: A Model Based Approach \cite{LizheChen2010},
+	\item Requirements Document Based Test Scenario Generation for Web Application Scenario Testing \cite{XiaojingZhang2015},
+	\item An Approach to Modeling and Testing Web Applications Based on Use Cases \cite{LipingLi2008},
+	\item Test cases generation from UML state diagrams \cite{YGKim1999},
+	\item Requirements by Contracts allow Automated System Testing \cite{ClementineNebut2003},
+	\item An Automated Approach to System Testing Based on Scenarios and Operations Contracts \cite{NajlaRaza2007}.
 \end{itemize}
 
-The decision criteria are based on the different search terms above mentioned and the already defined criteria. Additionally, focus of the selected paper should lie on creating system tests for any generic application area, not just UI parts of an application.
+The decision criteria are based on the different search terms mentioned above and the already defined criteria. Additionally, focus of the selected paper should lie on creating system tests for any generic application area, not just UI related parts of an application.
 
 The paper \textit{An Automatic Tool for Generating Test Cases from the System's Requirements} was not chosen as it does not focus on testing the consistency of use case combinations with contracts to build test objectives as in the original paper. Furthermore, it is not as in-depth as the original paper. Contract enriched use cases could neither be found in \textit{System Testing using UML Models}.
 
@@ -95,7 +95,7 @@ The paper \textit{An Automatic Tool for Generating Test Cases from the System's 
 
 \textit{Test cases generation from UML state diagrams} and \textit{Requirements by Contracts allow Automated System Testing} could unfortunately not be accessed in full length in IEEE Xplore.
 
-The chosen article to further evaluate is \textit{An Automated Approach to System Testing based on Scenarios and Operations Contracts}, as it introduces a second way to create system tests from use case scenarios as UML 2.0 models by enriching it with contracts and by transforming the formalized scenarios to a transition system to validate test objectives. Further information on the paper will be introduced in the mid-term presentation.
+The chosen article to further evaluate is \textit{An Automated Approach to System Testing based on Scenarios and Operations Contracts}, as it introduces a second way to create system tests from use case scenarios as UML 2.0 models by enriching it with contracts and by transforming the formalized scenarios to a transition system to derive test objectives. It uses a more graphical approach to define use cases instead of using a formalized language to do so and goes deeper down into use-case level instead of system-level test generation. A more in-depth comparison between the two papers can be found in \autoref{comparison}.
 
 \section{Approach 1} \label{approachone}
 

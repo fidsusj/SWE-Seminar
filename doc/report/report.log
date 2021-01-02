@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  28 DEC 2020 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.23)  2 JAN 2021 13:29
 entering extended mode
 **./report.tex
 (report.tex
@@ -1018,8 +1018,58 @@ chapter 4.
 [8
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 []|\OT1/cmr/bx/n/9 Search re-stric-
+ []
+
+
+Underfull \hbox (badness 7796) in paragraph at lines 57--57
+[]|\OT1/cmr/m/n/9 "system tests" in
+ []
+
+
+Underfull \hbox (badness 3449) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 in doc-u-ment ti-tle;
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 "tran-si-tion sys-tem"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 data; "sim-u-la-tion
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 & meta-data; "use
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 full text & meta-
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 "au-to-matic gen-er-a-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 tion sys-tem" AND
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 "sim-u-la-tion model"
+ []
+
+
+Underfull \hbox (badness 7685) in paragraph at lines 57--57
+\OT1/cmr/m/n/9 AND "use cases"
  []
 
 
@@ -1028,28 +1078,13 @@ Underfull \hbox (badness 7796) in paragraph at lines 59--59
  []
 
 
-Underfull \hbox (badness 3449) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 in doc-u-ment ti-tle;
+Underfull \hbox (badness 6428) in paragraph at lines 59--59
+\OT1/cmr/m/n/9 text & meta-data;
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 "tran-si-tion sys-tem"
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 data; "sim-u-la-tion
- []
-
-
-Underfull \hbox (badness 2334) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 & meta-data; "use
- []
-
-
-Underfull \hbox (badness 2564) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 full text & meta-
+Underfull \hbox (badness 1910) in paragraph at lines 59--59
+\OT1/cmr/m/n/9 u-ment ti-tle; "con-
  []
 
 
@@ -1063,73 +1098,68 @@ Underfull \hbox (badness 1297) in paragraph at lines 59--59
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 "sim-u-la-tion model"
- []
-
-
-Underfull \hbox (badness 7685) in paragraph at lines 59--59
-\OT1/cmr/m/n/9 AND "use cases"
- []
-
-
-Underfull \hbox (badness 7796) in paragraph at lines 61--61
-[]|\OT1/cmr/m/n/9 "system tests" in
- []
-
-
-Underfull \hbox (badness 6428) in paragraph at lines 61--61
-\OT1/cmr/m/n/9 text & meta-data;
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 61--61
-\OT1/cmr/m/n/9 u-ment ti-tle; "con-
- []
-
-
-Underfull \hbox (badness 3179) in paragraph at lines 61--61
-\OT1/cmr/m/n/9 "au-to-matic gen-er-a-
- []
-
-
-Underfull \hbox (badness 1297) in paragraph at lines 61--61
-\OT1/cmr/m/n/9 tion sys-tem" AND
- []
-
-
-Underfull \hbox (badness 7667) in paragraph at lines 61--61
+Underfull \hbox (badness 7667) in paragraph at lines 59--59
 \OT1/cmr/m/n/9 "use cases" AND
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 63--63
+Underfull \hbox (badness 4303) in paragraph at lines 61--61
 \OT1/cmr/m/n/9 tem" in full text
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 63--63
+Underfull \hbox (badness 2334) in paragraph at lines 61--61
 \OT1/cmr/m/n/9 & meta-data; "use
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 63--63
+Underfull \hbox (badness 1117) in paragraph at lines 61--61
 \OT1/cmr/m/n/9 "tran-si-tion sys-tem"
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 66--66
+Underfull \hbox (badness 7796) in paragraph at lines 64--64
 []|\OT1/cmr/m/n/9 "system tests" in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
 \OT1/cmr/m/n/9 ti-tle; "au-to-matic
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 64--64
+\OT1/cmr/m/n/9 "tran-si-tion sys-tem"
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 64--64
+\OT1/cmr/m/n/9 "au-to-matic gen-er-a-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 64--64
+\OT1/cmr/m/n/9 tion sys-tem" AND
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 64--64
+\OT1/cmr/m/n/9 "sim-u-la-tion model"
+ []
+
+
+Underfull \hbox (badness 7685) in paragraph at lines 64--64
+\OT1/cmr/m/n/9 AND "use cases"
  []
 
 
 Underfull \hbox (badness 1117) in paragraph at lines 66--66
 \OT1/cmr/m/n/9 "tran-si-tion sys-tem"
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 66--66
+\OT1/cmr/m/n/9 in full text; "use
  []
 
 
@@ -1143,13 +1173,13 @@ Underfull \hbox (badness 1297) in paragraph at lines 66--66
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 66--66
-\OT1/cmr/m/n/9 "sim-u-la-tion model"
+Underfull \hbox (badness 7667) in paragraph at lines 66--66
+\OT1/cmr/m/n/9 "use cases" AND
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 66--66
-\OT1/cmr/m/n/9 AND "use cases"
+Underfull \hbox (badness 2564) in paragraph at lines 68--68
+\OT1/cmr/m/n/9 tem" in full text;
  []
 
 
@@ -1157,82 +1187,72 @@ Underfull \hbox (badness 1117) in paragraph at lines 68--68
 \OT1/cmr/m/n/9 "tran-si-tion sys-tem"
  []
 
-
-Underfull \hbox (badness 2680) in paragraph at lines 68--68
-\OT1/cmr/m/n/9 in full text; "use
- []
-
-
-Underfull \hbox (badness 3179) in paragraph at lines 68--68
-\OT1/cmr/m/n/9 "au-to-matic gen-er-a-
- []
-
-
-Underfull \hbox (badness 1297) in paragraph at lines 68--68
-\OT1/cmr/m/n/9 tion sys-tem" AND
- []
-
-
-Underfull \hbox (badness 7667) in paragraph at lines 68--68
-\OT1/cmr/m/n/9 "use cases" AND
- []
-
-
-Underfull \hbox (badness 2564) in paragraph at lines 70--70
-\OT1/cmr/m/n/9 tem" in full text;
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 70--70
-\OT1/cmr/m/n/9 "tran-si-tion sys-tem"
- []
-
 [9] [10]
-<./images/transitionsystemflow.png, id=132, 588.39825pt x 368.577pt>
+<./images/transitionsystemflow.png, id=147, 588.39825pt x 368.577pt>
 File: ./images/transitionsystemflow.png Graphic file (type png)
 <use ./images/transitionsystemflow.png>
 Package pdftex.def Info: ./images/transitionsystemflow.png  used on input line 
-108.
+106.
 (pdftex.def)             Requested size: 309.4237pt x 193.832pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11] [12 <./images/transitionsystemflow.png>] [13] [14]
-<./images/ucts.png, id=184, 789.95125pt x 262.9825pt>
+[11] [12 <./images/transitionsystemflow.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13] [14]
+<./images/ucts.png, id=198, 789.95125pt x 262.9825pt>
 File: ./images/ucts.png Graphic file (type png)
 <use ./images/ucts.png>
-Package pdftex.def Info: ./images/ucts.png  used on input line 243.
+Package pdftex.def Info: ./images/ucts.png  used on input line 241.
 (pdftex.def)             Requested size: 412.56496pt x 137.34557pt.
- [15 <./images/ucts.png>]
-<./images/ucs.png, id=217, 854.19125pt x 954.56625pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images/ucs.png, id=200, 854.19125pt x 954.56625pt>
 File: ./images/ucs.png Graphic file (type png)
 <use ./images/ucs.png>
-Package pdftex.def Info: ./images/ucs.png  used on input line 254.
+Package pdftex.def Info: ./images/ucs.png  used on input line 252.
 (pdftex.def)             Requested size: 412.56496pt x 461.04144pt.
- [16 <./images/ucs.png>] [17]
-<./images/iod.png, id=230, 854.19125pt x 595.22375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15] [16 <./images/ucts.png>]
+<./images/iod.png, id=242, 854.19125pt x 595.22375pt>
 File: ./images/iod.png Graphic file (type png)
 <use ./images/iod.png>
-Package pdftex.def Info: ./images/iod.png  used on input line 279.
+Package pdftex.def Info: ./images/iod.png  used on input line 277.
 (pdftex.def)             Requested size: 412.56496pt x 287.4843pt.
- [18 <./images/iod.png>]
-<./images/cts.png, id=252, 850.17625pt x 151.56625pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./images/cts.png, id=244, 850.17625pt x 151.56625pt>
 File: ./images/cts.png Graphic file (type png)
 <use ./images/cts.png>
-Package pdftex.def Info: ./images/cts.png  used on input line 311.
+Package pdftex.def Info: ./images/cts.png  used on input line 309.
 (pdftex.def)             Requested size: 412.56496pt x 73.55116pt.
- [19 <./images/cts.png>]
-Underfull \hbox (badness 1043) in paragraph at lines 363--363
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Underfull \hbox (badness 1043) in paragraph at lines 361--361
 \OT1/cmr/m/n/10 tech-niques, ob-jec-tives of test-ing, eval-u-a-tion
  []
 
 
-Overfull \hbox (50.22635pt too wide) in alignment at lines 345--377
+Overfull \hbox (50.22635pt too wide) in alignment at lines 343--375
  [] [] [] 
  []
 
-[20] [21] [22]) (content/10-Conclusion.tex [23]
+[18] [19] [20]) (content/10-Conclusion.tex [21] [22 <./images/ucs.png>]
+[23 <./images/iod.png> <./images/cts.png>]
 chapter 5.
 ) [24
 
@@ -1255,36 +1275,36 @@ chapter 6.
 ]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     158.
+(LaTeX3)     179.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     158.
+(LaTeX3)     179.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     158.
+(LaTeX3)     179.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     158.
+(LaTeX3)     179.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     158.
+(LaTeX3)     179.
 
  (report.aux (content/0-Abstract.aux))
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20160 strings out of 479765
- 355509 string characters out of 2865212
- 944211 words of memory out of 3000000
- 36645 multiletter control sequences out of 15000+200000
+ 20188 strings out of 479765
+ 356136 string characters out of 2865212
+ 949211 words of memory out of 3000000
+ 36666 multiletter control sequences out of 15000+200000
  542141 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,10n,111p,10603b,2017s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 106i,10n,111p,10603b,2021s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1000.pk><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmbx10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.
@@ -1304,9 +1324,9 @@ ublic/amsfonts/cm/cmsy10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/D070497/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/D070497/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report.pdf (27 pages, 559448 bytes).
+Output written on report.pdf (27 pages, 562967 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

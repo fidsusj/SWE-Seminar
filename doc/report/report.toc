@@ -10,11 +10,11 @@
 \contentsline {section}{\numberline {4.3}Approach 1}{11}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Description of Approach 1}{11}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Application of Approach 1}{14}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Approach 2}{17}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Description of Approach 2}{17}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Application of Approach 2}{18}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Comparison}{19}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Conclusion}{22}{section.4.6}%
+\contentsline {section}{\numberline {4.4}Approach 2}{16}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Description of Approach 2}{16}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Application of Approach 2}{17}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Comparison}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Conclusion}{21}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Conclusion}{24}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Bibliography}{25}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
