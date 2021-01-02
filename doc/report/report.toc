@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {4.4.1}Description}{17}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Application}{18}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}Comparison}{19}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Conclusion}{23}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Conclusion}{22}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Conclusion}{24}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Bibliography}{25}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
