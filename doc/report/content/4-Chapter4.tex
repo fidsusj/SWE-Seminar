@@ -8,7 +8,7 @@ To solve this, the process of formal definition of requirements and matching sys
 
 For this purpose the two approaches \cite{ClementineNebut2006} and \cite{NajlaRaza2007} were analyzed. While \cite{ClementineNebut2006} was given in advance by the advisors, \cite{NajlaRaza2007} was discovered through an extensive literature search shown in \autoref{literaturesearch}. Both apporaches will be explained in the following sections \ref{approachone} and \ref{approachtwo} and applied to the movie management software example. A comparison between the two approaches will be drawn using a synthesis matrix shown in \autoref{comparison}. The main results of testing with transitions systems will be summarized in \autoref{conclusion}. 
 
-Please refer to the glossar in order to receive a common understanding of the following terms used in the sections below: contract, coverage criterion, interaction overview diagram, object constraint language, operation, test case, test objective, test scenario, transition system, UC-System, UC-SCSystem, use case, use case scenario, XML metadata interchange.
+Please refer to the glossary in order to receive a common understanding of the following terms used in the sections below: contract, coverage criterion, interaction overview diagram, object constraint language, operation, test case, test objective, test scenario, transition system, UC-System, UC-SCSystem, use case, use case scenario, XML metadata interchange.
 
 \section{Literature Search} \label{literaturesearch}
 
@@ -54,20 +54,20 @@ Seach-term based search was done using the following key terms: system tests, au
 		\textbf{Source} & \textbf{Date} & \textbf{Search restrictions} & \textbf{Search query} & \textbf{\#Results} \\
 		\hline
 		\hline	
-		IEEE Xplore & 2020-22-21 & "system tests" in document title; "automatic generation" in document title; "transition system" in full text \& metadata; "simulation model" in full text \& metadata; "use cases" in document title; "contracts" in full text \& metadata; & "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts & 0 \\
+		IEEE Xplore & 2020-11-21 & "system tests" in document title; "automatic generation" in document title; "transition system" in full text \& metadata; "simulation model" in full text \& metadata; "use cases" in document title; "contracts" in full text \& metadata; & "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts & 0 \\
 		\hline
-		IEEE Xplore & 2020-22-21 & "system tests" in document title; "automatic generation" in abstract; "transition system" in full text \& metadata; "use cases" in document title; "contracts" in full text \& metadata; & "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts & 0 \\
+		IEEE Xplore & 2020-11-21 & "system tests" in document title; "automatic generation" in abstract; "transition system" in full text \& metadata; "use cases" in document title; "contracts" in full text \& metadata; & "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts & 0 \\
 		\hline
-		IEEE Xplore & 2020-22-21 & "test" in document title; "transition system" in full text \& metadata; "use cases" in document title & "system tests" AND "transition system" AND "use cases" & 82 \\
+		IEEE Xplore & 2020-11-21 & "test" in document title; "transition system" in full text \& metadata; "use cases" in document title & "system tests" AND "transition system" AND "use cases" & 82 \\
 		\hline
 		\hline
-		ACM & 2020-22-21 & "system tests" in title; "automatic generation" in title; "transition system" in full text; "simulation model" in full text; "use cases" in title; "contracts" in full text; & "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts & 0 \\
+		ACM & 2020-11-21 & "system tests" in title; "automatic generation" in title; "transition system" in full text; "simulation model" in full text; "use cases" in title; "contracts" in full text; & "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts & 0 \\
 		\hline
-		ACM & 2020-22-21 & "system tests" in title; "automatic generation" in abstract; "transition system" in full text; "use cases" in title; "contracts" in full text; & "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts & 0 \\
+		ACM & 2020-11-21 & "system tests" in title; "automatic generation" in abstract; "transition system" in full text; "use cases" in title; "contracts" in full text; & "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts & 0 \\
 		\hline
-		ACM & 2020-22-21 & "system tests" in title; "transition system" in full text; "use cases" in title & "system tests" AND "transition system" AND "use cases" & 0 \\
+		ACM & 2020-11-21 & "system tests" in title; "transition system" in full text; "use cases" in title & "system tests" AND "transition system" AND "use cases" & 0 \\
 		\hline
-		ACM & 2020-22-21 & "test" in title; "use case" in title & "system tests" AND "use cases" & 8 \\
+		ACM & 2020-11-21 & "test" in title; "use case" in title & "system tests" AND "use cases" & 8 \\
 		\hline
 	\end{longtable}
 \end{small}
@@ -396,4 +396,4 @@ Approach \cite{ClementineNebut2006} almost shows a fully automated way to derive
 
 \cite{ClementineNebut2006} switches from system level to use case level test generation. It uses contract enriched IODs as graphical input and builds a transition system on it. Test paths are generated using the transition coverage criterion. No further methodology was introduced to generate executable test cases, but as the approach is already specified on use case level, the generation of test code is self-explanatory (a similar tool like UC-SCSystem from \cite{ClementineNebut2006} can be used).
 
-One weakness of both approaches remains the capability to generate a sufficient amount robustness tests for fault detection. Both approaches only rely on contract violations and do not sufficiently cover data variations as test path generation is only based on one initial state chosen by the test creator. Still for the automatic generation of functional test scenarios both approaches show industry-standard and highly applicable solutions.
+One weakness of both approaches remains the capability to generate a sufficient amount of robustness tests for fault detection. Both approaches only rely on contract violations and do not sufficiently cover data variations as test path generation is only based on one initial state chosen by the test creator. Still for the automatic generation of functional test scenarios both approaches show industry-standard and highly applicable solutions.
