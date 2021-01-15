@@ -289,7 +289,7 @@ The second approach differs from the first one as this time a transition system 
 	post self.performers[performer] -> isEmpty()
 	
 	context Movie::calculateOverallRating()
-	post self.rating = 0.5 * (self.mean(self.performers.getRatings()) + self.rating)
+	post self.overallRating = 0.5 * (self.mean(self.performers.getRatings()) + self.rating)
 \end{lstlisting}
 
 \newpage
