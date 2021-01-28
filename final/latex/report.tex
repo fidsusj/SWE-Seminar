@@ -1,0 +1,116 @@
+\documentclass[a4paper,10pt, bibliography=totocnumbered]{scrreprt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+%\usepackage{subfig}
+%\usepackage{microtype}
+\usepackage{tabularx}
+%\usepackage{amsmath, textcomp}
+
+% Custom packages
+\usepackage[numbers]{natbib}
+\usepackage{longtable}
+\usepackage{ragged2e}
+%\usepackage{tikz}
+%\usetikzlibrary{positioning}
+%\usepackage{pdflscape}
+%\usepackage{rotating}
+
+\usepackage{glossaries} 
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links
+%    citecolor=green,        % color of links to bibliography
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+
+%% Title Page
+\makeatletter
+\renewcommand{\maketitle}{\begin{titlepage}
+    \vskip 10\p@
+    \hbox{
+      \vrule depth 0.99\textheight
+        \mbox{\hspace{2em}}
+      \vtop{
+        \vskip 10\p@
+        \hspace{4pt}
+        \vskip 50\p@
+        \begin{flushleft}
+          \Large \@author \par
+        \end{flushleft}
+        \vskip 50\p@
+        \begin{flushleft}
+          \huge \bfseries \@title \par
+        \end{flushleft}
+        \begin{flushleft}
+          \Large \bfseries \@subtitle \par
+        \end{flushleft}
+        \vskip 70\p@
+        \begin{flushleft}
+          \Large \@publishers \par
+        \end{flushleft}
+        \vskip 50\p@
+        \begin{flushleft}
+          \Large \@date \par
+        \end{flushleft}
+        }}
+  \end{titlepage}
+}
+\makeatother
+
+\author{Author 1, Author n}
+\title{Title }
+\subtitle{Technical Report}
+\publishers{\textbf{Advisor University of Heidelberg}\\ Prof. Dr. Barbara Paech, Astrid Rohmann}
+\date{mm dd, year}
+
+
+
+% Deutsche Absaetze:
+\parindent 0pt
+\parskip 12pt
+
+\textwidth145mm
+\setlength{\oddsidemargin}{0.7cm}
+\setlength{\topmargin}{-0.5cm}
+\setlength{\textheight}{22.5cm}
+
+\begin{document}
+\maketitle
+
+\include{./content/0-Abstract}
+
+\tableofcontents
+
+\input{./content/1-Introduction}
+\input{./content/2-Chapter2}
+\input{./content/3-Chapter3}
+\input{./content/10-Conclusion}
+
+%% Bibliography
+\bibliographystyle{plainnat}
+%\bibliography{literature.bib}%Bibliography file name
+
+\begin{thebibliography}{9}
+
+\bibitem{KunChen2005} Chen, K, Zhang, W., Zhao, H.: An approach to constructing feature models based on requirements clustering.
+In: 13th IEEE International Conference on Requirements Engineering (RE05). pp. 31-40. (2005)
+
+\bibitem{RichtigesZitierenTUDresden} Institut für Geographie   
+Lehrstuhl für Allgemeine Wirtschafts- und Sozialgeographie: An Hinweise zum wissenschaftlichen Arbeiten.
+\url{http://www.geogr.uni-jena.de/fileadmin/Geoinformatik/Lehre/backup_05_2007/pdf-dokumente/Skript_WissArbeiten.pdf}
+\end{thebibliography}
+
+\listoffigures
+
+\listoftables
+
+\end{document}          
