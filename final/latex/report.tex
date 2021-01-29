@@ -31,6 +31,49 @@
     urlcolor=blue           % color of external links
 }
 
+% packages Max Edinger
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage[pass]{geometry}
+
+
+% define colors and configure listing
+\colorlet{mygray}{black!30}
+\colorlet{mygreen}{green!60!blue}
+\colorlet{mymauve}{red!60!blue}
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{gray!10},  
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    breakatwhitespace=false,      
+    breaklines=true,                
+    captionpos=t,                    
+    commentstyle=\color{mygreen},
+    emph={aspect, advice, pointcut, before, JoinPoint}, emphstyle={\color{blue}},
+    extendedchars=true,              
+    frame=single,                   
+    keepspaces=true,             
+    keywordstyle=\color{blue},      
+    language=c++,                 
+    numbers=none,                
+    numbersep=5pt,                   
+    numberstyle=\tiny\color{blue}, 
+    rulecolor=\color{mygray},        
+    showspaces=false,               
+    showtabs=false,                 
+    stepnumber=1,                  
+    stringstyle=\color{mymauve},    
+    tabsize=3,                      
+    title=\lstname,
+    numbers=left
+}
+
 
 %% Title Page
 \makeatletter
@@ -107,6 +150,8 @@ In: 13th IEEE International Conference on Requirements Engineering (RE05). pp. 3
 \bibitem{RichtigesZitierenTUDresden} Institut für Geographie   
 Lehrstuhl für Allgemeine Wirtschafts- und Sozialgeographie: An Hinweise zum wissenschaftlichen Arbeiten.
 \url{http://www.geogr.uni-jena.de/fileadmin/Geoinformatik/Lehre/backup_05_2007/pdf-dokumente/Skript_WissArbeiten.pdf}
+
+\bibitem{SWEBOK} PLATZHALTER
 \end{thebibliography}
 
 \listoffigures
