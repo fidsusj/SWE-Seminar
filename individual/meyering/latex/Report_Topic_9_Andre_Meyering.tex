@@ -1,0 +1,144 @@
+\documentclass[a4paper,10pt, bibliography=totocnumbered]{scrreprt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+%\usepackage{subfig}
+%\usepackage{microtype}
+\usepackage{tabularx}
+%\usepackage{amsmath, textcomp}
+
+% Custom packages
+\usepackage[numbers]{natbib}
+\usepackage{longtable}
+\usepackage{ragged2e}
+%\usepackage{tikz}
+%\usetikzlibrary{positioning}
+%\usepackage{pdflscape}
+%\usepackage{rotating}
+
+\usepackage{csquotes}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{tablefootnote}
+\usepackage{glossaries} 
+\setacronymstyle{long-short}
+\newacronym{ex}{sample}{example}
+\newacronym{NFR}{NFR}{non-functional requirement}
+\newacronym{FR}{FR}{functional requirement}
+\newacronym{UML}{UML}{uniform modeling language}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links
+%    citecolor=green,        % color of links to bibliography
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+
+%% Title Page
+\makeatletter
+\renewcommand{\maketitle}{\begin{titlepage}
+    \vskip 10\p@
+    \hbox{
+      \vrule depth 0.99\textheight
+        \mbox{\hspace{2em}}
+      \vtop{
+        \vskip 10\p@
+        \hspace{4pt}
+        \vskip 50\p@
+        \begin{flushleft}
+          \Large \@author \par
+        \end{flushleft}
+        \vskip 50\p@
+        \begin{flushleft}
+          \huge \bfseries \@title \par
+        \end{flushleft}
+        \begin{flushleft}
+          \Large \bfseries \@subtitle \par
+        \end{flushleft}
+        \vskip 70\p@
+        \begin{flushleft}
+          \Large \@publishers \par
+        \end{flushleft}
+        \vskip 50\p@
+        \begin{flushleft}
+          \Large \@date \par
+        \end{flushleft}
+        }}
+  \end{titlepage}
+}
+\makeatother
+
+\author{Author 1, Andre Meyering, Author n}
+\title{Title }
+\subtitle{Technical Report}
+\publishers{\textbf{Advisor University of Heidelberg}\\ Prof. Dr. Barbara Paech, Astrid Rohmann}
+\date{mm dd, 2021}
+
+
+
+% Deutsche Absaetze:
+\parindent 0pt
+\parskip 12pt
+
+\textwidth145mm
+\setlength{\oddsidemargin}{0.7cm}
+\setlength{\topmargin}{-0.5cm}
+\setlength{\textheight}{22.5cm}
+
+\begin{document}
+\maketitle
+
+\include{./content/0-Abstract}
+
+\tableofcontents
+
+\input{./content/1-Introduction}
+
+
+\input{./content/10-Chapter9}
+
+
+
+\input{./content/12-Conclusion}
+
+%% Bibliography
+\bibliographystyle{plainnat}
+%\bibliography{literature.bib}%Bibliography file name
+
+\begin{thebibliography}{9}
+
+\bibitem{KunChen2005} Chen, K, Zhang, W., Zhao, H.: An approach to constructing feature models based on requirements clustering.
+In: 13th IEEE International Conference on Requirements Engineering (RE05). pp. 31-40. (2005)
+
+\bibitem{RichtigesZitierenTUDresden} Institut für Geographie   
+Lehrstuhl für Allgemeine Wirtschafts- und Sozialgeographie: An Hinweise zum wissenschaftlichen Arbeiten.
+\url{http://www.geogr.uni-jena.de/fileadmin/Geoinformatik/Lehre/backup_05_2007/pdf-dokumente/Skript_WissArbeiten.pdf}
+
+\bibitem{SWEBOK} SWEBOK TODO
+
+% https://ieeexplore.ieee.org/document/4578345/references#references
+\bibitem{ZouPavlovski2008} J. Zou and C. J. Pavlovski, "Control Cases during the Software Development Life-Cycle," 2008 IEEE Congress on Services - Part I, Honolulu, HI, 2008, pp. 337-344, doi: 10.1109/SERVICES-1.2008.46.
+
+% https://ieeexplore.ieee.org/abstract/document/6908675
+\bibitem{Lagerstedt2014} R. Lagerstedt, "Using automated tests for communicating and verifying non-functional requirements," 2014 IEEE 1st International Workshop on Requirements Engineering and Testing (RET), Karlskrona, 2014, pp. 26-28, doi: 10.1109/RET.2014.6908675.
+
+% https://ieeexplore.ieee.org/document/1438375
+\bibitem{Andre_Search_1} A. Gregoriades and A. Sutcliffe, "Scenario-based assessment of nonfunctional requirements," in IEEE Transactions on Software Engineering, vol. 31, no. 5, pp. 392-409, May 2005, doi: 10.1109/TSE.2005.59.
+
+% https://ieeexplore.ieee.org/document/5954452
+\bibitem{Andre_Search_2} Z. A. Barmi, A. H. Ebrahimi and R. Feldt, "Alignment of Requirements Specification and Testing: A Systematic Mapping Study," 2011 IEEE Fourth International Conference on Software Testing, Verification and Validation Workshops, Berlin, 2011, pp. 476-485, doi: 10.1109/ICSTW.2011.58.
+
+\end{thebibliography}
+
+\listoffigures
+
+\listoftables
+
+\end{document}          
