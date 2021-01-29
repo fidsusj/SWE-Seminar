@@ -1,0 +1,179 @@
+\documentclass[a4paper,10pt, bibliography=totocnumbered]{scrreprt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{pdfpages}
+%\usepackage{subfig}
+%\usepackage{microtype}
+\usepackage{tabularx}
+%\usepackage{amsmath, textcomp}
+
+% Custom packages
+\usepackage[numbers]{natbib}
+\usepackage{longtable}
+\usepackage{ragged2e}
+%\usepackage{tikz}
+%\usetikzlibrary{positioning}
+%\usepackage{pdflscape}
+%\usepackage{rotating}
+
+\usepackage{glossaries} 
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=black,        % color of internal links
+%    citecolor=green,        % color of links to bibliography
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% packages Max Edinger
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage[pass]{geometry}
+
+
+% define colors and configure listing
+\colorlet{mygray}{black!30}
+\colorlet{mygreen}{green!60!blue}
+\colorlet{mymauve}{red!60!blue}
+\lstset { %
+    language=C++,
+    backgroundcolor=\color{gray!10},  
+    basicstyle=\ttfamily,
+    columns=fullflexible,
+    breakatwhitespace=false,      
+    breaklines=true,                
+    captionpos=t,                    
+    commentstyle=\color{mygreen},
+    emph={aspect, advice, pointcut, before, JoinPoint}, emphstyle={\color{blue}},
+    extendedchars=true,              
+    frame=single,                   
+    keepspaces=true,             
+    keywordstyle=\color{blue},      
+    language=c++,                 
+    numbers=none,                
+    numbersep=5pt,                   
+    numberstyle=\tiny\color{blue}, 
+    rulecolor=\color{mygray},        
+    showspaces=false,               
+    showtabs=false,                 
+    stepnumber=1,                  
+    stringstyle=\color{mymauve},    
+    tabsize=3,                      
+    title=\lstname,
+    numbers=left
+}
+
+%% Title Page
+\makeatletter
+\renewcommand{\maketitle}{\begin{titlepage}
+    \vskip 10\p@
+    \hbox{
+      \vrule depth 0.99\textheight
+        \mbox{\hspace{2em}}
+      \vtop{
+        \vskip 10\p@
+        \hspace{4pt}
+        \vskip 50\p@
+        \begin{flushleft}
+          \Large \@author \par
+        \end{flushleft}
+        \vskip 50\p@
+        \begin{flushleft}
+          \huge \bfseries \@title \par
+        \end{flushleft}
+        \begin{flushleft}
+          \Large \bfseries \@subtitle \par
+        \end{flushleft}
+        \vskip 70\p@
+        \begin{flushleft}
+          \Large \@publishers \par
+        \end{flushleft}
+        \vskip 50\p@
+        \begin{flushleft}
+          \Large \@date \par
+        \end{flushleft}
+        }}
+  \end{titlepage}
+}
+\makeatother
+
+\author{Author 1, Author n}
+\title{Title }
+\subtitle{Technical Report}
+\publishers{\textbf{Advisor University of Heidelberg}\\ Prof. Dr. Barbara Paech, Astrid Rohmann}
+\date{mm dd, year}
+
+
+
+% Deutsche Absaetze:
+\parindent 0pt
+\parskip 12pt
+
+\textwidth145mm
+\setlength{\oddsidemargin}{0.7cm}
+\setlength{\topmargin}{-0.5cm}
+\setlength{\textheight}{22.5cm}
+
+\begin{document}
+\maketitle
+
+\include{./content/0-Abstract}
+
+\tableofcontents
+
+\input{./content/1-Introduction}
+\input{./content/2-Chapter2}
+\input{./content/3-Chapter3}
+\input{./content/11-Chapter11}
+\input{./content/10-Conclusion}
+
+%% Bibliography
+\bibliographystyle{plainnat}
+%\bibliography{literature.bib}%Bibliography file name
+
+\begin{thebibliography}{9}
+
+\bibitem{C++} AspectC++ Development Team: About the Project.
+\url{https://www.aspectc.org/} last accessed 2020/12/28
+
+\bibitem{KunChen2005} Chen, K, Zhang, W., Zhao, H.: An approach to constructing feature models based on requirements clustering.
+In: 13th IEEE International Conference on Requirements Engineering (RE05). pp. 31-40. (2005)
+
+\bibitem{Dijkstra} Dijkstra, E.: A Discipline of Programming.
+In: Prentice-Hall Series in Automatic Computation Englewood Cliffs, New Jersey. (1976)
+
+\bibitem{Duclos} Duclos, E., Le Digabel, S., Guéhéneuc, Y.,  Adams, B.: "ACRE: An Automated Aspect Creator for Testing C++ Applications“.
+In:  CSMR 2013 Genova.  pp. 121-130. (2013). \url{10.1109/CSMR.2013.22}
+
+\bibitem{J} Eclipse Foundation: AspectJ.
+\url{https://www.eclipse.org/aspectj/}  last accessed 2020/12/28
+
+\bibitem{RichtigesZitierenTUDresden} Institut für Geographie   
+Lehrstuhl für Allgemeine Wirtschafts- und Sozialgeographie: An Hinweise zum wissenschaftlichen Arbeiten.
+\url{http://www.geogr.uni-jena.de/fileadmin/Geoinformatik/Lehre/backup_05_2007/pdf-dokumente/Skript_WissArbeiten.pdf}
+
+\bibitem{Metsa} Metsä, J., Katara, M., Mikkonen, T.: "Testing Non-Functional Requirements with Aspects: An Industrial Case Study“.
+In:  QSIC 2007 Portland. pp. 5-14. (2007). \url{10.1109/QSIC.2007.4385475}
+
+\bibitem{Parnas} Parnas, D.: On the criteria to be used in decomposing systems into modules.
+In: Communications of the ACM. (1972)
+
+
+\end{thebibliography}
+
+\listoffigures
+
+\listoftables
+
+\end{document}          

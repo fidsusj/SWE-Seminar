@@ -1,0 +1,406 @@
+\chapter{Testing Non-Functional Requirements with Aspects}
+
+\section{Introduction}
+
+Software testing ensures that specified requirements, functional and non-functional, are met by the implementation. Non-functional requirements are especially hard to test because they do not describe what the software does, but how and to what extend of quality it does it. Hence the also customary term quality requirements. They pose numerous challenges for software testing and software quality due to their system-wide effects and often crosscutting nature. They do not only concern one part of the software and its source code, but multiple or even the entire system. For instance, the memory requirement: “The system only uses two gigabytes of main memory at most at all times.” has a restrictive influence on other requirements and system functionality like performance requirements. This impedes the observance of the widely propagated principle of separation of concerns, introduced by Parnas \cite{Parnas} and Dijkstra \cite{Dijkstra}, throughout development and testing.\\
+\\
+By virtue of the afore-mentioned problems, there are only few tools and systematic approaches for testing non-functional requirements. Frequently, they are evaluated subjectively, resulting in a loss of traceability between test code, source code and requirements. Aspect orientation is a technique that can be harnessed for testing non-functional requirements. It is a programming paradigm, aiming to modularise such requirements (in the context of AOP, they are called system-level concerns in contrast to core-level concerns), similar to the modularisation of functional requirements using objects. An aspect modularises a system-level concern and thereby represents a system-wide functionality, accessible to multiple classes and other parts of the software. Let us consider a common application for AOP: Listing \ref{logging} shows a simple logging aspect in C++. It consists of three main components:
+\begin{itemize}
+\item Joinpoint: The point in the program code, the aspect is executed. It can be before, after or around something (here: before).
+\item Advice: Associates the joinpoint with an activity (here: a printf statement). 
+\item Pointcut: Selects a suitable joinpoint out of the set of all joinpoints and associates it with a method or function (here: \%::\%()).
+\end{itemize}
+
+\lstset {language=C++}
+\begin{lstlisting}[caption={\textbf{Logging Aspect in C++.}}, label=logging]
+aspect LoggingAspect{
+	public:
+		pointcut logMethods() = call("% %::%()");
+		advice logMethods() : before(){
+			printf("> Enter: %s\n", JoinPoint::signature());
+		}
+};
+\end{lstlisting}
+
+\newpage
+In this example, the printf logging statement is executed each time before the \%::\%() method is called. Based on these principles, many possibilities for systematic and automated testing are conceivable.\\
+\\
+In the following, the execution and results of a literature search based on a given article are presented in Section \ref{lit}. Subsequently, the given article , which assesses the use of aspects for testing non-functional requirements as well as the suitability of certain non-functional requirements for aspect-oriented testing is described and applied to an example in Section \ref{given}. Likewise, for a selected article found using the literature search in Section \ref{found}.  It expands upon the basic ideas of the first article and partially automates the creation of test aspects. Thereafter, the results of a literature comparison are presented in Section \ref{compare}. Finally, in Section \ref{feierabend} both approaches as well as the general concept of testing using aspects are evaluated. 
+
+\section{ Literature Search} \label{lit}
+
+To find relevant literature, a literature research based on the following search question was conducted: \textbf{\textit{Which approaches for systematic creation of tests (for non-functional requirements) using aspects exists?}} Both forward and backward snowballing proceeding from the given article as well as a term-based search were carried out. The used terms were test, aspects, AOP and aspect-oriented. Restrictions to reduce the number of hits are described in Table \ref{restrict}. First, the upper term from Table \ref{restrict} with everything in the publication title was used, then the lower term from Table \ref{restrict} with test in the title, aspects in the abstract and AOP and aspect-oriented in all meta data. Source platforms for the search were IEEE and ACM. IEEE because the given article as well as articles referencing it can be found here. ACM because there are many available and peer-reviewed articles differing from IEEE. Content-based relevance criteria were derived directly from the search question:
+
+\begin{itemize}
+\item The article must cover the creation of tests using aspects because this is the main topic of the given article. Furthermore, the criterion is used to exclude articles covering testing of aspect-oriented software with conventional methods.
+\item The article must describe systematic approaches for the creation of tests, since this is the superordinate topic of the seminar. 
+\item The article must describe test methods for non-functional requirements, as this is the subtopic of the given article.
+\end{itemize}
+
+In addition to these content-based criteria, there were some rather soft criteria:
+\begin{itemize}
+\item The article must be from different authors.
+\item The article must be written in English or German language.
+\end{itemize}
+
+\begin{table}[h]
+\caption{\textbf{Search Terms, Restrictions and Sources.}}
+\begin{tabular}{|p{6.5cm}|p{4.5cm}|p{2cm}|}
+\hline
+\textbf{Term} & \textbf{Restrictions} & \textbf{Sources}\\
+\hline
+\multirow{2}{8cm}{\textbf{test} AND (\textbf{aspects} OR \textbf{AOP} OR \textbf{aspect-oriented})} & \tabitem all in title  &  \tabitem IEEE\\
+& \quad & \tabitem ACM \\
+\hline
+\multirow{2}{8cm}{\textbf{test} AND \textbf{aspects} AND \textbf{AOP} AND \textbf{aspect-oriented}} & \tabitem test in title  &  \tabitem IEEE\\
+& \tabitem aspects in abstract & \tabitem ACM \\
+\hline
+\end{tabular}
+\label{restrict}
+\end{table}
+
+Table \ref{doc} shows the execution and results of the literature search. For further selection, the relevant articles were divided into three categories:
+
+\begin{itemize}
+\item overviews of testing using aspects,
+\item examples for testing using aspects,
+\item improvement or monitoring of conventional (unit) test using aspects. 
+\end{itemize}
+
+The given article can be classified between overview and example. Via the literature search, I wanted to find an article providing automation and tool support, seen as the given article has shortcomings in that regard. Moreover, all relevance criteria must be fulfilled and it would be beneficial if the article covers at least two out of three classification categories.\\
+\\
+Many articles violate the first criteria, because they cover the testing of aspect-oriented software without using aspects. Some articles were not chosen because they just cover one classification category, therefore not really adding new information and approaches.\\
+\\
+The article that stood out was Duclos et al.: “ACRE: An Automated Aspect Creator for Testing C++ Applications” \cite{Duclos} because it covers all categories and satisfies all criteria. It includes an extensive general section followed by the description of an approach for automated creation of test aspects on an example to improve or replace conventional tests. Since the article was found using forward snowballing, it directly references the given article and proposes solutions for problems the latter raises. This article was selected.
+
+\newpage
+\newgeometry{margin=1cm}
+\begin{landscape}
+
+\begin{table}
+\caption{\textbf{Literature Research Documentation.}}
+\begin{longtable}{|p{1.3cm}|p{1.8cm}|>{\raggedright}p{2.3cm}|>{\raggedright}p{6cm}|p{1.5cm}|p{1.5cm}|p{1.2cm}|p{2cm}|}
+
+\hline
+\textbf{Source} & \textbf{Date} & \textbf{Restrictions} & \textbf{Term} & \textbf{Results} & \textbf{Relevant} & \textbf{Used} & \textbf{Comments}\\
+\hline
+IEEE$^*$ & 11.11.2020 & none & forward snowballing & 10 & 5 & $\nabla$ & -\\
+\hline
+IEEE$^*$ & 11.11.2020 & none & backward snowballing & 22 & 5 & none & -\\
+\hline
+IEEE$^*$ & 11.11.2020 & none & "All Metadata":test AND ("All Metadata": aspects OR "All Metadata":AOP OR "All Metadata":aspect-oriented) & 220,605 & ? & none & too general, not considered\\
+\hline
+ACM$^\dagger$ & 11.11.2020 & none & [All: test] AND [[All: aspects] OR [All: aop] OR [All: aspect-oriented]] & 172,120 & ? & none & too general, not considered\\
+\hline
+IEEE$^*$ & 11.11.2020 & title &"Document Title":test AND ("Document Title": aspects OR "Document Title":AOP OR "Document Title":aspect-oriented) & 158 & 11 & none & first 50 considered\\
+\hline
+ACM$^\dagger$ & 12.11.2020 & title &[Publication Title: test] AND [[Publication Title: aspects] OR [Publication Title: aop] OR [Publication Title: aspect-oriented]] & 311 & 4 & none & first 50 considered\\
+\hline
+IEEE$^*$ & 12.11.2020 & test: title, aspects: abstract &((("Document Title":test) AND "Abstract":aspects) AND "All Metadata":AOP) AND "All Metadata":aspect-oriented & 33 & 16 & none & -\\
+\hline
+ACM$^\dagger$ & 12.11.2020 & test: title, aspects: abstract &[Publication Title: test] AND [Abstract: aspects] AND [All: aop] AND [All: aspect-oriented] & 31 & 6 & none & -\\
+\hline
+\end{longtable}
+\textit{\qquad \qquad \qquad \qquad \qquad *: https://ieeexplore.ieee.org/Xplore/home.jsp \quad $\dagger$: https://dl.acm.org/ \quad $\nabla$: \cite{Duclos}}
+\label{doc}
+\end{table}
+
+\end{landscape}
+\restoregeometry
+
+\newpage
+\section{Metsä et al.: “Testing Non-Functional Requirements with Aspects: An Industrial Case Study” } \label{given}
+
+\subsection{Description}
+The research article “Testing Non-Functional Requirements with Aspects: An Industrial Case Study” by Jani Metsä of Nokia in association with Mika Katara and Tommi Mikkonen \cite{Metsa} of Tampere University of Technology was published in 2007 as part of the Seventh International Conference on Quality Software. According to the authors, the main goal of software testing is to ensure that requirements are met by the implementation. There are already several systematic approaches for testing functional requirements, but only few for testing non-functional requirements. To tackle this problem, they turned to aspect-oriented programming as a potential testing technique. In their paper, they try to answer the following research questions:
+
+\begin{enumerate}
+\item To what extent can aspect-oriented techniques be harnessed to test non-functional requirements?
+\item Which non-functional requirements lend themselves for testing with aspects?
+\end{enumerate}
+
+The authors conducted a case study, analysing 150 requirements of an existing industrial embedded system (a quality verification software for mobile phones running Symbian OS). They were able to identify 16 crosscutting non-functional requirements for which seven test aspects were formulated and implemented. In detail, in the first step, a set of provided system requirements or characteristics are analysed and corresponding non-functional requirements (which might be crosscutting) derived. One non-functional requirement is derived from one or more system requirements, a system requirement can comprise multiple non-functional requirements. In a second step, the non-functional requirements are categorised (performance, robustness, …), and corresponding testing objectives are derived. One testing objective is derived from one or more non-functional requirements. Finally, the test aspects can be formulated based on the testing objectives and non-functional requirements categories. One test aspect can comprise multiple testing objectives.\\  
+\\
+The approach proved to be easy and test coverage could be increased significantly. The use of aspects enables non-invasive testing throughout the software lifecycle. Furthermore, separation of (test) concerns can be achieved by modularizing crosscutting non-functional requirements. As a result, maintainability, reusability as well as tracing between requirements and test code can be improved.  Based on the experiences gained, the authors concluded that especially system-wide and crosscutting non-functional requirements, such as security, performance, reliability and robustness, are suitable for aspect-oriented testing.
+To sum up, the article presents a systematic approach – a systematology - to derive testing objectives and test cases with related test aspects from non-functional requirements. It does not provide automation for any step, hence the main problems the authors identify: the lack of tool support and the need for testing personnel to be firm with aspect-oriented programming.
+
+\newpage
+\subsection{Application}
+
+ The non-functional requirements (REQ) are derived from the user task or the corresponding system characteristics (Table \ref{req}). They have system-wide effects (hence affect multiple system-functions) and are of crosscutting nature. For example, REQ5 and REQ6 set performance constraints on REQ7 and REQ8 as well as REQ3; REQ3 and REQ4 set reliability and robustness constraints on each other; REQ9 sets security constraints on REQ1 and REQ2.\\
+\\
+ Subsequently, the non-functional requirements are categorised and corresponding test objectives can be derived (Table \ref{obj}).\\
+\\
+Finally, a test aspect for one or multiple requirement categories is formulated (Table \ref{aspects}). These test aspects would then need to be implemented manually using an AOP-Framework (AspectC++ \cite{C++}, AspectJ \cite{J}, …). For instance, the Memory Aspect could work like this: every time the constructor or destructor of an entity class (Movie, Performer, …) is called, a counter will be incremented or decremented by the size of the class.
+
+\begin{table}[h]
+\caption{\textbf{Initial System Requirements of the Movie Manager App.}}
+\begin{tabular}{|p{7cm}|p{7cm}|}
+\hline
+\textbf{System Characteristic} & \textbf{Derived Requirement}\\
+\hline
+\multirow{2}{6.5cm}{Data is managed consistently by the system.} & REQ1: Default values are provided (wherever possible).\\
+ & REQ2: Entities are linked consistently (a performer must always be linked to at least one movie).\\ 
+\hline  
+\multirow{2}{6.5cm}{The system is fault tolerant and able to report faulty behaviour.} & REQ3: The system can recover from hang situations.\\
+ & REQ4: The system can identify correct and incorrect system behaviour.\\
+\hline 
+\multirow{2}{6.5cm}{The system runs on a mobile phone with limited amount of resources and thus has a strict memory footprint.} & REQ5: The system must occupy at maximum W bytes of ROM\\
+ & REQ6: The system must occupy at maximum X bytes of RAM.\\
+\hline 
+\multirow{2}{6.5cm}{The system is fast and responsive.} & REQ7: The system can respond to requests after Y time units after power-up.\\
+ & REQ8: All user requests are handled in Z time units.\\
+\hline  
+The system might hold sensitive data and is therefore secure. & REQ9: The system follows the Android App security best practices (e.g. a password is required for sensitive data changes).\\
+\hline
+\end{tabular}
+\label{req}
+\end{table}
+
+\begin{table}
+\caption{\textbf{Testing Objectives for Non-Functional Requirements.}}
+\begin{tabular}{|p{2cm}|p{8cm}|p{4cm}|}
+\hline
+\textbf{REQ} & \textbf{Testing Objective} & \textbf{Requirement Category}\\
+\hline
+REQ1 & TO1: Supervise data consistency and integrity. & Security (Integrity).\\
+REQ2 & \quad & \quad \\
+\hline
+REQ9 & TO2: Check password protection. & Security\\
+\hline 
+REQ3 & TO3: Generate hang situation. & Robustness\\
+\hline 
+REQ3 & TO4: Analyse system reliability. & Reliability\\
+REQ4 & \quad & \quad \\
+\hline 
+REQ5 &TO5: Supervise memory consumption. & Performance (Memory)\\
+REQ6 & \quad & \quad \\
+\hline
+REQ7 & TO6: Measure time consumed from power-on to the system being in a responsive state. & Performance\\
+\hline 
+REQ7 \quad REQ8 &TO7: Measure time consumed on serving requests and executing system-functions. & Performance\\
+\quad & \quad & \quad \\
+\hline
+\end{tabular}
+\label{obj}
+\end{table}
+
+\begin{table}
+\caption{\textbf{Formulated Test Aspects.}}
+\begin{tabular}{|p{4cm}|p{8cm}|p{2cm}|}
+\hline
+\textbf{Test Aspect} & \textbf{Description} & \textbf{Test Objective(s)}\\
+\hline
+Integrity Aspect & Checks if all specified default values are provided and performers are linked to at least one movie. & TO1\\
+\hline
+Security Aspect & Tries to execute all data changing system-functions without providing the password. It should ‘t be possible to commit the changes. & TO1, TO2\\
+\hline
+Robustness Aspect & Generates a request jam to test if the SUT can recover from the hang situation. & TO3\\
+\hline
+Reliability Aspect & Collects information on SUT states and failures. & TO4\\
+\hline
+Memory Aspect & Supervise memory consumption by tracking all memory allocations and deallocations. & TO5\\
+\hline
+Performance Aspect & Measure function execution times. & TO6, TO7\\
+\hline
+\end{tabular}
+\label{aspects}
+\end{table}
+
+\newpage
+\section{Duclos et al.: “ACRE: An Automated Aspect Creator for Testing C++ Applications” } \label{found}
+
+\subsection{Description}
+
+Etienne Duclos, Sébastien Le Digabel, Yann-Gaël Guéhéneuc and Bram Adams \cite{Duclos} of École Polytechnique de Montréal published their article “ACRE: An Automated Aspect Creator for Testing C++ Applications” in 2013 as part of the 17th European Conference on Software Maintenance and Reengineering. They state that software should be faultless and in accordance with requirements yet testing costs need to be acceptable. Systematic and developer-friendly tools for testing functional and non-functional requirements are required to achieve this goal. However, such tools are sparce, especially for non-functional requirements. The authors review related approaches for testing with aspects, including the approach by Metsä et al., and conclude that high-level tool support and automation are required to solve the problems raised in these publications. To achieve this, they try to answer the following tripartite research question:\\
+\\
+Can automatically generated test aspects be used to \dots
+\begin{enumerate}
+\item \dots detect memory leaks?
+\item \dots test invariants?  
+\item \dots detect interference bugs?
+\end{enumerate}
+
+The authors present ACRE (automated aspect creator), a tool that automatically generates test aspect code using a domain specific language. Provided a set of test cases or objectives or a bug report, the DSL statement describing the test aspect can be derived. The type of the bug or the category of the underlying NFR of the test case determines the type of the test aspect that must be chosen in this step. Afterwards, the test aspect is generated automatically based on the DSL description. ACRE takes the entire source code as an input and looks for DSL statements. They are parsed to generate the corresponding test aspects.\\
+\\
+Using ACRE, the authors were able to detect one error of each type (1. – 3.) in the mathematical optimisation software NOMAD. Thanks to the DSL description of the test aspect, testing personnel does not need to have extensive knowledge about aspect-oriented programming, just about the DSL syntax. Although the creation of test cases from requirements or bug reports is not automated, the DSL and the types of available test aspects provide support in that regard. However, this means that the approach is currently limited to specific use cases (memory leaks, invariants, interference bugs in C++ applications). Nevertheless, it would be easy to extend the available functionalities and transfer the approach to other programming languages with support for aspect-oriented programming. \\
+\\
+To sum up, the article presents a tool for the automatic generation of test aspects with given test cases formulated in a domain specific language.
+
+\newpage
+\subsection{Application}
+The non-functional requirements with corresponding test objectives or a bug report must be given, as the approach does not present a way to derive them. Let us consider the same requirements (REQ1-9) and test objectives (TO1-7) as in Table \ref{req} and Table \ref{obj}. Furthermore, a user of the Movie Manager App has filed the following bug report:
+
+\begin{table}[h]
+\caption{\textbf{Bug Report.}}
+\begin{tabular}{|p{14cm}|}
+\hline
+\textbf{Summary:} Memory Leak when removing all movies of a performer.\\
+\hline
+\textbf{Description:} Deleting all Movies linked to a performer leads to the removal of the performer from the performers list, but no memory* is not actually freed.\\
+\hline
+\textbf{Steps to reproduce:} \begin{enumerate} \item Consider a performer with one linked movie. \item Delete the linked Movie. \end{enumerate}\\
+\hline
+\textbf{Actual results:} The performer and movie are removed from the respective lists, but no memory is freed.\\
+\hline
+\textbf{Expected results:} The performer and movie are removed from the respective lists and both objects are no longer in memory.\\ 
+\hline
+\end{tabular}
+\textit{(*For the purpose of this example, let us consider all data is kept in main memory.)}
+\label{bug}
+\end{table}
+
+
+Based on the given test objectives or the bug report, the test aspects must be formulated manually using a domain-specific language. However, the DSL provides certain types of Aspects (Counter, Logging, Timing, Checking) and guidelines that help formulate the test cases. Table \ref{aspect-test} shows the aspect types corresponding to the given test objectives and test aspects of approach 1. The DSL formulation to test for memory leaks in the  Performer class  could look like this:
+
+\lstset {language=C++}
+\begin{lstlisting}[caption={\textbf{DSL Statement For Counter Aspect}}, label=dsl]
+// // name: MemoryAspect              
+// // type: Counter                           
+// // className: Performer    
+// // namespace: MovieManager       
+\end{lstlisting}
+
+The parameters \textit{'name'} and \textit{'type'} are required and determine the name and type of the test aspect. 'className' and 'namespace' are optional and specify, which class are concerned by the aspect. By default, the file in which the DSL statement was found is searched for namespaces and the name of the file is considered to be the name of the class.  It must be placed somewhere within the source code, for example above or below the tested function or class or in a separate file. Afterwards, ACRE takes the entire source code as an input, looks for DSL statements (always starting with // //) and generates the corresponding test aspects automatically. For the example above, ACRE generates the memory aspect for the Performer class as shown in Listing \ref{mem}. In essence, the counter aspect initialises a static counter variable that is incremented each time the Performer constructor is called and decremented each time the destructor is called. After the execution of the main method, the final count as well as a warning in case of a memory leak (counter $>$ 0) are printed. In this manner, a class causing a memory leak can be detected. The timing and logging aspects are quite similar to the counter aspect. The checking aspect is more complex and allows the declaration of variables as well as the use of for-loops, while-loops and if-clauses. Note that the timing aspect in its current form is used for interference bug testing, hence it measures access times to variables. However, a timing aspect for measuring function call times could easily be implemented by starting a timer before each function call and stopping it after each function call in the advice of the aspect.
+
+\begin{table}[h]
+\caption{\textbf{Aspect Types for Given Test Objectives.}}
+\begin{tabular}{|>{\raggedright}p{2cm}|p{8cm}|p{1cm}|p{2cm}|}
+\hline
+\textbf{Test \quad Aspect} & \textbf{Description} & \textbf{Test Objective(s)} & \textbf{Aspect Type}\\
+\hline
+Integrity Aspect & Checks if all specified default values are provided and performers are linked to at least one movie. & TO1 & Checking \\
+\hline
+Security Aspect & Tries to execute all data changing system-functions without providing the password. It should ‘t be possible to commit the changes. & TO1, TO2 & Checking\\
+\hline
+Robustness Aspect & Generates a request jam to test if the SUT can recover from the hang situation. & TO3 & Checking, Logging\\
+\hline
+Reliability Aspect & Collects information on SUT states and failures. & TO4 & Logging\\
+\hline
+Memory Aspect & Supervise memory consumption by tracking all memory allocations and deallocations. & TO5 & Counting\\
+\hline
+Performance Aspect & Measure function execution times. & TO6, TO7 & Timing (not in current form)\\
+\hline
+\end{tabular}
+\label{aspect-test}
+\end{table}
+
+\lstset {language=C++}
+\begin{lstlisting}[caption={\textbf{Generated Counter Aspect Code.}}, label=mem]
+aspect MemoryAspect{
+	public static int _Eval_Performer = 0;
+
+	pointcut Eval_Performer() = "MovieManager::Performer";
+	advice Eval_Performer() : slice struct{
+		class Eval_Performer{
+			public:
+				// constructor -> increment
+				Eval_Performer(){
+					MemoryAspect::_EvalPerformer++;
+				}
+				// destructor -> decrement
+				~Eval_Performer(){
+					MemoryAspect::_EvalPerformer--;
+				} 
+		} 
+	};
+
+	// print counter (and warning)
+	advice execution (main(...)) : after () {
+		printf("Final count of Eval_Performer: \%d\n",  _Eval_Performer)
+		if(_Eval_Performer > 0)
+			printf("Memory Leak! \n")
+	}
+};
+\end{lstlisting}
+
+\newpage
+\section{Comparison} \label{compare}
+
+The approaches have been compared using a set of synthesis questions, as shown in Table \ref{syn}.\\
+\\
+Both approaches offer the same benefits: using test aspects, it is possible to test system-wide crosscutting non-functional requirements in a non-invasive way (without modifying or instrumentalising the source code). As a result, modularity, maintainability reusability as well as traceability of requirements to corresponding tests can be improved. Multiple stakeholders can benefit from both approaches, in particular testing and maintenance personnel. Correspondingly, both approaches use and produce similar artifacts: test objectives are derived from requirements and ultimately implemented using aspects.\\
+\\
+However, there are differences concerning the specific individual steps, the level of automation as well as the relating quality of the approaches. Approach 1 describes a systematology to derive aspect test cases from requirements. These have to be implemented manually. In contrast, approach 2 assumes the test objectives to be provided and generates corresponding test aspects automatically. Subsequently, the most significant difference is the tool support: approach 1 does not provide any tool support, but rather describes a systematology. Approach 2 fully automates the final step of approach 1 – from test objectives to test code – and assists with the set-up of the concrete test cases through the structure of the domain specific language.\\ 
+\\
+This is reflected in the evaluation of the respective approach as well. Both draw the conclusion that aspects are well suited for testing non-functional requirements. Approach 1 criticises the lack of tool support, approach 2 counteracts this exact problem. In Summary, the two approaches are quite similar. However, approach 1 is less extensive concerning the automation of the technique and should be regarded as a rather fundamental research. Approach 2 expands on the ideas of approach 1 and enhances their quality by partially automating the process. 
+
+\newpage
+\newgeometry{margin=1cm}
+\begin{landscape}
+
+\begin{table}
+\caption{\textbf{Synthesis Matrix.}}
+\begin{longtable}{|p{2cm}|>{\raggedright}p{4cm}|>{}p{8cm}|>{}p{8cm}|}
+\hline
+Question 
+& Name 
+& Approach 1: \textbf{Testing Non-Functional Requirements with Aspects} 
+& Approach 2: \textbf{ACRE}\\ \hline
+%\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{3}{*}{3 \rotatebox[origin=r]{90}{\textbf{Description}}} 
+& a) artefacts and relationship between artefacts 
+& system requirements in natural language (provided), NFRs (derived), testing objectives (derived), test aspects (derived)
+& test objectives or bug report (provided), DSL-statements within the source code (derived), test aspects (generated)\\ 
+\cline{2-4}
+& b) preconditions/ input 
+&  system requirements 
+& test objectives or bug report\\ 
+\cline{2-4}
+& c) steps, results, informations 
+&  \underline{Step 1}: Provided a set of system requirements, NFRs (which might be crosscutting) are derived. One NFR is derived from one or more system requirements, a system requirement can comprise multiple NFRs. \underline{Step 2}: The NFRs are categorised and corresponding testing objectives are derived. One testing objective is derived from one ore more NFRs. \underline{Step 3}: Test aspects can be formulated based on the testing objectives and NFR categories. One test aspect can comprise multiple testing objectives.
+ & \underline{Step 1}: Provided a set of testing objectives or a bug report, the DSL statement describing the test aspect can be derived. The type of the bug or the category of the underlying NFR of the testing objective determines the type of the test aspect that must be chosen in this step. \underline{Step 2}: The test aspect is generated automatically based on the DSL description.\\
+\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{3}{*}{4 \rotatebox[origin=r]{90}{\textbf{Benefits}}} 
+& a) supported usage scenarios 
+& Easy and non-invasive testing throughout the software lifecycle: during initial development for debugging or validating NFRs, during system testing and for maintaining tasks. Separation of concerns by modularizing crosscutting NFRs. Tracing of NFRs and corresponding tests 
+& Easy and non-invasive testing throughout the software lifecycle: during initial development for debugging or validating NFRs, during system testing and for maintaining tasks. Separation of concerns by modularizing crosscutting NFRs. Tracing of NFRs and corresponding tests\\ 
+\cline{2-4}
+& b) supported stakeholders 
+& Developers, testing and maintenance personnel
+& Developers, testing and maintenance personnel\\ 
+\cline{2-4}
+& c) corresponding SWEBOK-Knowledge Areas
+ & Software Requirements (NFRs, Requirements Tracing), Software Testing (System Test), Software Maintenance 
+& Software Requirements (NFRs, Requirements Tracing), Software Testing (System Test), Software Maintenance\\ 
+\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{2}{*}{5 \rotatebox[origin=r]{90}{\textbf{Tools}}} 
+& a) tool support 
+& none (except the aspects themselves)
+&ACRE (Automated Aspect Creator), DSL\\ 
+\cline{2-4}
+& b) level of automation 
+&  none 
+& Test cases and testing objectives must be derived manually from the requirements. The DSL facilitates the test case design. The test aspect code is generated automatically from the DSL statements.\\ 
+\cline{2-4}
+\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multirow{2}{*}{6 \rotatebox[origin=r]{90}{\textbf{Quality}}} 
+& a) evaluation
+& Case study with requirements of an existing industrial embedded system. Comparison of test coverage with and without test aspects.
+& An empirical study aiming to find errors in the mathematical optimisation software NOMAD was conducted. The approach was contrasted with other common techniques and tools.\\ 
+\cline{2-4}
+& b) evaluation results 
+& Test aspects proved to be an easy and non-invasive technique for testing NFRs. Seperation of (test) concerns by modularising NFRs.  BUT: lack of tool support, complicated build process. 
+& Automatically generated test aspects proved to be suitable for finding memory leaks, interference bugs and testing invariants. The approach is easy to use because developers do not need to know aspect-oriented programming itself, only the DSL syntax and semantics. BUT: derivation of test cases from requirements and DSL statement input still manual\\ 
+\cline{2-4}
+\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{longtable}
+\label{syn}
+\end{table}
+
+\end{landscape}
+\restoregeometry
+
+\newpage
+\section{Conclusion} \label{feierabend}
+
+In summary, this report presents two articles describing possible approaches to harness aspect-oriented techniques for testing non-functional requirements. A literature search based on the first article was carried out to obtain an overview of the current state of research and find relevant literature for this report. The selected article builds upon the ideas of the given article and presents a tool for (partially) automating the creation of test aspects. The two approaches have been compared and illustrated using a literature synthesis with a set of synthesis questions and a synthesis matrix as well as an application to an example.\\
+\\ 
+The results of both research articles and the synthesis and example, conducted for the report, indicate that aspects are suitable for testing non-functional requirements in a systematic manner due to multiple reasons: Firstly, the basic functionality of aspects carries an inherent systematology and lends itself for testing. An aspect comprises a set of statements that can be executed every time before, after or around a function call, which can easily be utilised to check pre- and postconditions or to measure resource consumption and runtimes. In addition to that, they are non-invasive, meaning the tested source code does not need to be modified and the test aspect can easily be separated from the main code, reused or removed. Furthermore, test aspects are especially suitable for testing non-functional requirements because they modularise the system level concerns, non-functional requirements pose, thus maintaining separation of concerns. System-wide functionality, that is spread out through the entire system and its source code can be tested using one aspect. This also improves traceability between the non-functional requirements and the corresponding tests.\\
+\\ 
+Metsä et al. point out that the lacking tool support and the need for developers to have a firm understanding of aspect-oriented programming pose possible challenges. Duclos et al. solve these problems (partially) by introducing ACRE, a tool that parses DSL statements to generate test aspects automatically.  However, the tool only supports four aspect types and is limited to C++ applications. The lack of subsequent research articles (after 2013) indicates that systematic testing using aspects is not in focus of current research anymore. Nevertheless, existing approaches and tools, as presented in this report, should be further refined to make use of the aforementioned advantages of aspect-oriented testing, especially for non-functional requirements. Because aspect-oriented programming lost popularity in recent years, applying aspect-oriented testing techniques in practice is difficult because only few developers and testers are able to implement them. However, using a domain specific language as an intermediate layer of abstraction, as described by Duclos et al, tackles this problem and enables relevant stakeholders to use test aspects as small, re-usable and none-invasive test modules throughout the software lifecycle at the system test level. 
+
+
+
+
+
