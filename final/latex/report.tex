@@ -19,7 +19,19 @@
 %\usepackage{pdflscape}
 %\usepackage{rotating}
 
+\usepackage{csquotes}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{tablefootnote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hier die Glossareinträge
 \usepackage{glossaries} 
+\setacronymstyle{long-short}
+\newacronym{ex}{sample}{example}
+\newacronym{NFR}{NFR}{non-functional requirement}
+\newacronym{FR}{FR}{functional requirement}
+\newacronym{UML}{UML}{uniform modeling language}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -109,7 +121,7 @@
 }
 \makeatother
 
-\author{Author 1, Author n}
+\author{Author 1, Andre Meyering}
 \title{Title }
 \subtitle{Technical Report}
 \publishers{\textbf{Advisor University of Heidelberg}\\ Prof. Dr. Barbara Paech, Astrid Rohmann}
@@ -136,6 +148,7 @@
 \input{./content/1-Introduction}
 \input{./content/2-Chapter2}
 \input{./content/3-Chapter3}
+\input{./content/10-Topic-9}
 \input{./content/10-Conclusion}
 
 %% Bibliography
@@ -152,6 +165,19 @@ Lehrstuhl für Allgemeine Wirtschafts- und Sozialgeographie: An Hinweise zum wis
 \url{http://www.geogr.uni-jena.de/fileadmin/Geoinformatik/Lehre/backup_05_2007/pdf-dokumente/Skript_WissArbeiten.pdf}
 
 \bibitem{SWEBOK} PLATZHALTER
+
+% https://ieeexplore.ieee.org/document/4578345/references#references
+\bibitem{ZouPavlovski2008} J. Zou and C. J. Pavlovski, "Control Cases during the Software Development Life-Cycle," 2008 IEEE Congress on Services - Part I, Honolulu, HI, 2008, pp. 337-344, doi: 10.1109/SERVICES-1.2008.46.
+
+% https://ieeexplore.ieee.org/abstract/document/6908675
+\bibitem{Lagerstedt2014} R. Lagerstedt, "Using automated tests for communicating and verifying non-functional requirements," 2014 IEEE 1st International Workshop on Requirements Engineering and Testing (RET), Karlskrona, 2014, pp. 26-28, doi: 10.1109/RET.2014.6908675.
+
+% https://ieeexplore.ieee.org/document/1438375
+\bibitem{Andre_Search_1} A. Gregoriades and A. Sutcliffe, "Scenario-based assessment of nonfunctional requirements," in IEEE Transactions on Software Engineering, vol. 31, no. 5, pp. 392-409, May 2005, doi: 10.1109/TSE.2005.59.
+
+% https://ieeexplore.ieee.org/document/5954452
+\bibitem{Andre_Search_2} Z. A. Barmi, A. H. Ebrahimi and R. Feldt, "Alignment of Requirements Specification and Testing: A Systematic Mapping Study," 2011 IEEE Fourth International Conference on Software Testing, Verification and Validation Workshops, Berlin, 2011, pp. 476-485, doi: 10.1109/ICSTW.2011.58.
+
 \end{thebibliography}
 
 \listoffigures
