@@ -1,13 +1,79 @@
 \chapter{Introduction}\label{sec:introduction}
-[@bugwelle Introduction(1/2)]
 
+% Reviewfragen
+% - Weckt die Einleitung das Interesse der LeserInnen am Thema?
+% - Enthält die Einleitung eine detaillierte Problembeschreibung
+%   der Herausforderungen in der Softwareentwicklung, die mit systematischer
+%   Testerstellung adressiert werden sollen?
+% - Enthält die Einleitung die wesentlichen Aussagen aus den Einleitungen der einzelnen Kapitel?
+
+% Die Einleitung (1 Introduction) des Berichts soll das Interesse der LeserInnen
+% am Thema wecken und die gemeinsamen Grundlagen beschreiben. Sie enthält eine
+% detaillierte Problembeschreibung der Herausforderungen in der Softwareentwicklung,
+% die durch systematische Testerstellung adressiert werden sollen. Zudem enthält sie
+% die wesentlichen Aussagen aus den Einleitungen der einzelnen Kapitel 
+\section{Systematic Software Testing}\label{sec:introduction_software_testing}
+
+With the rise of smart gadgets and the Internet of Things, more and more parts of our daily life involve technology.
+And the software required to run our smartphones, computers and other gadgets requires software that becomes more complex as more data can be processed.
+As software becomes more complex, bugs can have immense consequences as the recent data breaches have show~\cite{TODO}.
+
+Therefore, proper testing of software becomes more important than ever.
+But what is software testing? According to the \enquote{Guide to the Software Engineering Body of Knowledge} (short: SWEBOK), \enquote{Software testing consists of the dynamic verification that a program provides expected behaviors on a finite set of test cases, suitably selected from the usually infinite execution domain.}~\cite{SWEBOK}
+This means that it may not even be possible to test every input against the expected output, for example if the input is an infinite data stream.
+But also for functionality with a finite set of input data, testing every possible combination may not be feasible.
+Software testing can take more time than developing the program under test. Hence, software testing can be tedious, difficult and expensive.
+So the question arises how software can be tested in an effective and efficient way.
+
+We need to write tests in a systematic way.
+This paper contains 10~articles, % TODO: Hat einer aufgehört?
+each describing another approach to systematic software testing.
+
+\autoref{sec:topic_1} TODO
+
+% Hat aufgehört?
+
+\autoref{sec:topic_2} TODO % Fitnesse
+
+Notes: Acceptance tests; Communication between customer and developer; customers describe in natural language; developers create code; Fit-Table are natural language;
+
+
+\autoref{sec:topic_3} TODO % Transition System
+
+Notes: Often specification and implementation does not match; traceability issues: which requirement is covered by which test? Solution: Transition system;
+
+
+\autoref{sec:topic_4} TODO % Timing Component
+
+Notes: some times issue can only be found if components are linked together; test with same input but different execution time can lead to different reactions in a real-time system.
+
+\autoref{sec:topic_5} TODO % Classiciation Tree
+
+Notes: Testing all possible cases becomes unmanageable very fast.Classification Trees offer an approach to offer an approach to reduce the complexity of such parameter con-structions  and  to  keep  them  clearly  arranged.  Test cases can be generated from CTs
+
+\autoref{sec:topic_6} TODO % Formal specification
+
+% Noch nicht online
+
+\autoref{sec:topic_7} TODO % System models
+
+\autoref{sec:topic_8} TODO % NFR/FR Use Requiremetn
+
+\autoref{sec:topic_9} TODO % Risk Analysis NFR
+
+\autoref{sec:topic_10} TODO % NFR Aspects
+
+
+% die Beschreibung der gemeinsamen Grundlagen unter Nutzung des Glossars
+% und der Wissensgebiete aus SWEBOK. Das Kapitel gibt einen Überblick über
+% die Struktur des Berichts.
 \section{Common Fundamentals}\label{sec:introduction_common_fundamentals}
 All articles build upon a common set of fundamental definitions regarding software testing and requirements.
 They are listed and mapped to the individual topics in the glossary section of this report.
 It is highly recommended to refer to the glossary before reading an article or when ambiguities arise while reading an article.
 However, since it is quite extensive and also contains more topic-specific definitions, the most important terms are defined hereafter.
 
-Like a part of the entries in the glossary section, we use the \enquote{Guide to the Software Engineering Body of Knowledge} (short: SWEBOK) in its third version as a basis.
+Like a part of the entries in the glossary section, we use the SWEBOK in its third version as a basis.
 Although this guide is already quite old (at least the original version from 2004), hence not fully compliant with current research results, its 15 knowledge areas and basic definitions of a body of knowledge are still useful for classifying the approaches presented in this report and establish a common set of technical terms.
 
 Let us begin with requirements.
