@@ -1,14 +1,16 @@
-\chapter{Acceptance testing with FitNesse}\label{sec:topic_2}
+%\chapter{Acceptance testing with FitNesse}
 
 % Hickl
+
 \chapter{Systematic Generation of acceptance tests that are executable with FitNesse}
+\label{sec:topic_2}
 
 \section{Introduction}
 
 This chapter focusses on the creation of acceptance tests that are automatically executable using the tool \textit{FitNesse}.
 In this first section of the chapter the reason for using this approach is discussed.
 Furthermore, the general features of FitNesse as well as the needed artefacts like Fit-tables are explained.
-An article that focusses on the topic of creating acceptance tests that are executable with FitNesse was provided by the supervisors of the seminar.
+An article that focuses on the topic of creating acceptance tests that are executable with FitNesse was provided by the supervisors of the seminar.
 Section \ref{sec:literature-search} documents the literature search used to find a different approach.
 The two articles are then described in the sections \ref{sec:el-attar} and \ref{sec:longo}.
 Moreover, for a better understanding of the presented approaches these chapters include the execution of them on the \textit{MovieManager}.
@@ -37,7 +39,7 @@ These tables can contain two types of values: Input values and expected output v
 The \textit{Fixture-Class} creates an instance of the \textit{System-under-test} and then transfers the input values into it.
 Then it extracts the resulting output values from the \textit{System-under-test} and returns them to \textit{FitNesse}.
 These extracted output values are then automatically compared by \textit{FitNesse} to the expected output values from the Fit-tables.
-If they are the same, the test was succesful and the entry of the table receives the colour \textit{Green}.
+If they are the same, the test was successful and the entry of the table receives the colour \textit{Green}.
 Otherwise, the affected part of the test failed and the entry receives the colour \textit{Red}.
 
 \begin{figure}[H]
@@ -67,10 +69,10 @@ The relevance criteria were chosen as follows:
 \begin{itemize}
 	\item \textit{Criterium 1:} The article describes an approach to systematically generate acceptance tests that are executable with \textit{FitNesse} \textit{or} gives an overview on the use of \textit{FitNesse} in software engineering.
 	
-	This criterium was chosen to find approaches that are specific to the subject of this chapter.
+	This criterion was chosen to find approaches that are specific to the subject of this chapter.
 	Articles that give an overview over the use of \textit{FitNesse} were also accepted because of their potential to classify the found approaches.
 	
-	\item \textit{Criterium 2:} The article was not published before the year 2009 which is the year that the article by El-Attar and Smith was published.
+	\item \textit{Criterion 2:} The article was not published before the year 2009 which is the year that the article by El-Attar and Smith was published.
 	
 	This criterium was chosen to get a more recent approach than the start article which was by the creation of this chapter already more than 10 years old.
 \end{itemize}
@@ -80,7 +82,7 @@ As search terms the terms 'acceptance test' and 'FitNesse' were chosen.
 These search terms turned out to be specific enough to fit only a manageable amount of articles.
 The search resulted in eight relevant articles of which six presented an approach and two gave an overview over the use of \textit{FitNesse}.
 Both snowballing searches from the start articles did not result in any more relevant articles that were not already found by the search-term-based search.
-The backward-snowballing did not result in any relevant articles due to their publishing date and hence not passing Criterium 2.
+The backward-snowballing did not result in any relevant articles due to their publishing date and hence not passing Criterion 2.
 One relevant article was found during the forward-snowballing that was already found by the search-term-based search on the platform Springer Link.
 
 \begin{table}[H]
@@ -161,10 +163,10 @@ To achieve this, for every use case a \textbf{robustness diagram} is created.
 These diagrams combine the use cases from the use case model with the objects from the domain model.
 They contain actors and entities as well as boundary- and control-objects.
 For each use case all involved objects and the connections between the objects are displayed.
-The involved objects and the communication between them is extracted from the Use Case desription.
+The involved objects and the communication between them is extracted from the Use Case description.
 During the creation of the robustness diagrams necessary \textit{objects} or \textit{attributes of objects} may be identified that are not already part of the domain model.
 These should be added to the domain model.
-Also missing steps or preconditions in the Use Case desription might be found.
+Also missing steps or preconditions in the Use Case description might be found.
 If this is the case, the Use Case descriptions should also be updated.
 After this step the HLATs should be adapted to fit the updated domain model and Use Case descriptions.
 
@@ -196,7 +198,7 @@ Such a relation is highlighted in the Use Case Model with the keyword \textit{ex
 The domain model of the Movie Manager application is shown in Figure \ref{fig:domain-mm} on the next page.
 It contains the entities Movie and Performer as well as the two views that the user can see.
 
-To illustrate the approach the Use Case \textit{Describe a perfomer} is used.
+To illustrate the approach the Use Case \textit{Describe a performer} is used.
 In the first step of the approach the HLATs for this Use Case need to be created.
 The User Scenarios for this Use Case are as mentioned in the User Task table:
 \begin{itemize}
@@ -527,7 +529,7 @@ This Fixture-Class has to be written manually.
 Both approaches provide a tool to combine artefacts with the resulting acceptance tests which helps traceability.
 For both approaches the creation of the executable acceptance tests is still mostly or completely manual.
 While the approach of El-Attar and Smith uses no automation during the creation of the executable acceptance tests, the last step of the approach of Longo et al. is fully automatically.
-This is possible because the US-UIDs created in the approach of Longo et al. are a different way to display the informations of a \textit{Fit-table} and therefore can be directly converted to a \textit{Fit-table}.
+This is possible because the US-UIDs created in the approach of Longo et al. are a different way to display the information of a \textit{Fit-table} and therefore can be directly converted to a \textit{Fit-table}.
 The execution of the final acceptance tests is fully automatic for both approaches.
 
 Both approaches involve customer and developers as stakeholders.
