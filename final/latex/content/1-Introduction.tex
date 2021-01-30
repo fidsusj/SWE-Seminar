@@ -16,7 +16,7 @@
 
 With the rise of smart gadgets and the Internet of Things, more and more parts of our daily life involve technology.
 And the software required to run our smartphones, computers and other gadgets requires software that becomes more complex as more data can be processed.
-As software becomes more complex, bugs can have immense consequences as the recent data breaches have show~\cite{TODO}.
+As software becomes more complex, bugs can have immense consequences as the recent data breaches have show~\footnote{TODO}.
 
 Therefore, proper testing of software becomes more important than ever.
 But what is software testing? According to the \enquote{Guide to the Software Engineering Body of Knowledge} (short: SWEBOK), \enquote{Software testing consists of the dynamic verification that a program provides expected behaviors on a finite set of test cases, suitably selected from the usually infinite execution domain.}~\cite{SWEBOK}
@@ -26,43 +26,62 @@ Software testing can take more time than developing the program under test. Henc
 So the question arises how software can be tested in an effective and efficient way.
 
 We need to write tests in a systematic way.
-This paper contains 10~articles, % TODO: Hat einer aufgehört?
+This paper contains 9~articles, % TODO: Hat einer aufgehört?
 each describing another approach to systematic software testing.
 
-\autoref{sec:topic_1} TODO
+In \autoref{sec:topic_2} % Fitnesse
+we focus on acceptance tests with FitNesse.
+Communicating requirements between customers and developers can be difficult.
+Whereas natural language can be too ambiguous, code can be too technical.
+By using FitNess, human-readable Fit-Tables can be created that be understood by customers and can be transformed into code automatically.
 
-% Hat aufgehört?
+But having tests may not be enough.
+Which requirement is covered by which test?
+Can we be sure that the implementation matches the specification?
+Traceability becomes necessary and is required to not loose overview over the tests cases and covered requirements.
+This is where
+\autoref{sec:topic_3} % Transition System
+comes into play with transition systems which can be used to automatically create test paths through the application by using formal specifications.
 
-\autoref{sec:topic_2} TODO % Fitnesse
+% Notes: Often specification and implementation does not match; traceability issues: which requirement is covered by which test? Solution: Transition system;
 
-Notes: Acceptance tests; Communication between customer and developer; customers describe in natural language; developers create code; Fit-Table are natural language;
+After that,
+\autoref{sec:topic_4} % Timing Component
+looks into testing with a timing component.
+Integrating different components can reveal errors even if the individual components are properly tested.
+Furthermore, if the system is a real time system, tests with the same input can lead to different system reactions if the test's execution time changes.
 
+% Notes: some times issue can only be found if components are linked together; test with same input but different execution time can lead to different reactions in a real-time system.
 
-\autoref{sec:topic_3} TODO % Transition System
+Following this,
+\autoref{sec:topic_5} % Classiciation Tree
+looks into decreasing the number of test cases by using classification trees.
+Because testing all possible parameter cases becomes unmanageable very fast, these classification trees offer a great way to reduce the complexity of such parameter constructs.
+Furthermore, these classification trees can be used to generated test cases.
 
-Notes: Often specification and implementation does not match; traceability issues: which requirement is covered by which test? Solution: Transition system;
+% Notes: Testing all possible cases becomes unmanageable very fast.Classification Trees offer an approach to offer an approach to reduce the complexity of such parameter con-structions  and  to  keep  them  clearly  arranged.  Test cases can be generated from CTs
 
-
-\autoref{sec:topic_4} TODO % Timing Component
-
-Notes: some times issue can only be found if components are linked together; test with same input but different execution time can lead to different reactions in a real-time system.
-
-\autoref{sec:topic_5} TODO % Classiciation Tree
-
-Notes: Testing all possible cases becomes unmanageable very fast.Classification Trees offer an approach to offer an approach to reduce the complexity of such parameter con-structions  and  to  keep  them  clearly  arranged.  Test cases can be generated from CTs
-
-\autoref{sec:topic_6} TODO % Formal specification
-
+\autoref{sec:topic_6} %TODO % Formal specification
+\textit{ist noch nicht online; TODO}
 % Noch nicht online
 
-\autoref{sec:topic_7} TODO % System models
+In \autoref{sec:topic_7} %  System models
+we then look into testing with systems models which are compared against test models.
+It is looked into model based testing and how tracability can be used to increase the probability of finding errors and improve test quality.
 
-\autoref{sec:topic_8} TODO % NFR/FR Use Requiremetn
+\autoref{sec:topic_8} % NFR/FR Use Requiremetn
+explains why writing manual tests for functional and non-functional requirements can be  not only tedious but error prone due to Copy\,\&\,Paste of errors in test logic.
+The section describes how test cases can be automatically created by using the user requirements notation that is used for modelling, analyzing, and controlling the correctness and completeness of functional and non-functional requirements.
 
-\autoref{sec:topic_9} TODO % Risk Analysis NFR
+Another aspect of testing non-functional requirements can be by using risk analysis.
+This is where \autoref{sec:topic_9}%  Risk Analysis NFR
+steps in and briefly shows how non-functional requirements can be tested and how risk analysis can be used to prioritize test cases.
 
-\autoref{sec:topic_10} TODO % NFR Aspects
+The section also shows how architectural non-functional requirements such as code conventions can be tested.
+\autoref{sec:topic_10} % NFR Aspects
+expands on this topic by introducing aspects and aspect oriented programming to test and verify non-functional requirements such as software memory limits and memory leaks.
 
+Finally, \autoref{sec:conclusion} concludes this paper and summarizes each article.
 
 % die Beschreibung der gemeinsamen Grundlagen unter Nutzung des Glossars
 % und der Wissensgebiete aus SWEBOK. Das Kapitel gibt einen Überblick über
