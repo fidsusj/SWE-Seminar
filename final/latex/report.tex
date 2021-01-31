@@ -1,3 +1,4 @@
+% ------ BEGIN PREAMBEL ------
 \documentclass[a4paper,10pt, bibliography=totocnumbered]{scrreprt}
 
 \usepackage[utf8x]{inputenc}
@@ -25,15 +26,7 @@
 \usepackage{tablefootnote}
 \usepackage{float}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hier die Glossareinträge
-\usepackage{glossaries} 
-\setacronymstyle{long-short}
-\newacronym{ex}{sample}{example}
-\newacronym{NFR}{NFR}{non-functional requirement}
-\newacronym{FR}{FR}{functional requirement}
-\newacronym{UML}{UML}{uniform modeling language}
-
+% Links
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,        % false: boxed links; true: colored links
@@ -44,7 +37,12 @@
     urlcolor=blue           % color of external links
 }
 
-% packages Max Edinger
+% Glossary
+\usepackage[nomain,acronym,toc]{glossaries} 
+\makeglossaries
+\input{./content/glossary}
+
+% ------ BEGIN EDINGER PACKAGES ------
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{array}
@@ -54,39 +52,71 @@
 \usepackage{pdflscape}
 \usepackage[pass]{geometry}
 
-
 % define colors and configure listing
 \colorlet{mygray}{black!30}
 \colorlet{mygreen}{green!60!blue}
 \colorlet{mymauve}{red!60!blue}
 \lstset { %
-    language=C++,
-    backgroundcolor=\color{gray!10},  
-    basicstyle=\ttfamily,
-    columns=fullflexible,
-    breakatwhitespace=false,      
-    breaklines=true,                
-    captionpos=t,                    
-    commentstyle=\color{mygreen},
-    emph={aspect, advice, pointcut, before, JoinPoint}, emphstyle={\color{blue}},
-    extendedchars=true,              
-    frame=single,                   
-    keepspaces=true,             
-    keywordstyle=\color{blue},      
-    language=c++,                 
-    numbers=none,                
-    numbersep=5pt,                   
-    numberstyle=\tiny\color{blue}, 
-    rulecolor=\color{mygray},        
-    showspaces=false,               
-    showtabs=false,                 
-    stepnumber=1,                  
-    stringstyle=\color{mymauve},    
-    tabsize=3,                      
-    title=\lstname,
-    numbers=left
+	language=C++,
+	backgroundcolor=\color{gray!10},  
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	breakatwhitespace=false,      
+	breaklines=true,                
+	captionpos=t,                    
+	commentstyle=\color{mygreen},
+	emph={aspect, advice, pointcut, before, JoinPoint}, emphstyle={\color{blue}},
+	extendedchars=true,              
+	frame=single,                   
+	keepspaces=true,             
+	keywordstyle=\color{blue},      
+	language=c++,                 
+	numbers=none,                
+	numbersep=5pt,                   
+	numberstyle=\tiny\color{blue}, 
+	rulecolor=\color{mygray},        
+	showspaces=false,               
+	showtabs=false,                 
+	stepnumber=1,                  
+	stringstyle=\color{mymauve},    
+	tabsize=3,                      
+	title=\lstname,
+	numbers=left
 }
+% ------ END EDINGER PACKAGES ------
 
+% ------ BEGIN HAUSBERGER PACKAGES ------
+%\usepackage{csquotes}
+%\usepackage{float}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	morekeywords={UC, context, pre, @pre, post, and, or, not, implies, forall, exists},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+% ------ END HAUSBERGER PACKAGES ------
+
+% ------ END PREAMBEL ------
 
 %% Title Page
 \makeatletter
@@ -159,6 +189,10 @@
 \input{./content/11-Topic-10}
 \input{./content/12-Conclusion}
 
+%% Glossary
+\glsaddall
+\printglossaries
+
 %% Bibliography
 \bibliographystyle{plainnat}
 %\bibliography{literature.bib}%Bibliography file name
@@ -206,6 +240,55 @@ Engineering and Knowledge Engineering. 330-335 (2015).
 \bibitem{elsevier} Science Direct. \url{https://www.sciencedirect.com/}
 
 \bibitem{Fit-tables} FitNesse: Writing Fit Tables. \url{http://fitnesse.org/FitNesse.UserGuide.WritingAcceptanceTests.FitFramework.WritingFitTables}
+
+% ------ BEGIN REFERENCES HAUSBERGER ------ 
+
+\bibitem{KunChen2005} Chen, K, Zhang, W., Zhao, H.: An approach to constructing feature models based on requirements clustering.
+In: 13th IEEE International Conference on Requirements Engineering (RE05). pp. 31-40. (2005)
+
+\bibitem{RichtigesZitierenTUDresden} Institut für Geographie   
+Lehrstuhl für Allgemeine Wirtschafts- und Sozialgeographie: An Hinweise zum wissenschaftlichen Arbeiten.
+\url{http://www.geogr.uni-jena.de/fileadmin/Geoinformatik/Lehre/backup_05_2007/pdf-dokumente/Skript_WissArbeiten.pdf}
+
+\bibitem{ClementineNebut2006} Nebut, C., Fleurey, F., Le Traon, Y., Jézéquel, J.-M.: Automatic Test Generation: A Use Case Driven Approach.
+In: IEEE Transactions on Software Engineering (Volume: 32, Issue: 3, March 2006).
+https://doi.org/10.1109/TSE.2006.22.
+
+\bibitem{NajlaRaza2007} Raza, N., Nadeem, A., Iqbal, M. Z. Z.: An Automated Approach to System Testing based on Scenarios and Operations Contracts.
+In: Seventh International Conference on Quality Software (QSIC 2007).
+https://doi.org/10.1109/QSIC.2007.4385504.
+
+\bibitem{FelixHausberger2020} Hausberger, F.: Research planning, research and mid-term presentation, \url{https://github.com/fidsusj/SWE-Seminar}, last accessed 2021/01/10.
+
+\bibitem{MonalisaSarma2007} Sarma, M., Mall, R.: System Testing using UML Models.
+In: 16th IEEE Asian Test Symposium (ATS 2007).
+https://doi.org/10.1109/ATS.2007.102.
+
+\bibitem{RosziatiIbrahim2007} Ibrahim, R., Saringat, M. Z., Ibrahim, N., Ismail, N.: An Automatic Tool for Generating Test Cases from the System's Requirements.
+In: 7th IEEE International Conference on Computer and Information Technology (CIT 2007).
+https://doi.org/10.1109/CIT.2007.116.
+
+\bibitem{LizheChen2010} Chen, L., Li, Q.: Automated test case generation from use case: A model based approach.
+In: 2010 3rd International Conference on Computer Science and Information Technology.
+https://doi.org/10.1109/ICCSIT.2010.5563772.
+
+\bibitem{XiaojingZhang2015} Zhang, X., Tanno, H.: Requirements document based test scenario generation for web application scenario testing.
+In: 2015 IEEE Eighth International Conference on Software Testing, Verification and Validation Workshops (ICSTW).
+https://doi.org/10.1109/ICSTW.2015.7107465.
+
+\bibitem{LipingLi2008} Li, L., Miao, H.: An Approach to Modeling and Testing Web Applications Based on Use Cases.
+In: 2008 International Symposium on Information Science and Engineering.
+https://doi.org/10.1109/ISISE.2008.265.
+
+\bibitem{YGKim1999} Kim, Y. G., Hong, H. S., Cho, S. M., Bae, D. H., Cha, S. D.: Test cases generation from UML state diagrams.
+In: IEEE Proceedings - Software, Vol. 146, No. 4, pp. 187-192, Aug. 1999.
+https://doi.org/10.1049/ip-sen:19990602.
+
+\bibitem{ClementineNebut2003} Nebut, C., Fleurey, F., Le Traon, Y., Jézéquel, J.-M.: Requirements by Contracts allow Automated System Testing.
+In: Proceedings of the 14th International Symposium on Software Reliability Engineering (ISSRE November 2003).
+https://dl.acm.org/doi/10.5555/951952.952350.
+
+% ------ END REFERENCES HAUSBERGER ------ 
 
 \end{thebibliography}
 
