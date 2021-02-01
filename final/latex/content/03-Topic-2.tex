@@ -5,7 +5,7 @@
 \chapter{Systematic Generation of acceptance tests that are executable with FitNesse}
 \label{sec:topic_2}
 
-\section{Introduction}
+\section{Introduction}\label{sec:topic_2_intro}
 
 This chapter focusses on the creation of acceptance tests that are automatically executable using the tool \textit{FitNesse}.
 In this first section of the chapter the reason for using this approach is discussed.
@@ -15,7 +15,7 @@ Section \ref{sec:literature-search} documents the literature search used to find
 The two articles are then described in the sections \ref{sec:el-attar} and \ref{sec:longo}.
 Moreover, for a better understanding of the presented approaches these chapters include the execution of them on the \textit{MovieManager}.
 The following section \ref{sec:comparison} includes the comparison of the two approaches using a synthesis matrix.
-Section \ref{sec:conclusion} provides a Conclusion including the most important insights of the process and an assessment in which situations the approaches might be suitable.
+Section \ref{sec:topic_2_conclusion} provides a Conclusion including the most important insights of the process and an assessment in which situations the approaches might be suitable.
 
 During the software engineering process communication between the developers and the customers is a crucial factor for the success of the product.
 A problem for the communication is the different use of documents by the two main stakeholders:
@@ -376,7 +376,7 @@ In the next step the functional information from the US-UID needs to be connecte
 objects and attributes of the \textit{System-under-test}. This is done in a Fixture-Class that is marked
 with \textit{@Fixture}.
 This class has to be written manually.
-The data flow during the execution of acceptance tests with FitNesse and the role of the Fixture-Class in this process is described in section \ref{sec:intro}.
+The data flow during the execution of acceptance tests with FitNesse and the role of the Fixture-Class in this process is described in section \ref{sec:topic_2_intro}.
 Inputs are part of the functional data on the start of the arrows in the US-UIDs. 
 For the first display of the US-UID PerformerView the Fixture-Class needs methods to move to the next display, to set the starting performer list and to choose
 \textit{create Performer}.
@@ -546,7 +546,7 @@ Also changes in the source code of the System-under-test resulted in failed test
 
 
 \section{Conclusion}
-\label{sec:conclusion}
+\label{sec:topic_2_conclusion}
 
 The literature search showed that creating acceptance tests that are automatically executable with the specific tool \textit{FitNesse} is not a widely researched topic in the literature.
 However, approaches exist that differ in their process to create tests.
