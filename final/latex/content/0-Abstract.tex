@@ -1,4 +1,54 @@
 \begin{abstract}
 \section*{Abstract}
-Place the abstract in this section.
+
+Testing is an essential and time-consuming part of any software development.
+This work is a collaboration that highlights various approaches to how systematic tests can be created to make this process more efficient, clearer, easier or more successful.
+After the introduction for this purpose eight different methods are dealt with in own subchapters.
+Each of these chapters deals with the investigated approach, describes the problem, discusses the literature search on the topic, and then compares the approaches found in each case via a synthesis matrix.
+The approaches are put into practice using the example of a movie manager.
+Subsequently, the topic described in this subchapter is summarized and a statement regarding the usage for a systematic test generation is made. 
+
+The first topic dealt with is \enquote{systematic generation of acceptance tests that are executable with FitNesse}.
+It is about generating automatic tests with the tool FitNesse.
+This approach tries to solve the difficulties of communication among the participants.
+For this purpose several artifacts like the fit tables are created and used.
+After the investigation, it is concluded that the approaches can work well depending on the project size and experience, but unfortunately it is highly dependent on the latter in particular. 
+
+The next chapter discusses that it should be possible to generate test cases in early phases of development.
+\enquote{Transition systems} can help to derive test cases from specifications.
+The approaches examined here offer industry standard solutions, but the capability of generating robustness tests for fault detection is still a weakness.
+
+The third subchapter deals with \enquote{Testing with a timing component}.
+The difficulty of integrating individual software components into an overall project is described as a problem.
+The aspect particularly considered here is the temporal component, since in many real-time systems the exact time between two instruction executions can lead to different results.
+After an analysis, the conclusion is drawn that this is still a rarely used approach with many non-automated working steps. 
+
+In the next chapter, approaches for model-based systems are examined.
+First and foremost, these include \enquote{classification trees}.
+The goal is to derive automatic test cases based on the requirements and the input parameters of a model.
+In conclusion, classification trees are described as well arranged and close to the requirements, but can potentially produce many test cases.
+Moreover, it is difficult to apply these approaches to systems without a simulated model.
+
+The fifth subchapter focuses on \enquote{model based testing} and examines approaches to make testing with models better and describes the differences between system models and test models.
+After the analysis the difficulties in using the tools given in literature are worked out.
+Nevertheless, it is possible to reduce test time and errors by using them. 
+
+The initial problem for the next chapter with \enquote{Testing functional and nonfunctional requirements in User Requirements Notation} is the risk for wrong test cases during manual test creation.
+User requirements notation should fulfill requirements during test creation and thus prevent incorrect or incomplete tests.
+At the end, the problem is discussed that this approach is largely unexplored.
+Provided that one makes the effort to take additional steps in test case generation, one still achieves a better quality.
+
+In \enquote{Testing Non-Functional Requirements with Risk Analysis} the focus is on risk analysis, because it is precisely here that error-prone components can be discovered.
+Suitable approaches are then sought.
+Among the findings here are the importance of automated tests and that tests for non-functional requirements should have more priority. 
+
+The last chapter describes the \enquote{Testing Non-Functional Requirements with Aspects} and puts thereby in the comparison with the previous section the focus on the \enquote{aspects}.
+This is intended to describe system-wide functionalities in order to be able to deal with concerns at system level.
+Also here the missing availability of tools and suitable research are criticized.
+However, the approaches considered seem promising and should be further refined.
+
+Thus, this joint work addresses the merits and difficulties of various test case generation techniques.
+Common problems identified are the lack of availability of tools or research, but in suitable use cases most approaches help in improving or automating the test cases.
+A final conclusion on this is drawn at the end of this work.
+
 \end{abstract}

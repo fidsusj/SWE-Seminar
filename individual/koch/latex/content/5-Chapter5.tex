@@ -91,7 +91,8 @@ Chapter \ref{sec:Literature-Search} explains the process of the literature
 search that was used to find the second approach. Chapter \ref{sec:Comparison}
 compares the two approaches and shows the result in a synthesis matrix.
 Chapter \ref{sec:Conclusion} provides an assessment of the approaches
-and summarises the most important findings.
+and summarises the most important findings.\\
+Please refer to the glossary in order to receive a common understanding of the following terms used in the sections below: SUT, CACC, TUM, EXAM, CREMTEG, CIIG, CSIBG, CSIEDBG, AIC, AITC, AIEC.
 
 \section{Literature Search\label{sec:Literature-Search}}
 
@@ -99,7 +100,7 @@ The literature search was conducted in too ways: Search term and snowballing.
 To find more and possibly different approaches the search question
 was chosen to be: \textquotedbl What models with a timing component
 exist that favor the creation of automatically generated tests?\textquotedbl{}
-The ACM \cite*{ACM} and IEEE \cite*{IEEE} search sources were considered.
+The ACM \cite*{acm} and IEEE \cite*{ieee} search sources were considered.
 Relevance criteria, both substantive and formal, were used to limit
 the number of search hits. 
 \begin{itemize}
@@ -228,7 +229,7 @@ changes were made to the system functions \textquotedbl show movie
 in IMDB\textquotedbl{} and \textquotedbl show performer in IMDB\textquotedbl :
 After the error message \textquotedbl Connection failed\textquotedbl{}
 appears, the system should automatically try to establish a connection
-to the IMDB website \cite*{IMDB}. If this exceeds a certain time
+to the IMDB website \cite*{imdb}. If this exceeds a certain time
 value (in this case 120 sec.), a final message is issued to the user
 stating that the connection could not be re-established automatically.
 After this message appears, no further attempts are made to connect
@@ -386,7 +387,7 @@ in the overall system. Within these components there are states (e.g.
 under the component \textquotedbl Movies Tab\textquotedbl{} there is
 a state \textquotedbl empty\textquotedbl{} if no movies are stored
 in the movie list and a state \textquotedbl Movies List\textquotedbl{}
-if at least one movie is stored).The message edges show the information
+if at least one movie is stored). The message edges show the information
 exchange of the existing system functions. Multi threading does not
 play a role in the Movie Manager, so a CSIBG was used for the demonstration.
 
