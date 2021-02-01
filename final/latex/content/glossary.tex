@@ -1,84 +1,306 @@
+\newglossaryentry{Acceptance Test}
+{
+	name={Acceptance Test},
+	description={Test to validate that a software meets its requirements by simulating how end-users typically conduct business using the system. Identifying and designing acceptance tests may be difficult for nonfunctional requirements. To be validated, they must first be analyzed and decomposed to the point where they can be expressed quantitatively}
+}
+
+\newglossaryentry{Acceptance Test Driven Development (ATDD)}
+{
+	name={Acceptance Test Driven Development (ATDD)},
+	description={Use of automated acceptance tests with the additional constraint that these tests are written before the application code get implemented}
+}
+
+\newglossaryentry{All-Interface Coverage Criterion (AIC)}
+{
+	name={All-Interface Coverage Criterion (AIC)},
+	description={Test criterion for component based systems, which ensures that each interface is tested once}
+}
+
+\newglossaryentry{All-Interface-Event Coverage Criterion (AIEC)}
+{
+	name={All-Interface-Event Coverage Criterion (AIEC)},
+	description={Test criterion for component based systems, which combines edge coverage with logical coverage}
+}
+
+\newglossaryentry{All-Interface-Transition Coverage Criterion (AITC)}
+{
+	name={All-Interface-Transition Coverage Criterion (AITC)},
+	description={Test criterion for component based systems, which ensures that each interface between components is tested once and each internal state transition path in a component is toured at least once}
+}
+
+\newglossaryentry{Anti-Lock Braking System (ABS)}
+{
+	name={Anti-Lock Braking System (ABS)},
+	description={Detects the tendency of one or more wheels to lock at an early stage during braking and then immediately ensures that the brake pressure is kept constant or reduced. In this way, the wheels do not lock and the vehicle follows the steering. This allows a car to be braked or brought to a standstill safely and quickly}
+}
+
+\newglossaryentry{Aspect}
+{
+	name={Aspect},
+	description={System-wide functionality or issues isolated from the main business logic of the program}
+}
+
+\newglossaryentry{Aspect Oriented Programming (AOP)}
+{
+	name={Aspect Oriented Programming (AOP)},
+	description={Programming paradigm using aspects to encapsulate crosscutting concerns. New functionality can be added to existing code without modifying it. Therefore, modularity, maintainability and reusability can be improved}
+}
+
+\newglossaryentry{AspectC++	}
+{
+	name={AspectC++},
+	description={Aspect-oriented programming extension for the C and C++ programming languages}
+}
+
+\newglossaryentry{AspectJ}
+{
+	name={AspectJ},
+	description={Aspect-oriented programming extension for the Java programming language}
+}
+
+\newglossaryentry{Classification Tree (CT)}
+{
+	name={Classification Tree (CT)},
+	description={According to CT-method, the input domain of a test object is analyzed on the basis of its functional specification with respect to various aspects regarded as relevant for the test. For each aspect, disjoint and complete classifications are formed. Classes resulting from these classifications may be further classified iteratively. The stepwise partition of the input domain by means of classifications is represented graphically as a tree. Subsequently, test scenarios are formed by combining classes of different classifications}
+}
+
+\newglossaryentry{Component Interface Interaction Graph (CIIG)}
+{
+	name={Component Interface Interaction Graph (CIIG)},
+	description={A special CREMTEG, which represents the time-dependent connectivity relationships between these components as well as time-dependent relations inside a component and a component interface}
+}
+
+\newglossaryentry{Component State-Based Event-Driven Interaction Behavior Graph (CSIEDBG)}
+{
+	name={Component State-Based Event-Driven Interaction Behavior Graph (CSIEDBG)},
+	description={A special \\CREMTEG, which, beside CIIG and CSIBG, deals with concurrency. Therefore, the CSIBG model is extended as follows: First, each provider service in a component has one event capture to process the incoming external message. Second, each state contains one event handler and each event capture generates one event in one state. Last, all events are handled by one event handler}
+}
+
+\newglossaryentry{Component State-Based Interaction Behavior Graph (CSIBG)}
+{
+	name={Component State-Based Interaction Behavior Graph (CSIBG)},
+	description={A special CREMTEG, which additionally to a CIIG reflects the internal behavior of a component by state transitions and internal message edges with time stamps}
+}
+
+\newglossaryentry{Component-Based Real-Time Embedded Model-Based Test Graph (CREMTEG)}
+{
+	name={Component-Based Real-Time Embedded Model-Based Test Graph (CREMTEG)},
+	description={The \\CREMTEG models are derived from component level sequence diagrams and component state diagrams involved in the component interactions. Test criteria for generation integration tests are developed from the CREMTEG models}
+}
+
 \newglossaryentry{Contract}
 {
 	name={Contract},
-	description={A requirement-level logical expression used to express preconditions and postconditions of an \textit{operation}}
+	description={A requirement-level logical expression used to express preconditions and postconditions of an operation}
 }
 
-\newglossaryentry{Coverage criterion}
+\newglossaryentry{Correlated Active Clause Coverage (CACC)}
 {
-	name={Coverage criterion},
-	description={A criterion used to limit the amount of \textit{test objectives} to be generated. Specifies which paths to traverse in the context of the traversal of a \textit{transition system}}
+	name={Correlated Active Clause Coverage (CACC)},
+	description={A special form of predicate logic. For each predicate $p$ and each major clause $c_i$  in $C_p$ (set of all clauses in $p$), choose minor clauses , $c_j$  $j$ $\neq$ $i$, so that $c_i$ determines $p$. $c_i$ has two requirements: $c_i$ evaluates to true and $c_i$ evaluates to false. The values chosen for the minor clauses $c_j$ must cause $p$ to be true for one value of the major clause $c_i$ and false for the other, that is, it is required that p($c_i$ = true) $\neq$ p($c_i$ = false)}
+}
+
+\newglossaryentry{Coverage Criterion}
+{
+	name={Coverage Criterion},
+	description={A criterion used to limit the amount of test objectives to be generated. It specifies which paths to traverse in the context of the traversal of a transition system}
+}
+
+\newglossaryentry{Crosscutting Concerns}
+{
+	name={Crosscutting Concerns},
+	description={Part of a software that affects other parts, impeding the separation of concerns. This can lead to concern scattering (duplications) or tangling (dependencies)}
+}
+
+\newglossaryentry{Domain Specific Language (DSL)}
+{
+	name={Domain Specific Language (DSL)},
+	description={Small language, focused on a particular aspect of a software system}
+}
+
+\newglossaryentry{Event Sequence Graph (ESG)}
+{
+	name={Event Sequence Graph (ESG)},
+	description={Used to represent system behavior as well as user-system interaction by events. An ESG is a more abstract representation compared to a state transition diagram of a finite-state automaton}
+}
+
+\newglossaryentry{Extendend Automation Method (EXAM)}
+{
+	name={Extendend Automation Method (EXAM)},
+	description={Test method used by the AUDI AG and within the Volkswagen AG to perform tests at component and system levels. EXAM defines the process, the roles, and the tools used to model test cases graphically in UML. Test automation in the scope of EXAM comprises the automated generation of platform dependent code and the automated execution of the derived test suite without human interactions}
+}
+
+\newglossaryentry{Functional Requirements (FRs)}
+{
+	name={Functional Requirements (FRs)},
+	description={Describe the functions that the software is to execute, e.g. formatting some text or modulating a signal. They are sometimes known as capabilities or features. A FR can also be described as one for which a finite set of test steps can be written to validate its behavior}
+}
+
+\newglossaryentry{Goal-Oriented Requirements Language (GRL)}
+{
+	name={Goal-Oriented Requirements Language (GRL)},
+	description={A visual modeling notation for intentions, business goals, and NFRs of many stakeholders, for alternatives that have to be considered, for decisions that were made, and for rationales that helped make these decisions}
+}
+
+\newglossaryentry{Implementation Under Test (IUT)}
+{
+	name={Implementation Under Test (IUT)},
+	description={The part of a real system which is to be tested, which should be an implementation of applications, services or protocols}
 }
 
 \newglossaryentry{Interaction Overview Diagram (IOD)}
 {
 	name={Interaction Overview Diagram (IOD)},
-	description={A special form of activity diagram used to show control flow. Each node in the IOD represents either an interaction diagram (sequence diagrams) or interaction occurrences that show an \textit{operation} invocation}
+	description={A special form of activity diagram used to show control flow. Each node in the IOD represents either an interaction diagram (sequence diagrams) or interaction occurrences that show an operation invocation}
+}
+
+\newglossaryentry{JUnit Testing Framework}
+{
+	name={JUnit Testing Framework},
+	description={A simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks}
+}
+
+\newglossaryentry{Model Based Black-Box Testing (MBBBT)}
+{
+	name={Model Based Black-Box Testing (MBBBT)},
+	description={Approach to define test scenarios for software developed in a model-based way from two different perspectives and to create consistency between both requirement-based test design and model-based test design}
+}
+
+\newglossaryentry{Model-Based Testing (MBT)}
+{
+	name={Model-Based Testing (MBT)},
+	description={A software testing technique that has gained much interest in recent years by providing the degree of automation needed for shortening the time required for testing}
+}
+
+\newglossaryentry{Non-Functional Requirements (NFRs)}
+{
+	name={Non-Functional Requirements (NFRs)},
+	description={Act to constrain the solution, sometimes known as constraints or quality requirements. They can be further classified according to whether they are performance requirements, maintainability requirements, safety requirements, reliability requirements, security requirements, interoperability requirements or one of many other types of software requirements}
 }
 
 \newglossaryentry{Object Constraint Language (OCL)}
 {
 	name={Object Constraint Language (OCL)},
-	description={A declarative language in the UML standard used to define \textit{contracts}}
+	description={A formal language used to describe expressions on UML models. These expressions typically specify invariant conditions that must hold for the system being modeled or queries over objects described in a model. Therefore, OCL is therefore often used to define contracts}
 }
 
 \newglossaryentry{Operation}
 {
 	name={Operation},
-	description={An abstract term used to describe a state transition in a \textit{transition system}. Is equal to a \textit{use case} in \cite{ClementineNebut2006} or to an interaction diagram/interaction occurrence in \cite{NajlaRaza2007}}
+	description={An abstract term used to describe a state transition in a transition system. An operation is equal to a use case or to an interaction diagram/interaction occurrence for instance}
 }
 
-\newglossaryentry{Test case}
+\newglossaryentry{Separation Of Concerns}
 {
-	name={Test case},
-	description={Tests a single \textit{use case}}
+	name={Separation Of Concerns},
+	description={Programming principle aiming to split the main task of a program into multiple sub tasks and solving them individually}
 }
 
-\newglossaryentry{Test objective}
+\newglossaryentry{Stakeholders}
 {
-	name={Test objective},
-	description={A synonym for test path as a combination of abstract \textit{operations} to be composed into one \textit{test scenario}}
+	name={Stakeholders},
+	description={In a software development process, the software systems are built, tested, maintained, enhanced, and paid. All these activities involve a number of people in building the software. Each of these activities has a different group of users working on it, which may have different interests, requirements for making the software. All these different groups of people comprise stakeholders. Therefore, we can define a stakeholder as an architect of an organization, team, or group having an interest in making a product}
 }
 
-\newglossaryentry{Test scenario}
+\newglossaryentry{System Model (SM)}
 {
-	name={Test scenario},
-	description={A sequential composition of \textit{test cases}}
+	name={System Model (SM)},
+	description={An abstract model primarily created for system development and then used for testing as well}
 }
 
-\newglossaryentry{Transition system}
+\newglossaryentry{System Under Test (SUT)}
 {
-	name={Transition system},
-	description={Used to derive \textit{test scenarios} by helping to generate \textit{test objectives} through its traversal. Consists of states and transitions, where states are given by \textit{contracts} and transitions are given by \textit{operations}}
+	name={System Under Test (SUT)},
+	description={A system that is being tested for correct operation}
+}
+
+\newglossaryentry{Systems Modeling Language (SysML)}
+{
+	name={Systems Modeling Language (SysML)},
+	description={A general-purpose architecture modeling language for Systems Engineering applications. It supports the specification, analysis, design, verification and validation of a broad range of systems and systems-of-systems. SysML is a dialect of UML 2, and is defined as a UML 2 profile}
+}
+
+\newglossaryentry{Test Case}
+{
+	name={Test Case},
+	description={A test case is a documented set of preconditions (prerequisites), procedures (inputs/actions), and postconditions (expected results) which a tester uses to determine whether a SUT satisfies use case requirements or works correctly. A test case can have one or multiple test scripts and a collection of test cases is called a test suite}
+}
+
+\newglossaryentry{Test Model (TM)}
+{
+	name={Test Model (TM)},
+	description={An abstract model solely developed for testing}
+}
+
+\newglossaryentry{Test Objective}
+{
+	name={Test Objective},
+	description={Purpose of a test. Stating the objectives of testing in precise, quantitative terms supports measurement and control of the test process. A test objective is used in \cite{ClementineNebut2006} as a synonym for test path as a combination of abstract operations to be composed into one test scenario}
+}
+
+\newglossaryentry{Test Scenario}
+{
+	name={Test Scenario},
+	description={A Test Scenario is a statement describing the functionality of the application to be tested. It is used for end to end testing of a feature and is generally derived from the use cases. Test scenarios can serve as the basis for lower-level test case creation. A single test scenario can cover one or more test cases. Therefore a test scenario has a one-to-many relationship with the test cases}
+}
+
+\newglossaryentry{Timed Usage Model (TUM)}
+{
+	name={Timed Usage Model (TUM)},
+	description={Markov Chain Usage Models (MCUM) extended by time information, that preserve the semantic of the MCUM and support automated test case generation for embedded systems in test environments as they are established in the automotive industry}
+}
+
+\newglossaryentry{Transition System}
+{
+	name={Transition System},
+	description={Used to derive test scenarios by helping to generate test objectives through its traversal. Consists of states and transitions, where states are given by contracts and transitions are given by operations}
 }
 
 \newglossaryentry{UC-System}
 {
 	name={UC-System},
-	description={A prototype/interpreter-tool used to build a \textit{transition system} in \cite{ClementineNebut2006} and to derive \textit{test objectives} from it}
+	description={A prototype/interpreter-tool used to build a transition system and to derive test objectives from it}
 }
 
 \newglossaryentry{UC-SCSystem}
 {
 	name={UC-SCSystem},
-	description={A prototype-tool using \textit{use case scenarios} to derive executable \textit{test scenarios} as JUnit tests in \cite{ClementineNebut2006}}
+	description={A prototype-tool using use case scenarios to derive executable test scenarios as JUnit tests}
 }
 
-\newglossaryentry{Use case}
+\newglossaryentry{Unified Modeling Language (UML)}
 {
-	name={Use case},
-	description={An abstract, requirement-level term used to describe a main functionality of a system}
+	name={Unified Modeling Language (UML)},
+	description={A standard visual modeling language intended to be used for modeling business and similar processes as well as the analysis, design, and implementation of software-based systems}
 }
 
-\newglossaryentry{Use case scenario}
+\newglossaryentry{User Requirements Notation (URN)}
 {
-	name={Use case scenario},
+	name={User Requirements Notation (URN)},
+	description={A modeling language that aims to support the elicitation, analysis, specification, and validation of requirements. URN is the first international standard to address explicitly, in a graphical way and in one unified language, goals and scenarios, and the links between them. URN models can be used to specify and analyze various types of reactive systems as well as telecommunications standards and business processes. URN allows software and requirements engineers as well as business analysts to discover and specify requirements for a proposed system or process (or evolving ones), and analyze such requirements for correctness and completeness. The URN standard combines two sub-languages: GRL for modeling actors and their intentions, and the UCM notation for describing scenarios and architectures}
+}
+
+\newglossaryentry{Use Case}
+{
+	name={Use Case},
+	description={A type of scenario that provides and embodies a context during the elicitation of user requirements. Is used in \cite{ClementineNebut2006} as an abstract, requirement-level term used to describe a main functionality of a system}
+}
+
+\newglossaryentry{Use Case Map (UCM)}
+{
+	name={Use Case Map (UCM)},
+	description={The UCM visual scenario notation focuses on the causal flow of behavior optionally superimposed on a structure of components. UCM depict the causal interaction of architectural entities while abstracting from message and data details}
+}
+
+\newglossaryentry{Use Case Scenario}
+{
+	name={Use Case Scenario},
 	description={A synonym for sequence diagram in case of \cite{ClementineNebut2006}}
 }
 
 \newglossaryentry{XML Metadata Interchange (XMI)}
 {
 	name={XML Metadata Interchange (XMI)},
-	description={XML based metadata interchange format gained from an \textit{Interaction Overview Diagram} in \cite{NajlaRaza2007} to generate a \textit{transition system}}
+	description={XML based metadata interchange format gained from an Interaction Overview Diagram to generate atransition system}
 }
 
