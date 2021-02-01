@@ -9,8 +9,8 @@
 
 This chapter focusses on the creation of acceptance tests that are automatically executable using the tool \textit{FitNesse}.
 In this first section of the chapter the reason for using this approach is discussed.
-Furthermore, the general features of FitNesse as well as the needed artefacts like Fit-tables are explained.
-An article that focuses on the topic of creating acceptance tests that are executable with FitNesse was provided by the supervisors of the seminar.
+Furthermore, the general features of \textit{FitNesse} as well as the needed artefacts like Fit-tables are explained.
+An article that focuses on the topic of creating acceptance tests that are executable with \textit{FitNesse} was provided by the supervisors of the seminar.
 Section \ref{sec:literature-search} documents the literature search used to find a different approach.
 The two articles are then described in the sections \ref{sec:el-attar} and \ref{sec:longo}.
 Moreover, for a better understanding of the presented approaches these chapters include the execution of them on the \textit{MovieManager}.
@@ -34,7 +34,7 @@ These classes connect the input values from the \textit{Fit-tables} to the \text
 An overview of the data exchange during the process is shown in figure \ref{fig:overview-fitnesse} on the next page.
 The specific steps are explained in the following:
 
-After the user chooses to execute a set of Fit-tables in FitNesse, FitNesse executes the Fixture-Classes that belong to the selected tables.
+After the user chooses to execute a set of Fit-tables in \textit{FitNesse}, \textit{FitNesse} executes the Fixture-Classes that belong to the selected tables.
 These tables can contain two types of values: Input values and expected output values.
 The \textit{Fixture-Class} creates an instance of the \textit{System-under-test} and then transfers the input values into it.
 Then it extracts the resulting output values from the \textit{System-under-test} and returns them to \textit{FitNesse}.
@@ -110,7 +110,7 @@ El-Attar and Smith \cite{el-attar} introduce an approach to create acceptance te
 Their approach is targeted at larger software projects that use a model-based approach such as the use of UML models. 
 It was created such that a non-technical person (e.g. a Business Analyst) can execute it during the early phases of the development of the software.
 This makes it possible for the developers to follow the approach of Acceptance-Test-Driven-Development (ATDD) because of the possibility of executing the acceptance tests at any time during the development process.
-ATDD helps the developers during the develoment process to evaluate which requirements are already implemented and  which are yet to be implemented.
+ATDD helps the developers during the development process to evaluate which requirements are already implemented and  which are yet to be implemented.
 
 The approach starts with use case models and domain models as initial artefacts.
 During the whole process of creating the acceptance tests every step is performed completely manually.
@@ -391,7 +391,7 @@ Each row represents an User Scenario.
 The resulting \textit{Fit-table} for the example is displayed in table \ref{fig:fit-longo} on the next page.
 
 \begin{table}[h!]
-	\caption{\textit{Fit-table} for a specific User Scenario of the Use Case \textit{Describe a performer (newe performer)} of the Movie Manager application. The expected results end with a question mark.}
+	\caption{\textit{Fit-table} for a specific User Scenario of the Use Case \textit{Describe a performer (new performer)} of the Movie Manager application. The expected results end with a question mark.}
 	\centering
 	\includegraphics[width=\textwidth]{../images/LongoFit.png}
 
@@ -407,8 +407,8 @@ The questions are the same as in the other chapters:
 
 \renewcommand{\arraystretch}{1.5}
 	\begin{tabularx}{\textwidth}{>{\hsize=.2\hsize}X X}
-  		\textbf{1a} & Which artifacts and relations between artifacts are used in this approach? Which
-artifacts are created in the course of the approach? How are the artifacts characterized?
+  		\textbf{1a} & Which artefacts and relations between artefacts are used in this approach? Which
+artefacts are created in the course of the approach? How are the artefacts characterized?
  \\
   		\hline
   		\textbf{1b} & What is required and/or input for the application of the approach? \\
@@ -519,7 +519,7 @@ The authors concluded that the tests created by their approach can successfully 
 
 Both approaches provide a possible way to create acceptance tests that are executable with the tool \textit{FitNesse}.
 El-Attar and Smith utilize use case models and domain models as their initial data while Longo et al. only need a non-specific description of the use cases.
-Generally El-Attar and Smith use more artefacts as their approach needs use case models, domain models, high-level acceptance tests and robustness diagrams as stepstones to the final representation of the executable acceptance tests.
+Generally El-Attar and Smith use more artefacts as their approach needs use case models, domain models, high-level acceptance tests and robustness diagrams as intermediate steps to the final representation of the executable acceptance tests.
 In the approach of Longo et al. only US-UIDs need to be created which are then automatically converted to \textit{Fit-tables}.
 In contrary to El-Attar and Smith the approach of Longo et al. requires the creation of some code in the process:
 This is the case because the used \textit{Fit-tables} differ between the two approaches.

@@ -11,15 +11,15 @@
 
 \section{Introduction}
 
-In contrast to \glspl{FR} that describe the program's functionality, i.e. how it processes data and user input, \glspl{NFR} describe constraints that the program must adhere to~\cite{SWEBOK}.
-Parts of \glspl{NFR} are performance and security requirements which can directly affect the end-user but also maintainability requirements which are more important to development teams.
-While there are lot of resources about testing \glspl{FR} in the form of unit-, integration- and end-to-end-tests, no common testing framework or guidance for testing \glspl{NFR} exists.
+In contrast to functional requirements (FRs) that describe the program's functionality, i.e. how it processes data and user input, non-functional requirements (NFRs) describe constraints that the program must adhere to~\cite{SWEBOK}.
+Parts of NFRs are performance and security requirements which can directly affect the end-user but also maintainability requirements which are more important to development teams.
+While there are lot of resources about testing FRs in the form of unit-, integration- and end-to-end-tests, no common testing framework or guidance for testing NFRs exists.
 
 For this reason, we look into two approaches \cite{ZouPavlovski2008} and \cite{Lagerstedt2014}.
 While \cite{ZouPavlovski2008} was given in advance by the advisors of the seminar, \cite{Lagerstedt2014} was found through a literature search, which is described in \autoref{sec:9_literature}.
 Each approach will be described and applied to an example in the form of movie management software in the respective sections \ref{sec:9_approach_1} and \ref{sec:9_approach_2}. 
 
-Both approaches are compared in \autoref{sec:9_comparison} by using a synthesis matrix. We will look at which \glspl{NFR} are covered and how they are tested.
+Both approaches are compared in \autoref{sec:9_comparison} by using a synthesis matrix. We will look at which NFRs are covered and how they are tested.
 The results of this chapter will be summarized and concluded in \autoref{sec:9_conclusion}.
 
 Please refer to the glossary for the following terms used throughout this chapter:
@@ -112,7 +112,7 @@ After this initial search, the resulting papers were evaluated and one paper was
 \textit{Scenario-Based Assessment of non-functional Requirements} covers all three criteria we defined at the start of our search. However, it limits itself to complex socio-technical systems and only looks at one non-functional requirement, which is the system's performance.  It limits itself to the evaluation of the reliability of certain aspects of software which interacts with humans to calculate the risk of human errors occurring.
 This is done by implementing scenarios--hence the title \enquote{scenario-based assessment}. The testing aspect of this paper is limited to human-interactions whose risks are evaluated. If scenarios fail this risk assessment, then so will the test.
 
-\textit{Alignment of requirements specification and testing: A systematic mapping study} is about papers that cover non-functional requirements. It is a study about such papers and lists approaches that are used to test \glspl{NFR}. Some of which are mentioned in other chapters of this paper. However, none cover risk analysis. The paper itself does not give much insight into testing non-functional requirements itself.
+\textit{Alignment of requirements specification and testing: A systematic mapping study} is about papers that cover non-functional requirements. It is a study about such papers and lists approaches that are used to test NFRs. Some of which are mentioned in other chapters of this paper. However, none cover risk analysis. The paper itself does not give much insight into testing non-functional requirements itself.
 
 The chosen article which we will further evaluate in the following sections is \textit{Using Automated Tests for Communicating and Verifying Non-functional Requirements}. It covers the non-functional requirement \enquote{maintainability} and how it can be tested. It further explains it by using practical examples.
 However, the chosen paper does not cover risk-analysis. Since no paper could be found that covers all criteria, we were advised to focus on the testing of non-functional requirements and leave out risk-analysis.
@@ -127,22 +127,22 @@ However, the chosen paper does not cover risk-analysis. Since no paper could be 
 
 \subsection{Description of Approach 1}
 
-In their paper \enquote{Control Cases during the Software Development Life-Cycle}~\cite{ZouPavlovski2008}, J. Zou und C. J. Pavlovski based their work on so called  \enquote{control cases} and \enquote{operating conditions} as tools for modeling and controlling \glspl{NFR}.
+In their paper \enquote{Control Cases during the Software Development Life-Cycle}~\cite{ZouPavlovski2008}, J. Zou und C. J. Pavlovski based their work on so called  \enquote{control cases} and \enquote{operating conditions} as tools for modeling and controlling NFRs.
 
-\enquote{Control cases} are used as a format to communicate and discuss \glspl{NFR} between management, requirement engineers, developers, and system users and to define qualitative attributes of the system.
+\enquote{Control cases} are used as a format to communicate and discuss NFRs between management, requirement engineers, developers, and system users and to define qualitative attributes of the system.
 
 Their work focuses on determining and revealing problems early on, for example bad performance or security risks.
 The classic software development life cycle often focuses on these topics too late or not at all.
-However, control cases require \glspl{NFR} to be defined first.
+However, control cases require NFRs to be defined first.
 To define them, the paper starts by introducing operating conditions.
-Operating conditions model constraints that apply to the system or a specific use case. These constraints are then used to model \glspl{NFR}, hence the operating condition can be seen as a high level view on \glspl{NFR}.
+Operating conditions model constraints that apply to the system or a specific use case. These constraints are then used to model NFRs, hence the operating condition can be seen as a high level view on NFRs.
 Defining such constraints that apply to a certain use case is left to the reader or rather is mentioned as a step of the business process modeling.
 
 Operating conditions can belong to one or more use cases and are not unique to a specific one. Conditions such as \enquote{Transaction Volume Condition: $>$400 concurrent users} can be applied to different use cases~\cite{ZouPavlovski2008} and model exactly that: a condition under which the use case operates.
 
 Control cases--as the name suggests--control the operating conditions and can be used to ensure that they are complied to.
 This makes it possible to mitigate business risks which may affect the business if the operating condition and its constraints are violated.
-Their paper visualizes the connection between these artifacts using an \glspl{UML} diagram, which can be seen in \autoref{fig:topic_9_appraoch_1_use_case} below.
+Their paper visualizes the connection between these artifacts using an UML diagram, which can be seen in \autoref{fig:topic_9_appraoch_1_use_case} below.
 
 \begin{figure}[htbp]
 	\centering
@@ -191,7 +191,7 @@ The tester needs to simulate the operating condition.
 In our example above, that would mean to simulate the scrolling condition by creating a huge list of movies.
 The steps that must be executed for the test are combined into a test case , such as \autoref{tbl:topic_9_test_case} on \autopageref{tbl:topic_9_test_case}.
 
-By determining the operating condition that is associated to a use case, we were able to create a control case that reflects the \glspl{NFR}.
+By determining the operating condition that is associated to a use case, we were able to create a control case that reflects the NFRs.
 Based on the operating condition, we then created a test case that checks if the controls put in place by the control cases are enough to mitigate the business risk.
 Following this pattern, tests for non-functional requirements can be created systematically step by step.
 
@@ -284,17 +284,17 @@ Following this pattern, tests for non-functional requirements can be created sys
 
 \subsection{Description of Approach 2}
 
-In \enquote{Using Automated Tests for Communicating and Verifying Non-functional Requirements}~\cite{Lagerstedt2014}, Robert Lagerstedt describes how testing \glspl{NFR} can be automated by introducing a tool-based approach.
-The author only looks at \glspl{NFR} in regards to software architecture which affects code quality in the sense of maintainability and security.
+In \enquote{Using Automated Tests for Communicating and Verifying Non-functional Requirements}~\cite{Lagerstedt2014}, Robert Lagerstedt describes how testing NFRs can be automated by introducing a tool-based approach.
+The author only looks at NFRs in regards to software architecture which affects code quality in the sense of maintainability and security.
 
-By looking at software architecture aspects as \glspl{NFR}, Lagerstedt describes how software may be written by listing some architectural requirements.
+By looking at software architecture aspects as NFRs, Lagerstedt describes how software may be written by listing some architectural requirements.
 It should not have dependencies from lower code components into higher but only vice versa.
 Certain functions must not be called from some components to ensure encapsulation. Some functions may be blacklisted due to security concerns.
 All of these requirements are part of the software architecture and therefore a huge part of software quality and maintainability~\cite{Lagerstedt2014}.
 
-These \glspl{NFR} must be communicated to developers. According to Lagerstedt, this is done by guidelines written by software architects.
+These NFRs must be communicated to developers. According to Lagerstedt, this is done by guidelines written by software architects.
 The compliance of these guidelines is often verified by different reports. These reports may be written for each code change as part of a code review or by other teams.
-Lagerstedt visualizes this in a simple \glspl{UML} diagram as can be seen in
+Lagerstedt visualizes this in a simple UML diagram as can be seen in
 \autoref{fig:topic_9_approach_2_1}.
 The graphic uses a rather high distance between the developer and the compliance report on purpose to symbolize that the two are asynchronous, this means that the report is not automated and feedback reaches the developer not immediately.
 
@@ -310,7 +310,7 @@ Every developer has to read and understand the guidelines. Developers must be re
 This is quite time consuming and prone to error.  Creating reports about guideline compliance is time consuming as well.
 Furthermore, while code review should be performed for all code changes, mistakes may slip through.
 
-That is why the author proposes automated testing of software architecture \glspl{NFR}.
+That is why the author proposes automated testing of software architecture NFRs.
 This allows a fast tool-based feedback loop in which the developer gets a code review that can be incorporated without other developers having to look out for violations of guidelines.
 On top of that, by having this tight feedback loop, developers can learn the guidelines in an iterative way.
 Little to no training is required, which saves time to make new guidelines known to all developers.
@@ -334,9 +334,9 @@ The number of non-compliant code is lower for the tool-based approach than for u
 
 \subsection{Application of Approach 2}
 
-The paper works with architectural \glspl{NFR} but does not explain how those can be modeled.
+The paper works with architectural NFRs but does not explain how those can be modeled.
 To be able to apply the approach, we introduce another system function to the movie manager example that is listed in \autoref{tbl:topic_9_application_approach_2}.
-This system function and the following \glspl{NFR} are based on personal experience in maintaining an open-source media manager.
+This system function and the following NFRs are based on personal experience in maintaining an open-source media manager.
 
 \begin{table}[h!]
 	\centering
@@ -352,14 +352,14 @@ This system function and the following \glspl{NFR} are based on personal experie
 	\end{tabular}
 \end{table}
 
-In \autoref{tbl:topic_9_approach_2_nfr} on \autopageref{tbl:topic_9_approach_2_nfr}, two \glspl{NFR} are listed which were created for the system function in \autoref{tbl:topic_9_application_approach_2}. 
-These two \glspl{NFR} are based on personal experience.
-Both are transformed into pseudo code so that the \glspl{NFR} can be executed automatically as part of the code review.
+In \autoref{tbl:topic_9_approach_2_nfr} on \autopageref{tbl:topic_9_approach_2_nfr}, two NFRs are listed which were created for the system function in \autoref{tbl:topic_9_application_approach_2}. 
+These two NFRs are based on personal experience.
+Both are transformed into pseudo code so that the NFRs can be executed automatically as part of the code review.
 
-While these two \glspl{NFR} can be written as guidelines, especially point two may be violated and may slip through code review. Violating point two may result in security issues or at least in unexpected behavior if the HTML contains unescaped characters.
+While these two NFRs can be written as guidelines, especially point two may be violated and may slip through code review. Violating point two may result in security issues or at least in unexpected behavior if the HTML contains unescaped characters.
 
 \begin{longtable}[th]{p{0.05\textwidth}|p{0.24\textwidth}|p{0.65\textwidth}}
-	\caption{\glspl{NFR} for the application of approach 2 of topic 9}
+	\caption{NFRs for the application of approach 2 of topic 9}
 	\label{tbl:topic_9_approach_2_nfr}
 	\setlength{\tabcolsep}{1em} \\    %%%%<===
 	\textbf{No.} & \textbf{NFR} & \textbf{Explanation} \\
@@ -380,7 +380,7 @@ for each $variable in $source:
 	2 & Exported strings are escaped &
 	This is a security concern and can be implemented in different ways. We assume that an HTML-exporter was created which takes a movie object as an argument.
 	This object may contain texts which contain HTML elements themselves.
-	These elements need to be escaped. To ensure this \glspl{NFR}, all strings must be run through a certain function which escapes strings.
+	These elements need to be escaped. To ensure this NFR, all strings must be run through a certain function which escapes strings.
 	
 	Because this may be missed by the developer, a new string-subclass is introduced which escapes its input automatically, e.g. \texttt{EscapedString}.
 	Only this string class may be used in the HTML exporter.
@@ -457,7 +457,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	\\
 	
 	\textbf{1c} &
-	Preconditions/Constraints must be extracted from which \glspl{NFR} are created, e.g. performance or security constraints.
+	Preconditions/Constraints must be extracted from which NFRs are created, e.g. performance or security constraints.
 	These constraints are modeled by operating conditions for which control cases are created.
 	Their purpose is to mitigate business risk which is essentially the failure to fulfill the operating condition.
 	For each control case a test case is added that checks if the controls put in place by the control case are effective.
@@ -475,7 +475,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	Early modeling of non-functional requirements. Being able to control requirements throughout the whole software development life cycle.
 	
 	&
-	Maintainability, quality and security of the code base can be hold up to standards and may even be improved by giving automated feedback that points out \glspl{NFR} which are violated by the developer.
+	Maintainability, quality and security of the code base can be hold up to standards and may even be improved by giving automated feedback that points out NFRs which are violated by the developer.
 	
 	\\
 	
@@ -498,7 +498,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	No automation is done. Automation is only proposed as another step which can be implemented, e.g. through code generation with SysML.
 	&
 	Only code testing is performed automatically.
-	And only tests for \glspl{NFR} which were extracted from the software architects guidelines and that were transformed into automated tests.
+	And only tests for NFRs which were extracted from the software architects guidelines and that were transformed into automated tests.
 	Those tests can be executed automatically during code review, e.g. by a continuous-integration service which tests each code change. Writing the tests is still a manual job.
 	\\
 	
@@ -518,13 +518,13 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 
 
 If we compare the two papers using the synthesis matrix above, we notice that they do not share a lot.
-That is not surprising: the second paper is very specific and only deals with architectural \glspl{NFR} in code.
-The first paper, on the other hand, can be applied to different \glspl{NFR}, not limiting itself to a specific one.
+That is not surprising: the second paper is very specific and only deals with architectural NFRs in code.
+The first paper, on the other hand, can be applied to different NFRs, not limiting itself to a specific one.
 Only the first paper mentions risk analysis but only as part of a control case.
 
 Both papers do not give specific instructions how test cases can be modeled.
 While the first paper only says to \enquote{simulate the operating condition}~\cite{ZouPavlovski2008}, it leaves out details.
-For example security \glspl{NFR} are explicitly mentioned but it is left out how an operating condition for that \gls{NFR} can be simulated.
+For example security NFRs are explicitly mentioned but it is left out how an operating condition for that NFR can be simulated.
 Also the example test case from the paper is essentially a stress test.
 The second paper leaves it to the reader to develop automated tests and only mentions that static code analysis tools can be used.
 
@@ -541,22 +541,22 @@ The first article states no evaluation at all and only discusses the approach fo
 
 \section{Conclusion} \label{sec:9_conclusion}
 
-Both articles deal with \glspl{NFR}.
+Both articles deal with NFRs.
 While \cite{ZouPavlovski2008} describes how these can be defined and controlled, it does not specify a way to test them except for simulating the operating condition.
 In the same way there is no description of how the business risk affects the test case except for defining the test-priority.
-However, it explains in great detail how control cases and operating conditions can be defined and how they interact with use cases and functional requirements, which raised my interest in the overall topic of testing \glspl{NFR}.
-But the lack of detailed explanation for test case creation makes it difficult for me to assess the usefulness of the approach. After reading the paper I may know how to model \glspl{NFR} with operating conditions but still wonder how they can be properly tested.
+However, it explains in great detail how control cases and operating conditions can be defined and how they interact with use cases and functional requirements, which raised my interest in the overall topic of testing NFRs.
+But the lack of detailed explanation for test case creation makes it difficult for me to assess the usefulness of the approach. After reading the paper I may know how to model NFRs with operating conditions but still wonder how they can be properly tested.
 
-\cite{Lagerstedt2014} on the other hand leaves it to software architects to define \glspl{NFR}.
-The paper only uses architectural \glspl{NFR} that exist as code conventions and other guidelines.
+\cite{Lagerstedt2014} on the other hand leaves it to software architects to define NFRs.
+The paper only uses architectural NFRs that exist as code conventions and other guidelines.
 The author describes why having automated tests is a necessity of software development in regards to cost efficiency and how it mitigates human error during code review which can be seen as a risk to code maintainability.
 This corresponds to my personal experience. 
 By using a code formatter, the amount of formatting related review comments went down to zero.
 By introducing a new linter rule, I was able to automatically fix company branding issues in product messages which none of my colleagues were even aware of.
-I can therefore only emphasize that communication of \glspl{NFR} is more effective and  efficient when a tool based approach is used.
+I can therefore only emphasize that communication of NFRs is more effective and  efficient when a tool based approach is used.
 
 
 Finally, both articles mention risk analysis only as a side note, if mentioned at all.
 It is left to the reader where risks are mitigated.
-The conclusion is that \glspl{NFR} with higher risks need to be paid more attention to by giving the tests higher priority.
+The conclusion is that NFRs with higher risks need to be paid more attention to by giving the tests higher priority.
 
