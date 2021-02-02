@@ -16,7 +16,7 @@
 
 With the rise of smart gadgets and the Internet of Things, more and more parts of our daily life involve technology.
 And the software required to run our smartphones, computers and other gadgets requires software that becomes more complex as more data can be processed.
-As software becomes more complex, bugs can have immense consequences as the recent data breaches have show~\footnote{TODO}.
+As software becomes more complex, bugs can have immense consequences as the recent data breaches have show.%~\footnote{TODO}.
 
 Therefore, proper testing of software becomes more important than ever.
 But what is software testing? According to the \enquote{Guide to the Software Engineering Body of Knowledge} (short: SWEBOK), \enquote{Software testing consists of the dynamic verification that a program provides expected behaviors on a finite set of test cases, suitably selected from the usually infinite execution domain.}~\cite{SWEBOK}
@@ -70,16 +70,16 @@ we then look into testing with systems models which are compared against test mo
 It is looked into model based testing and how traceability can be used to increase the probability of finding errors and improve test quality.
 
 \autoref{sec:topic_8} % NFR/FR Use Requiremetn
-explains why writing manual tests for functional and non-functional requirements can be  not only tedious but error prone due to Copy\,\&\,Paste of errors in test logic.
-The section describes how test cases can be automatically created by using the user requirements notation that is used for modeling, analyzing, and controlling the correctness and completeness of functional and non-functional requirements.
+explains why writing manual tests for functional and Non-Functional requirements can be  not only tedious but error prone due to Copy\,\&\,Paste of errors in test logic.
+The section describes how test cases can be automatically created by using the user requirements notation that is used for modeling, analyzing, and controlling the correctness and completeness of functional and Non-Functional requirements.
 
-Another aspect of testing non-functional requirements can be by using risk analysis.
+Another aspect of testing Non-Functional requirements can be by using risk analysis.
 This is where \autoref{sec:topic_9}%  Risk Analysis NFR
-steps in and briefly shows how non-functional requirements can be tested and how risk analysis can be used to prioritize test cases.
+steps in and briefly shows how Non-Functional requirements can be tested and how risk analysis can be used to prioritize test cases.
 
-The section also shows how architectural non-functional requirements such as code conventions can be tested.
+The section also shows how architectural Non-Functional requirements such as code conventions can be tested.
 \autoref{sec:topic_10} % NFR Aspects
-expands on this topic by introducing aspects and aspect oriented programming to test and verify non-functional requirements such as software memory limits and memory leaks.
+expands on this topic by introducing aspects and aspect oriented programming to test and verify Non-Functional requirements such as software memory limits and memory leaks.
 
 Finally, \autoref{chap:conclusion} concludes this paper and summarizes each article.
 
@@ -99,17 +99,18 @@ Let us begin with requirements.
 The corresponding SWEBOK knowledge area is \enquote{Software Requirements}.
 Relevant sub chapters are \enquote{Software Requirements Fundamentals} and \enquote{Requirements Validation}.
 The guide defines requirements as \enquote{a property that must be exhibited by something in order to solve some problem in the real world. [\ldots]
-An essential property of all software requirements is that they be verifiable as an individual feature as a functional requirement or at the system level as a non-functional requirement.
+An essential property of all software requirements is that they be verifiable as an individual feature as a functional requirement or at the system level as a Non-Functional requirement.
 It may be difficult or costly to verify certain software requirements.} \cite{SWEBOK}
 This definition already points out the difficulty of verifying requirements that necessitates the use of systematic testing techniques, as explained in \autoref{sec:introduction_common_fundamentals}.
-Moreover, it distinguishes between functional, representing a feature the software is to provide, and non-functional requirements, specifying the extend of quality.
+Moreover, it distinguishes between functional, representing a feature the software is to provide, and Non-Functional requirements, specifying the extend of quality.
 Requirements need to be formulated clearly, unambiguously and quantitatively in order to implement and verify them correctly \cite{SWEBOK}.
 
+\newpage
 For software testing, there is no uniform definition.
 Therefore, the guide refers to multiple definitions from cited references.
 In essence, software testing is to assure that specified requirements are met by the implementation or, from a different perspective, find errors indicating that a requirement has not been met.
 This testing process is performed at different levels, as the requirements definition already touched upon. % ???
-The SWEBOK guide distinguishes between three test levels: unit testing, verifying isolated functionalities (mostly functional requirements), integration testing, verifying the correct interaction of components and system testing, verifying the behavior of the entire system (mostly non-functional requirements).
+The SWEBOK guide distinguishes between three test levels: unit testing, verifying isolated functionalities (mostly functional requirements), integration testing, verifying the correct interaction of components and system testing, verifying the behavior of the entire system (mostly Non-Functional requirements).
 Correspondingly, these levels are distinguished by the object of the test (single module, multiple modules, entire system), called the target of the test, and the purpose, called objective of the test \cite{SWEBOK}.
 
 The guide presents a wide array of testing techniques.
@@ -132,14 +133,13 @@ In the following, the given requirements (\autoref{fig:mm}) and synthesis questi
 \textbf{Synthesis questions:}
 
 \begin{enumerate}
-	\item What is the name of the approach? If no name is provided, the publication title is used.
-	\item Summary
 	\item Description of the approach (What does the approach do?)
 	\begin{enumerate}
 		\item Which artifacts and relations between artifacts are used in this approach? Which artifacts are created in the course of the approach? How are the artifacts characterized?
 		\item What is required and/or input for the application of the approach?
 		\item What steps does the approach consist of? Which information is used in which step and how? What are the results of the individual steps?
 	\end{enumerate}
+	\item[] 
 	\item Benefits of the approach (Whom does the approach help and how?)
 	\begin{enumerate}
 		\item Which usage scenarios are supported by the approach?
@@ -157,6 +157,7 @@ In the following, the given requirements (\autoref{fig:mm}) and synthesis questi
 		\item What are the (main) results of the evaluation?
 	\end{enumerate}
 \end{enumerate}
+
 
 \newpage
 \newgeometry{margin=1cm}

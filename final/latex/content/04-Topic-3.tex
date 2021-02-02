@@ -6,11 +6,11 @@ System tests are used to make sure that clients receive exactly the kind of soft
 
 To solve this, the process of formal definition of requirements and matching system tests must be brought closer together. Testing should already be possible in early stages of development, to be precise during the specification phase already. To automatically derive test scenarios from means of the specification area \textit{transition systems} are used. They help to generate test paths as possible combinations of fine-grained functional requirements received through the traversal. An equivalent approach can be used to derive robustness tests as well. In this process requirements can furthermore be tested on their consistency, correctness and integration and eventually can be refined further.
 
-For this purpose the two approaches \cite{ClementineNebut2006} and \cite{NajlaRaza2007} were analyzed. While \cite{ClementineNebut2006} was given in advance by the advisors, \cite{NajlaRaza2007} was discovered through an extensive literature search shown in \autoref{literaturesearch}. Both approaches will be explained in the following sections \ref{approachone} and \ref{approachtwo} and applied to the movie management software example. A comparison between the two approaches will be drawn using a synthesis matrix shown in \autoref{comparison}. The main results of testing with transitions systems will be summarized in \autoref{conclusion}. 
+For this purpose the two approaches \cite{ClementineNebut2006} and \cite{NajlaRaza2007} were analyzed. While \cite{ClementineNebut2006} was given in advance by the advisors, \cite{NajlaRaza2007} was discovered through an extensive literature search shown in \autoref{literaturesearch}. Both approaches will be explained in the following sections \autoref{approachone} and \autoref{approachtwo} and applied to the movie management software example. A comparison between the two approaches will be drawn using a synthesis matrix shown in \autoref{comparison}. The main results of testing with transitions systems will be summarized in \autoref{conclusion}. 
 
 Please refer to the glossary in order to receive a common understanding of the following terms used in the sections below: contract, coverage criterion, interaction overview diagram, object constraint language, operation, test case, test objective, test scenario, transition system, UC-System, UC-SCSystem, use case, use case scenario, XML metadata interchange.
 
-\section{Literature Search} \label{literaturesearch}
+\section{Literature search} \label{literaturesearch}
 
 The literature research was driven by the central research question (RQ): 
 
@@ -27,43 +27,38 @@ As system tests can not exclusively be derived from means of the specification a
 
 The search was done using both snowballing and search term techniques. 140 papers were found referencing \cite{ClementineNebut2006} and 46 articles were referenced by \cite{ClementineNebut2006}. The results of the snowballing search can be found in \autoref{snowballing}. The backward snowballing approach was restricted on references stated in the \textit{Related Work} chapter as all other references relate to preceding work that serve as basic knowledge to realize the transition system approach in \cite{ClementineNebut2006}. Additionally, most of the references were quite old since the original paper was published in 2006. Therefore not all papers could be found on IEEE Xplore or ACM, which is why the number of considered papers is even lower than the number of original references found. Why specific papers were considered not suitable or only partly suitable is documented in \cite{FelixHausberger2020}.
 
-\begin{table}[h] 
-	\centering
-	\begin{small}
+\begin{small}
+	\begin{longtable}{l|c|c|c}
 		\caption{Results of snowballing techniques}
-		\label{snowballing}
-		\setlength{\tabcolsep}{1em}
-		\begin{tabular}{l|c|c|c}
-			\hline
-			& \textbf{Yes} & \textbf{Possibly} & \textbf{No} \\
-			\hline
-			\hline	
-			Forward snowballing & 5 & 9 & 63 \\
-			\hline
-			Backward snowballing & 2 & 1 & 2 \\
-			\hline
-		\end{tabular}
-	\end{small}
-\end{table}
+		\label{snowballing}	
+		\\    %%%%<===
+		\hline
+		 & \textbf{Yes} & \textbf{Possibly} & \textbf{No} \\
+		\hline	
+		Forward snowballing & 5 & 9 & 63 \\
+		\hline
+		Backward snowballing & 2 & 1 & 2 \\
+		\hline
+	\end{longtable}
+\end{small}
+
 
 Seach-term based search was done using the following key terms: system tests, automatic generation, transition system, simulation model, use cases, contracts. Only papers published between 2006 and 2020 having the search term "test" and "use case" in their publication title were evaluated. 
 
 \newpage
 
-\begin{small}
-	\centering
-	\begin{longtable}[h]{c|c|p{0.2\textwidth}|p{0.2\textwidth}|c}
-		\caption{Results of search-term based technique}\label{search-term}\setlength{\tabcolsep}{1em}\\
+
+\begin{longtable}[h]{c|c|p{0.2\textwidth}|p{0.2\textwidth}|c}
+		\caption{Results of search-term based technique}
+		\label{search-term}\setlength{\tabcolsep}{1em}\\
 		\hline
 		\textbf{Source} & \textbf{Date} & \textbf{Search restrictions} & \textbf{Search query} & \textbf{\#Results} \\
 		\hline
-		\hline	
 		IEEE Xplore & 2020-11-21 & "system tests" in document title; "automatic generation" in document title; "transition system" in full text \& metadata; "simulation model" in full text \& metadata; "use cases" in document title; "contracts" in full text \& metadata; & "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts & 0 \\
 		\hline
 		IEEE Xplore & 2020-11-21 & "system tests" in document title; "automatic generation" in abstract; "transition system" in full text \& metadata; "use cases" in document title; "contracts" in full text \& metadata; & "system tests" AND "automatic generation" AND "transition system" AND "use cases" AND contracts & 0 \\
 		\hline
 		IEEE Xplore & 2020-11-21 & "test" in document title; "transition system" in full text \& metadata; "use cases" in document title & "system tests" AND "transition system" AND "use cases" & 82 \\
-		\hline
 		\hline
 		ACM & 2020-11-21 & "system tests" in title; "automatic generation" in title; "transition system" in full text; "simulation model" in full text; "use cases" in title; "contracts" in full text; & "system tests" AND "automatic generation" AND "transition system" AND "simulation model" AND "use cases" AND contracts & 0 \\
 		\hline
@@ -73,10 +68,7 @@ Seach-term based search was done using the following key terms: system tests, au
 		\hline
 		ACM & 2020-11-21 & "test" in title; "use case" in title & "system tests" AND "use cases" & 8 \\
 		\hline
-	\end{longtable}
-\end{small}
-
-\newpage
+\end{longtable}
 
 From the resulting papers, only one was considered suitable as a potential second paper. After the search for potential articles to be evaluated was finished, a choice between eight remaining papers from the initial search had to be made:
 
@@ -103,7 +95,7 @@ The paper \textit{An Automatic Tool for Generating Test Cases from the System's 
 
 The chosen article to further evaluate is \textit{An Automated Approach to System Testing based on Scenarios and Operations Contracts}, as it introduces a second way to create system tests from use case scenarios as UML 2.0 models by enriching it with contracts and by transforming the formalized scenarios to a transition system to derive test objectives. It uses a more graphical approach to define use cases instead of using a formalized language to do so and goes deeper down into use-case level instead of system-level test generation. A more in-depth comparison between the two papers can be found in \autoref{comparison}.
 
-\section{Automatic Test Generation: A Use Case Driven Approach} \label{approachone}
+\section{Automatic test generation: A Use Case driven approach} \label{approachone}
 
 \subsection{Description}
 
@@ -117,8 +109,6 @@ The chosen article to further evaluate is \textit{An Automated Approach to Syste
 The approach consists of two phases (see \autoref{tsf}). In the first phase, UML use cases get enhanced with contracts (pre- and postconditions). Use cases can be seen as the systems' main functions whereas contracts are used to infer the correct partial ordering of functionalities that the system should offer. They express the ordering constraints between the use cases during the simulation process to build the transition system. The contracts are made executable for logical evaluation by writing them in the form of requirement-level first-order logical expressions. They consist of predicates with and are used to describe facts in the system like actor state, main concept state, roles, and more. Each predicate can either evaluate to true or false, but never to undefined. A dedicated editor tool helps to manage the predicates and guides the design of contracts to maintain a nonredundant, minimal set of contracts and predicates. Contracts therefore specify the system properties to make a use case applicable (preconditions) and define the system properties (predicates) acquired after their application (deterministic postconditions). Parameters to use cases can either be system actors or main concepts of the use case, which are represented as normal instantiated objects of classes during the test scenario generation process. 
 
 Through exhaustive simulation by the prototype/interpreter-tool \textit{UC-System} a \textit{use case transition system} (UCTS) is built, which serves as a model for all valid sequences of use cases. Therefore first an initial state and enumerations of different business entities that later serve as parameters to use cases are declared. Then all use cases get instantiated by replacing the set of formal parameters with all the possible combinations of their possible actual values (i.e. actors and main concepts). To apply an instantiated use case the simulation state and the precondition of an instantiated use case must match. The simulation state is then updated according to the postcondition of the contract. The initial state defines which predicates are true from the very beginning, the current simulation state covers all instantiated predicates which are evaluated to true. Now all possible paths are traversed exhaustively until a final UCTS was generated. 
-
-\newpage
 
 During this step, the requirement engineer has also the chance to check and possibly correct the requirements before the tests are generated. Inconsistencies between predicates and contracts can be identified as well as underspecification or errors in the requirements. Invariants can also be checked. The number of states in the transition system can be calculated with
 
@@ -138,6 +128,8 @@ Now relevant test objectives get extracted from the UCTS by applying predefined 
 
 The \textit{All Edges} (AE) criterion makes sure that all state transitions are covered, whereas the \textit{All Vertices} (AV) criterion guarantees that all states (predicates) are reached within the set of test objectives.  The \textit{All Instantiated Use Cases} (AIUC) criterion is helpful in case a state transition can be done by multiple use cases or a use case leads to no state change. A combination od AV and AIUC is the \textit{All vertices and All Instantiated Use Cases} (AV-AIUC) criterion. The most strict criterion is probably the \textit{All Precondition Terms} (APT) criterion, which makes sure that all possible ways to apply each use case are exercised. Now, these criteria are mainly introduced to generate functional tests. The \textit{Robustness} criterion on the other hand explicitly exercises a use case in as many different ways as to make its precondition false. Therefore valid test paths are generated, which lead to an invalid application of a use case to generate robustness tests from. All algorithms are based on breadth-first search in the UCTS to obtain small test-objectives that are human-understandable and meaningful. 
 
+\newpage 
+
 Subsequently, in the second phase, test scenarios get generated by replacing each use case in a test objective with the according use case scenario that is compatible in terms of static contract matching. This is done by the prototype-tool \textit{UC-SCSystem}. The use case scenarios were also attached with contracts beforehand. This time the contracts contain more detailed pre- and postconditions. There are contracts that rely on the rest of the model, they are written in \textit{Object Constraint Language} (OCL), and there are contracts that rely on the predicates of the use cases. Now the exchange of messages involved between the environment and the system is also specified. Note that all use case scenarios are system-level scenarios. Eventually, additional parameters and messages need to be passed manually before executable \textit{test cases} can be generated. The process results in executable test scenarios that get evaluated using the statement coverage metric.
 
 One possible challenge of the approach is that the simulation model has to be compact enough to avoid combinatorial explosion of the internal states. Therefore the two-phase approach was chosen and parameters to instantiate use cases during the simulation can often be restricted to only the main system concepts and actors. Furthermore, the above-mentioned test objective generation criteria were identified through experimental comparisons and help to keep the number of test objectives in a reasonable scope. 
@@ -156,7 +148,6 @@ To evaluate the approach the original authors used three software products: An A
 			\hline
 			& \textbf{ATM} & \textbf{FTP} & \textbf{VM} \\
 			\hline
-			\hline	
 			\# use cases & 5 & 14 & 14 \\
 			\hline
 			\# nominal UC-scenarios & 5 & 14 & 14 \\
@@ -173,16 +164,15 @@ To evaluate the approach the original authors used three software products: An A
 
 Taken the example of the VM server, most coverage criteria reached up to 70\% code coverage, when including robustness test cases even up to 80\%. For more detailed information see \autoref{codecoverage}.
 
-\begin{table}[h] 
+\begin{table}[h]
+	\begin{small} 
 	\centering
-	\begin{small}
-		\caption{Statement coverage reached by the generated test cases}
-		\label{codecoverage}
-		\setlength{\tabcolsep}{1em}
+	\caption{Statement coverage reached by the generated test cases}
+	\label{codecoverage}
+	\setlength{\tabcolsep}{1em}
 		\begin{tabular}{l|c|c|c}
 			\hline
 			& \textbf{ATM} & \textbf{FTP} & \textbf{VM} \\
-			\hline
 			\hline	
 			\% of functional code covered & 100\% & 90.7\% & 100\% \\
 			\hline
@@ -255,9 +245,9 @@ After that, the UC-System prototype/interpreter tool should build the UCTS (\aut
 
 After applying an instantiated use case in the transition system (in case the precondition of the contract was fulfilled) the simulation state is updated according to the contracts' postcondition. 
 
-Depending on the selected coverage criterion, we receive different test objectives as correct sequences of use cases. The robustness criterion was not considered in this example, but its application is coherent to the functional coverage criteria. How many test objectives are derived depends on the internal implementation of UC-System and cannot be predicted for this example. Let's assume that one test objective is the test path createMovie(m) \mbox{-\textgreater} createLinkedPerformer(p,m) \mbox{-\textgreater} removeMovie(m). Then the use case scenarios from \autoref{ucs} are used to replace the use cases in the test objectives. It helps to specify the exchange of messages involved between the environment and the system.
-
 \newpage
+
+Depending on the selected coverage criterion, we receive different test objectives as correct sequences of use cases. The robustness criterion was not considered in this example, but its application is coherent to the functional coverage criteria. How many test objectives are derived depends on the internal implementation of UC-System and cannot be predicted for this example. Let's assume that one test objective is the test path createMovie(m) \mbox{-\textgreater} createLinkedPerformer(p,m) \mbox{-\textgreater} removeMovie(m). Then the use case scenarios from \autoref{ucs} are used to replace the use cases in the test objectives. It helps to specify the exchange of messages involved between the environment and the system.
 
 \begin{figure}[h]
 	\centering
@@ -266,11 +256,10 @@ Depending on the selected coverage criterion, we receive different test objectiv
 	\label{ucs}
 \end{figure}
 
+\newpage
 Note that the use case scenarios may still be incomplete for the execution. They contain the main messages exchanged between the tester and the SUT and say how the system has to be simulated to perform a use case and how to react to the simulation. To know how the system has to be simulated, the use case scenarios contain more detailed contracts written in OCL besides the contracts written as logical expressions that were provided by the use cases. 
 
 The prototype-tool UC-SCSystem uses the shown implementation in the use case scenarios to derive executable test scenarios as JUnit tests.
-
-\newpage
 
 \section{An Automated Approach to System Testing based on Scenarios and Operations Contracts} \label{approachtwo}
 
@@ -331,69 +320,58 @@ For instance, the state $S_{0}$ describes the state when a performer p is linked
 
 Based on a coverage criterion the test paths get derived. Different from the first approach no test scenarios get generated. The paper only shows a new more low-level, graphical approach to generate test paths as this was even a suggested improvement from the authors of the first paper. 
 
+\newpage
 \section{Comparison} \label{comparison}
-
-To better compare the two approaches a synthesis matrix based on the following questions is provided:
-
-\begin{enumerate}
-	\item Description of the approach (What does the approach do?)
-	\begin{enumerate}
-		\item Which artifacts and relations between artifacts are used in this approach? Which artifacts are created in the course of the approach? How are the artifacts characterized?
-		\item What is required and/or input for the application of the approach?
-		\item What steps does the approach consist of? Which information is used in which step and how? What are the results of the individual steps?
-	\end{enumerate}
-	\newpage
-	\item Benefits of the approach (Whom does the approach help and how?)
-	\begin{enumerate}
-		\item Which usage scenarios are supported by the approach?
-		\item Which stakeholders are supported by the usage scenarios?
-		\item Which knowledge areas from SWEBOK can be assigned to the usage scenarios?
-	\end{enumerate}
-	\item Tool support for the approach (What tool support is available?)
-	\begin{enumerate}
-		\item What tool support is provided for the approach?
-		\item Which steps of the approach are automated by a tool? Which steps are supported by a tool, but still have to be executed manually? Which steps are not supported by a tool?
-	\end{enumerate}
-	\item Quality of the approach (How well does the approach work?)
-	\begin{enumerate}
-		\item How was the approach evaluated?
-		\item What are the (main) results of the evaluation?
-	\end{enumerate}
-\end{enumerate}
-
-\begin{longtable}[h]{p{0.5cm}p{0.5\textwidth}p{0.5\textwidth}}
-	Nr. & Approach \cite{ClementineNebut2006} & Approach \cite{NajlaRaza2007} \\
-	1a & 
+\begin{small}
+\begin{longtable}[h]{p{0.45cm}|p{0.425\textwidth}|p{0.425\textwidth}}
+	\caption{Synthesis matrix}
+	\label{tab3:synthesismatrix}
+	\\    %%%%<===
+	\hline
+	\textbf{Nr.} & \textbf{Approach 1} & \textbf{Approach 2} \\
+	\hline
+	1a) & 
 	Use cases describing the basic operations in the transition system. Contracts that are attached to the use cases describing the states in the transition system. A contract consists of pre- and postconditions that specify the system properties to make a use case applicable and which properties are acquired by the system after its application. Parameters to contracts are actors and main concepts of the use case. The transition system (UCTS) itself as a simulation model to derive test objectives. The states in the UCTS are given through the predicates defined in the contracts, the transitions are triggered when applying an instantiated use case. Test objectives describing the test paths. Test objectives are derived by traversing the UCTS using a specific coverage criteria. Use case scenarios to build test scenarios from test objectives. Use case scenarios contain the main messages exchanged between the tester and the SUT, they define how the system has to be simulated to perform a use case and how to react to the simulation. & 
 	IODs holding all scenarios and operations of a use case. Operations can either be interaction uses or sequence diagrams inside the IOD and define the state transitions. Contracts written in OCL that are attached to the operations describing the states in the transition system. The CTS describing the transition system. Test paths derived from the CTS using coverage criteria.  \\
-	1b & 
+	\hline
+	1b) & 
 	Use cases, contracts written as logical expressions, use case scenarios (sequence diagrams), initial system state, selected coverage criterion, and additional use case scenario parameters. & 
 	IODs, contracts written in OCL, selected coverage criterion, possibly manual resolving of conflicts in the CTS matrix. \\
-	1c &
+	\hline
+	1c) &
 	To express the ordering constraints between use cases, each use case is attached by a contract. To simulate the use cases, the set of formal parameters of the contracts are replaced with all possible combinations of their actual values. The use cases are then called \textit{instantiated}. To apply an instantiated use case the precondition of its contract must match with the current simulation state. Afterwards the simulation state is updated according to the postcondition of the use case. Exhaustively simulating the system results in the UCTS. To derive test objectives the transition system is traversed according to one of the predefined coverage criteria AE, AV, AIUC, AV-AIUC, or APT. To build test scenarios a use case scenario can replace a use case at a certain stage of execution if the state reached at this stage locally implies the precondition of the use case scenario. Executable test scenarios are generated by the prototype-tool UC-SCSystem. &
 	Each operation in the IOD was enriched with its own contract written in OCL. To build the CTS, first all operations have to be identified from the IOD. The operations are taken from the sequence diagrams or from other operations expressed as interaction occurrences in the IOD. Using the contracts of operations, the states for the CTS are identified. Eventually, conflicts in the CTS have to be resolved such as logical if-then-else conditions, equal contract statements, or join nodes. After the CTS was built, test paths are derived from the CTS by applying a coverage criterion, which is either state-, transition- or transition pair coverage. \\
-	2a & 
+	\hline
+	2a) & 
 	Automatic test generation from use cases and use case scenarios. Requirement validation by identifying inconsistencies, underspecifications, and invariants. & 
 	Deriving test paths from IODs. Further requirement validation on use case level.\\
-	2b & 
+	\hline
+	2b) & 
 	Test writers / Developers, Requirement Engineers. &
 	Test writers / Developers, Requirement Engineers. \\
-	2c &
+	\hline
+	2c) &
 	Software Requirements (definition of a software requirement, functional requirements, acceptance tests), Software Testing (model-based techniques, objectives of testing, evaluation of the tests performed), Software Engineering Models and Methods (preconditions, postconditions and invariants, behavioral modeling, analysis for consistency, and correctness, traceability). &
 	Software Requirements (definition of a software requirement, functional requirements, acceptance tests), Software Testing (model-based techniques), Software Engineering Models and Methods (preconditions, postconditions and invariants, behavioral modeling, analysis for consistency and correctness). \\
-	3a & 
+	\hline
+	3a) & 
 	Dedicated editor to design use cases with contracts, UC-System to build the UCTS simulation model, and to derive test objectives from it. UC-SCSystem to exchange the use cases by use case scenarios in order to build the executable test case scenarios. & 
 	UML 2.0 as a standard for IODs, OCL as a formal language to write the contracts, prototype tool to derive test paths. \\
-	3b & 
+	\hline
+	3b) & 
 	Writing the use cases and contracts is supported by a dedicated editor, but has to be done manually. Deriving test objectives from use cases and contracts through the transition system is done automatically by UC-System. Use case scenarios have to be specified manually, the generation of test scenarios works semi-automatically with UC-SCSystem as it may need additional parameters from the tester. & 
 	Only the IOD and contract specification has to be done manually, the complete approach was then automized by a prototype tool. \\
-	4a & 
+	\hline
+	4a) & 
 	The approach was evaluated by looking at the statement coverage of three sample programs and the efficiency of test case scenario generation. & 
 	The approach was evaluated by looking at the number of test paths generated to cover all success scenarios and fault detections. \\
-	4b &
+	\hline
+	4b) &
 	Code coverage with the most coverage criteria was around 80\%. The coverage criteria differ in efficiency. AE, AV, and AV-AIUC perform with low efficiency, the sets of test cases are larger than in AIUC and APT. APT reaches 100\% functional test coverage with only 15 test case scenarios. Testing robustness leads to a high number of generated test case scenarios that only cover about 50\% of the corresponding code. The approach is good for functional testing, but bad for robustness testing. &
 	Using the transition criterion to derive test paths leads to a reasonable amount of test paths and covers all alternative flows in the IOD, but is not suitable for fault detection at any time. The transition pair coverage criterion guarantees the maximum fault detection, but leads to a high amount of test paths. State coverage captures all success scenarios. \\
+	\hline
 \end{longtable}
+\end{small}
 
 Both approaches have a transition system as a core component in common. Both use contracts to define the states in the transition system. A transition can be applied in case the precondition is fulfilled, the state is then updated according to the postcondition. The transition system is used to derive test paths. Furthermore, both approaches define coverage criteria to generate a certain amount of test cases from the transition system. Both have the AE/transition coverage criterion and AV/state coverage criterion in common. Using this core idea it is also easy in both approaches for requirement engineers to validate their specified requirements during the simulation of the transition system. Both papers draw a similar conclusion, that the core approach is helpful to generate functional test case scenarios for the requirements, nevertheless, there is a lack to achieve a comparable coverage for robustness code for fault detection.
 
