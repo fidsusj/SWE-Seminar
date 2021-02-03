@@ -3,6 +3,9 @@
 
 In this chapter, we aim to study the topic \textit{testing with  system models}. Section \ref{sec:Intro7} presents the introduction of this topic. Section \ref{sec:LS} describes how the systematic literature research is carried out to identify the existing approaches for testing with system models. In \autoref{sec:AP1}, the first relevant approach for this topic, which is given from the Chair of Software Engineering of University Heidelberg to be studied, is described and implemented on the example application \textit{Movie Manager}. In \autoref{sec:AP2}, the second relevant approach, which is identified through the literature research, is studied likewise. Then, \autoref{sec:Compar} compares the two relevant approaches selected for this topic. In conclusion, \autoref{sec:Conc} presents the insights gained from this study.
 
+In order to get familiar with \textit{system Model (SM), test model (TM), system under test (SUT), model-based testing (MBT), Unified Modeling Language (UML), Systems Modeling Language (SysML)} and \textit{Object Constraint Language (OCL)}, please visit the glossary.
+
+
 \section{Introduction}
 \label{sec:Intro7}
 
@@ -29,15 +32,11 @@ But as can be seen in \autoref{sec:AP1}, the authors are entirely concerned with
 
 As the SM of the SUT is typically derived from the informal requirements, it is important to trace how different requirements reflect in the models, on different perspectives and on different abstraction levels, and how the generated test cases cover different requirements \cite{Paper1}, \cite{SMvsTM}. For a model-based testing perspective, traceability of requirements means that the generated test cases from the model are linked with the requirements \cite{Paper2}. Thus, traceability of requirements helps to achieve the right level of coverage and shows what requirement has been covered by what test \cite{Paper1}. It also enables us to identify which requirements have been successfully tested and which have resulted in failures \cite{Paper1}. Hereby, traceability of requirements is a pivotal aspect of MBT that allows one to ensure that all requirements have been tested  \cite{matera}.
 
-
 %\newpage
 \section{Literature search}
 \label{sec:LS}
 
 This section describes the systematic literature research carried out according to the \textit{Guidelines for Literature Research of the Chair of Software Engineering} \cite{LRGuidelines}. It aims to identify and analyze the scientific articles regarding testing with system models. 
-
-Subsection~\ref{subsec:RQ} specifies the research question, research strategy and used methods for this \autoref{sec:topic_7}. Then, \autoref{subsec:RE} describes how the literature research is carried out and presents the results of the search process. 
-
 
 \subsection*{Research question and research strategy}
 \label{subsec:RQ}
@@ -93,7 +92,7 @@ Snowballing search method is applied to the given article \cite{Paper1} to ident
 \end{tabular}
 \end{small}
 \end{table}
-\newpage
+
 In order to ensure that the research methodology and its implementation remain consistent and comprehensible, we formulated four relevance criteria as shown in \autoref{tab:ArticleCriteria}. An article is relevant, if it fulfills all criteria. The first two criteria are formulated to check the availability and the subject area of the articles. Since this work is to be written in English, the article to be used should be available in English. To reduce the comprehensive subject area to the relevant area for our topic, the article should have a clear focus on the area of software engineering as described in the second criterion. The third criterion aims to focus on recent work and to limit the search results. The last criterion is formulated to answer the research question and to find relevant articles, which particularly provide similar approaches to the approach presented in \cite{Paper1}.
 
 \subsection*{Research execution and literature results}
@@ -102,7 +101,7 @@ In order to ensure that the research methodology and its implementation remain c
 First, the search was carried out using the keyword-based search method with aforesaid search terms. In \autoref{tab:ResultKeyword}, the results of this search are documented.\\
 First column shows the search location, second column shows the date on which the search was carried out, and third column shows the applied restriction of search. Fourth column presents the exact search query of the search terms and thus shows how they were searched in the specified parts of articles. Fifth column shows the number of overall results, and sixth column shows the number of relevant articles. Finally, last column presents the number of articles chosen to be used in this study.
 
-\begin{table} [h] 
+\begin{table} [H] 
 \begin{small}
   \begin{center}
   \begin{scriptsize}
@@ -125,7 +124,7 @@ IEEE & 21.11.20 & 2005-2020, Advanced Search & ((((\enquote{Abstract}:system mod
  \end{center}
 \end{small}
 \end{table}
-
+\newpage
 As shown in \autoref{tab:ResultKeyword}, in all of our searches we searched the search term \enquote{test*}  in the \textit{documentation title} part, and the search term \enquote{trac*} in the \textit{abstract} part of the digital libraries, in order to find the closest approaches as possible to the presented approach in \cite{Paper1}. Although the \enquote{system model} is the most important search term for this topic, it was not written even in the abstract of the given article \cite{Paper1}. Therefore, with considering that, we decided to search this term also in the \textit{full text} part, instead of only in the \textit{abstract} part of the digital libraries. Consequently, the search terms \enquote{system model} and \enquote{requirement} were searched in the first searches only in \textit{full text} part, then in the second searches in \textit{abstract} part of the digital libraries. 
 
 After identifying relevant articles by using keyword-based search method, snowballing method was conducted to the \cite{Paper1}, which is our start paper for this study, in order to find further relevant articles. The results of the search using snowballing method are detailed documented in \autoref{tab:ResultSnowballing}.
@@ -177,7 +176,6 @@ Thus, after conducting the keyword-based and snowballing search methods, we coul
  \end{center}
 \end{small}
 \end{table}
-\newpage
 The articles \cite{Paper1}, \cite{matera}, \cite{Relevant3}  and \cite{Relevant4} were identified through the keyword-based search method, and \cite{SMvsTM} and \cite{Paper2} were identified through the snowballing search method. The first identified article \cite{Paper1} through the keyword-based search method was already given us for this study as start paper. Since \cite{matera} and \cite{SMvsTM} are from the same author group of \cite{Paper1}, we didn't choose them for our study as a second approach to examine. 
 
 The articles \cite{Relevant3} and \cite{Relevant4} have also common authors, and one of them is the same author of the article \cite{Paper2}. Therefore, we excluded the \cite{Relevant3} and \cite{Relevant4}, and chose only \cite{Paper2}, \textit{Requirements Traceability in the Model-Based Testing Process}, which is closest to the provided approach in the given article \cite{Paper1}, and very suitable for our topic \textit{testing with system models}.
@@ -268,7 +266,9 @@ First, the validation engineer constructs the model from a textual specification
 
 Then, requirements traceability is managed by tagging manually the postconditions of the operations and the effects of the transitions in the UML model with the requirements. The format uses ad-hoc comment symbols to associate a requirement with an OCL statement which will be involved into a test target during the generation of the test cases. Once the model is reasonably trustworthy, the generation of tests is steered by the validation engineer on the basis of test selection criteria. Test selection criteria are supported by the LEIRIOS Test Designer tool to control the choice of tests from all the possible tests that can be derived from the behavior UML model \cite{LTG}, e.g. transition-based coverage, decision-based coverage, and data-oriented coverage. It is important to notice that all these test selection criteria are related to models and define how well the generated test suite covers the model \cite{LTG}. 
 
-The test generation method is provided by the LEIRIOS Test Designer tool. It consists in testing all the possible behaviors of the specification operations, by traversing the states of the system. This strategy is controlled by the previously defined test selection criteria. This method is performed as follows:
+The test generation method is provided by the LEIRIOS Test Designer tool. It consists in testing all the possible behaviors of the specification operations, by traversing the states of the system. This strategy is controlled by the previously defined test selection criteria. 
+\newpage
+This method is performed as follows:
 %
 \begin{itemize}[noitemsep]
   \item [--]Partitioning of the model operation to generate all the possible expected behaviors,
@@ -416,7 +416,7 @@ In the second approach, \cite{Paper2}, the expected functional requirements of t
 
 Furthermore, the LEIRIOS Test Designer tool provided in the second approach does not offer a tool support for tracing-back requirements from tests to models, while the first approach supports it via the automatically generated test report by their provided tool, Qtronic.
 \newpage
-\autoref{tab:TSM} presents the detailed comparison of both approaches as a synthesis matrix. In the first column, the number of the synthesis questions are presented. Number 1 implies the description, number 2 implies the benefit, number 3 implies the tools, and number 4 implies the quality for the compared approaches. The second column explains in more detail in which context the questions are asked. Finally, the third column presents the answers to these questions for approach 1, and fourth column for approach 2. 
+\autoref{tab:TSM} presents the detailed comparison of both approaches as a synthesis matrix. In the first column, the number of the synthesis questions are presented. Number 1 implies the description, number 2 implies the benefit, number 3 implies the tools, and number 4 implies the quality for the compared approaches. Then, the second column presents the answers to these questions for approach 1, and third column for approach 2. 
 
 \newpage
 \newgeometry{margin=1cm}
