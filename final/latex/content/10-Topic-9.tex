@@ -69,34 +69,34 @@ We also discovered that the spelling of the term \enquote{non-functional} had a 
 
 \begin{small}
 	\centering
-	\begin{longtable}[bth]{p{0.08\textwidth}|c|p{0.58\textwidth}|p{0.12\textwidth}}
+	\begin{longtable}[h]{p{0.08\textwidth}|c|p{0.58\textwidth}|p{0.12\textwidth}}
 		\caption{Term based search results}
 		\label{tbl:search_topic_9_andre}
 		\setlength{\tabcolsep}{1em}\\    %%%%<===
-		\hline
+		\toprule
 		\textbf{Source} & \textbf{Date} & \textbf{Search query and restrictions} & \textbf{\#Results (relevant)} \\
 		
-		\hline
-		IEEE Xplore & 2020-11-11 & \texttt{\enquote{{}non-functional requirements}{} AND testing AND \enquote{{}risk analysis}{}} & 3 (0) \\
+		\midrule
+		IEEE Xplore & 2020-11-11 & \texttt{"{}non-functional requirements"{} AND testing AND "{}risk analysis"{}} & 3 (0) \\
 		
-		\hline
+		\midrule
 		IEEE Xplore & 2020-11-11 & \texttt{non-functional requirements AND testing AND risk analysis} & 12 (0) \\
 		
-		\hline
-		IEEE Xplore & 2020-11-11 & \texttt{risk AND \enquote{non-functional} and test} & 23 (2) \\
+		\midrule
+		IEEE Xplore & 2020-11-11 & \texttt{risk AND "non-functional" and test} & 23 (2) \\
 		
-		\hline
-		IEEE Xplore & 2020-11-29 & \texttt{((\enquote{{}Abstract}{}:nonfunctional requirements) AND \enquote{{}Abstract}{}:Test) AND \enquote{Full Text \& Metadata}:\enquote{{}risk analysis}{})} & 2 (1) \\
+		\midrule
+		IEEE Xplore & 2020-11-29 & \texttt{(("{}Abstract"{}:nonfunctional requirements) AND "{}Abstract"{}:Test) AND "Full Text \& Metadata":"{}risk analysis"{})} & 2 (1) \\
 		
-		\hline
-		IEEE Xplore & 2020-11-29 & \texttt{((\enquote{{}Abstract}{}:non-functional requirements) AND \enquote{{}Abstract}{}:Test) AND \enquote{Full Text \& Metadata}:\enquote{{}risk analysis}{})} & 3 (0) \\
-
-		\hline
-		ACM & 2020-11-29 & \texttt{[Abstract: \enquote{{}risk}{}] AND [Abstract: test*] AND [Abstract: \enquote{{}non functional}{}]} & 4 (1) \\
+		\midrule
+		IEEE Xplore & 2020-11-29 & \texttt{(("{}Abstract"{}:non-functional requirements) AND "{}Abstract"{}:Test) AND "Full Text \& Metadata":"{}risk analysis"{})} & 3 (0) \\
 		
-		\hline
-		ACM & 2020-11-29 & \texttt{[Abstract: test] AND [Abstract: \enquote{{}non functional}{}] AND [[Full Text: \enquote{{}risk analysis}{}] OR [Full Text: \enquote{{}risk}{}]]} & 20 (1) \\
-		\hline
+		\midrule
+		ACM & 2020-11-29 & \texttt{[Abstract: "{}risk"{}] AND [Abstract: test*] AND [Abstract: "{}non functional"{}]} & 4 (1) \\
+		
+		\midrule
+		ACM & 2020-11-29 & \texttt{[Abstract: test] AND [Abstract: "{}non functional"{}] AND [[Full Text: "{}risk analysis"{}] OR [Full Text: "{}risk"{}]]} & 20 (1) \\
+		\bottomrule
 	\end{longtable}
 \end{small}
 
@@ -201,7 +201,7 @@ Following this pattern, tests for non-functional requirements can be created sys
 	\centering
 	\caption{Control Case for Approach 1 of Topic 9}
 	\label{tbl:topic_9_approach_1}
-	\begin{tabular}{p{0.95\textwidth}}\hline
+	\begin{tabular}{|p{0.95\textwidth}|}\hline
 		\textbf{Control Case}: Performance of the movie list view \\ 
 		\hline
 		\textbf{Control Case ID}: CC-001 \\
@@ -250,7 +250,7 @@ Following this pattern, tests for non-functional requirements can be created sys
 	\centering
 	\caption{Test Case for the movie manager example of topic 9, approach 1}
 	\label{tbl:topic_9_test_case}
-	\begin{tabular}{p{0.95\textwidth}}\hline
+	\begin{tabular}{|p{0.95\textwidth}|}\hline
 		\textbf{Associated Control Case ID:} CC-001\\
 		\hline
 		\textbf{Test Objectives:} \newline Verify that the movie list view has no visible hiccups when scrolling through the list of movies. \\
