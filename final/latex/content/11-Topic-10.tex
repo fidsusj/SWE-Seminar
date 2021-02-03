@@ -12,7 +12,7 @@ By virtue of the afore-mentioned problems, there are only few tools and systemat
 \end{itemize}
 
 \lstset {language=C++}
-\begin{lstlisting}[caption={\textbf{Logging Aspect in C++.}}, label=logging]
+\begin{lstlisting}[caption={Logging Aspect in C++.}, label=logging]
 aspect LoggingAspect{
 	public:
 		pointcut logMethods() = call("% %::%()");
@@ -137,7 +137,7 @@ To sum up, the article presents a systematic approach – a systematology - to d
 \\
 Finally, a test aspect for one or multiple requirement categories is formulated (\autoref{aspects}). These test aspects would then need to be implemented manually using an AOP-Framework (AspectC++ \cite{C++}, AspectJ \cite{J}, …). For instance, the Memory Aspect could work like this: every time the constructor or destructor of an entity class (Movie, Performer, …) is called, a counter will be incremented or decremented by the size of the class.
 
-\begin{table}[h]
+\begin{table}[tbh]
 \begin{small}
 \caption{Initial System Requirements of the Movie Manager App.}
 \begin{tabular}{p{7cm}|p{7cm}}
@@ -241,7 +241,7 @@ To sum up, the article presents a tool for the automatic generation of test aspe
 \subsection{Application}
 The non-functional requirements with corresponding test objectives or a bug report must be given, as the approach does not present a way to derive them. Let us consider the same requirements (REQ1-9) and test objectives (TO1-7) as in \autoref{req} and \autoref{obj}. Furthermore, a user of the Movie Manager App has filed the following bug report:
 
-\begin{table}[h]
+\begin{table}[tbh]
 \begin{small}
 \caption{Bug Report.}
 \begin{tabular}{p{14cm}}
