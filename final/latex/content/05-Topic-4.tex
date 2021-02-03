@@ -21,7 +21,7 @@ can thus not be used to evaluate the system under test (SUT)}
 \cite{Siegl2010}. Therefore requirements must be stricter and more
 formal.\\
  Furthermore, there are systems that have to fulfil real-time requirements.
-Two approaches (Chapter \autoref{sec:Approach-1} and \autoref{sec:Approach-2})
+Two approaches (Chapter \ref{sec:Approach-1} and \ref{sec:Approach-2})
 will be presented in this chapter. Both approaches test with a time
 component as they refer to a real-time system. In these systems, it
 is not only important what input the individual system functions receive
@@ -45,14 +45,14 @@ deals even more specifically with the dependency between individual
 components of SUT, so that they are taken into account in the automatic
 test generation from these models.\\
  \\
-Chapter \autoref{sec:Literature-Search} explains the process of the literature
-search that was used to find the second approach. Chapter \autoref{sec:Comparison}
+Chapter \ref{sec:Literature-Search} explains the process of the literature
+search that was used to find the second approach. Chapter \ref{sec:Comparison}
 compares the two approaches and shows the result in a synthesis matrix.
-Chapter \autoref{sec:topic_4_Conclusion} provides an assessment of the approaches
+Chapter \ref{sec:topic_4_Conclusion} provides an assessment of the approaches
 and summarises the most important findings.\\
 Please refer to the glossary in order to receive a common understanding of the following terms used in the sections below: SUT, CACC, TUM, EXAM, CREMTEG, CIIG, CSIBG, CSIEDBG, AIC, AITC, AIEC.
 
-\section{Literature Search\label{sec:Literature-Search}}
+\section{Literature search\label{sec:Literature-Search}}
 
 The literature search was conducted in too ways: Search term and snowballing.
 To find more and possibly different approaches the search question
@@ -326,13 +326,13 @@ real-time embedded system, it is often impossible to cover all test
 paths. For this reason, it must be decided on a case-by-case basis
 which test approach is chosen. Each model fulfills a test criterion
 of different quality: A CIIG fulfills the All-Interface Coverage Criterion
-(AIC). ``This criterion ensures that each interface is tested once''
+(AIC). \enquote{This criterion ensures that each interface is tested once}
 \cite{Guan2015}. A CSIBG fulfills the All-Interface-Transition Coverage
-Criterion (AITC). ``This criterion ensures that each interface between
+Criterion (AITC). \enquote{This criterion ensures that each interface between
 components is tested once and each internal state transition path
-in a component is toured at least once'' \cite{Guan2015}. A CSIEDBG
-fulfills the All-Interface-Event Coverage Criterion (AIEC). ``AIEC
-combines edge coverage with logical coverage'' (see above) \cite{Guan2015}.
+in a component is toured at least once} \cite{Guan2015}. A CSIEDBG
+fulfills the All-Interface-Event Coverage Criterion (AIEC). \enquote{AIEC
+combines edge coverage with logical coverage} (see above) \cite{Guan2015}.
 Models presented here serve as a basis for the creation of automatically
 generated test cases.
 
@@ -374,7 +374,7 @@ or equal 120. The Message Edge between U8 and P9 only exists, if (T8-\textgreate
 \begin{small} 		
 	\begin{longtable}[h]{p{0.45cm}|p{0.425\textwidth}|p{0.425\textwidth}}
 \hline 
-\textbf{Nr.} & \textbf {Approach 1(\autoref{sec:Approach-1})}  & \textbf{Approach 2(\autoref{sec:Approach-2})}\\
+\textbf{Nr.} & \textbf {Approach 1 (\autoref{sec:Approach-1})}  & \textbf{Approach 2 (\autoref{sec:Approach-2})}\\
 \hline 
 1a)  & Requirements specification: This could be natural language text, spreadsheets,
 drawings or UML charts. TUM: Will be manually derived from the requirements

@@ -2,7 +2,7 @@
 
 % Hickl
 
-\chapter{Systematic generation of acceptance tests that are executable with FitNesse}
+\chapter{Systematic Generation of acceptance tests that are executable with FitNesse}
 \label{sec:topic_2}
 
 \section{Introduction}\label{sec:topic_2_intro}
@@ -11,11 +11,11 @@ This chapter focusses on the creation of acceptance tests that are automatically
 In this first section of the chapter the reason for using this approach is discussed.
 Furthermore, the general features of \textit{FitNesse} as well as the needed artefacts like Fit-tables are explained.
 An article that focuses on the topic of creating acceptance tests that are executable with \textit{FitNesse} was provided by the supervisors of the seminar.
-Section \autoref{sec:literature-search} documents the literature search used to find a different approach.
-The two articles are then described in the sections \autoref{sec:el-attar} and \autoref{sec:longo}.
+Section \ref{sec:literature-search} documents the literature search used to find a different approach.
+The two articles are then described in the sections \ref{sec:el-attar} and \ref{sec:longo}.
 Moreover, for a better understanding of the presented approaches these chapters include the execution of them on the \textit{MovieManager}.
-The following section \autoref{sec:comparison} includes the comparison of the two approaches using a synthesis matrix.
-Section \autoref{sec:topic_2_conclusion} provides a Conclusion including the most important insights of the process and an assessment in which situations the approaches might be suitable.
+The following section \ref{sec:comparison} includes the comparison of the two approaches using a synthesis matrix.
+Section \ref{sec:topic_2_conclusion} provides a Conclusion including the most important insights of the process and an assessment in which situations the approaches might be suitable.
 
 During the software engineering process communication between the developers and the customers is a crucial factor for the success of the product.
 A problem for the communication is the different use of documents by the two main stakeholders:
@@ -31,7 +31,7 @@ Thus the customers receive a software that satisfies all their mentioned require
 \textit{FitNesse} supports the creation and maintenance of \textit{Fit-tables} as well as the automated execution of the tests represented by the tables.
 To make this possible \textit{Fixture-Classes} are needed.
 These classes connect the input values from the \textit{Fit-tables} to the \textit{System-under-test} and are executed by \textit{FitNesse}.
-An overview of the data exchange during the process is shown in figure \autoref{fig:overview-fitnesse} on the next page.
+An overview of the data exchange during the process is shown in figure \ref{fig:overview-fitnesse} on the next page.
 The specific steps are explained in the following:
 
 After the user chooses to execute a set of Fit-tables in \textit{FitNesse}, \textit{FitNesse} executes the Fixture-Classes that belong to the selected tables.
@@ -77,7 +77,7 @@ The relevance criteria were chosen as follows:
 	This criterion was chosen to get a more recent approach than the start article which was by the creation of this chapter already more than 10 years old.
 \end{itemize}
 
-Table \autoref{fig:lit-search-fitnesse} on the next page provides an overview for the search-term-based literature search.
+Table \ref{fig:lit-search-fitnesse} on the next page provides an overview for the search-term-based literature search.
 As search terms the terms \enquote{acceptance test} and \enquote{FitNesse} were chosen.
 These search terms turned out to be specific enough to fit only a manageable amount of articles.
 The search resulted in eight relevant articles of which six presented an approach and two gave an overview over the use of \textit{FitNesse}.
@@ -102,7 +102,7 @@ The presented approach differs from the approach of the article by El-Attar and 
 Also it was created by different authors and was published in 2016, so it is a much more recent approach.
 
 
-\section{Approach 1: Developing comprehensive acceptance tests from use cases and robustness diagrams}
+\section{Approach 1: Developing comprehensive acceptance tests from Use Cases and robustness diagrams}
 \label{sec:el-attar}
 
 \subsection{Description}
@@ -119,7 +119,7 @@ The execution of the final acceptance tests is done fully automatically by the t
 To help with traceability during the approach the authors created a tool called UCAT.
 This tool does not provide any automation support but allows the user to create use case models and \textit{Fit-tables}.
 These artefacts can be linked within UCAT which helps to determine which use cases resulted in which acceptance tests.
-Figure \autoref{fig:overview-el-attar} shows the rough structure of the approach.
+Figure \ref{fig:overview-el-attar} shows the rough structure of the approach.
 The exact steps of the approach are described in the following:
 
 \begin{figure}
@@ -190,11 +190,11 @@ This example is not part of this work because in the following section the execu
 
 The approach starts with Use Case and Domain Models.
 As those are not already described in this article, they are created for this chapter.
-Figure \autoref{fig:use-case-mm} on the next page shows the Use Case Model for the Movie Manager application.
+Figure \ref{fig:use-case-mm} on the next page shows the Use Case Model for the Movie Manager application.
 It contains the use cases and shows connections between them.
 For example, removing a movie might result in removing a performer if one of the performers that participated in the movie has no movies anymore after the removal.
 Such a relation is highlighted in the Use Case Model with the keyword \textit{extend}.
-The domain model of the Movie Manager application is shown in Figure \autoref{fig:domain-mm} on the next page.
+The domain model of the Movie Manager application is shown in Figure \ref{fig:domain-mm} on the next page.
 It contains the entities Movie and Performer as well as the two views that the user can see.
 
 To illustrate the approach the Use Case \textit{Describe a performer} is used.
@@ -224,7 +224,7 @@ The User Scenarios for this Use Case are as mentioned in the User Task table:
 
 
 
-The HLATs for the Use Case \textit{Describe a Performer} are displayed in Table \autoref{fig:hlats-mm}.
+The HLATs for the Use Case \textit{Describe a Performer} are displayed in Table \ref{fig:hlats-mm}.
 Each HLAT describes the necessary preconditions, inputs and the expected results of one User Scenario.
 This information is extracted from Use Case description.
 
@@ -236,12 +236,12 @@ This information is extracted from Use Case description.
 \end{table}
 
 In the next step a robustness diagram is created using the information from the Use Case Model and the Domain Model.
-The robustness diagram for the Use Case \textit{Describe a movie} is shown in figure \autoref{fig:robustness-mm} on the next page.
+The robustness diagram for the Use Case \textit{Describe a movie} is shown in figure \ref{fig:robustness-mm} on the next page.
 A robustness diagram contains the involved objects that communicate with the user.
 These are called boundary objects.
-An example for a boundary object is \textit{PerformerView} in figure \autoref{fig:robustness-mm}.
-It also contains control-objects like \textit{RelateToMovie} in figure \autoref{fig:robustness-mm} that makes sure that a performer is related to at least one movie.
-The last types of objects are the \textit{User} and the entities like \textit{Performer} or \textit{Movie} in figure \autoref{fig:robustness-mm}.
+An example for a boundary object is \textit{PerformerView} in figure \ref{fig:robustness-mm}.
+It also contains control-objects like \textit{RelateToMovie} in figure \ref{fig:robustness-mm} that makes sure that a performer is related to at least one movie.
+The last types of objects are the \textit{User} and the entities like \textit{Performer} or \textit{Movie} in figure \ref{fig:robustness-mm}.
 The resulting robustness diagram is used to find new information for the domain diagram.
 For example, CheckMovieRelations needs to find out whether the performer is linked to at least one existing movie.
 Therefore, the domain model needs to include a list of related movies for each performer or the number of related movies.
@@ -264,7 +264,7 @@ These are created in the form of \textit{Fit-tables}.
 For this example so called \textit{ActionFixtures} are chosen but \textit{RowFixtures} and \textit{ColumnFixtures} are also possible for this approach.
 \textit{ActionFixtures} contain a Test ID in the first row.
 Each of the following rows contains one action like entering a value or pressing a button.
-The ActionFixtures for the three HLATs from table \autoref{fig:hlats-mm} are displayed in the tables \autoref{fig:eats1-mm}, \autoref{fig:eats2-mm} and \autoref{fig:eats3-mm} on the next page.
+The ActionFixtures for the three HLATs from table \ref{fig:hlats-mm} are displayed in the tables \ref{fig:eats1-mm}, \ref{fig:eats2-mm} and \ref{fig:eats3-mm} on the next page.
 These Fit-tables are the final result of the approach.
 
 \begin{table}[H]
@@ -303,10 +303,9 @@ The US-UIDs are created in a tool provided by the authors.
 They contain functional data such as the involved objects, attributes and functions and also explicit User Scenarios provided by the customer.
 The User Scenarios provide the test data and combined with the functional data, \textit{Fit-tables} can be automatically created.
 The functional data represents the top row of the \textit{Fit-table} and the User Scenarios the specific values.
-Figure \autoref{fig:overview-longo} provides an overview over the steps of the approach.
+Figure \ref{fig:overview-longo} provides an overview over the steps of the approach.
 The only step that is executed automatically is marked in this overview.
 Each of the steps is explained in more detail in the following.
-
 
 \begin{figure}[H]
 	\centering
@@ -314,7 +313,7 @@ Each of the steps is explained in more detail in the following.
 	\caption{Overview of the steps in the approach of Longo et al.}
 	\label{fig:overview-longo}
 \end{figure}
-
+\newpage
 In the first step the US-UIDs are created.
 This step is described in another work by the authors \cite{longo2}.
 Each US-UID contains an explicit User Scenario provided by the customer.
@@ -349,7 +348,7 @@ In the first step an US-UID has to be created that displays the explicit informa
 In this type of model the round boxes are states of the system.
 The rectangles contain the User's Input whilst the free text in the round boxes describes the system's output.
 Arrows are used to assign functional names to the data and to denote transitions between states.
-The US-UID for the example is displayed in figure \autoref{fig:us-uid-mm}.
+The US-UID for the example is displayed in figure \ref{fig:us-uid-mm}.
 In the beginning the performerList contains only the performers a, b and c with attributes e, f and g.
 After the execution of the US-UID it also contains performer d with attributes x.
 
@@ -365,7 +364,7 @@ In the next step the functional information from the US-UID needs to be connecte
 objects and attributes of the \textit{System-under-test}. This is done in a Fixture-Class that is marked
 with \textit{@Fixture}.
 This class has to be written manually.
-The data flow during the execution of acceptance tests with FitNesse and the role of the Fixture-Class in this process is described in section \autoref{sec:topic_2_intro}.
+The data flow during the execution of acceptance tests with FitNesse and the role of the Fixture-Class in this process is described in section \ref{sec:topic_2_intro}.
 Inputs are part of the functional data on the start of the arrows in the US-UIDs. 
 For the first display of the US-UID PerformerView the Fixture-Class needs methods to move to the next display, to set the starting performer list and to choose
 \textit{create Performer}.
@@ -377,7 +376,7 @@ In the final step a \textit{Fit-Table} is created.
 This step is fully automatic with the tool of Longo et al. because it is only remodeling information from the US-UID.
 The functional information is placed in the top row whilst the explicit data of the User Scenarios is stored in the following rows.
 Each row represents an User Scenario.
-The resulting \textit{Fit-table} for the example is displayed in table \autoref{fig:fit-longo} on the next page.
+The resulting \textit{Fit-table} for the example is displayed in table \ref{fig:fit-longo} on the next page.
 
 \begin{table}[h!]
 	\caption{\textit{Fit-table} for a specific User Scenario of the Use Case \textit{Describe a performer (new performer)} of the Movie Manager application. The expected results end with a question mark.}

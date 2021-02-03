@@ -6,11 +6,11 @@ If one wants to ensure that all possible cases are covered and checked in a test
 
 Classification trees (CT) offer an approach to reduce the complexity of such parameter constructions and to keep them clearly arranged. Test cases covering the relevant parameter constructions can then be derived from the CT. This chapter reviews the use of such CTs based on two selected articles describing their uses and suitability.
 
-First, the literature search in the context of classification trees is explained. Subsequently, chapter \autoref{Kap:Approach1} deals with classification trees as a method for creating test cases for model-based systems and discusses them. Using the movie manager as an example, the classification trees are applied to certain requirements. Chapter \autoref{Kap:Approach2} then introduces Event Sequence Graphs (ESG) as an alternative concept for model-based systems. These are also applied to the movie manager example before a comparison of both approaches takes place in chapter \autoref{Kap:Comparison}. Finally, a conclusion is drawn in chapter \autoref{Kap:Conclusion}. There, we conclude by answering the question of the extent to which CT helped reducing a complex problem to a manageable number of test cases. As with the previous chapters, an attempt is then made to apply the design of this approach to the Movie Manager example.
+First, the literature search in the context of classification trees is explained. Subsequently, chapter \ref{Kap:Approach1} deals with classification trees as a method for creating test cases for model-based systems and discusses them. Using the movie manager as an example, the classification trees are applied to certain requirements. Chapter \ref{Kap:Approach2} then introduces Event Sequence Graphs (ESG) as an alternative concept for model-based systems. These are also applied to the movie manager example before a comparison of both approaches takes place in chapter \ref{Kap:Comparison}. Finally, a conclusion is drawn in chapter \ref{Kap:Conclusion}. There, we conclude by answering the question of the extent to which CT helped reducing a complex problem to a manageable number of test cases. As with the previous chapters, an attempt is then made to apply the design of this approach to the Movie Manager example.
 
 \section{Literature search}
 
-The literature search was conducted via snowballing and via a keyword search. Two partial approaches were used in snowballing. On the one hand, forward snowballing was used to find articles referencing the first given article. On the other hand, backward snowballing was used to search the articles that are listed by the initial article in the bibliography. Thus, publications directly related to the given article were considered. An overview of the main search results can be found in Fig.  \autoref{fig:literature_search}. 
+The literature search was conducted via snowballing and via a keyword search. Two partial approaches were used in snowballing. On the one hand, forward snowballing was used to find articles referencing the first given article. On the other hand, backward snowballing was used to search the articles that are listed by the initial article in the bibliography. Thus, publications directly related to the given article were considered. An overview of the main search results can be found in Figure \ref{fig:literature_search}. 
 
 \begin{figure}[H]
 \centering
@@ -21,7 +21,7 @@ The literature search was conducted via snowballing and via a keyword search. Tw
 
 A free keyword search was then performed on Elsevier, IEEE, and ACM\footnote{Die Links zu diesen Suchmaschinen sind: Elsevier: https://www.sciencedirect.com/ IEEE: https://ieeexplore.ieee.org/Xplore/home.jsp ACM: https://dl.acm.org/ }. The search query reflects the exact wording that was finally used. During this process, experiments were conducted to estimate which keywords were relevant enough to elicit a suitable number of search hits. In addition, backward snowballing proceeded without experimentation by searching and evaluating the sources listed in the bibliography of the main article in order. Forward snowballing was performed by searching the citations given at Elsevier.
 
-Figure \autoref{fig:literature_search} shows the relevant results of both search approaches. The title and abstract of all results have been viewed, aside from the 1000 hits on Elsevier. There, the first fifty results have been considered. The assessment of whether an article is relevant was determined on the basis of three criteria:
+Figure \ref{fig:literature_search} shows the relevant results of both search approaches. The title and abstract of all results have been viewed, aside from the 1000 hits on Elsevier. There, the first fifty results have been considered. The assessment of whether an article is relevant was determined on the basis of three criteria:
 
 \begin{enumerate}
 \item CT must be used or described to allow conclusions to be drawn about their suitability
@@ -40,7 +40,7 @@ Both approaches to the search yielded multiple hits. One of the articles listed 
 
 \subsection{Description}
 
-The first approach comes from Conrad et al\cite{Conrad}: The article \enquote{Systematic Model-Based Testing of Embedded Automotive Software} deals with the application of CT to problems that have a simulation or model of the application. The application example of the paper is the testing of an ABS system. Therefore, the introduction starts with a comparison of traditional and model-based software development. Figure \autoref{fig:tradditional_vs_modelbased} from the article shows this difference well. The necessity of model-based test methods is thereby justified. The approach introduced as \enquote{model-based black-box testing} (MBBBT) is presented below. Two perspectives are presented: Requirements-based test design and model-based test design. The basis for this is the creation of a CT.
+The first approach comes from Conrad et al\cite{Conrad}: The article \enquote{Systematic Model-Based Testing of Embedded Automotive Software} deals with the application of CT to problems that have a simulation or model of the application. The application example of the paper is the testing of an ABS system. Therefore, the introduction starts with a comparison of traditional and model-based software development. Figure \ref{fig:tradditional_vs_modelbased} from the article shows this difference well. The necessity of model-based test methods is thereby justified. The approach introduced as \enquote{model-based black-box testing} (MBBBT) is presented below. Two perspectives are presented: Requirements-based test design and model-based test design. The basis for this is the creation of a CT.
 
 \begin{figure}[H]
 \centering
@@ -50,7 +50,7 @@ The first approach comes from Conrad et al\cite{Conrad}: The article \enquote{Sy
 \end{figure}
 
 
-A graphically represented CT consists of the following components: The root denotes the product or model. The branches derived from it define the classifications. Classifications describe different requirements of the product. This depends on which of the two perspectives mentioned above was chosen as the basis. The leaves of a CT describe the different classes. A class in this context is a qualitative description. Thus, a category is described by the classes here. We can also say the range of values of a category is decomposed into the different classes. Figure \autoref{fig:ABS_CT} shows the requirements-based CT for the ABS model. At the top of the figure are the individual classifications with the different values for the classes. Because this is a requirements-based CT, mostly qualitative descriptions such as \enquote{dry}, \enquote{straight}, or \enquote{strong braking} are found as leaves.  
+A graphically represented CT consists of the following components: The root denotes the product or model. The branches derived from it define the classifications. Classifications describe different requirements of the product. This depends on which of the two perspectives mentioned above was chosen as the basis. The leaves of a CT describe the different classes. A class in this context is a qualitative description. Thus, a category is described by the classes here. We can also say the range of values of a category is decomposed into the different classes. Figure \ref{fig:ABS_CT} shows the requirements-based CT for the ABS model. At the top of the figure are the individual classifications with the different values for the classes. Because this is a requirements-based CT, mostly qualitative descriptions such as \enquote{dry}, \enquote{straight}, or \enquote{strong braking} are found as leaves.  
 
 For the test cases, the combination of these leaves is now to be tested. If you test all combinations of classes of this CT, you cover all test cases defined via the requirements. This assumes that the requirements are complete. In this example, this results in $4*2*3*5 = 120$ combinations.
 
@@ -99,11 +99,11 @@ The approach of a CT requires as a basis a model, over which is tested and after
 \label{fig:Movie_Maker_CT}
 \end{figure}
 
-The requirements presented here can then be transformed into a requirements-based CT as in Figure \autoref{fig:Movie_Maker_CT}. In the absence of a proper model against which to make classifications, exactly what counts as input or class depends on the exact implementation. A possible transition to \cite{Conrad} can be found in the following illustration: The requirements shown here can then be transitioned to a requirements-based CT as in Figure \autoref{fig:Movie_Maker_CT}. In the absence of a proper model against which to make classifications, exactly what counts as input or class depends on the exact implementation. A possible transfer to \cite{Conrad} can be found in the following illustration:
+The requirements presented here can then be transformed into a requirements-based CT as in Figure \ref{fig:Movie_Maker_CT}. In the absence of a proper model against which to make classifications, exactly what counts as input or class depends on the exact implementation. A possible transition to \cite{Conrad} can be found in the following illustration: The requirements shown here can then be transitioned to a requirements-based CT as in Figure \ref{fig:Movie_Maker_CT}. In the absence of a proper model against which to make classifications, exactly what counts as input or class depends on the exact implementation. A possible transfer to \cite{Conrad} can be found in the following illustration:
 
 \begin{table}[t] 
 \centering
-%\begin{small}
+\begin{small}
 \caption{A tabular listing of the various requirements with example values. The last column indicates which type of transfer is possible with a suitable implementation.}
 \label{tab:ueberfuehrung}
 
@@ -120,11 +120,11 @@ The requirements presented here can then be transformed into a requirements-base
 	\hline
 	   & Nicht vorhanden & NULL & 1:1 \\
 	\hline
-	Beschreibung & Leer & [""] & 1:1 \\
+	Beschreibung & Leer & [\enquote{}] & 1:1 \\
 	\hline
-	   & Unvollständig & ["Name":"x"] & 1:n \\
+	   & Unvollständig & [\enquote{Name}:\enquote{x}] & 1:n \\
 	\hline
-	   & Vollständig & ["Name":"x", "Veröffentlichung":"20XX", ...] & 1:n \\
+	   & Vollständig & [\enquote{Name}:\enquote{x}, \enquote{Veröffentlichung}:\enquote{20XX}, ...] & 1:n \\
 	\hline
 	Bewertung & Gut & [ 5.0, 3.0 ] & 1:1 \\
 	\hline
@@ -132,16 +132,16 @@ The requirements presented here can then be transformed into a requirements-base
 	\hline 
 	   & Gut & [ 5.0, 3.0 ] & 1:1 \\
 	\hline 
-	Verknüpfung & Vorhanden & ["Darsteller":"Max Mustermann", "Film":"XY"] & 1:n \\
+	Verknüpfung & Vorhanden & [\enquote{Darsteller}:\enquote{Max Mustermann}, \enquote{Film}:\enquote{XY}] & 1:n \\
 	\hline 
 	   & Nicht vorhanden & NULL & 1:1 \\
 	\hline 
 	Bisherige Filme & Leer & NULL & 1:1 \\
 	\hline 
-	   & Nicht leer & ["Film":"XY"], ["Film":"X", "Film":"Y", ...] & 1:n \\
+	   & Nicht leer & [\enquote{Film}:\enquote{XY}], [\enquote{Film}:\enquote{X}, \enquote{Film}:\enquote{Y}, ...] & 1:n \\
 	\hline 
 \end{tabular}
-%\end{small}
+\end{small}
 \end{table}
 
 Based on this transfer, it is then possible to determine suitable test cases. This results from the combinations of the different classes. Assuming that n is only 1 for the 1:n relations, the classifications for selection, existence, description, evaluation, linkage and the previous films result in $2*2*3*3*2*2 = 144$ combinations of test cases. Individual test cases can then be, for example, the following:
@@ -170,7 +170,7 @@ The selected article \enquote{A Graph-Model-Based Testing Method Compared with t
 
 While CTs look at different combinations of input values, ESGs look at combinations of different sequences of inputs. They then evaluate whether this sequence of \enquote{events} resulted in a success or failure of the action and whether that was part of the expected behavior. Unlike CT, which only looks at what should work, ESGs thus also consider failures.
 
-Then, after the formal description, the test scenario is presented: A control system with ABS, ESP and an adaptive control element. This is followed by a description with specific characteristics of the test environment. The study starts with the application of ESG and CT to the previously described test environment. Difficulties with CT are mentioned, citing dependencies that are difficult to understand. As a result of the study, a lower effort for the creation of CT test, but also a higher number of test cases and thus test steps are mentioned. Both approaches uncovered approximately the same errors. Figure \autoref{fig:Comparison_CG_ESG} shows the main findings of the comparison from Belli and Hollmann's\cite{Belli}'s test study.
+Then, after the formal description, the test scenario is presented: A control system with ABS, ESP and an adaptive control element. This is followed by a description with specific characteristics of the test environment. The study starts with the application of ESG and CT to the previously described test environment. Difficulties with CT are mentioned, citing dependencies that are difficult to understand. As a result of the study, a lower effort for the creation of CT test, but also a higher number of test cases and thus test steps are mentioned. Both approaches uncovered approximately the same errors. Figure \ref{fig:Comparison_CG_ESG} shows the main findings of the comparison from Belli and Hollmann's\cite{Belli}'s test study.
 
 \begin{figure}[H]
 \centering
@@ -183,17 +183,17 @@ The table shows that CT and ESG offer their advantages and disadvantages. The ef
 
 \subsection{Application}
 
-The CT, as they are built and used here, are identical in their function. In the article, a model-based CT is built directly without looking at the requirements themselves. This makes it all the more necessary to have a model for simulation or a ready-made application environment. Nevertheless, the same table as in Figure \autoref{fig:Approach1_CT} would arise at this point.
+The CT, as they are built and used here, are identical in their function. In the article, a model-based CT is built directly without looking at the requirements themselves. This makes it all the more necessary to have a model for simulation or a ready-made application environment. Nevertheless, the same table as in Figure \ref{fig:Approach1_CT} would arise at this point.
 
-Regarding the ESG, similar difficulties appear when trying to adapt this model based approach to the move manager example. Figure \autoref{fig:ESG_example} shows an example for a partially constructed ESG. Test cases can be constructed by triggering events with Inputs or user actions. Test cases are successful, if they reach the exit event on the right side. Such a test could be: 
+Regarding the ESG, similar difficulties appear when trying to adapt this model based approach to the move manager example. Figure \ref{fig:ESG_example} shows an example for a partially constructed ESG. Test cases can be constructed by triggering events with Inputs or user actions. Test cases are successful, if they reach the exit event on the right side. Such a test could be: 
 
-\begin{itemize}
-	\item 1. Starting with an \enquote{empty data base}
-	\item 2. Adding a movie, reaching \enquote{movie exists}
-	\item 3. Adding a performer, reaching \enquote{Movie and performer exist}
-	\item 4. Linking movie and performer
-	\item 5. Closing the application without and error, leading to the exit event.
-\end{itemize}
+\begin{enumerate}
+	\item Starting with an \enquote{empty data base}
+	\item Adding a movie, reaching \enquote{movie exists}
+	\item Adding a performer, reaching \enquote{Movie and performer exist}
+	\item Linking movie and performer
+	\item Closing the application without and error, leading to the exit event.
+\end{enumerate}
 
 \begin{figure}[H]
 \centering
@@ -213,26 +213,26 @@ Regarding the ESG, similar difficulties appear when trying to adapt this model b
 	\hline
 	\textbf{Nr.} & \textbf{Conrad and Fey} & \textbf{Belli et al.} \\
 	\hline
-	3a) & Anforderungsbasierte CT, Modellbasierte CT,  1:1 und 1:n Relationen & CT, ESG, tabellarischer Vergleich \\
+	1a) & Anforderungsbasierte CT, Modellbasierte CT,  1:1 und 1:n Relationen & CT, ESG, tabellarischer Vergleich \\
 	\hline	
-	3b) & Simulierbares Modell liegt vor, Anforderungen können im Modell abgebilded werden & Simulierbares Modell liegt vor \\
+	1b) & Simulierbares Modell liegt vor, Anforderungen können im Modell abgebilded werden & Simulierbares Modell liegt vor \\
 	\hline	
-	3c) & 1. Entwurf zweier CT für Anforderungen und Modell. 2. Abbildung Anforderungen -> Modell 3. Testentwurf durch Kombination aller Klassen & 1. Entwurf CT und ESG 2. Testentwurf durch Kombination aller Klassen / Zustandsübergänge 3. Vergleich in Tabelle \\
+	1c) & 1. Entwurf zweier CT für Anforderungen und Modell. 2. Abbildung Anforderungen -> Modell 3. Testentwurf durch Kombination aller Klassen & 1. Entwurf CT und ESG 2. Testentwurf durch Kombination aller Klassen / Zustandsübergänge 3. Vergleich in Tabelle \\
 	\hline	
-	4a) & Testentwurf mit (black box)-Modellen & Testentwurf mit (black box)-Modellen \\
+	2a) & Testentwurf mit (black box)-Modellen & Testentwurf mit (black box)-Modellen \\
 	\hline	
-	4b) & Softwareentwickler & Softwareentwickler \\
+	2b) & Softwareentwickler & Softwareentwickler \\
 	\hline	
-	4c) & Software Testing, Software Maintenance and Software Construction & Software Testing, Software Maintenance \\
+	2c) & Software Testing, Software Maintenance and Software Construction & Software Testing, Software Maintenance \\
 	\hline
-	5a) & Matlab Simulink & CANoe \\
+	3a) & Matlab Simulink & CANoe \\
 	\hline
-	5b) & 1. Manuell , 2. Manuell , 3. Automatisierbar & 1. Manuell, 2. Vollatomatisierbar, 3. Manuell \\
+	3b) & 1. Manuell , 2. Manuell , 3. Automatisierbar & 1. Manuell, 2. Vollatomatisierbar, 3. Manuell \\
 	\hline	
-	6a) & Vergleich der Klassifikationsbäume & 
+	4a) & Vergleich der Klassifikationsbäume & 
 	Vergleich der Teststatistiken  \\
 	\hline	
-	6b) & Sehr gut geeignet für black box Modelle auf Basis von Anforderungen & CT sind ein guter Ansatz neben ESG. CT sind schneller zu entwickeln, aber haben größere Tests \\
+	4b) & Sehr gut geeignet für black box Modelle auf Basis von Anforderungen & CT sind ein guter Ansatz neben ESG. CT sind schneller zu entwickeln, aber haben größere Tests \\
 	\hline	
 	\end{longtable}
 \end{small}
@@ -255,7 +255,7 @@ With its focus on the ESG, \cite{Belli} clearly differentiates itself from \cite
 
 ESG itself is distinguished from CT, as described in the previous chapters, by considering a combination of possible state and input sequences instead of a combination of possible input values, which also makes it possible to ensure that cases that should not work do not work.
 
-Figure \autoref{tab:synthesematrix_julian} shows the synthesis matrix of the two articles on which the comparison of this chapter is based. 
+Figure \ref{tab:synthesematrix_julian} shows the synthesis matrix of the two articles on which the comparison of this chapter is based. 
 
 \section{Conclusion}
 \label{Kap:Conclusion}
