@@ -1,7 +1,7 @@
 \chapter{Testing with System Models}
 \label{sec:topic_7}
 
-In this chapter, we aim to study the topic \textit{testing with  system models}. Section~\ref{sec:Intro7} presents the introduction of this topic. Section~\ref{sec:LS} describes how the systematic literature research is carried out to identify the existing approaches for testing with system models. In Section~\ref{sec:AP1}, the first relevant approach for this topic, which is given from the Chair of Software Engineering of University Heidelberg to be studied, is described and implemented on the example application \textit{Movie Manager}. In Section~\ref{sec:AP2}, the second relevant approach, which is identified through the literature research, is studied likewise. Then, Section~\ref{sec:Compar} compares the two relevant approaches selected for this topic. In conclusion, Section~\ref{sec:Conc} presents the insights gained from this study.
+In this chapter, we aim to study the topic \textit{testing with  system models}. Section \ref{sec:Intro7} presents the introduction of this topic. Section \ref{sec:LS} describes how the systematic literature research is carried out to identify the existing approaches for testing with system models. In \autoref{sec:AP1}, the first relevant approach for this topic, which is given from the Chair of Software Engineering of University Heidelberg to be studied, is described and implemented on the example application \textit{Movie Manager}. In \autoref{sec:AP2}, the second relevant approach, which is identified through the literature research, is studied likewise. Then, \autoref{sec:Compar} compares the two relevant approaches selected for this topic. In conclusion, \autoref{sec:Conc} presents the insights gained from this study.
 
 \section{Introduction}
 \label{sec:Intro7}
@@ -10,11 +10,11 @@ The key to successful product engineering in the software industry today is in m
 
 Model-based testing (MBT) is a software testing technique that has gained much interest in recent years by providing the degree of automation needed for shortening the time required for testing \cite{Paper1}. It provides automatic generation of tests from models representing the behavior of the system under test (SUT) \cite{matera}. From these models, test cases can be derived directly or via some model transformations following different coverage criteria. 
 
-As our topic is testing with system models, it is important to differentiate the two model types \textit{system model} (SM) and \textit{test model} (TM) with respect to the MBT. In our first approach \cite{Paper1}, which is presented in Section~\ref{sec:AP1}, the authors explicitly stated that they used SMs instead of TMs. And the difference between SM and TM is explained as follows: “The difference between the two being that the former is both used for development and testing, whereas the latter is only used for testing" \cite{Paper1}. 
+As our topic is testing with system models, it is important to differentiate the two model types \textit{system model} (SM) and \textit{test model} (TM) with respect to the MBT. In our first approach \cite{Paper1}, which is presented in \autoref{sec:AP1}, the authors explicitly stated that they used SMs instead of TMs. And the difference between SM and TM is explained as follows: \enquote{The difference between the two being that the former is both used for development and testing, whereas the latter is only used for testing} \cite{Paper1}. 
 
 In order to discuss the differences between using SM and TM in particularly, the authors of \cite{Paper1} provide with some additional authors the article \textit{Model-Based Testing using System vs. Test Models – What is the Difference?} \cite{SMvsTM}, which is newer than \cite{Paper1} and presents two model-based testing case study examples which use SMs and TMs, respectively. In \cite{SMvsTM}, the SM case study example is our first approach \cite{Paper1} to be studied within this chapter.
 
-The article \cite{SMvsTM} summarizes the differences between the SMs and TMs as shown in Figure~\ref{fig:smtm}.
+The article \cite{SMvsTM} summarizes the differences between the SMs and TMs as shown in \autoref{fig:smtm}.
 
 \begin{figure} [H] 
 \centering
@@ -25,25 +25,25 @@ The article \cite{SMvsTM} summarizes the differences between the SMs and TMs as 
 
 From the viewpoint of modeling, one difference between SM and TM is in the way the expected behavior of the SUT is specified with respect to its interfaces; SM provides an internal viewpoint, whereas the TM provides an external viewpoint of the SUT \cite{SMvsTM}. In the terms of reactive systems, TMs provide stimuli and observe the SUT reactions, while the SMs expect the stimuli and provide reactions. Concerning the purpose of modeling, the TMs are developed solely for testing while SMs can be primarily developed for system development (however, SMs are simpler and more abstract than implementation models) and then used for testing as well \cite{SMvsTM}. \\
 However, there also some definitions in \cite{SMvsTM}, which conflict with the usage and the way of the models are created in \cite{Paper1}. According to \cite{SMvsTM}, in TM based approaches, implementation is seen as a black-box thus it is hard to give any verdict about how much of the implementation code has been covered by generated test cases unless source code is instrumented for this purpose. Therefore, requirement coverage is mostly used in this case. On the other hand, in SM based approaches, both code and requirement coverage can be observed, again provided that the implementation code is available for such analysis. \\
-But as can be seen in Section~\ref{sec:AP1}, the authors are entirely concerned with the requirement coverage in \cite{Paper1} while using SMs. After stating this, we would like to clarify that for our study we stick to the definition and usage of SM provided in \cite{Paper1}, as it is also suitable with the Figure~\ref{fig:smtm}.
+But as can be seen in \autoref{sec:AP1}, the authors are entirely concerned with the requirement coverage in \cite{Paper1} while using SMs. After stating this, we would like to clarify that for our study we stick to the definition and usage of SM provided in \cite{Paper1}, as it is also suitable with the \autoref{fig:smtm}.
 
 As the SM of the SUT is typically derived from the informal requirements, it is important to trace how different requirements reflect in the models, on different perspectives and on different abstraction levels, and how the generated test cases cover different requirements \cite{Paper1}, \cite{SMvsTM}. For a model-based testing perspective, traceability of requirements means that the generated test cases from the model are linked with the requirements \cite{Paper2}. Thus, traceability of requirements helps to achieve the right level of coverage and shows what requirement has been covered by what test \cite{Paper1}. It also enables us to identify which requirements have been successfully tested and which have resulted in failures \cite{Paper1}. Hereby, traceability of requirements is a pivotal aspect of MBT that allows one to ensure that all requirements have been tested  \cite{matera}.
 
 
 %\newpage
-\section{Literature Search}
+\section{Literature search}
 \label{sec:LS}
 
 This section describes the systematic literature research carried out according to the \textit{Guidelines for Literature Research of the Chair of Software Engineering} \cite{LRGuidelines}. It aims to identify and analyze the scientific articles regarding testing with system models. 
 
-Subsection~\ref{subsec:RQ} specifies the research question, research strategy and used methods for this Chapter~\ref{sec:topic_7}. Then, Subsection~\ref{subsec:RE} describes how the literature research is carried out and presents the results of the search process. 
+Subsection~\ref{subsec:RQ} specifies the research question, research strategy and used methods for this \autoref{sec:topic_7}. Then, \autoref{subsec:RE} describes how the literature research is carried out and presents the results of the search process. 
 
 
-\subsection{Research Question and Research Strategy}
+\subsection*{Research question and research strategy}
 \label{subsec:RQ}
 The main goal of this search is to find relevant approaches for testing with system models, which are similar to the approach provided in the given article \textit{Tracing Requirements in a Model-Based Testing Approach} \cite{Paper1}. 
 
-Based on \cite{Paper1}, which is our start paper for Chapter~\ref{sec:topic_7} in this study, we derive the following research question presented in Table~\ref{tab:RQ}.
+Based on \cite{Paper1}, which is our start paper for \autoref{sec:topic_7} in this study, we derive the following research question presented in \autoref{tab:RQ}.
 
 \begin{table} [htb] 
 \centering
@@ -51,7 +51,7 @@ Based on \cite{Paper1}, which is our start paper for Chapter~\ref{sec:topic_7} i
 \caption{Research question and search terms}
 \label{tab:RQ}
 \setlength{\tabcolsep}{1 em}
-\begin{tabular}{ l| p{8cm}}
+\begin{tabular}{ l| p{10cm}}
 \hline
 \textbf{Research Question} & Which approaches exist to generate test cases using system models for the traceability of requirements?\\
 \hline
@@ -61,13 +61,13 @@ Based on \cite{Paper1}, which is our start paper for Chapter~\ref{sec:topic_7} i
 \end{small}
 \end{table}
 
-In order to answer the research question and find relevant articles, we use “keyword-based search” and “snowballing” methods. For the keyword-based search method, we determined the search terms as presented in Table~\ref{tab:RQ}. These search terms were derived from the research question to focus on a certain aspect of the given article \cite{Paper1} and to find a similar approach. 
+In order to answer the research question and find relevant articles, we use \enquote{keyword-based search} and \enquote{snowballing} methods. For the keyword-based search method, we determined the search terms as presented in \autoref{tab:RQ}. These search terms were derived from the research question to focus on a certain aspect of the given article \cite{Paper1} and to find a similar approach. 
 
 For the literature research, the digital libraries of the IEEE Xplore (Institute of Electrical and Electronics Engineers)\footnote{IEEExplore \url{https://ieeexplore.ieee.org}} and ACM (Association for Computing Machinery)\footnote{ACM Digital Library \url{https://dl.acm.org}} were used as main sources, since they include the most extensive range of examined scientific publications and are widely recognized. 
 
-In this literature research, keyword-based search method and snowballing search method are conducted to find relevant articles in aforesaid libraries. With keyword-based search method, we search for the search terms presented in Table~\ref{tab:RQ} with different combinations, since each digital library has a different search method, e.g.  advanced search, or command search.
+In this literature research, keyword-based search method and snowballing search method are conducted to find relevant articles in aforesaid libraries. With keyword-based search method, we search for the search terms presented in \autoref{tab:RQ} with different combinations, since each digital library has a different search method, e.g.  advanced search, or command search.
 
-Snowballing search method is applied to the given article \cite{Paper1} to identify further relevant articles. With backward snowballing method, we go through the reference list of \cite{Paper1} and select the articles as relevant, which fulfill the relevance criteria determined during the literature research. The relevance criteria are presented in Table~\ref{tab:ArticleCriteria}. With forward snowballing method, we go through the articles, which cite the given article, and again select the articles as relevant, if they fulfill the relevance criteria.
+Snowballing search method is applied to the given article \cite{Paper1} to identify further relevant articles. With backward snowballing method, we go through the reference list of \cite{Paper1} and select the articles as relevant, which fulfill the relevance criteria determined during the literature research. The relevance criteria are presented in \autoref{tab:ArticleCriteria}. With forward snowballing method, we go through the articles, which cite the given article, and again select the articles as relevant, if they fulfill the relevance criteria.
 
 %\subsection{Research Strategy}
 %\label{subsec:RS}
@@ -78,7 +78,7 @@ Snowballing search method is applied to the given article \cite{Paper1} to ident
 \caption{Criteria for selecting an article as relevant}
 \label{tab:ArticleCriteria}
 \setlength{\tabcolsep}{1em}
-\begin{tabular}{ l| p{10cm}}
+\begin{tabular}{ l| p{12cm}}
 \hline
 \textbf{No.} & \textbf{Description} \\
 \hline
@@ -94,46 +94,49 @@ Snowballing search method is applied to the given article \cite{Paper1} to ident
 \end{small}
 \end{table}
 
-In order to ensure that the research methodology and its implementation remain consistent and comprehensible, we formulated four relevance criteria as shown in Table~\ref{tab:ArticleCriteria}. An article is relevant, if it fulfills all criteria. The first two criteria are formulated to check the availability and the subject area of the articles. Since this work is to be written in English, the article to be used should be available in English. To reduce the comprehensive subject area to the relevant area for our topic, the article should have a clear focus on the area of software engineering as described in the second criterion. The third criterion aims to focus on recent work and to limit the search results. The last criterion is formulated to answer the research question and to find relevant articles, which particularly provide similar approaches to the approach presented in \cite{Paper1}.
+In order to ensure that the research methodology and its implementation remain consistent and comprehensible, we formulated four relevance criteria as shown in \autoref{tab:ArticleCriteria}. An article is relevant, if it fulfills all criteria. The first two criteria are formulated to check the availability and the subject area of the articles. Since this work is to be written in English, the article to be used should be available in English. To reduce the comprehensive subject area to the relevant area for our topic, the article should have a clear focus on the area of software engineering as described in the second criterion. The third criterion aims to focus on recent work and to limit the search results. The last criterion is formulated to answer the research question and to find relevant articles, which particularly provide similar approaches to the approach presented in \cite{Paper1}.
 
-\subsection{Research Execution and Literature Results}
+\subsection*{Research execution and literature results}
 \label{subsec:RE}
 
-First, the search was carried out using the keyword-based search method with aforesaid search terms. In Table~\ref{tab:ResultKeyword}, the results of this search are documented.\\
+First, the search was carried out using the keyword-based search method with aforesaid search terms. In \autoref{tab:ResultKeyword}, the results of this search are documented.\\
 First column shows the search location, second column shows the date on which the search was carried out, and third column shows the applied restriction of search. Fourth column presents the exact search query of the search terms and thus shows how they were searched in the specified parts of articles. Fifth column shows the number of overall results, and sixth column shows the number of relevant articles. Finally, last column presents the number of articles chosen to be used in this study.
 
 \begin{table} [H] 
+\begin{small}
   \begin{center}
   \begin{scriptsize}
 \caption{Results of the keyword-based search method}
 \label{tab:ResultKeyword}
-\begin{tabular}{  | m{1cm} | m{1cm} | m{1.6cm} | m{4.8cm} | m{1cm} | m{1.2cm} | m{0.7cm} | }
+\begin{tabular}{   m{1cm} | m{1cm} | m{1.6cm} | m{4.8cm} | m{1cm} | m{1.2cm} | m{0.7cm}  }
 \hline
 \textbf{Search Location} & \textbf{Search Date} & \textbf{Restriction}  & \textbf{Search Terms}  &  \textbf{\# Results}  & \textbf{\# Relevant Articles}  &  \textbf{Used Results} \\
 \hline
-IEEE & 20.11.20 & 2005-2020, Advanced Search & ((((“Full Text Only":“system model*") AND “Document Title":test*) AND “Abstract":trac*) AND “Full Text Only":requirement?) & 64 & 2 & 0\\
+IEEE & 20.11.20 & 2005-2020, Advanced Search & ((((\enquote{Full Text Only}:\enquote{system model*}) AND \enquote{Document Title}:test*) AND \enquote{Abstract}:trac*) AND \enquote{Full Text Only}:requirement?) & 64 & 2 & 0\\
 \hline
-ACM & 20.11.20 & 2005-2020, Advanced Search & $[$Full Text: “system model*"$]$ AND $[$Publication Title: test* $]$ AND $[$Abstract: trac*$]$ AND $[$Full Text: requirement?$]$ AND $[$Publication Date: (01/01/2005 TO 12/31/2020)$]$ & 9 & 0 & 0\\
+ACM & 20.11.20 & 2005-2020, Advanced Search & $[$Full Text: \enquote{system model*}$]$ AND $[$Publication Title: test* $]$ AND $[$Abstract: trac*$]$ AND $[$Full Text: requirement?$]$ AND $[$Publication Date: (01/01/2005 TO 12/31/2020)$]$ & 9 & 0 & 0\\
 \hline
 ACM & 21.11.20 & 2005-2020, Advanced Search & $[$Abstract: system model*$]$ AND $[$Publication Title: test*$]$ AND  $[$Abstract: trac*$]$ AND $[$Abstract: requirement?$]$ AND $[$Publication Date: (01/01/2005 TO 12/31/2020)$]$ & 46 & 2 & 0 \\
 \hline
-IEEE & 21.11.20 & 2005-2020, Advanced Search & ((((“Abstract":system model*) AND “Abstract":requirement?) AND “Abstract":trac*) AND “Document Title":test*) & 59 & 0 & 0\\
+IEEE & 21.11.20 & 2005-2020, Advanced Search & ((((\enquote{Abstract}:system model*) AND \enquote{Abstract}:requirement?) AND \enquote{Abstract}:trac*) AND \enquote{Document Title}:test*) & 59 & 0 & 0\\
 \hline
 \end{tabular}
 \end{scriptsize}
  \end{center}
+\end{small}
 \end{table}
 
-As shown in Table~\ref{tab:ResultKeyword}, in all of our searches we searched the search term “test*”  in the \textit{documentation title} part, and the search term “trac*” in the \textit{abstract} part of the digital libraries, in order to find the closest approaches as possible to the presented approach in \cite{Paper1}. Although the “system model” is the most important search term for this topic, it was not written even in the abstract of the given article \cite{Paper1}. Therefore, with considering that, we decided to search this term also in the \textit{full text} part, instead of only in the \textit{abstract} part of the digital libraries. Consequently, the search terms “system model” and “requirement” were searched in the first searches only in \textit{full text} part, then in the second searches in \textit{abstract} part of the digital libraries. 
+As shown in \autoref{tab:ResultKeyword}, in all of our searches we searched the search term \enquote{test*}  in the \textit{documentation title} part, and the search term \enquote{trac*} in the \textit{abstract} part of the digital libraries, in order to find the closest approaches as possible to the presented approach in \cite{Paper1}. Although the \enquote{system model} is the most important search term for this topic, it was not written even in the abstract of the given article \cite{Paper1}. Therefore, with considering that, we decided to search this term also in the \textit{full text} part, instead of only in the \textit{abstract} part of the digital libraries. Consequently, the search terms \enquote{system model} and \enquote{requirement} were searched in the first searches only in \textit{full text} part, then in the second searches in \textit{abstract} part of the digital libraries. 
 
-After identifying relevant articles by using keyword-based search method, snowballing method was conducted to the \cite{Paper1}, which is our start paper for this study, in order to find further relevant articles. The results of the search using snowballing method are detailed documented in Table~\ref{tab:ResultSnowballing}.
+After identifying relevant articles by using keyword-based search method, snowballing method was conducted to the \cite{Paper1}, which is our start paper for this study, in order to find further relevant articles. The results of the search using snowballing method are detailed documented in \autoref{tab:ResultSnowballing}.
 
 \begin{table} [H] 
+\begin{small}
 \begin{center}
 \begin{scriptsize}
 \caption{Results of the snowballing search method}
 \label{tab:ResultSnowballing}
-\begin{tabular}{ | m{1.2cm} | m{4.7cm} | m{1.3cm} | m{1.6cm} | m{1.7cm} | m{1.2cm} | }
+\begin{tabular}{  m{1.2cm} | m{4.7cm} | m{1.3cm} | m{1.6cm} | m{1.7cm} | m{1.2cm} }
 \hline
 \textbf{Search Date} & \textbf{Reference} & \textbf{Direction}  & \textbf{Number of Citations}  &  \textbf{\# Relevant Articles}  &  \textbf{Used Results} \\
 \hline
@@ -142,16 +145,18 @@ After identifying relevant articles by using keyword-based search method, snowba
 \end{tabular}
 \end{scriptsize}
  \end{center}
+	\end{small}
 \end{table}
 
-Thus, after conducting the keyword-based and snowballing search methods, we could identify six relevant articles presented in Table~\ref{tab:RelevantArticles}.
+Thus, after conducting the keyword-based and snowballing search methods, we could identify six relevant articles presented in \autoref{tab:RelevantArticles}.
 
 \begin{table} [H] 
+	\begin{small}
   \begin{center}
   \begin{scriptsize}
 \caption{Results of the literature search}
 \label{tab:RelevantArticles}
-\begin{tabular}{ | m{0.5cm} | m{4.7cm} | m{4.6cm} | m{1.2cm} | m{1.2cm} | }
+\begin{tabular}{  m{0.5cm} | m{4.7cm} | m{4.6cm} | m{1.2cm} | m{1.2cm}  }
 \hline
 \textbf{ID} & \textbf{Title} & \textbf{Authors} & \textbf{Year}  & \textbf{Source}  \\
 \hline
@@ -170,13 +175,14 @@ Thus, after conducting the keyword-based and snowballing search methods, we coul
 \end{tabular}
 \end{scriptsize}
  \end{center}
+\end{small}
 \end{table}
 
 The articles \cite{Paper1}, \cite{matera}, \cite{Relevant3}  and \cite{Relevant4} were identified through the keyword-based search method, and \cite{SMvsTM} and \cite{Paper2} were identified through the snowballing search method. The first identified article \cite{Paper1} through the keyword-based search method was already given us for this study as start paper. Since \cite{matera} and \cite{SMvsTM} are from the same author group of \cite{Paper1}, we didn't choose them for our study as a second approach to examine. 
 
 The articles \cite{Relevant3} and \cite{Relevant4} have also common authors, and one of them is the same author of the article \cite{Paper2}. Therefore, we excluded the \cite{Relevant3} and \cite{Relevant4}, and chose only \cite{Paper2}, \textit{Requirements Traceability in the Model-Based Testing Process}, which is closest to the provided approach in the given article \cite{Paper1}, and very suitable for our topic \textit{testing with system models}.
 
-Consequently, \textbf{\textit{Tracing Requirements in a Model-Based Testing Approach}} \cite{Paper1} and \textbf{\textit{Requirements Traceability in the Model-Based Testing Process}}  \cite{Paper2} are the chosen articles to be studied in this Chapter~\ref{sec:topic_7}.
+Consequently, \textbf{\textit{Tracing Requirements in a Model-Based Testing Approach}} \cite{Paper1} and \textbf{\textit{Requirements Traceability in the Model-Based Testing Process}}  \cite{Paper2} are the chosen articles to be studied in this \autoref{sec:topic_7}.
 
 
 
@@ -199,7 +205,7 @@ This approach was presented in 2009 by Fredrik Abbors, Dragos Truscan, and Johan
 \label{fig:Ap1-1}
 \end{figure}
 
-As shown in Figure~\ref{fig:Ap1-1}, the model-based testing process starts with the analysis and structuring of the informal requirements (including protocol specifications, standards, user scenarios, etc.) into a \textit{requirements model} via Systems Modeling Language (SysML). Because compared to the pure textual description of requirements, a requirement diagram offers several advantages due to its visual overview, e.g. missing aspects can be easily identified to help identify additional requirements, and the different types of relationships facilitate traceability and promote understanding \cite{netreqdia}. Requirements traceability is built on top of this testing process, since authors want to be able to trace how different parts of the system models relate to the requirements and then to see how different requirements are covered by the generated test cases. Another reason for tracing requirements is that if a requirement changes, it is essential to know how this change is reflected in the models. Therefore, after requirements are structured hierarchically using SysML requirements diagrams, they are traced to different models or parts of the models implementing them. 
+As shown in \autoref{fig:Ap1-1}, the model-based testing process starts with the analysis and structuring of the informal requirements (including protocol specifications, standards, user scenarios, etc.) into a \textit{requirements model} via Systems Modeling Language (SysML). Because compared to the pure textual description of requirements, a requirement diagram offers several advantages due to its visual overview, e.g. missing aspects can be easily identified to help identify additional requirements, and the different types of relationships facilitate traceability and promote understanding \cite{netreqdia}. Requirements traceability is built on top of this testing process, since authors want to be able to trace how different parts of the system models relate to the requirements and then to see how different requirements are covered by the generated test cases. Another reason for tracing requirements is that if a requirement changes, it is essential to know how this change is reflected in the models. Therefore, after requirements are structured hierarchically using SysML requirements diagrams, they are traced to different models or parts of the models implementing them. 
  
 %Secondly, once the test report becomes available, we would like to be able to identify which requirements have been successfully tested and which have resulted in failures. In addition, for the failed test cases we should be able to trace back from test cases those parts of the SUT specification that generated the failure.
 For the modeling, the Unified Modeling Language (UML) is used to specify the SUT. For a successful test derivation, several perspectives of the SUT are modeled; a class diagram is used to specify a \textit{domain model}, a \textit{behavioral model} is used to describe the behavior of the SUT, \textit{data models} are used to describe the message types exchanged between different domain entities, and \textit{domain configuration models} are used to represent specific test configurations using object diagrams. In order to increase the quality of the resulting models, a set of modeling guidelines and validation rules are defined. These rules ensure that the models are consistent with each other and moreover, that they contain the information needed in the later phases of the testing process. For editing the SysML and UML models and for running these validation rules, the NoMagic’s \textit{MagicDraw}\footnote{NoMagic MagicDraw \url{https://www.nomagic.com/products/magicdraw}} tool has been used. 
@@ -223,7 +229,7 @@ Furthermore, it should be noted that although Conformiq is still active and offe
 %As presented in Figure~\ref{fig:Ap1-s1}, 
 First, functional requirements of the SUT should be analyzed and structured into requirements models using the requirements diagrams of SysML. Each requirement element contains a \textit{name} field which specifies the name of the requirement, an \textit{id} field that simply specifies the id of the requirement, a \textit{text} field which describes the requirement, and a \textit{source} field which specifies the origins of the requirement. The source can be a link to or a name of a textual document from where the requirement has been extracted. 
 
-In our implementation, we converted the user sub-tasks of Movie Manager into system functions in order to build a requirements diagram from system functional requirements. Figure~\ref{fig:Ap1-req} presents the example of a SysML requirements diagram for our application. 
+In our implementation, we converted the user sub-tasks of Movie Manager into system functions in order to build a requirements diagram from system functional requirements. \autoref{fig:Ap1-req} presents the example of a SysML requirements diagram for our application. 
 
 
 \begin{figure} [H] 
@@ -237,7 +243,7 @@ In our implementation, we converted the user sub-tasks of Movie Manager into sys
 Then, the UML models of the SUT are built starting from the requirements models. During this process, the requirements should be traced to different parts of the models to point how each requirement is addressed by the models. In the provided approach, a set of modeling guidelines and validation rules should be defined for ensuring the quality of the resulting models. For this purpose, Object Constraint Language (OCL) is used. The aforementioned NoMagic’s MagicDraw tool has been used for editing the SysML and UML models and for running the validation rules. But in our implementation of the approach, we use the free online tool of the diagram software \textit{Draw.io}\footnote{Draw.io \url{https://drawio-app.com/}} via \textit{diagrams.net}\footnote{diagrams.net \url{https://www.diagrams.net/}} for this purpose.
 
 As the next step, a state machine model should be modeled from the requirements model, which is to be used as input for Qtronic, since the Qtronic tool expects the behavior of SUT in the form of state machines in order to be able to convert it into QML. %In the provided approach, the relationships between requirements and models are specified on several levels. For instance, non-leaf requirements are linked to state machine models, and leaf requirements in the requirements tree are linked to other UML elements to which they apply, e.g. transitions in a state machine or classes in a class diagram. As an exceptional situation, the top-level functional requirements are linked to use cases in the use case model of the SUT. \\
-In Figure~\ref{fig:Ap1-sm2}, we present an example for the requirement with the requirement id “1.4" from the requirements model presented in Figure~\ref{fig:Ap1-req}.
+In \autoref{fig:Ap1-sm2}, we present an example for the requirement with the requirement id \enquote{1.4} from the requirements model presented in \autoref{fig:Ap1-req}.
 
 \begin{figure} [H] 
 \centering
@@ -246,7 +252,7 @@ In Figure~\ref{fig:Ap1-sm2}, we present an example for the requirement with the 
 \label{fig:Ap1-sm2}
 \end{figure}
 
-But as already mentioned in the description of this approach in ~\ref{subsec:DE1}, Qtronic is no longer available and therefore we can not apply the remaining steps, which are \textit{automatic test design and execution} and \textit{generation of test report}. As we could not find any information on how Qtronic generates tests, we can not provide any exemplarily test cases either. 
+But as already mentioned in the description of this approach in ~\autoref{subsec:DE1}, Qtronic is no longer available and therefore we can not apply the remaining steps, which are \textit{automatic test design and execution} and \textit{generation of test report}. As we could not find any information on how Qtronic generates tests, we can not provide any exemplarily test cases either. 
 
 
 
@@ -275,7 +281,7 @@ Operations are the internal actions that modify the system state during the comp
 
 A test case reaches a target, which involves OCL statements tagged with one or several requirement identifiers. Then, LEIRIOS Test Designer makes it possible to match a test with requirements during the generation of the test cases. In LEIRIOS Test Designer, a general framework to convert the generated test cases into executable scripts is also provided. The test script pattern is a source code file in the target language with some tags indicating where sequences of operation invocations have to be inserted. A traceability matrix is obtained after the tests are executed. For each requirement, the matrix gives the list of needed test cases to test it. 
 
-In \cite{Paper2}, this presented approach is implemented on a simplified version of a drink vending machine controller, which is SUT, with “Buy a drink” scenario to illustrate the test generation process with LEIRIOS Test Designer. After expected functional requirements of the SUT are listed, it is modeled via a \textit{class diagram}, an \textit{instance diagram} and a \textit{state machine}. Expected behaviors are specified by transitions (either external or internal) and those transitions are triggered by a \textit{user event}, a \textit{guard} and an \textit{effect}. Requirements traceability is managed by tagging the effect of each transition with requirement identifiers. This link between the model and the requirements is used by the LEIRIOS Test Designer tool to produce the traceability matrix between generated test cases and requirements. At the end, from the SUT model, 12 test targets are generated, one for each transition, and 12 test cases are generated. 
+In \cite{Paper2}, this presented approach is implemented on a simplified version of a drink vending machine controller, which is SUT, with \enquote{Buy a drink} scenario to illustrate the test generation process with LEIRIOS Test Designer. After expected functional requirements of the SUT are listed, it is modeled via a \textit{class diagram}, an \textit{instance diagram} and a \textit{state machine}. Expected behaviors are specified by transitions (either external or internal) and those transitions are triggered by a \textit{user event}, a \textit{guard} and an \textit{effect}. Requirements traceability is managed by tagging the effect of each transition with requirement identifiers. This link between the model and the requirements is used by the LEIRIOS Test Designer tool to produce the traceability matrix between generated test cases and requirements. At the end, from the SUT model, 12 test targets are generated, one for each transition, and 12 test cases are generated. 
 
 Unfortunately, the approach lacks the detailed explanation on how the test cases are generated and converted to executable test scripts via LEIRIOS Test Designer tool.
 
@@ -286,7 +292,7 @@ Unfortunately, the approach lacks the detailed explanation on how the test cases
 
 In this part, we aim to to follow the same steps of the approach on our Movie Manager example as similar as possible. 
 
-First, we get the informal requirements of the system under test. To do that, we create use case diagram of Movie Manager using draw.io tool as shown in Figure~\ref{fig:Ap2-2}. Our use case scenario: “User manages movies and corresponding performer data of a movie collection”.
+First, we get the informal requirements of the system under test. To do that, we create use case diagram of Movie Manager using draw.io tool as shown in \autoref{fig:Ap2-2}. Our use case scenario: \enquote{User manages movies and corresponding performer data of a movie collection}.
 
 \begin{figure} [H] 
 \centering
@@ -295,14 +301,14 @@ First, we get the informal requirements of the system under test. To do that, we
 \label{fig:Ap2-2}
 \end{figure}
 
-The system under test is the Movie Manager. To precisely define the expected functional requirements of the Movie Manager, a list of requirements including Req Identifier, Req Name, and Req description is defined as presented in Table~\ref{tab:MMreq}. For the requirements MM-2 and MM-7 we added some preconditions based on the Movie Manager \cite{MovieManager} to be able to apply the next steps of the approach within this section. 
+The system under test is the Movie Manager. To precisely define the expected functional requirements of the Movie Manager, a list of requirements including Req Identifier, Req Name, and Req description is defined as presented in \autoref{tab:MMreq}. For the requirements MM-2 and MM-7 we added some preconditions based on the Movie Manager \cite{MovieManager} to be able to apply the next steps of the approach within this section. 
 
 \begin{table} [H] 
   \begin{center}
   \begin{small}
 \caption{Movie Manager requirements}
 \label{tab:MMreq}
-\begin{tabular}{ | m{1.3cm} | m{3.8cm} | m{8cm} | }
+\begin{tabular}{  m{1.3cm} | m{3.8cm} | m{8cm}  }
 \hline
 \textbf{Req. Id}& \textbf{Req. Name}&\textbf{Req. Description}   \\
 \hline
@@ -325,7 +331,7 @@ MM-7& Rate\_Movie\_or\_Performer& The Movie Manager shall allow to rate movie or
  \end{center}
 \end{table}
 
-Then as an instance, we create the Movie Manager Class Diagram for the aforementioned requirements as presented in Figure~\ref{fig:Ap2-class}.
+Then as an instance, we create the Movie Manager Class Diagram for the aforementioned requirements as presented in \autoref{fig:Ap2-class}.
 
 \begin{figure} [H] 
 \centering
@@ -334,18 +340,19 @@ Then as an instance, we create the Movie Manager Class Diagram for the aforement
 \label{fig:Ap2-class}
 \end{figure}
 
-The Movie Manager Class Diagram defines the data and the points of control and observation of the application under test. The enumeration “Messages” represents the possible message/warning to be displayed on the dialog window of the application. For our case, we considered only the messages like, \textit{movie is linked with performer} and \textit{performer does not exist}.
+The Movie Manager Class Diagram defines the data and the points of control and observation of the application under test. The enumeration \enquote{Messages} represents the possible message/warning to be displayed on the dialog window of the application. For our case, we considered only the messages like, \textit{movie is linked with performer} and \textit{performer does not exist}.
 
-In addition to class diagram, an instance diagram and a state machine are also provided in the use case scenario of the provided approach. In the approach, the test generation method of LEIRIOS Test Designer consists in testing all the possible behaviors of the specification operations, by traversing the states of the system. But in our implementation, we have to skip this step since it is performed by the LEIRIOS Test Designer tool, which is called now Smartesting as already explained in ~\ref{subsec:DE2}. We cannot use the tool right now, because it requires a scheduling even for the demo version. 
+In addition to class diagram, an instance diagram and a state machine are also provided in the use case scenario of the provided approach. In the approach, the test generation method of LEIRIOS Test Designer consists in testing all the possible behaviors of the specification operations, by traversing the states of the system. But in our implementation, we have to skip this step since it is performed by the LEIRIOS Test Designer tool, which is called now Smartesting as already explained in ~\autoref{subsec:DE2}. We cannot use the tool right now, because it requires a scheduling even for the demo version. 
 
-Therefore, we give only exemplarily two different internal activities specified according to the description in the article \cite{Paper2}, one for the user option “remove movie”, and other one for the user option “rate performer”, as shown in Table~\ref{tab:intact}. 
+Therefore, we give only exemplarily two different internal activities specified according to the description in the article \cite{Paper2}, one for the user option \enquote{remove movie}, and other one for the user option \enquote{rate performer}, as shown in \autoref{tab:intact}. 
 
 \begin{table} [H] 
+	\begin{small}
   \begin{center}
   \begin{scriptsize}
 \caption{Example of internal transitions}
 \label{tab:intact}
-\begin{tabular}{ | m{3.2cm} | m{3.3cm} | m{6.3cm} | }
+\begin{tabular}{  m{3.3cm} | m{3.4cm} | m{6.4cm}  }
 \hline
 \textbf{Trigger/Label}& \textbf{Guard}&\textbf{Effect}   \\
 \hline
@@ -358,19 +365,20 @@ ratePerformer (performer)
 \end{tabular}
 \end{scriptsize}
  \end{center}
+\end{small}
 \end{table}
 
 These are the transitions, which are triggered by a user event, a guard and an effect. Requirements traceability is managed by tagging the effect of each transition with requirement identifiers. For example, the requirement MM-7 is used to annotate the effect in case of not existing performer. This is the link between the model and the requirement. \\
 As last step, this link between the model and the requirements should be used by the LEIRIOS Test Designer tool to produce the traceability matrix between generated test cases and requirements. For each transition a test target and a test case should be via LEIRIOS Test Designer tool generated. 
 
-Since we cannot use the tool, we generate the test cases as an example for both transitions manually. Table~\ref{tab:T1} and Table~\ref{tab:T2} presents these generated test cases for the two internal transitions showed in Table~\ref{tab:intact}.
+Since we cannot use the tool, we generate the test cases as an example for both transitions manually. \autoref{tab:T1} and \autoref{tab:T2} presents these generated test cases for the two internal transitions showed in \autoref{tab:intact}.
 
 \begin{table} [H] 
   \begin{center}
   \begin{small}
 \caption{Test 1: Movie is linked with performer - Covered Requirements: MM-2}
 \label{tab:T1}
-\begin{tabular}{ | m{0.8cm} | m{5cm} | m{6cm} | }
+\begin{tabular}{ m{0.8cm} | m{5cm} | m{7.3cm} }
 \hline
 \textbf{Step}& \textbf{Operation}&\textbf{Attributes Values}   \\
 \hline
@@ -387,7 +395,7 @@ Since we cannot use the tool, we generate the test cases as an example for both 
  \begin{small}
 \caption{Test 2: Performer does not exist - Covered Requirements: MM-7}
 \label{tab:T2}
-\begin{tabular}{ | m{0.8cm} | m{5cm} | m{6cm} | }
+\begin{tabular}{  m{0.8cm} | m{5cm} | m{7.3cm}  }
 \hline
 \textbf{Step}& \textbf{Operation}&\textbf{Attributes Values}   \\
 \hline
@@ -413,14 +421,14 @@ In the second approach, \cite{Paper2}, the expected functional requirements of t
 
 Furthermore, the LEIRIOS Test Designer tool provided in the second approach does not offer a tool support for tracing-back requirements from tests to models, while the first approach supports it via the automatically generated test report by their provided tool, Qtronic.
 
-Table~\ref{tab:TSM} presents the detailed comparison of both approaches as a synthesis matrix. In the first column, the number of the synthesis questions are presented. Number 1 implies the description, number 2 implies the benefit, number 3 implies the tools, and number 4 implies the quality for the compared approaches. The second column explains in more detail in which context the questions are asked. Finally, the third column presents the answers to these questions for approach 1, and fourth column for approach 2. 
+\autoref{tab:TSM} presents the detailed comparison of both approaches as a synthesis matrix. In the first column, the number of the synthesis questions are presented. Number 1 implies the description, number 2 implies the benefit, number 3 implies the tools, and number 4 implies the quality for the compared approaches. The second column explains in more detail in which context the questions are asked. Finally, the third column presents the answers to these questions for approach 1, and fourth column for approach 2. 
 
 \newpage
 \newgeometry{margin=1cm}
 \begin{landscape} 
 %\begin{scriptsize}
 \begin{small}
-\begin{longtable}{| p{0.5cm} | p{2.5cm} | p{9cm} | p{9cm} |}
+\begin{longtable}{ p{0.5cm} | p{2.5cm} | p{9cm} | p{9cm} }
 \caption{Synthesis matrix}
 \label{tab:TSM}
 \\    %%%%<===

@@ -17,7 +17,7 @@ While there are lot of resources about testing FRs in the form of unit-, integra
 
 For this reason, we look into two approaches \cite{ZouPavlovski2008} and \cite{Lagerstedt2014}.
 While \cite{ZouPavlovski2008} was given in advance by the advisors of the seminar, \cite{Lagerstedt2014} was found through a literature search, which is described in \autoref{sec:9_literature}.
-Each approach will be described and applied to an example in the form of movie management software in the respective sections \ref{sec:9_approach_1} and \ref{sec:9_approach_2}. 
+Each approach will be described and applied to an example in the form of movie management software in the respective \autoref{sec:9_approach_1} and \autoref{sec:9_approach_2}. 
 
 Both approaches are compared in \autoref{sec:9_comparison} by using a synthesis matrix. We will look at which NFRs are covered and how they are tested.
 The results of this chapter will be summarized and concluded in \autoref{sec:9_conclusion}.
@@ -30,7 +30,7 @@ test case, use case, NFR.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Literature Search} \label{sec:9_literature}
+\section{Literature search} \label{sec:9_literature}
 
 The starting point for the literature search was the paper given to us~\cite{ZouPavlovski2008}.
 Based on this paper, we formulated the central research question: 
@@ -73,30 +73,30 @@ We also discovered that the spelling of the term \enquote{non-functional} had a 
 		\caption{Term based search results}
 		\label{tbl:search_topic_9_andre}
 		\setlength{\tabcolsep}{1em}\\    %%%%<===
-		\toprule
+		\hline
 		\textbf{Source} & \textbf{Date} & \textbf{Search query and restrictions} & \textbf{\#Results (relevant)} \\
 		
-		\midrule
-		IEEE Xplore & 2020-11-11 & \texttt{"{}non-functional requirements"{} AND testing AND "{}risk analysis"{}} & 3 (0) \\
+		\hline
+		IEEE Xplore & 2020-11-11 & \texttt{\enquote{{}non-functional requirements}{} AND testing AND \enquote{{}risk analysis}{}} & 3 (0) \\
 		
-		\midrule
+		\hline
 		IEEE Xplore & 2020-11-11 & \texttt{non-functional requirements AND testing AND risk analysis} & 12 (0) \\
 		
-		\midrule
-		IEEE Xplore & 2020-11-11 & \texttt{risk AND "non-functional" and test} & 23 (2) \\
+		\hline
+		IEEE Xplore & 2020-11-11 & \texttt{risk AND \enquote{non-functional} and test} & 23 (2) \\
 		
-		\midrule
-		IEEE Xplore & 2020-11-29 & \texttt{(("{}Abstract"{}:nonfunctional requirements) AND "{}Abstract"{}:Test) AND "Full Text \& Metadata":"{}risk analysis"{})} & 2 (1) \\
+		\hline
+		IEEE Xplore & 2020-11-29 & \texttt{((\enquote{{}Abstract}{}:nonfunctional requirements) AND \enquote{{}Abstract}{}:Test) AND \enquote{Full Text \& Metadata}:\enquote{{}risk analysis}{})} & 2 (1) \\
 		
-		\midrule
-		IEEE Xplore & 2020-11-29 & \texttt{(("{}Abstract"{}:non-functional requirements) AND "{}Abstract"{}:Test) AND "Full Text \& Metadata":"{}risk analysis"{})} & 3 (0) \\
+		\hline
+		IEEE Xplore & 2020-11-29 & \texttt{((\enquote{{}Abstract}{}:non-functional requirements) AND \enquote{{}Abstract}{}:Test) AND \enquote{Full Text \& Metadata}:\enquote{{}risk analysis}{})} & 3 (0) \\
 
-		\midrule
-		ACM & 2020-11-29 & \texttt{[Abstract: "{}risk"{}] AND [Abstract: test*] AND [Abstract: "{}non functional"{}]} & 4 (1) \\
+		\hline
+		ACM & 2020-11-29 & \texttt{[Abstract: \enquote{{}risk}{}] AND [Abstract: test*] AND [Abstract: \enquote{{}non functional}{}]} & 4 (1) \\
 		
-		\midrule
-		ACM & 2020-11-29 & \texttt{[Abstract: test] AND [Abstract: "{}non functional"{}] AND [[Full Text: "{}risk analysis"{}] OR [Full Text: "{}risk"{}]]} & 20 (1) \\
-		\bottomrule
+		\hline
+		ACM & 2020-11-29 & \texttt{[Abstract: test] AND [Abstract: \enquote{{}non functional}{}] AND [[Full Text: \enquote{{}risk analysis}{}] OR [Full Text: \enquote{{}risk}{}]]} & 20 (1) \\
+		\hline
 	\end{longtable}
 \end{small}
 
@@ -122,10 +122,10 @@ However, the chosen paper does not cover risk-analysis. Since no paper could be 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Approach 1} \label{sec:9_approach_1}
+\section{Approach 1: Control Cases during the Software Development Life-Cycle } \label{sec:9_approach_1}
 
 
-\subsection{Description of Approach 1}
+\subsection{Description}
 
 In their paper \enquote{Control Cases during the Software Development Life-Cycle}~\cite{ZouPavlovski2008}, J. Zou und C. J. Pavlovski based their work on so called  \enquote{control cases} and \enquote{operating conditions} as tools for modeling and controlling NFRs.
 
@@ -146,7 +146,7 @@ Their paper visualizes the connection between these artifacts using an UML diagr
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{../images/topic_9_approach_1_1.png}
+	\includegraphics[width=0.4\textwidth]{../images/topic_9_approach_1_1.png}
 	\caption{Association in Use Cases Modelling~\cite{ZouPavlovski2008}}
 	\label{fig:topic_9_appraoch_1_use_case}
 \end{figure}
@@ -158,7 +158,7 @@ The paper does this for their fictional example which can be seen in \autoref{fi
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../images/topic_9_approach_1_2.png}
+	\includegraphics[width=0.65\textwidth]{../images/topic_9_approach_1_2.png}
 	\caption{Use Case Model with Control Cases~\cite{ZouPavlovski2008}}
 	\label{fig:topic_9_appraoch_1_2}
 \end{figure}
@@ -176,7 +176,7 @@ With this simulation relevant metrics can be extracted that are used to verify t
 
 
 
-\subsection{Application of Approach 1}
+\subsection{Application}
 
 J. Zou und C. J. Pavlovski focus on creating control cases. This is done for the movie manager example.
 
@@ -195,13 +195,13 @@ By determining the operating condition that is associated to a use case, we were
 Based on the operating condition, we then created a test case that checks if the controls put in place by the control cases are enough to mitigate the business risk.
 Following this pattern, tests for non-functional requirements can be created systematically step by step.
 
-\clearpage
+%\clearpage
 
-\begin{table}[h!]
+\begin{table}[p!]
 	\centering
 	\caption{Control Case for Approach 1 of Topic 9}
 	\label{tbl:topic_9_approach_1}
-	\begin{tabular}{|p{0.95\textwidth}|}\hline
+	\begin{tabular}{p{0.95\textwidth}}\hline
 		\textbf{Control Case}: Performance of the movie list view \\ 
 		\hline
 		\textbf{Control Case ID}: CC-001 \\
@@ -250,7 +250,7 @@ Following this pattern, tests for non-functional requirements can be created sys
 	\centering
 	\caption{Test Case for the movie manager example of topic 9, approach 1}
 	\label{tbl:topic_9_test_case}
-	\begin{tabular}{|p{0.95\textwidth}|}\hline
+	\begin{tabular}{p{0.95\textwidth}}\hline
 		\textbf{Associated Control Case ID:} CC-001\\
 		\hline
 		\textbf{Test Objectives:} \newline Verify that the movie list view has no visible hiccups when scrolling through the list of movies. \\
@@ -279,10 +279,11 @@ Following this pattern, tests for non-functional requirements can be created sys
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
-\section{Approach 2} \label{sec:9_approach_2}
+\section{Approach 2: Using Automated Tests for Communicating and Verifying Non-functional Requirements} \label{sec:9_approach_2}
 
-\subsection{Description of Approach 2}
+\subsection{Description}
 
 In \enquote{Using Automated Tests for Communicating and Verifying Non-functional Requirements}~\cite{Lagerstedt2014}, Robert Lagerstedt describes how testing NFRs can be automated by introducing a tool-based approach.
 The author only looks at NFRs in regards to software architecture which affects code quality in the sense of maintainability and security.
@@ -300,11 +301,11 @@ The graphic uses a rather high distance between the developer and the compliance
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../images/topic_9_approach_2_1.png}
+	\includegraphics[width=0.6\textwidth]{../images/topic_9_approach_2_1.png}
 	\caption{The common way of communicating architectural requirements~\cite{Lagerstedt2014}}
 	\label{fig:topic_9_approach_2_1}
 \end{figure}
-
+\newpage
 This way of communicating guidelines is not very cost-efficient.
 Every developer has to read and understand the guidelines. Developers must be re-trained when changes are made or if too many guidelines violations occur, because they have been forgotten.
 This is quite time consuming and prone to error.  Creating reports about guideline compliance is time consuming as well.
@@ -332,7 +333,7 @@ Productivity is increased while the time spent on communicating architectural gu
 The number of non-compliant code is lower for the tool-based approach than for using guidelines and reports only.
 
 
-\subsection{Application of Approach 2}
+\subsection{Application}
 
 The paper works with architectural NFRs but does not explain how those can be modeled.
 To be able to apply the approach, we introduce another system function to the movie manager example that is listed in \autoref{tbl:topic_9_application_approach_2}.
@@ -342,13 +343,13 @@ This system function and the following NFRs are based on personal experience in 
 	\centering
 	\caption{New system function for application of approach 2 of topic 9}
 	\label{tbl:topic_9_application_approach_2}
-	\begin{tabular}{rp{0.7\textwidth}}
-		\textbf{Name}          & Export the movie to HTML \\
-		\textbf{Description}   & An existing movie is exported to a single HTML file which can be viewed in any modern web browser \\
-		\textbf{Precondition}  & Movie exists \\
-		\textbf{Input}         & Movie details \\
-		\textbf{Postcondition} & HTML file exists with the movie's contents \\
-		\textbf{Output}        & HTML file \\
+	\begin{tabular}{r|p{0.7\textwidth}}
+		\textbf{Name}          & Export the movie to HTML \\ \hline
+		\textbf{Description}   & An existing movie is exported to a single HTML file which can be viewed in any modern web browser \\ \hline
+		\textbf{Precondition}  & Movie exists \\ \hline
+		\textbf{Input}         & Movie details \\ \hline
+		\textbf{Postcondition} & HTML file exists with the movie's contents \\ \hline
+		\textbf{Output}        & HTML file \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -361,9 +362,10 @@ While these two NFRs can be written as guidelines, especially point two may be v
 \begin{longtable}[th]{p{0.05\textwidth}|p{0.24\textwidth}|p{0.65\textwidth}}
 	\caption{NFRs for the application of approach 2 of topic 9}
 	\label{tbl:topic_9_approach_2_nfr}
-	\setlength{\tabcolsep}{1em} \\    %%%%<===
+	\setlength{\tabcolsep}{1em} \\
+	\hline    %%%%<===
 	\textbf{No.} & \textbf{NFR} & \textbf{Explanation} \\
-	\toprule
+	\hline
 	1 & IMDb IDs are encapsulated in a class &
 	All IMDb IDs have a certain format. They start with the string \enquote{tt} and end with 7-8 numbers. The ID must be validated which cannot be ensured by using a simple string. This is why an encapsulation in a class is required.
 	
@@ -375,7 +377,7 @@ for each $variable in $source:
   if typeof($variable) != "ImdbId" then
    throw new Exception("Wrong class")
 	\end{lstlisting}\\
-	\midrule
+	\hline
 	
 	2 & Exported strings are escaped &
 	This is a security concern and can be implemented in different ways. We assume that an HTML-exporter was created which takes a movie object as an argument.
@@ -396,47 +398,48 @@ for each $functionCall in $HTMLExporter:
 
 \textit{Note:} We assume that \texttt{writeText} is a method of a generic HTML-class which the HTML-exporter uses itself. We assume that the method cannot be changed to accept another argument type. Otherwise the language's type checker could already be able to find this issue.\\
 
-\bottomrule
+\hline
 \end{longtable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+%\clearpage
 \section{Comparison} \label{sec:9_comparison}
 
-For an improved comparison of these two approaches, a synthesis matrix is provided which references the following questions:
+For an improved comparison of these two approaches, a synthesis matrix is provided which references the questions from \autoref{sec:intruduction1.3}:
 
-\begin{enumerate}
-	\item Description of the approach (What does the approach do?)
-	\begin{enumerate}
-		\item Which artifacts and relations between artifacts are used in this approach? Which artifacts are created in the course of the approach? How are the artifacts characterized?
-		\item What is required and/or input for the application of the approach?
-		\item Which steps does the approach consist of? Which information is used in which step and how? What are the results of the individual steps?
-	\end{enumerate}
-	\item Benefits of the approach (Whom does the approach help and how?)
-	\begin{enumerate}
-		\item Which usage scenarios are supported by the approach?
-		\item Which stakeholders are supported by the usage scenarios?
-		\item Which knowledge areas from SWEBOK can be assigned to the usage scenarios?
-	\end{enumerate}
-	\item Tool support for the approach (What tool support is available?)
-	\begin{enumerate}
-		\item What kind of tool support is provided for the approach?
-		\item Which steps of the approach are automated by a tool? Which steps are supported by a tool, but still have to be executed manually? Which steps are not supported by a tool?
-	\end{enumerate}
-	\item Quality of the approach (How well does the approach work?)
-	\begin{enumerate}
-		\item How was the approach evaluated?
-		\item What are the (main) results of the evaluation?
-	\end{enumerate}
-\end{enumerate}
+%\begin{enumerate}
+%	\item Description of the approach (What does the approach do?)
+%	\begin{enumerate}
+%		\item Which artifacts and relations between artifacts are used in this approach? Which artifacts are created in the course of the approach? How are the artifacts characterized?
+%		\item What is required and/or input for the application of the approach?
+%		\item Which steps does the approach consist of? Which information is used in which step and how? What are the results of the individual steps?
+%	\end{enumerate}
+%	\item Benefits of the approach (Whom does the approach help and how?)
+%	\begin{enumerate}
+%		\item Which usage scenarios are supported by the approach?
+%		\item Which stakeholders are supported by the usage scenarios?
+%		\item Which knowledge areas from SWEBOK can be assigned to the usage scenarios?
+%	\end{enumerate}
+%	\item Tool support for the approach (What tool support is available?)
+%	\begin{enumerate}
+%		\item What kind of tool support is provided for the approach?
+%		\item Which steps of the approach are automated by a tool? Which steps are supported by a tool, but still have to be executed manually? Which steps are not supported by a tool?
+%	\end{enumerate}
+%	\item Quality of the approach (How well does the approach work?)
+%	\begin{enumerate}
+%		\item How was the approach evaluated?
+%		\item What are the (main) results of the evaluation?
+%	\end{enumerate}
+%\end{enumerate}
 
-
-\begin{longtable}[h]{p{0.02\linewidth}p{0.45\linewidth}p{0.45\linewidth}}
-	\centering
+\begin{small}
+\begin{longtable}[h]{p{0.02\linewidth}|p{0.455\linewidth}|p{0.455\linewidth}}
+	\hline
 	\textbf{No.} & \textbf{Approach 1 \cite{ZouPavlovski2008}} & \textbf{Approach 2 \cite{Lagerstedt2014}} \\
-	\textbf{1a} & 
+	\hline
+	1a & 
 	Operating conditions are formed that work under specific use cases.
 	These, on the other, hand are controlled by control cases and can be operated under them.
 	Control cases describe the business risks in case that the operating condition cannot be fulfilled.
@@ -447,16 +450,17 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	These point out issues that the developer can fix.
 	Guidelines are characterized by the fact that they describe the code architecture.
 	\\
-	
-	\textbf{1b} & 
+	\hline
+	1b & 
 	There are no preconditions because we start defining control cases at the beginning of the software development process, for example at the \enquote{Business Process Modelling}-step.
 	
 	&
 	The guidelines cover code architecture. They must be transformable into automated tests (e.g. by a static code analyzer).
 	
 	\\
+	\hline
 	
-	\textbf{1c} &
+	1c &
 	Preconditions/Constraints must be extracted from which NFRs are created, e.g. performance or security constraints.
 	These constraints are modeled by operating conditions for which control cases are created.
 	Their purpose is to mitigate business risk which is essentially the failure to fulfill the operating condition.
@@ -469,8 +473,9 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	The exact process is not explained and it is left to the reader how this may be implemented.
 	It is only pointed out that existing tools such as compilers or static code analysis tools can be extended and used.
 	\\
+	\hline
 	
-	\textbf{2a} & 
+	2a & 
 	
 	Early modeling of non-functional requirements. Being able to control requirements throughout the whole software development life cycle.
 	
@@ -478,48 +483,48 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	Maintainability, quality and security of the code base can be hold up to standards and may even be improved by giving automated feedback that points out NFRs which are violated by the developer.
 	
 	\\
-	
-	\textbf{2b} & 
+	\hline
+	2b & 
 	Management, Requirements Engineer, Developers, Testers
 	&
 	Developer / test writer, Software Architect
 	\\
+	\hline
 	
-	\textbf{2c} &
+	2c &
 	Software Requirements (functional and non-functional requirements, acceptance tests), Software Testing (model based techniques)
 	&
 	Software Testing (Software Testing Tools, Test Techniques), Software Maintenance (Software Maintenance Tools) \\
-	
-	\textbf{3a} & 
+	\hline
+	3a & 
 	No tool support for generating \enquote{Control Case}-Boxes and other artifacts &
 	Existing static code analysis tools (e.g. linters), which can be extended by further tests.
 	\\
-	\textbf{3b} & 
+	3b & 
 	No automation is done. Automation is only proposed as another step which can be implemented, e.g. through code generation with SysML.
 	&
 	Only code testing is performed automatically.
 	And only tests for NFRs which were extracted from the software architects guidelines and that were transformed into automated tests.
 	Those tests can be executed automatically during code review, e.g. by a continuous-integration service which tests each code change. Writing the tests is still a manual job.
 	\\
-	
-	\textbf{4a} 	
+	\hline
+	4a
 	&
 	The approach was explained by creating a fictional example and going through all steps of the software development life cycle by extending the example. No evaluation was performed, though.
 	
 	&
 	No evaluation was performed. The conclusion, i.e. success of the approach, is based on personal experience only.
 	\\
-	
-	\textbf{4b} &
+	\hline
+	4b &
 	N/A &
 	
 	Based on his experience in both small and large organizations, Lagerstedt concludes that automated verification of non-functional requirements by using tool-chain feedback is superior to classic guidelines that need to be checked by humans. By evaluation of his prior experience, he concludes increased productivity and a decrease in time spent on communicating architectural requirements. \\
+	\hline
 \end{longtable}
+\end{small}
 
-
-If we compare the two papers using the synthesis matrix above, we notice that they do not share a lot.
-That is not surprising: the second paper is very specific and only deals with architectural NFRs in code.
-The first paper, on the other hand, can be applied to different NFRs, not limiting itself to a specific one.
+If we compare the two papers using the synthesis matrix above, we notice that they do not share a lot. That is not surprising: the second paper is very specific and only deals with architectural NFRs in code. The first paper, on the other hand, can be applied to different NFRs, not limiting itself to a specific one.
 Only the first paper mentions risk analysis but only as part of a control case.
 
 Both papers do not give specific instructions how test cases can be modeled.
