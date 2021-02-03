@@ -128,7 +128,7 @@ However, the chosen paper does not cover risk-analysis. Since no paper could be 
 \subsection{Description}
 
 In their paper \enquote{Control Cases during the Software Development Life-Cycle}~\cite{ZouPavlovski2008}, J. Zou und C. J. Pavlovski based their work on so called  \enquote{control cases} and \enquote{operating conditions} as tools for modeling and controlling NFRs.
-
+\newpage
 \enquote{Control cases} are used as a format to communicate and discuss NFRs between management, requirement engineers, developers, and system users and to define qualitative attributes of the system.
 
 Their work focuses on determining and revealing problems early on, for example bad performance or security risks.
@@ -170,7 +170,7 @@ And the control case is specific to one operating condition.
 
 The reader is guided through all steps of the software development life cycle, so that a control case can be defined which is then used as the basis for a test case. Because the control case is associated to an operating condition, the test case is associated to it transitively as well.
 The test case exists to verify that the controls put in place to manage the operating condition are effective.
-
+\newpage
 The paper does not give a detailed instruction how to model test cases. It only instructs testers to simulate the operating condition, for example by creating a huge work load on the server.
 With this simulation relevant metrics can be extracted that are used to verify the test case.
 
@@ -305,7 +305,7 @@ The graphic uses a rather high distance between the developer and the compliance
 	\caption{The common way of communicating architectural requirements~\cite{Lagerstedt2014}}
 	\label{fig:topic_9_approach_2_1}
 \end{figure}
-\newpage
+
 This way of communicating guidelines is not very cost-efficient.
 Every developer has to read and understand the guidelines. Developers must be re-trained when changes are made or if too many guidelines violations occur, because they have been forgotten.
 This is quite time consuming and prone to error.  Creating reports about guideline compliance is time consuming as well.
@@ -327,7 +327,7 @@ Developers get feedback through different tools that the architect extends. Tool
 	\caption{Suggested solution of communicating requirements~\cite{Lagerstedt2014}}
 	\label{fig:topic_9_approach_2_2}
 \end{figure}
-
+\newpage
 According to Lagerstedt's personal experience, a tool based approach is superior to a guideline-only one.
 Productivity is increased while the time spent on communicating architectural guidelines is decreased.
 The number of non-compliant code is lower for the tool-based approach than for using guidelines and reports only.
@@ -344,6 +344,7 @@ This system function and the following NFRs are based on personal experience in 
 	\caption{New system function for application of approach 2 of topic 9}
 	\label{tbl:topic_9_application_approach_2}
 	\begin{tabular}{r|p{0.7\textwidth}}
+		\hline
 		\textbf{Name}          & Export the movie to HTML \\ \hline
 		\textbf{Description}   & An existing movie is exported to a single HTML file which can be viewed in any modern web browser \\ \hline
 		\textbf{Precondition}  & Movie exists \\ \hline
@@ -358,7 +359,7 @@ These two NFRs are based on personal experience.
 Both are transformed into pseudo code so that the NFRs can be executed automatically as part of the code review.
 
 While these two NFRs can be written as guidelines, especially point two may be violated and may slip through code review. Violating point two may result in security issues or at least in unexpected behavior if the HTML contains unescaped characters.
-
+\newpage
 \begin{longtable}[th]{p{0.05\textwidth}|p{0.24\textwidth}|p{0.65\textwidth}}
 	\caption{NFRs for the application of approach 2 of topic 9}
 	\label{tbl:topic_9_approach_2_nfr}
@@ -439,7 +440,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	\hline
 	\textbf{No.} & \textbf{Approach 1 \cite{ZouPavlovski2008}} & \textbf{Approach 2 \cite{Lagerstedt2014}} \\
 	\hline
-	1a & 
+	1a) & 
 	Operating conditions are formed that work under specific use cases.
 	These, on the other, hand are controlled by control cases and can be operated under them.
 	Control cases describe the business risks in case that the operating condition cannot be fulfilled.
@@ -451,7 +452,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	Guidelines are characterized by the fact that they describe the code architecture.
 	\\
 	\hline
-	1b & 
+	1b) & 
 	There are no preconditions because we start defining control cases at the beginning of the software development process, for example at the \enquote{Business Process Modelling}-step.
 	
 	&
@@ -460,7 +461,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	\\
 	\hline
 	
-	1c &
+	1c) &
 	Preconditions/Constraints must be extracted from which NFRs are created, e.g. performance or security constraints.
 	These constraints are modeled by operating conditions for which control cases are created.
 	Their purpose is to mitigate business risk which is essentially the failure to fulfill the operating condition.
@@ -475,7 +476,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	\\
 	\hline
 	
-	2a & 
+	2a) & 
 	
 	Early modeling of non-functional requirements. Being able to control requirements throughout the whole software development life cycle.
 	
@@ -484,7 +485,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	
 	\\
 	\hline
-	2b & 
+	2b) & 
 	Management, Requirements Engineer, Developers, Testers
 	&
 	Developer / test writer, Software Architect
@@ -496,11 +497,11 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	&
 	Software Testing (Software Testing Tools, Test Techniques), Software Maintenance (Software Maintenance Tools) \\
 	\hline
-	3a & 
+	3a) & 
 	No tool support for generating \enquote{Control Case}-Boxes and other artifacts &
 	Existing static code analysis tools (e.g. linters), which can be extended by further tests.
 	\\
-	3b & 
+	3b) & 
 	No automation is done. Automation is only proposed as another step which can be implemented, e.g. through code generation with SysML.
 	&
 	Only code testing is performed automatically.
@@ -508,7 +509,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	Those tests can be executed automatically during code review, e.g. by a continuous-integration service which tests each code change. Writing the tests is still a manual job.
 	\\
 	\hline
-	4a
+	4a)
 	&
 	The approach was explained by creating a fictional example and going through all steps of the software development life cycle by extending the example. No evaluation was performed, though.
 	
@@ -516,7 +517,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 	No evaluation was performed. The conclusion, i.e. success of the approach, is based on personal experience only.
 	\\
 	\hline
-	4b &
+	4b) &
 	N/A &
 	
 	Based on his experience in both small and large organizations, Lagerstedt concludes that automated verification of non-functional requirements by using tool-chain feedback is superior to classic guidelines that need to be checked by humans. By evaluation of his prior experience, he concludes increased productivity and a decrease in time spent on communicating architectural requirements. \\

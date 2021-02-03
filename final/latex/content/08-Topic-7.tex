@@ -93,7 +93,7 @@ Snowballing search method is applied to the given article \cite{Paper1} to ident
 \end{tabular}
 \end{small}
 \end{table}
-
+\newpage
 In order to ensure that the research methodology and its implementation remain consistent and comprehensible, we formulated four relevance criteria as shown in \autoref{tab:ArticleCriteria}. An article is relevant, if it fulfills all criteria. The first two criteria are formulated to check the availability and the subject area of the articles. Since this work is to be written in English, the article to be used should be available in English. To reduce the comprehensive subject area to the relevant area for our topic, the article should have a clear focus on the area of software engineering as described in the second criterion. The third criterion aims to focus on recent work and to limit the search results. The last criterion is formulated to answer the research question and to find relevant articles, which particularly provide similar approaches to the approach presented in \cite{Paper1}.
 
 \subsection*{Research execution and literature results}
@@ -102,7 +102,7 @@ In order to ensure that the research methodology and its implementation remain c
 First, the search was carried out using the keyword-based search method with aforesaid search terms. In \autoref{tab:ResultKeyword}, the results of this search are documented.\\
 First column shows the search location, second column shows the date on which the search was carried out, and third column shows the applied restriction of search. Fourth column presents the exact search query of the search terms and thus shows how they were searched in the specified parts of articles. Fifth column shows the number of overall results, and sixth column shows the number of relevant articles. Finally, last column presents the number of articles chosen to be used in this study.
 
-\begin{table} [H] 
+\begin{table} [h] 
 \begin{small}
   \begin{center}
   \begin{scriptsize}
@@ -177,7 +177,7 @@ Thus, after conducting the keyword-based and snowballing search methods, we coul
  \end{center}
 \end{small}
 \end{table}
-
+\newpage
 The articles \cite{Paper1}, \cite{matera}, \cite{Relevant3}  and \cite{Relevant4} were identified through the keyword-based search method, and \cite{SMvsTM} and \cite{Paper2} were identified through the snowballing search method. The first identified article \cite{Paper1} through the keyword-based search method was already given us for this study as start paper. Since \cite{matera} and \cite{SMvsTM} are from the same author group of \cite{Paper1}, we didn't choose them for our study as a second approach to examine. 
 
 The articles \cite{Relevant3} and \cite{Relevant4} have also common authors, and one of them is the same author of the article \cite{Paper2}. Therefore, we excluded the \cite{Relevant3} and \cite{Relevant4}, and chose only \cite{Paper2}, \textit{Requirements Traceability in the Model-Based Testing Process}, which is closest to the provided approach in the given article \cite{Paper1}, and very suitable for our topic \textit{testing with system models}.
@@ -185,8 +185,6 @@ The articles \cite{Relevant3} and \cite{Relevant4} have also common authors, and
 Consequently, \textbf{\textit{Tracing Requirements in a Model-Based Testing Approach}} \cite{Paper1} and \textbf{\textit{Requirements Traceability in the Model-Based Testing Process}}  \cite{Paper2} are the chosen articles to be studied in this \autoref{sec:topic_7}.
 
 
-
-\newpage
 \section{Approach 1: Tracing Requirements in a Model-Based Testing Approach}
 \label{sec:AP1}
 
@@ -198,9 +196,9 @@ This approach was presented in 2009 by Fredrik Abbors, Dragos Truscan, and Johan
 %The approach is only described using small examples from a telecommunications case study. In that case, the SUT is a mobile switching server (MSS), which is a network element located in a mobile telecommunication system. The MSS is responsible for keeping track of the location of mobile subscribes (MS) in the network and for connecting calls between MS’s over 2G and 3G networks. The MSS is also responsible for tracking the movement of MS’s during an ongoing call\\
 %Figure~\ref{fig:Ap1-1} presents the model-based testing process of this approach.\\
 
-\begin{figure} [H] 
+\begin{figure} [h] 
 \centering
-\includegraphics[scale=0.3]{../images/Ap1-1.png} 
+\includegraphics[scale=0.25]{../images/Ap1-1.png} 
 \caption{Overview of the model-based testing process \cite{Paper1} }
 \label{fig:Ap1-1}
 \end{figure}
@@ -232,7 +230,7 @@ First, functional requirements of the SUT should be analyzed and structured into
 In our implementation, we converted the user sub-tasks of Movie Manager into system functions in order to build a requirements diagram from system functional requirements. \autoref{fig:Ap1-req} presents the example of a SysML requirements diagram for our application. 
 
 
-\begin{figure} [H] 
+\begin{figure} [h] 
 \centering
 \includegraphics[scale=0.49]{../images/Ap1-req} 
 \caption{Example of a SysML requirements diagram}
@@ -241,13 +239,13 @@ In our implementation, we converted the user sub-tasks of Movie Manager into sys
 
 %As presented in Figure~\ref{fig:Ap1-s2}, 
 Then, the UML models of the SUT are built starting from the requirements models. During this process, the requirements should be traced to different parts of the models to point how each requirement is addressed by the models. In the provided approach, a set of modeling guidelines and validation rules should be defined for ensuring the quality of the resulting models. For this purpose, Object Constraint Language (OCL) is used. The aforementioned NoMagic’s MagicDraw tool has been used for editing the SysML and UML models and for running the validation rules. But in our implementation of the approach, we use the free online tool of the diagram software \textit{Draw.io}\footnote{Draw.io \url{https://drawio-app.com/}} via \textit{diagrams.net}\footnote{diagrams.net \url{https://www.diagrams.net/}} for this purpose.
-
+\newpage
 As the next step, a state machine model should be modeled from the requirements model, which is to be used as input for Qtronic, since the Qtronic tool expects the behavior of SUT in the form of state machines in order to be able to convert it into QML. %In the provided approach, the relationships between requirements and models are specified on several levels. For instance, non-leaf requirements are linked to state machine models, and leaf requirements in the requirements tree are linked to other UML elements to which they apply, e.g. transitions in a state machine or classes in a class diagram. As an exceptional situation, the top-level functional requirements are linked to use cases in the use case model of the SUT. \\
 In \autoref{fig:Ap1-sm2}, we present an example for the requirement with the requirement id \enquote{1.4} from the requirements model presented in \autoref{fig:Ap1-req}.
 
 \begin{figure} [H] 
 \centering
-\includegraphics[scale=0.35]{../images/Ap1-sm2} 
+\includegraphics[scale=0.3]{../images/Ap1-sm2} 
 \caption{Example of a UML state machine}
 \label{fig:Ap1-sm2}
 \end{figure}
@@ -335,7 +333,7 @@ Then as an instance, we create the Movie Manager Class Diagram for the aforement
 
 \begin{figure} [H] 
 \centering
-\includegraphics[scale=0.45]{../images/Ap2-class} 
+\includegraphics[scale=0.42]{../images/Ap2-class} 
 \caption{Example for a class diagram of Movie Manager}
 \label{fig:Ap2-class}
 \end{figure}
@@ -388,8 +386,6 @@ Since we cannot use the tool, we generate the test cases as an example for both 
 \end{small}
  \end{center}
 \end{table}
-
-
 \begin{table} [H] 
 \begin{center}
  \begin{small}
@@ -408,7 +404,6 @@ Since we cannot use the tool, we generate the test cases as an example for both 
 
 
 
-\newpage
 \section{Comparison}
 \label{sec:Compar}
 
@@ -420,7 +415,7 @@ However, there are also differences between them. In the first approach, \cite{P
 In the second approach, \cite{Paper2}, the expected functional requirements of the system under test are derived from a use case scenario. The requirements traceability is managed by tagging manually the postconditions of the operations and the effects of the transitions in the UML model with the requirements via ad-hoc comment symbols in order to associate a requirement with an OCL statement which will be involved into a test target during the generation of the test cases.
 
 Furthermore, the LEIRIOS Test Designer tool provided in the second approach does not offer a tool support for tracing-back requirements from tests to models, while the first approach supports it via the automatically generated test report by their provided tool, Qtronic.
-
+\newpage
 \autoref{tab:TSM} presents the detailed comparison of both approaches as a synthesis matrix. In the first column, the number of the synthesis questions are presented. Number 1 implies the description, number 2 implies the benefit, number 3 implies the tools, and number 4 implies the quality for the compared approaches. The second column explains in more detail in which context the questions are asked. Finally, the third column presents the answers to these questions for approach 1, and fourth column for approach 2. 
 
 \newpage
@@ -428,14 +423,14 @@ Furthermore, the LEIRIOS Test Designer tool provided in the second approach does
 \begin{landscape} 
 %\begin{scriptsize}
 \begin{small}
-\begin{longtable}{ p{0.5cm} | p{2.5cm} | p{9cm} | p{9cm} }
+\begin{longtable}{ p{0.5cm} | p{11cm} | p{11cm} }
 \caption{Synthesis matrix}
 \label{tab:TSM}
 \\    %%%%<===
 \hline
-\textbf{Nr.} & \textbf{Name} & \textbf{Approach 1: Tracing Requirements in a Model-Based Testing Approach}  & \textbf{Approach 2: Requirements Traceability in the Model- Based Testing Process} \\
+\textbf{No.} & \textbf{Approach 1: Tracing Requirements in a Model-Based Testing Approach}  & \textbf{Approach 2: Requirements Traceability in the Model- Based Testing Process} \\
 \hline
-1a) & Characterization of the artifacts and relationships of the artifacts in the approach& - Informal requirements
+1a) & - Informal requirements
 \newline - Requirements models via requirements diagram of SysML
 \newline - UML Models, e.g. class Diagram specifies a domain model, a behavioral model describes the behavior of the SUT using state machines, data models describe the message types exchanged between different domain entities, domain configuration models represents specific test configurations using object diagrams.
 \newline - Generated tests and test report
@@ -445,14 +440,14 @@ Furthermore, the LEIRIOS Test Designer tool provided in the second approach does
 \newline - Test cases and test scripts
 \newline - Traceability Matrix \\
 \hline
-1b) & Requirements or inputs for the application of the approach & Informal requirements are input for this approach.
+1b) & Informal requirements are input for this approach.
 \newline A set of modeling guidelines and validation rules should also be defined.
 \newline In order to automatically transform UML models to the QML via the Qtronic tool, all requirements should have been linked to model elements and the models should have been validated.
 \newline The desired coverage criteria used for test generation should be manually selected from the GUI of Qtronic.
 \newline The presented approach is for functional requirements and it only supports online testing. & Informal requirements are input for this approach. 
 \newline Uncontrollable or unobservable elements should not be modeled.\\
 \hline
-1c) & Steps and results of the approach and use of the information & 1. The informal requirements are analyzed and structured into a requirements model using the requirements diagrams of the SysML.
+1c) & 1. The informal requirements are analyzed and structured into a requirements model using the requirements diagrams of the SysML.
 \newline 2. SUT is specified using UML (including OCL) and several perspectives of the SUT are modeled, e.g. class diagram, behavioral model, data models, domain configuration models etc. 
 \newline 3. A set of modeling guidelines and validation rules are defined using OCL. MagicDraw tool has been used for editing the SysML and UML models and for running the validation rules
 \newline 4. The models used to specify the SUT are subsequently transformed into input for the automated test derivation tool Qtronic. 
@@ -463,11 +458,11 @@ Furthermore, the LEIRIOS Test Designer tool provided in the second approach does
 \newline4. Test generation method provided by the LEIRIOS Test Designer tool
 \newline5. Executable test script generation which are converted from the generated test cases via LEIRIOS Test Designer. A test script pattern and a mapping table are to be defined by the test engineer.\\
 \hline
-2a) & Supported usage scenarios& Test generation, and tracing requirements to models, to test specification, and back to models again.& Test generation, and tracing requirements to test cases. \\
+2a) & Test generation, and tracing requirements to models, to test specification, and back to models again.& Test generation, and tracing requirements to test cases. \\
 \hline
-2b) & Supported stakeholders & Product engineer, software engineer, requirement engineer and user of the provided tooll/tester.  & Validation engineer, software engineer, requirement engineer and user of the provided tool/tester. \\
+2b) & Product engineer, software engineer, requirement engineer and user of the provided tooll/tester.  & Validation engineer, software engineer, requirement engineer and user of the provided tool/tester. \\
 \hline
-2c) & Associated SWEBOK\footnotemark{ \footnotetext {SWEBOK \url{https://www.computer.org/education/bodies-of-knowledge/software-engineering}}} knowledge areas & Chapter 1: Software Requirements
+2c) & Chapter 1: Software Requirements
 \newline - Requirements Process
 \newline - Requirements Analysis
 \newline - Practical Considerations (e.g. Requirements Tracing)
@@ -489,14 +484,14 @@ Furthermore, the LEIRIOS Test Designer tool provided in the second approach does
 \newline - Types of Models
 \newline - Analysis of Models (e.g. Traceability) \\  
 \hline
-3a) &Tool support & The NoMagic’s MagicDraw has been used for editing the SysML and UML models and for running the validation rules. \newline Conformiq’s Qtronic tool is provided for the automated test derivation and test report generation. Only online testing mode of Qtronic is used to generate tests. & LEIRIOS Test Designer tool is provided to generate test cases and to produce the traceability matrix between generated test cases and requirements. The tool is used in the test and test script generation processes.\\
+3a) & The NoMagic’s MagicDraw has been used for editing the SysML and UML models and for running the validation rules. \newline Conformiq’s Qtronic tool is provided for the automated test derivation and test report generation. Only online testing mode of Qtronic is used to generate tests. & LEIRIOS Test Designer tool is provided to generate test cases and to produce the traceability matrix between generated test cases and requirements. The tool is used in the test and test script generation processes.\\
 \hline
-3b) & Degree of automation & The creation of the models is not automated and the desired coverage criteria used for test generation should be manually selected from the GUI of Qtronic. Tests and test reports are automatically generated by the provided tool, Qtronic. &Requirements traceability is managed by tagging manually the postconditions of the operations and the effects of the transitions in the UML model with the requirements via ad-hoc comment symbols. Tests are automatically generated by the provided tool, LEIRIOS.\\
+3b) & The creation of the models is not automated and the desired coverage criteria used for test generation should be manually selected from the GUI of Qtronic. Tests and test reports are automatically generated by the provided tool, Qtronic. &Requirements traceability is managed by tagging manually the postconditions of the operations and the effects of the transitions in the UML model with the requirements via ad-hoc comment symbols. Tests are automatically generated by the provided tool, LEIRIOS.\\
 \hline
-4a) & Evaluation of the approach & Approach does not present an evaluation. Only validation rules have been defined and implemented for both requirements models and for SMs for checking different quality metrics of the resulting models before proceeding to the test derivation phase.
+4a) & Approach does not present an evaluation. Only validation rules have been defined and implemented for both requirements models and for SMs for checking different quality metrics of the resulting models before proceeding to the test derivation phase.
 \newline For the description of the approach, only small examples from a telecommunications case study are provided. & Approach does not present an evaluation. Only for a simpler description, the approach is implemented on a simplified version of a drink vending machine controller.\\
 \hline
-4b) & Important evaluation results & Since the approach does not offer any evaluation, only the benefits and shortcomings of the approach have been shared as below:
+4b) & Since the approach does not offer any evaluation, only the benefits and shortcomings of the approach have been shared as below:
 \newline - The approach provides a solution for tracing only functional requirements and supports only online testing.
 \newline - The approach provided automation of the transitions between the phases of the process, allowing to have a fast feed-back loop for testing and debugging specifications or the implementation of the SUT.
 \newline - Many errors have been detected in the early stages of the process, when the system models have been created. The errors were caused mainly by omissions in the models and by misinterpreting the requirements.

@@ -298,7 +298,7 @@ Performance Aspect & Measure function execution times. & TO6, TO7 & Timing (not 
 \label{aspect-test}
 \end{small}
 \end{table}
-
+\newpage
 \lstset {language=C++}
 \begin{lstlisting}[caption={\textbf{Generated Counter Aspect Code.}}, label=mem]
 aspect MemoryAspect{
@@ -345,58 +345,51 @@ This is reflected in the evaluation of the respective approach as well. Both dra
 \begin{small}
 \begin{table}
 \caption{Synthesis Matrix.}
-\begin{longtable}{p{2cm}|>{\raggedright}p{4cm}|>{}p{8cm}|>{}p{8cm}}
+\begin{longtable}{>{\raggedright}p{0.5cm}|>{}p{11cm}|>{}p{11cm}}
 \hline
-\textbf{Question} 
-& \textbf{Name }
+\textbf{No. }
 & \textbf{Approach 1: Testing Non-Functional Requirements with Aspects} 
 & \textbf{Approach 2: ACRE}\\ \hline
 %\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\multirow{3}{*}{1 \rotatebox[origin=r]{90}{\textbf{Description}}} 
-& a) artefacts and relationship between artefacts 
+1a) 
 & system requirements in natural language (provided), NFRs (derived), testing objectives (derived), test aspects (derived)
 & test objectives or bug report (provided), DSL-statements within the source code (derived), test aspects (generated)\\ 
-\cline{2-4}
-& b) preconditions/ input 
+\hline
+1b)
 &  system requirements 
 & test objectives or bug report\\ 
-\cline{2-4}
-& c) steps, results, information 
+\hline
+1c)
 &  \underline{Step 1}: Provided a set of system requirements, NFRs (which might be crosscutting) are derived. One NFR is derived from one or more system requirements, a system requirement can comprise multiple NFRs. \underline{Step 2}: The NFRs are categorised and corresponding testing objectives are derived. One testing objective is derived from one ore more NFRs. \underline{Step 3}: Test aspects can be formulated based on the testing objectives and NFR categories. One test aspect can comprise multiple testing objectives.
- & \underline{Step 1}: Provided a set of testing objectives or a bug report, the DSL statement describing the test aspect can be derived. The type of the bug or the category of the underlying NFR of the testing objective determines the type of the test aspect that must be chosen in this step. \underline{Step 2}: The test aspect is generated automatically based on the DSL description.\\
+& \underline{Step 1}: Provided a set of testing objectives or a bug report, the DSL statement describing the test aspect can be derived. The type of the bug or the category of the underlying NFR of the testing objective determines the type of the test aspect that must be chosen in this step. \underline{Step 2}: The test aspect is generated automatically based on the DSL description.\\
 \hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\multirow{3}{*}{2 \rotatebox[origin=r]{90}{\textbf{Benefits}}} 
-& a) supported usage scenarios 
+2a) 
 & Easy and non-invasive testing throughout the software lifecycle: during initial development for debugging or validating NFRs, during system testing and for maintaining tasks. Separation of concerns by modularizing crosscutting NFRs. Tracing of NFRs and corresponding tests 
 & Easy and non-invasive testing throughout the software lifecycle: during initial development for debugging or validating NFRs, during system testing and for maintaining tasks. Separation of concerns by modularizing crosscutting NFRs. Tracing of NFRs and corresponding tests\\ 
-\cline{2-4}
-& b) supported stakeholders 
+\hline
+2b)
 & Developers, testing and maintenance personnel
 & Developers, testing and maintenance personnel\\ 
-\cline{2-4}
-& c) corresponding SWEBOK-Knowledge Areas
+\hline
+2c)
  & Software Requirements (NFRs, Requirements Tracing), Software Testing (System Test), Software Maintenance 
 & Software Requirements (NFRs, Requirements Tracing), Software Testing (System Test), Software Maintenance\\ 
 \hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\multirow{2}{*}{3 \rotatebox[origin=r]{90}{\textbf{Tools}}} 
-& a) tool support 
+3a) 
 & none (except the aspects themselves)
 &ACRE (Automated Aspect Creator), DSL\\ 
-\cline{2-4}
-& b) level of automation 
+\hline
+3b) 
 &  none 
 & Test cases and testing objectives must be derived manually from the requirements. The DSL facilitates the test case design. The test aspect code is generated automatically from the DSL statements.\\ 
-\cline{2-4}
 \hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\multirow{2}{*}{4 \rotatebox[origin=r]{90}{\textbf{Quality}}} 
-& a) evaluation
+4a)
 & Case study with requirements of an existing industrial embedded system. Comparison of test coverage with and without test aspects.
 & An empirical study aiming to find errors in the mathematical optimisation software NOMAD was conducted. The approach was contrasted with other common techniques and tools.\\ 
-\cline{2-4}
-& b) evaluation results 
+\hline
+4b)
 & Test aspects proved to be an easy and non-invasive technique for testing NFRs. Separation of (test) concerns by modularising NFRs.  BUT: lack of tool support, complicated build process. 
 & Automatically generated test aspects proved to be suitable for finding memory leaks, interference bugs and testing invariants. The approach is easy to use because developers do not need to know aspect-oriented programming itself, only the DSL syntax and semantics. BUT: derivation of test cases from requirements and DSL statement input still manual\\ 
-\cline{2-4}
 \hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{longtable}
 \label{syn}

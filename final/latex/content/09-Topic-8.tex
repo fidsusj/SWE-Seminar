@@ -151,7 +151,7 @@ After that, the VF starts the IUT, runs the TRM on the IUT, saves all informatio
 \label{topic08:sectionApproach2Description}
 
 \textit{Mathieu Boucher} and \textit{Gunter Mussbacher} of McGill University wrote the paper \textit{Transforming Workflow Models into Automated End-to-End Acceptance Test Cases}, which was published in 2017 by IEEE/ACM in the 9th International Workshop on Modelling in Software Engineering (MiSE) \cite{BoucherMussbacher2017}.
-\newpage
+
 The authors in this paper want to generate acceptance tests from the User Requirements Notation. Since \textit{Boucher} and \textit{Mussbacher} focus on the functional requirements, they only need the Use Case Maps (see \autoref{fig:08_flowOf2}). These test cases will be executed with the \enquote{JUnit Testing Framework}, which will be discussed later. In order to enable this, the Use Case Maps must be extended. The input data, the expected output, a description of the behavior, and the test logic with postconditions are needed. In greater detail, the scenario groups, scenario definition, start- and endpoints, and responsibilities have to be included. Scenario groups contain the name of the data/class, global settings and information for the starting and ending process, and global variables for the tests. A scenario group includes several scenario definitions, which correspond to a use case. The scenario definitions' inputs consist of the data type (e.g., boolean, integer, string, etc.) and the values. Start points define the system state before the scenario starts. Responsibilities describe an action in the scenario and are connected with the system code, whereas endpoints define the system state after the scenario ends. 
 
 The test case's extent depends on the number of responsibilities that the traversal mechanism meets during the traversal. If the mechanisms only meet one responsibility, the test cases are like Unit Tests. If the mechanisms meet many responsibilities, the test cases are similar to acceptance test cases. After the Use Case Maps diagram is extended, the traversal mechanism can analyze the diagram, which means it is traveling through the Use Case Map, from the start point to an endpoint by visiting the responsibilities, which creates the test cases automatically. For each scenario definition, the mechanism will generate a test case skeleton, which is used with the input combinations to create specific acceptance test cases. Thus, one has one test case for each input combination. 
@@ -160,7 +160,7 @@ The input combinations are determined according to the paper with boundary value
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{../images/08/08_controllFlow2.jpg} 
+	\includegraphics[scale=0.34]{../images/08/08_controllFlow2.jpg} 
 	\caption{Flow of approach 2}
 	\label{fig:08_flowOf2}
 \end{figure}
@@ -213,15 +213,13 @@ Both approaches start with the User Requirements Notation. Approach one deals wi
 	\begin{small}
 	\begin{table}
 		\caption{Synthesis Matrix part 1/2.}
-		\begin{longtable}[h]{p{1.3cm}|>{\raggedright}p{2.8cm}|>{}p{9.1cm}|>{}p{9.1cm}}
+		\begin{longtable}[h]{>{\raggedright}p{0.5cm}|>{}p{11cm}|>{}p{11cm}}
 			\hline
-			\textbf{Question} 
-			& \textbf{Name} 
+			\textbf{No.} 
 			& \textbf{Approach 1: Scenario-Based Validation Beyond the User Requirements Notation} 
 			& \textbf{Approach 2: Transforming Workflow Models into Automated End-to-End Acceptance Test Cases}\\ \hline
-			%\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\multirow{3}{*}{1 \rotatebox[origin=r]{90}{\textbf{Description}}} 
-			& a) artefacts and relationship between artefacts 
+			%\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+			1a)
 			&- \enquote{Implementation under test} (IUT): Part of the software to be tested. 
 			
 			- \enquote{User Requirements Notation} (URN): Notation for functional requirements (FRs) and non-functional requirements (NFRs). The FRs are written in \enquote{Use Case Maps} and the NFRs in \enquote{Goal-oriented requirements Language}.
@@ -234,16 +232,14 @@ Both approaches start with the User Requirements Notation. Approach one deals wi
 			&- \enquote{Use Case Maps} (UCM): Part of the User Requirements Notation. Notation for functional requirements (FRs).
 			
 			- \enquote{Extended UCM}: Include scenario groups, which are defined with global settings and information about setup and tear down. A scenario group consists of several scenario definitions, and every definition corresponds to a use case, which should be tested. The scenario definitions need information about the input data type, the input data, and the expected output.
-			\\
-			\cline{2-4}
-			& b) preconditions/ input 
+			\\ \hline
+			1b)
 			&  - FRs and NFRs in URN
 			
 			- IUT
 			& 
-			- FRs in URN \\
-			\cline{2-4}
-			& c) steps, results, informations 
+			- FRs in URN \\ \hline
+			1c)
 			& - The requirements must be converted manually from the URN to the TRM.
 			
 			- The VF must be started. VF calls the ABE for the automated binding process. VF runs the IUT, tests the behavior of the IUT with the test cases, collects and evaluates the information, and creates the CER.
@@ -255,16 +251,13 @@ Both approaches start with the User Requirements Notation. Approach one deals wi
 			- \enquote{JUnit Testing Framework}: Execute the acceptance tests on the software.
 			\\
 			\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\multirow{3}{*}{2 \rotatebox[origin=r]{90}{\textbf{Benefits}}} 
-			& a) supported usage scenarios 
+			2a)
 			& - The testing process for the FRs and NFRs is automated, and there is traceability between the test cases and the IUT. 
-			& - The testing process for the FRs is automated. \\ 
-			\cline{2-4}
-			& b) supported stakeholders 
+			& - The testing process for the FRs is automated. \\ \hline
+			2b)
 			& - All stakeholders who are responsible for testing the software, both internal and external stakeholders.
-			& - All stakeholders who are responsible for testing the software, both internal and external stakeholders.\\ 
-			\cline{2-4}
-			& c) corresponding SWEBOK-Knowledge Areas
+			& - All stakeholders who are responsible for testing the software, both internal and external stakeholders.\\ \hline
+			2c)
 			& - Software Requirements: 1.3 Functional and Nonfunctional Requirements, 6.3 Model Validation
 			
 			- Software Testing: 3.6 Model-Based Testing Techniques, 6.1 Testing Tool Support
@@ -290,15 +283,13 @@ Both approaches start with the User Requirements Notation. Approach one deals wi
 	\begin{small}
 	\begin{table}
 		\caption{Synthesis Matrix part 2/2.}
-		\begin{longtable}[h]{p{1.3cm}|>{\raggedright}p{2.6cm}|>{}p{9.2cm}|>{}p{9.2cm}}
+		\begin{longtable}[h]{>{\raggedright}p{0.5cm}|>{}p{11cm}|>{}p{11cm}}
 			\hline
-			\textbf{Question} 
-			& \textbf{Name} 
+			\textbf{No.} 
 			& \textbf{Approach 1: Scenario-Based Validation Beyond the User Requirements Notation} 
-			& \textbf{Approach 2: Transforming Workflow Models into Automated End-to-End Acceptance Test Cases}\\ \hline
-			%\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\multirow{2}{*}{3 \rotatebox[origin=r]{90}{\textbf{Tools}}} 
-			& a) tool support 
+			& \textbf{Approach 2: Transforming Workflow Models into Automated End-to-End Acceptance Test Cases}\\ 
+			\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			3a)
 			& - \enquote{Automated Binding Engine} (ABE): Automate the binding process between the elements of the TRM and the related elements of an IUT
 			
 			- \enquote{Validation Framework} (VF)$^*$: Get the IUT and the TRM. Call ABE to bind the elements of TRM and IUT. Run the IUT, test the behavior of the IUT with the test cases from TRM. Collect information about the input, the behavior, and the output. Evaluate the information with the metric evaluator and create the CER.
@@ -306,8 +297,8 @@ Both approaches start with the User Requirements Notation. Approach one deals wi
 			- \enquote{UCM traversal mechanism} from \enquote{jUCMNav tool}$^\nabla$: Traverse the extended UCM and create the acceptance test cases.
 			
 			- \enquote{JUnit Testing Framework}: Execute the acceptance tests on the software.$^\dagger$\\ 
-			\cline{2-4}
-			& b) level of automation 
+			\hline
+			3b) 
 			& - The conversion from the URN to the TRM must be done manually without tool support. It requires a person who is familiar with a) the semantic of ACL, b) the test case generation process, and c) the binding process between IUT and TRM.  
 			
 			- The binding process, the execution of the IUT, the test process, and the report creation is all automated by the VF.
@@ -318,18 +309,14 @@ Both approaches start with the User Requirements Notation. Approach one deals wi
 			
 			- \enquote{JUnit Testing Framework} execute the acceptance tests automatically.
 			\\
-			\cline{2-4}
 			\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-			\multirow{2}{*}{4 \rotatebox[origin=r]{90}{\textbf{Quality}}} 
-			& a) evaluation
+			4a)
 			& - The authors did not evaluate the approach. 
 			& - They have compared the lines of codes of the extending process with the lines of codes of the manually generated test cases. This was made on example software. 
-			\\
-			\cline{2-4}
-			& b) evaluation results 
+			\\ \hline
+			4b)
 			&- The authors did not evaluate the approach. &
 			- They need 60 lines of code to extend the UCM and 600 lines of code for the manual test case creation. \\
-			\cline{2-4}
 			\hline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\end{longtable}
 		\qquad \qquad *: The VF is developed by one of the authors, Dave Arnold, for his Ph.D. Thesis. According to the paper, the VF can be found under http://vf.davearnold.ca/.\\
