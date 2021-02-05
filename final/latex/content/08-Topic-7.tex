@@ -367,9 +367,7 @@ ratePerformer (performer)
 \end{table}
 
 These are the transitions, which are triggered by a user event, a guard and an effect. Requirements traceability is managed by tagging the effect of each transition with requirement identifiers. For example, the requirement MM-7 is used to annotate the effect in case of not existing performer. This is the link between the model and the requirement. \\
-As last step, this link between the model and the requirements should be used by the LEIRIOS Test Designer tool to produce the traceability matrix between generated test cases and requirements. For each transition a test target and a test case should be via LEIRIOS Test Designer tool generated. 
-
-Since we cannot use the tool, we generate the test cases as an example for both transitions manually. \autoref{tab:T1} and \autoref{tab:T2} presents these generated test cases for the two internal transitions showed in \autoref{tab:intact}.
+As last step, this link between the model and the requirements should be used by the LEIRIOS Test Designer tool to produce the traceability matrix between generated test cases and requirements. For each transition a test target and a test case should be via LEIRIOS Test Designer tool generated. Since we cannot use the tool, we generate the test cases as an example for both transitions manually. \autoref{tab:T1} and \autoref{tab:T2} presents these generated test cases for the two internal transitions showed in \autoref{tab:intact}.
 
 \begin{table} [H] 
   \begin{center}
@@ -409,13 +407,11 @@ Since we cannot use the tool, we generate the test cases as an example for both 
 
 In this section, we describe the special features, similarities and differences of each approaches.
 
-Both approaches are very similar in terms of the way they use the information and of their steps. They both use informal requirements as input for their approaches, use system models for this purpose (UML models including OCL), and make use of requirements traceability for ensuring the quality of the generated test cases. They both offer tool support to generate tests automatically. 
-
+Both approaches are very similar in terms of the way they use the information and of their steps. They both use informal requirements as input for their approaches, use system models for this purpose (UML models including OCL), and make use of requirements traceability for ensuring the quality of the generated test cases. They both offer tool support to generate tests automatically. \\
 However, there are also differences between them. In the first approach, \cite{Paper1}, the informal requirements are analyzed and structured into requirements models and then OCL is used for verifying the quality of these requirements models.
-In the second approach, \cite{Paper2}, the expected functional requirements of the system under test are derived from a use case scenario. The requirements traceability is managed by tagging manually the postconditions of the operations and the effects of the transitions in the UML model with the requirements via ad-hoc comment symbols in order to associate a requirement with an OCL statement which will be involved into a test target during the generation of the test cases.
-
+In the second approach, \cite{Paper2}, the expected functional requirements of the system under test are derived from a use case scenario. The requirements traceability is managed by tagging manually the postconditions of the operations and the effects of the transitions in the UML model with the requirements via ad-hoc comment symbols in order to associate a requirement with an OCL statement which will be involved into a test target during the generation of the test cases. \\
 Furthermore, the LEIRIOS Test Designer tool provided in the second approach does not offer a tool support for tracing-back requirements from tests to models, while the first approach supports it via the automatically generated test report by their provided tool, Qtronic.
-\newpage
+
 \autoref{tab:TSM} presents the detailed comparison of both approaches as a synthesis matrix. In the first column, the number of the synthesis questions are presented. Number 1 implies the description, number 2 implies the benefit, number 3 implies the tools, and number 4 implies the quality for the compared approaches. Then, the second column presents the answers to these questions for approach 1, and third column for approach 2. 
 
 \newpage
