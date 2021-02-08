@@ -128,7 +128,7 @@ The authors conducted a case study, analysing 150 requirements of an existing in
 The approach proved to be easy and test coverage could be increased significantly. The use of aspects enables non-invasive testing throughout the software lifecycle. Furthermore, separation of (test) concerns can be achieved by modularizing crosscutting non-functional requirements. As a result, maintainability, reusability as well as tracing between requirements and test code can be improved.  Based on the experiences gained, the authors concluded that especially system-wide and crosscutting non-functional requirements, such as security, performance, reliability and robustness, are suitable for aspect-oriented testing.
 To sum up, the article presents a systematic approach – a systematology - to derive testing objectives and test cases with related test aspects from non-functional requirements. It does not provide automation for any step, hence the main problems the authors identify: the lack of tool support and the need for testing personnel to be firm with aspect-oriented programming.
 
-
+\newpage
 \subsection{Application}
 
  The non-functional requirements (REQ) are derived from the user task or the corresponding system characteristics (\autoref{req}). They have system-wide effects (hence affect multiple system-functions) and are of crosscutting nature. For example, REQ5 and REQ6 set performance constraints on REQ7 and REQ8 as well as REQ3; REQ3 and REQ4 set reliability and robustness constraints on each other; REQ9 sets security constraints on REQ1 and REQ2.\\
@@ -237,7 +237,7 @@ Using ACRE, the authors were able to detect one error of each type (1. – 3.) i
 \\
 To sum up, the article presents a tool for the automatic generation of test aspects with given test cases formulated in a domain specific language.
 
-
+\newpage
 \subsection{Application}
 The non-functional requirements with corresponding test objectives or a bug report must be given, as the approach does not present a way to derive them. Let us consider the same requirements (REQ1-9) and test objectives (TO1-7) as in \autoref{req} and \autoref{obj}. Furthermore, a user of the Movie Manager App has filed the following bug report:
 
@@ -266,7 +266,7 @@ The non-functional requirements with corresponding test objectives or a bug repo
 Based on the given test objectives or the bug report, the test aspects must be formulated manually using a domain-specific language. However, the DSL provides certain types of Aspects (Counter, Logging, Timing, Checking) and guidelines that help formulate the test cases. \autoref{aspect-test} shows the aspect types corresponding to the given test objectives and test aspects of approach 1. The DSL formulation to test for memory leaks in the  Performer class  could look like this:
 
 \lstset {language=C++}
-\begin{lstlisting}[caption={\textbf{DSL Statement For Counter Aspect}}, label=dsl]
+\begin{lstlisting}[caption={DSL Statement For Counter Aspect}, label=dsl]
 // // name: MemoryAspect              
 // // type: Counter                           
 // // className: Performer    
@@ -278,7 +278,7 @@ The parameters \textit{'name'} and \textit{'type'} are required and determine th
 \begin{table}[h]
 \begin{small}
 \caption{Aspect Types for Given Test Objectives.}
-\begin{tabular}{>{\raggedright}p{2cm}|p{8cm}|p{1cm}|p{2cm}}
+\begin{tabular}{>{\raggedright}p{1.7cm}|p{8cm}|p{1.1cm}|p{2.2cm}}
 \hline
 \textbf{Test \quad Aspect} & \textbf{Description} & \textbf{Test Objective(s)} & \textbf{Aspect Type}\\
 \hline
@@ -298,12 +298,12 @@ Performance Aspect & Measure function execution times. & TO6, TO7 & Timing (not 
 \label{aspect-test}
 \end{small}
 \end{table}
-\newpage
+
 \lstset {language=C++}
-\begin{lstlisting}[caption={\textbf{Generated Counter Aspect Code.}}, label=mem]
+\begin{lstlisting}[caption={Generated Counter Aspect Code.}, label=mem]
 aspect MemoryAspect{
 	public static int _Eval_Performer = 0;
-
+	
 	pointcut Eval_Performer() = "MovieManager::Performer";
 	advice Eval_Performer() : slice struct{
 		class Eval_Performer{

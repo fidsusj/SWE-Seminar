@@ -59,14 +59,6 @@ Of those papers, only few covered the first criterion and none covered the third
 \cite{ZouPavlovski2008} itself does not cover risk analysis as a main research topic but only covers it in a side note (see \autoref{sec:9_approach_1}).
 This is why search-term based search was performed using the key terms: non-functional requirements, testing and risk analysis.
 
-\autoref{tbl:search_topic_9_andre} lists an excerpt of the term-based search.
-Listed are only those searches that returned promising results or highlight issues I encountered during the search.
-It can be seen that, if all keywords are combined using the \texttt{AND} operator with the default restrictions, no relevant results were returned.
-After a feedback from one advisor, the search was changed so that \enquote{non-functional requirements} and \enquote{testing} were expected in the paper's abstract, but \enquote{risk analysis} was searched for in \textit{all} metadata including the full text.
-It turned out that no papers were found which mentioned risk analysis as well as the other two keywords in their abstract.
-
-We also discovered that the spelling of the term \enquote{non-functional} had a huge impact on the results returned by IEEE~Xplore.
-
 \begin{small}
 	\centering
 	\begin{longtable}[h]{p{0.08\textwidth}|c|p{0.58\textwidth}|p{0.12\textwidth}}
@@ -99,6 +91,14 @@ We also discovered that the spelling of the term \enquote{non-functional} had a 
 		\bottomrule
 	\end{longtable}
 \end{small}
+
+\autoref{tbl:search_topic_9_andre} lists an excerpt of the term-based search.
+Listed are only those searches that returned promising results or highlight issues I encountered during the search.
+It can be seen that, if all keywords are combined using the \texttt{AND} operator with the default restrictions, no relevant results were returned.
+After a feedback from one advisor, the search was changed so that \enquote{non-functional requirements} and \enquote{testing} were expected in the paper's abstract, but \enquote{risk analysis} was searched for in \textit{all} metadata including the full text.
+It turned out that no papers were found which mentioned risk analysis as well as the other two keywords in their abstract.
+
+We also discovered that the spelling of the term \enquote{non-functional} had a huge impact on the results returned by IEEE~Xplore.
 
 After this initial search, the resulting papers were evaluated and one paper was chosen. The papers to chose from included:
 
@@ -435,8 +435,9 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 %	\end{enumerate}
 %\end{enumerate}
 
+
 \begin{small}
-\begin{longtable}[h]{p{0.02\linewidth}|p{0.455\linewidth}|p{0.455\linewidth}}
+\begin{longtable}[H]{p{0.03\linewidth}|p{0.455\linewidth}|p{0.455\linewidth}}
 	\hline
 	\textbf{No.} & \textbf{Approach 1 \cite{ZouPavlovski2008}} & \textbf{Approach 2 \cite{Lagerstedt2014}} \\
 	\hline
@@ -525,6 +526,7 @@ For an improved comparison of these two approaches, a synthesis matrix is provid
 \end{longtable}
 \end{small}
 
+
 If we compare the two papers using the synthesis matrix above, we notice that they do not share a lot. That is not surprising: the second paper is very specific and only deals with architectural NFRs in code. The first paper, on the other hand, can be applied to different NFRs, not limiting itself to a specific one.
 Only the first paper mentions risk analysis but only as part of a control case.
 
@@ -544,7 +546,7 @@ The first article states no evaluation at all and only discusses the approach fo
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section{Conclusion} \label{sec:9_conclusion}
 
 Both articles deal with NFRs.
