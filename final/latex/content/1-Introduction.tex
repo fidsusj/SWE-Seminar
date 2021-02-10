@@ -15,8 +15,12 @@
 \section{Systematic Software Testing}\label{sec:introduction_software_testing}
 
 With the rise of smart gadgets and the Internet of Things, more and more parts of our daily life involve technology.
-And the software required to run our smartphones, computers and other gadgets requires software that becomes more complex as more data can be processed.
-As software becomes more complex, bugs can have immense consequences as the recent data breaches have show.%~\footnote{TODO}.
+And the software required to run our smartphones, computers and other gadgets  becomes more complex as more data can be processed.
+As software becomes more complex, bugs and even small configuration mistakes can have immense consequences as recent data breaches have shown\footnote{\enquote{235 Million Instagram, TikTok And YouTube User Profiles Exposed In Massive Data Leak}, \url{https://www.forbes.com/sites/daveywinder/2020/08/19/massive-data-leak235-million-instagram-tiktok-and-youtube-user-profiles-exposed/}, last visited on 2021-02-10}.
+Furthermore, not testing software can have legal consequences.
+If basic security measures are not implemented and tested, businesses may violate the General Data Protection Regulation (GDPR) and may have to pay fines.
+This is not a hypothetical risk.
+The \enquote{GDPR Enforcement Tracker}\footnote{see \url{https://www.enforcementtracker.com/}, last visited on 2021-02-10} lists instances where businesses had to pay fines due to \enquote{Insufficient technical and organisational measures to ensure information security}.
 
 Therefore, proper testing of software becomes more important than ever.
 But what is software testing? According to the \enquote{Guide to the Software Engineering Body of Knowledge} (short: SWEBOK), \enquote{Software testing consists of the dynamic verification that a program provides expected behaviors on a finite set of test cases, suitably selected from the usually infinite execution domain.}~\cite{SWEBOK}
@@ -33,7 +37,7 @@ In \autoref{sec:topic_2} % Fitnesse
 we focus on acceptance tests with FitNesse.
 Communicating requirements between customers and developers can be difficult.
 Whereas natural language can be too ambiguous, code can be too technical.
-By using FitNess, human-readable Fit-Tables can be created that be understood by customers and can be transformed into code automatically.
+By using FitNesse, human-readable Fit-Tables which include test steps are created that can be understood by customers. By writing fixture classes, these Fit-Tables can be used to automatically run tests.
 
 But having tests may not be enough.
 Which requirement is covered by which test?
@@ -47,9 +51,10 @@ comes into play with transition systems which can be used to automatically creat
 
 After that,
 \autoref{sec:topic_4} % Timing Component
-looks into testing with a timing component.
-Integrating different components can reveal errors even if the individual components are properly tested.
-Furthermore, if the system is a real time system, tests with the same input can lead to different system reactions if the test's execution time changes.
+looks into testing with a timing component, since for real-time systems, timing is crucial.
+In real-time systems, the exact time between two instructions or variances in the individual execution time can lead to different system reactions and therefore different results.
+
+% The aspect particularly considered here is the temporal component, since in many real-time systems the exact time between two instruction executions or variances in the individual execution time can lead to different results.
 
 % Notes: some times issue can only be found if components are linked together; test with same input but different execution time can lead to different reactions in a real-time system.
 
@@ -57,7 +62,7 @@ Following this,
 \autoref{sec:topic_5} % Classiciation Tree
 looks into decreasing the number of test cases by using classification trees.
 Because testing all possible parameter cases becomes unmanageable very fast, these classification trees offer a great way to reduce the complexity of such parameter constructs.
-Furthermore, these classification trees can be used to generated test cases.
+Furthermore, these classification trees can be used to generate test cases.
 
 % Notes: Testing all possible cases becomes unmanageable very fast.Classification Trees offer an approach to offer an approach to reduce the complexity of such parameter con-structions  and  to  keep  them  clearly  arranged.  Test cases can be generated from CTs
 
@@ -69,14 +74,14 @@ In \autoref{sec:topic_7} %  System models
 we then look into testing with systems models which are compared against test models.
 It is looked into model based testing and how traceability can be used to increase the probability of finding errors and improve test quality.
 
-\autoref{sec:topic_8} % NFR/FR Use Requiremetn
+% KEIN autoref, da sonst kleingeschrieben
+Chapter~\ref{sec:topic_8} % NFR/FR Use Requiremetn
 explains why writing manual tests for functional and Non-Functional requirements can be  not only tedious but error prone due to Copy\,\&\,Paste of errors in test logic.
 The section describes how test cases can be automatically created by using the user requirements notation that is used for modeling, analyzing, and controlling the correctness and completeness of functional and Non-Functional requirements.
 
 Another aspect of testing Non-Functional requirements can be by using risk analysis.
-This is where \autoref{sec:topic_9}%  Risk Analysis NFR
-steps in and briefly shows how Non-Functional requirements can be tested and how risk analysis can be used to prioritize test cases.
-
+This is where \autoref{sec:topic_9} %  Risk Analysis NFR
+steps in and briefly shows how non-functional requirements can be tested and how risk analysis can be used to prioritize test cases.
 The section also shows how architectural Non-Functional requirements such as code conventions can be tested.
 \autoref{sec:topic_10} % NFR Aspects
 expands on this topic by introducing aspects and aspect oriented programming to test and verify Non-Functional requirements such as software memory limits and memory leaks.
@@ -105,7 +110,6 @@ This definition already points out the difficulty of verifying requirements that
 Moreover, it distinguishes between functional, representing a feature the software is to provide, and Non-Functional requirements, specifying the extend of quality.
 Requirements need to be formulated clearly, unambiguously and quantitatively in order to implement and verify them correctly \cite{SWEBOK}.
 
-\newpage
 For software testing, there is no uniform definition.
 Therefore, the guide refers to multiple definitions from cited references.
 In essence, software testing is to assure that specified requirements are met by the implementation or, from a different perspective, find errors indicating that a requirement has not been met.
@@ -119,7 +123,7 @@ Model-based testing is used to validate requirements, check their consistency, a
 Some of the approaches presented in this report are model based, at least partially.
 However, it is not always clear what the actual model is and some authors use the term incorrectly.
 
-Finally, it is important to emphasize the difference between different artifacts produced during the testing process, including the afore-mentioned test objectives, test cases (logical or concrete with inputs) as well as executable tests (as code).
+Finally, it is important to emphasize the difference between artifacts produced during the testing process, including the afore-mentioned test objectives, test cases (logical or concrete with inputs) as well as executable tests (as code).
 
 \section{Outline}
 \label{sec:intruduction1.3}
