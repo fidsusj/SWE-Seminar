@@ -238,14 +238,13 @@ After that, the UC-System prototype/interpreter tool should build the UCTS (\aut
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\textwidth]{../images/topic3_ucts.png}
+	\includegraphics[width=\textwidth]{../images/topic3_ucts.png}
 	\caption{The use case transition system}
 	\label{ucts}
 \end{figure}
 
-After applying an instantiated use case in the transition system (in case the precondition of the contract was fulfilled) the simulation state is updated according to the contracts' postcondition. 
-
 \newpage
+After applying an instantiated use case in the transition system (in case the precondition of the contract was fulfilled) the simulation state is updated according to the contracts' postcondition. 
 
 Depending on the selected coverage criterion, we receive different test objectives as correct sequences of use cases. The robustness criterion was not considered in this example, but its application is coherent to the functional coverage criteria. How many test objectives are derived depends on the internal implementation of UC-System and cannot be predicted for this example. Let's assume that one test objective is the test path createMovie(m) \mbox{-\textgreater} createLinkedPerformer(p,m) \mbox{-\textgreater} removeMovie(m). Then the use case scenarios from \autoref{ucs} are used to replace the use cases in the test objectives. It helps to specify the exchange of messages involved between the environment and the system.
 
@@ -306,7 +305,6 @@ Based on the IOD and the specified contracts the CTS matrix gets defined and lea
 	$O_{3}$ & $S_{3}$ OR $S_{4}$ & $S_{2}$ & \\
 	$O_{3}$ & $S_{2}$ & $S_{5}$ & \\
 \end{longtable}
-
 The operations (sequence diagrams in the IOD) can be thought of as the transitions in the CTS, whereas the states match the specified postconditions (maybe thought of as starting points of arrows).
 
 \begin{figure}[h]
