@@ -12,28 +12,28 @@ The next chapter discusses the need for generating test cases in early phases of
 The approaches examined here offer industry-standard solutions, but the capability of generating robustness tests for fault detection is still a weakness.
 
 The third part deals with \enquote{Testing with a timing component}. 
-The aspect particularly considered here is the temporal component. In many real-time systems the exact time between two instruction executions or variances in the individual execution time can lead to different results. 
+The aspect particularly considered here is the temporal component. In many real-time systems, the exact time between two instruction executions or variances in the individual execution time can lead to different results. 
 Since this approach is not very common in the industry, there are many steps that are not yet automated. 
-In the next chapter, approaches for model-based systems are examined.
+In the next chapter, approaches for systems using models are examined.
 First and foremost, these include \enquote{classification trees}.
 The goal is to derive automatic test cases based on the requirements and the input parameters of a model.
 In conclusion, classification trees are described as well arranged and close to the requirements, but can potentially produce many test cases.
 Moreover, it is difficult to apply these approaches to systems without a simulated model.
 
-The fifth segment focuses on \enquote{model based testing} and examines approaches to make testing with models better and describes the differences between system models and test models.
-After that, the analysis the difficulties in using the tools given in the literature are worked out.
-Nevertheless, it is possible to reduce test time and errors by using them. 
+The sixth segment focuses on testing with system models and examines approaches to make testing with models better. 
+Differences between system models and test models are described.
+After that, the difficulties using the tools given in the literature are presented.
+Nevertheless, it is possible to reduce test time and errors using them. 
 The initial problem for the next topic with \enquote{Testing functional and nonfunctional requirements in User Requirements Notation} is the risk for wrong test cases during manual test creation.
-User requirements notation should fulfill requirements during test creation and thus prevent incorrect or incomplete tests.
+User requirements notation helps to fulfill requirements during test creation. Therefore, incorrect or incomplete tests are prevented.
 The problem here is that this approach is largely unexplored. Making the effort to take additional steps while generating more test cases, it is still possible to achieve better results. 
 
 In \enquote{Testing Non-Functional Requirements with Risk Analysis} the focus is on risk analysis, because it is precisely here that error-prone components can be discovered.
 Suitable approaches are then sought.
 Among the findings here are the importance of automated tests and that tests for non-functional requirements should have more priority. 
-The last chapter describes the \enquote{Testing Non-Functional Requirements with Aspects} and  focuses on the \enquote{aspects}.
-This is intended to describe system-wide functionalities in order to be able to deal with concerns at system level.
-Furthermore, the missing availability of tools and suitable research are criticized.
-However, the approaches considered seem promising and should be further refined. 
+The last chapter describes \enquote{Testing Non-Functional Requirements with Aspects} and  focuses on the \enquote{aspects}.
+Aspects describe system-wide functionalities that are ioslated from the main program logic. This is supposed to help to deal with concerns at system level.
+The approaches considered seem promising and should be further refined even though the availability of tools is limited. 
 
 Thus, this joint work addresses the merits and difficulties of various test case generation techniques. Common problems identified are the lack of availability of tools or research, but in suitable use cases most approaches help in improving or automating the test cases. A final conclusion on this is drawn at the end of this work. 
 
@@ -43,17 +43,18 @@ Testen ist ein wichtiger und aufwendiger Bestandteil jeder Softwareentwicklung. 
 
 Zunächst geht es um \enquote{Systematic Generation of acceptance tests that are executable with FitNesse}. Dieser Ansatz versucht die Schwierigkeiten bei der Kommunikation unter den Beteiligten zu lösen. Dafür werden auch mehrere Artefakte wie die Fit-Tabellen erstellt und herangezogen. Die Ansätze können je nach Projektgröße und Erfahrung gut funktionieren, was meistens eher von Letzterem abhängig ist, aber gerade von letzterem leider auch stark abhängig ist. Das nächste Kapitel erörtert, dass es bereits in frühen Phasen der Entwicklung möglich sein sollte, Testfälle zu generieren. \enquote{Transition systems} können dabei helfen, Testfälle aus Spezifikationen abzuleiten. Die hier untersuchten Herangehensweisen bieten Lösungen auf Industrie-Standard, allerdings ist die Umsetzbarkeit von Robustheitstests für die Fehlerfindung noch eine Schwäche.
 
-Das dritte Unterkapitel beschäftigt sich mit \enquote{Testing with a timing component}. 
+Das dritte Kapitel beschäftigt sich mit \enquote{Testing with a timing component}. 
 Hier ist die zeitliche Komponente wichtig, da in vielen Echtzeitsystemen die genaue Zeit zwischen zwei Befehlsausführungen zu unterschiedlichen Ergebnissen führen kann.
 Da dieser Ansatz in der Industrie nicht sehr weit verbreitet ist, gibt es viele Arbeitsschritte, die noch nicht automatisiert sind. 
-Im nächsten Kapitel werden Ansätze für modellbasierte Systeme untersucht. Dazu gehören an erster Stelle die \enquote{classification trees}. Die Nutzbarkeit von Klassifikationsbäume wird untersucht. Eine Schlussfolgerung ist die Schwierigkeit, diese Ansätze auf Systeme ohne simuliertes Modell anzuwenden.
+Im nächsten Kapitel werden Ansätze für Systeme mit Modellen betrachtet. Dazu gehören an erster Stelle die \enquote{classification trees}. Die Nutzbarkeit von Klassifikationsbäume wird untersucht. Eine Schlussfolgerung ist die Schwierigkeit, diese Ansätze auf Systeme ohne simuliertes Modell anzuwenden.
 
-Das fünfte Unterkapitel legt den Fokus auf \enquote{model based testing} und untersucht Ansätze, die das Testen mit Modellen besser machen und beschreibt die Unterschiede zwischen Systemmodellen und Testmodellen. Die Schwierigkeiten bei der Nutzung der in der Literatur angegebenen Tools werden herausgearbeitet, Testzeit und Fehler können dennoch reduziert werden.
-\enquote{Testing functional and nonfunctional requirements in User Requirements Notation}  beschäftigt sich mit dem Risiko falscher Testfälle bei der manuellen Testerstellung. \enquote{User requirements notation} soll dabei helfen, Anforderungen bei der Testerstellung zu erfüllen und so falsche oder unvollständige Tests zu verhindern. Allerdings ist  dieser Ansatz weitgehend noch nicht erforscht. Geht man jedoch zusätzliche Schritte bei der Testfallgenerierung, kann man trotzdem eine bessere Qualität erhalten.
+Das sechste Kapitel legt den Fokus auf das Testen mit Modellen. Unterschiede zwischen Systemmodellen und Testmodellen werden beschrieben. Die Schwierigkeiten bei der Nutzung der in der Literatur angegebenen Tools werden herausgearbeitet, Testzeit und Fehler können dennoch reduziert werden.
+\enquote{Testing functional and nonfunctional requirements in User Requirements Notation}  beschäftigt sich mit dem Risiko falscher Testfälle bei der manuellen Testerstellung. \enquote{User requirements notation} soll dabei sicherstellen, dass Anforderungen bei der Testerstellung erfüllt werden. Falsche oder unvollständige Tests sollen somit verhindert werden. 
+Allerdings ist dieser Ansatz weitgehend noch nicht erforscht. Geht man jedoch zusätzliche Schritte bei der Testfallgenerierung, kann man trotzdem eine bessere Qualität erhalten.
 
 Bei \enquote{Testing Non-Functional Requirements with Risk Analysis} liegt der Schwerpunkt auf der Risikoanalyse, weil genau hier fehleranfällige Komponenten entdeckt werden. 
 Automatisierte Tests sollen bei  \enquote{non-functional requirements} eine höhere Priorität besitzen.
-Das letzte Kapitel beschreibt das \enquote{Testing Non-Functional Requirements with Aspects} und legt den Fokus auf die \enquote{aspects}. Damit sollen systemweite Funktionalitäten beschrieben werden. Auch hier werden die fehlende Verfügbarkeit von Tools und passender Forschung bemängelt. Die betrachteten Ansätze wirken aber vielversprechend und sollten weiter verfeinert werden.
+Das letzte Kapitel beschreibt das \enquote{Testing Non-Functional Requirements with Aspects} und legt den Fokus auf die \enquote{aspects}. Damit sollen systemweite Funktionalitäten oder vom Restprogramm abgrenzbare Komponenten beschrieben werden. Auch hier werden die fehlende Verfügbarkeit von Tools und passender Forschung bemängelt. Die betrachteten Ansätze wirken aber vielversprechend und sollten weiter verfeinert werden.
 
 Diese gemeinsame Arbeit geht also auf die Vorzüge und Schwierigkeiten verschiedener Verfahren zur Testfallgenerierung ein. Häufige Probleme, die herausgearbeitet wurden, sind die mangelnde Verfügbarkeit von Werkzeugen oder wissenschaftlichen Artikeln, aber in passenden Anwendungsfällen helfen die meisten Ansätze bei einer Verbesserung oder Automatisierung der Testfälle.
 
