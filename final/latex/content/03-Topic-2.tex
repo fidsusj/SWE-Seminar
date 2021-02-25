@@ -9,7 +9,7 @@
 
 This chapter focuses on the creation of acceptance tests that are automatically executable using the tool \textit{FitNesse}.
 In this first section of the chapter the reason for using this approach is discussed.
-Furthermore, the general features of \textit{FitNesse} as well as the needed artefacts like Fit-tables are explained.
+Furthermore, the general features of \textit{FitNesse} as well as the needed artifacts like Fit-tables are explained.
 An article that focuses on the topic of creating acceptance tests (see glossary for the term \textit{acceptance test}) that are executable with \textit{FitNesse} was provided by the supervisors of the seminar.
 \hyperref[Section]{Section~\ref{sec:literature-search}} documents the literature search used to find a different approach.
 The two articles are then described in \autoref{sec:el-attar} and in \autoref{sec:longo}.
@@ -23,9 +23,9 @@ A problem for the communication is the different use of documents by the two mai
 Customers describe their requirements in natural language whereas the developers create code.
 Natural language can often be interpreted in different ways, which can lead to unwanted results.
 And whereas code is more precise, it is often too technical for the customer.
-Therefore, artefacts are needed that are more precise than natural language and can easily be transformed into code.
+Therefore, artifacts are needed that are more precise than natural language and can easily be transformed into code.
 
-One such artefact is a \textit{Fit-table}. 
+One such artifact is a \textit{Fit-table}. 
 These tables store easily readable information about acceptance test cases and can be fully automatically executed using the testing tool \textit{FitNesse} \cite{fitnesse}.
 Creating \textit{Fit-tables} before the development of the software can help the developers to understand the requirements of the customer by implementing the necessary functionality to pass the acceptance tests.
 Thus the customers receive a software that satisfies all their mentioned requirements.
@@ -99,7 +99,7 @@ The articles that gave an overview over the use of FitNesse were not specific ab
 Therefore, none of these articles was used.
 As a second approach to compare to the start article, the work by Longo et al. \cite{longo} was chosen.
 This article also describes an approach to create acceptance tests that can be automatically executed by \textit{FitNesse}.
-The presented approach differs from the approach of the article by El-Attar and Smith in its use of artefacts.
+The presented approach differs from the approach of the article by El-Attar and Smith in its use of artifacts.
 Also it was created by different authors and was published in 2016, so it is a much more recent approach.
 
 
@@ -114,12 +114,12 @@ It was created such that a non-technical person (e.g. a Business Analyst) can ex
 This makes it possible for the developers to follow the approach of Acceptance-Test-Driven-Development (\textit{ATDD}, see glossary) because of the possibility of executing the acceptance tests at any time during the development process.
 ATDD helps the developers during the development process to evaluate which requirements are already implemented and  which are yet to be implemented.
 
-The approach starts with use case models and domain models as initial artefacts.
+The approach starts with use case models and domain models as initial artifacts.
 During the whole process of creating the acceptance tests every step is performed completely manually.
 The execution of the final acceptance tests is done fully automatically by the tool \textit{FitNesse}.
 To help with traceability during the approach the authors created a tool called UCAT.
 This tool does not provide any automation support but allows the user to create use case models and \textit{Fit-tables}.
-These artefacts can be linked within UCAT which helps to determine which use cases resulted in which acceptance tests.
+These artifacts can be linked within UCAT which helps to determine which use cases resulted in which acceptance tests.
  \autoref{fig:overview-el-attar} shows the rough structure of the approach.
 The exact steps of the approach are described in the following:
 
@@ -170,7 +170,7 @@ Also missing steps or preconditions in the Use Case description might be found.
 If this is the case, the Use Case descriptions should also be updated.
 After this step the HLATs should be adapted to fit the updated domain model and Use Case descriptions.
 
-In the last step all the existing artefacts (possibly except the domain models) are used to create the final product of the approach: \textbf{Executable Acceptance Tests (EATs)}.
+In the last step all the existing artifacts (possibly except the domain models) are used to create the final product of the approach: \textbf{Executable Acceptance Tests (EATs)}.
 These acceptance tests are in the form of specific \textit{Fit-tables}.
 To achieve this, the HLATs have to be divided into smaller steps using the information about the Usage Scenario from the related use case description.
 This step requires human judgment and is not further described.
@@ -396,8 +396,8 @@ As in the other chapters the approaches are compared in a synthesis matrix.
 
 \renewcommand{\arraystretch}{1.5}
 %	\begin{tabularx}{\textwidth}{>{\hsize=.2\hsize}X X}
-%  		\textbf{1a} & Which artefacts and relations between artefacts are used in this approach? Which
-%artefacts are created in the course of the approach? How are the artefacts characterized?
+%  		\textbf{1a} & Which artifacts and relations between artifacts are used in this approach? Which
+%artifacts are created in the course of the approach? How are the artifacts characterized?
 % \\
 %  		\hline
 %  		\textbf{1b} & What is required and/or input for the application of the approach? \\
@@ -432,7 +432,7 @@ As in the other chapters the approaches are compared in a synthesis matrix.
 	\hline
   	\textbf{No.} & \textbf{Approach 1} & \textbf{Approach 2}\\
   	\hline
-  		 1a) & Initial artefacts: \textbf{Use Case and Domain Models} are used to create high level acceptance tests and robustness diagrams 
+  		 1a) & Initial artifacts: \textbf{Use Case and Domain Models} are used to create high level acceptance tests and robustness diagrams 
 \textbf{Robustness diagrams} combine the information from the use cases and the domain model. During the creation of the robustness diagrams for the use cases objects and attributes may be identified that are missing in the domain model. The domain model is updated with this missing information.
 \textbf{High level acceptance tests (HLATs)} deliver an informal description of acceptance tests. They are tables and use keywords that are chosen by their creator. For each flow of a use case from the Use Case model a HLAT is created.
 \textbf{Fit-tables} are a form of executable acceptance tests that can be automatically executed by the tool FitNesse. For each HLAT a Fit-table is created using the information about the control flow in the respective robustness diagram.
@@ -444,7 +444,7 @@ As in the other chapters the approaches are compared in a synthesis matrix.
   		 \item Use Case Model \item Domain Model
 \end{itemize}  		  & Requirements in a non-specific type \\
 	\hline
-  1c) & As initial artefacts Use Case models and Domain models are used.
+  1c) & As initial artifacts Use Case models and Domain models are used.
 In the first step a HLAT is created for each flow of each use case from the Use Case model. The information about the preconditions, inputs and triggers for the HLATs gets extracted from the domain model.
 The second step is the creation of robustness diagrams for the use cases from the Use Case model. These diagrams also include the objects from the domain model and model the communication between those in the specific use case. If objects or attributes are found in this step that are necessary but not yet part of the domain model, they are added to the domain model. All the other models are updated to fit the domain model. In the last step a Fit-table is created for each HLAT using the control flow that can be seen in the robustness diagram. 
 Finally the created Fit-tables can be combined with the Use Case from the Use Case model that they belong to.
@@ -478,7 +478,7 @@ Developer: Software Construction (Test-Driven Development)
   		\hline
   		 3a) & The authors provide the tool UCAT in which Use Case Models and Fit-tables can be created and linked. The created Fit-tables can be automatically executed using FitNesse. & A web framework is provided by the authors in which US-UIDs can be created and converted to Fit-tables. These Fit-tables can be executed with FitNesse. \\
   	 \hline
-  		 3b) & The tool UCAT serves as an editor to create Use Case models and Fit-tables. Those two artefacts can also be linked in UCAT.
+  		 3b) & The tool UCAT serves as an editor to create Use Case models and Fit-tables. Those two artifacts can also be linked in UCAT.
 Every other step in the creation of the acceptance tests is done without tool support.
 No step of the approach is done automatically.
  & The creation of the US-UIDs is supported by the web framework which serves as an editor.
@@ -510,14 +510,14 @@ The authors concluded that the tests created by their approach can successfully 
 
 Both approaches provide a possible way to create acceptance tests that are executable with the tool \textit{FitNesse}.
 El-Attar and Smith utilize use case models and domain models as their initial data while Longo et al. only need a non-specific description of the use cases.
-Generally El-Attar and Smith use more artefacts as their approach needs use case models, domain models, high-level acceptance tests and robustness diagrams as intermediate steps to the final representation of the executable acceptance tests.
+Generally El-Attar and Smith use more artifacts as their approach needs use case models, domain models, high-level acceptance tests and robustness diagrams as intermediate steps to the final representation of the executable acceptance tests.
 In the approach of Longo et al. only US-UIDs need to be created which are then automatically converted to \textit{Fit-tables}.
 In contrary to El-Attar and Smith the approach of Longo et al. requires the creation of some code in the process:
 This is the case because the used \textit{Fit-tables} differ between the two approaches.
 While El-Attar and Smith use the specific table types ActionFixture, RowFixture and ColumnFixture, Longo et al. use easier \textit{Fit-tables} that are connected to the System-under-test via a Fixture-Class.
 This Fixture-Class has to be written manually.
 
-Both approaches provide a tool to combine artefacts with the resulting acceptance tests which helps traceability.
+Both approaches provide a tool to combine artifacts with the resulting acceptance tests which helps traceability.
 For both approaches the creation of the executable acceptance tests is still mostly or completely manual.
 While the approach of El-Attar and Smith uses no automation during the creation of the executable acceptance tests, the last step of the approach of Longo et al. is fully automatically.
 This is possible because the US-UIDs created in the approach of Longo et al. are a different way to display the information of a \textit{Fit-table} and therefore can be directly converted to a \textit{Fit-table}.
