@@ -40,7 +40,7 @@ Based on this paper, we formulated the central research question:
 We focused on finding articles that covered the three most important keywords and phrases for the topic: \textit{testing}, \textit{non-functional requirements} and \textit{risk analysis}.
 A quick search using these three phrases resulted in IEEE Xplore having the most promising results, whereas ACM~\cite{acm} only showed a few.
 Because the given article \cite{ZouPavlovski2008} can also be found on IEEE~Xplore~\cite{ieee}, we focused our search onto that site but still looked at ACM.
-
+\newpage
 To be able to evaluate the relevance of papers found during the literature search, we defined three relevance criteria:
 
 \begin{enumerate}
@@ -65,37 +65,37 @@ This is why search-term based search was performed using the key terms: non-func
 		\caption{Term based search results}
 		\label{tbl:search_topic_9_andre}
 		\setlength{\tabcolsep}{1em}\\    %%%%<===
-		\toprule
+		\hline
 		\textbf{Source} & \textbf{Date} & \textbf{Search query and restrictions} & \textbf{\#Results (relevant)} \\
 		
-		\midrule
+		\hline
 		IEEE Xplore & 2020-11-11 & \texttt{"{}non-functional requirements"{} AND testing AND "{}risk analysis"{}} & 3 (0) \\
 		
-		\midrule
+		\hline
 		IEEE Xplore & 2020-11-11 & \texttt{non-functional requirements AND testing AND risk analysis} & 12 (0) \\
 		
-		\midrule
+		\hline
 		IEEE Xplore & 2020-11-11 & \texttt{risk AND "non-functional" and test} & 23 (2) \\
 		
-		\midrule
+		\hline
 		IEEE Xplore & 2020-11-29 & \texttt{(("{}Abstract"{}:nonfunctional requirements) AND "{}Abstract"{}:Test) AND "Full Text \& Metadata":"{}risk analysis"{})} & 2 (1) \\
 		
-		\midrule
+		\hline
 		IEEE Xplore & 2020-11-29 & \texttt{(("{}Abstract"{}:non-functional requirements) AND "{}Abstract"{}:Test) AND "Full Text \& Metadata":"{}risk analysis"{})} & 3 (0) \\
 		
-		\midrule
+		\hline
 		ACM & 2020-11-29 & \texttt{[Abstract: "{}risk"{}] AND [Abstract: test*] AND [Abstract: "{}non functional"{}]} & 4 (1) \\
 		
-		\midrule
+		\hline
 		ACM & 2020-11-29 & \texttt{[Abstract: test] AND [Abstract: "{}non functional"{}] AND [[Full Text: "{}risk analysis"{}] OR [Full Text: "{}risk"{}]]} & 20 (1) \\
-		\bottomrule
+		\hline
 	\end{longtable}
 \end{small}
 
 \autoref{tbl:search_topic_9_andre} lists an excerpt of the term-based search.
 Listed are only those searches that returned promising results or highlight issues I encountered during the search.
 It can be seen that, if all keywords are combined using the \texttt{AND} operator with the default restrictions, no relevant results were returned.
-After a feedback from one advisor, the search was changed so that \enquote{non-functional requirements} and \enquote{testing} were expected in the paper's abstract, but \enquote{risk analysis} was searched for in \textit{all} metadata including the full text.
+After a feedback from one advisor, the search was changed so that \enquote{non-functional requirements} and \enquote{testing} were expected in the paper's abstract, but \enquote{risk \newpage analysis} was searched for in \textit{all} metadata including the full text.
 It turned out that no papers were found which mentioned risk analysis as well as the other two keywords in their abstract.
 
 We also discovered that the spelling of the term \enquote{non-functional} had a huge impact on the results returned by IEEE~Xplore.
@@ -146,7 +146,7 @@ Their paper visualizes the connection between these artifacts using an UML diagr
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.4\textwidth]{../images/topic_9_approach_1_1.png}
+	\includegraphics[width=0.5\textwidth]{../images/topic_9_approach_1_1.png}
 	\caption{Association in Use Cases Modelling~\cite{ZouPavlovski2008}}
 	\label{fig:topic_9_appraoch_1_use_case}
 \end{figure}
